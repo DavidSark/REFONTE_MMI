@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Red+Hat+Display:wght@600;700&display=swap');
+@import "./functions";
+
+// TYPOGRAPHY
+$font-poppins : 'Poppins', sans-serif;
+$font-redhat : 'Red Hat Display', sans-serif;
+
+// FONT SIZE 
+//DESKTOP
+$size-133 : rem(133);
+$size-123 : rem(123);
+$size-90 : rem(90);
+$size-75 : rem(75);
+$size-33 : rem(33);
+$size-28 : rem(28);
+$size-26 : rem(26);
+$size-24 : rem(24);
+$size-23 : rem(23);
+$size-21 : rem(21);
+$size-19 : rem(19);
+$size-12 : rem(12);
+
+//MOBILE 
+$size-39 : rem(39);
+$size-20 : rem(20);
+$size-16 : rem(16);
+$size-14 : rem(14);
+$size-13 : rem(13);
+
+// COLORS
+$white : #ffffff;
+$white-soft : #EBEBEB;
+$black : #1C1C1C;
+$gray-soft : #8A8A8A;
+$gray-black : #414141;
+
+$blue : #0264F6;
+$red : #BD0200;
+$green : #2A856A;
+
+
+
+
+
+
+
+
