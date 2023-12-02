@@ -1,0 +1,8 @@
+@mixin borderColorTitle{
+    border-left: 10px solid ;
+    padding: 10px;
+}
+@mixin borderColorSubtitle{
+    border-left: 3px solid $gray-soft;
+    padding: 20px;
+}
