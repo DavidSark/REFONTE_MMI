@@ -10,8 +10,8 @@
             <p>MÉTIERS DU MULTIMÉDIA ET DE L’INTERNET</p>
         </div>
         <div class="container__left">
-           <img src="" alt="/">
-           <img src="" alt="/">
+           <img src="image1.webp" alt="/">
+           <img src="image2.webp" alt="/">
         </div>
     </div>
 </template>

@@ -14,8 +14,5 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
 
 
 <style lang="scss" scoped>
-.container{
-    height:8000px;
 
-}
 </style>
