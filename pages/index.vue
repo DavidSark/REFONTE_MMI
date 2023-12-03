@@ -7,12 +7,15 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
 
 
 <template>
-    <div>
+    <div class="container">
         <Header :elements="home.data.header"></Header>
     </div>  
 </template>
 
 
 <style lang="scss" scoped>
+.container{
+    height:8000px;
 
+}
 </style>

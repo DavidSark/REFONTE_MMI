@@ -24,10 +24,6 @@ const className = computed (() => ({
     ' -borderBlue': props.borderColor === 'borderBlue',
 }))
 
-
-
-
-
 </script>
 
 <template>
