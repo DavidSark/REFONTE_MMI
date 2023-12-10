@@ -9,14 +9,10 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
 <template>
     <div>
         <Header :elements="home.data.header"></Header>
-        <Hero></Hero>
-        
-    </div>
+    </div>  
 </template>
 
 
 <style lang="scss" scoped>
-
-
 
 </style>
