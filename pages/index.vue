@@ -9,6 +9,8 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
 <template>
     <div class="container">
         <Header :elements="home.data.header"></Header>
+        <Footer></Footer>
+
     </div>  
 </template>
 
