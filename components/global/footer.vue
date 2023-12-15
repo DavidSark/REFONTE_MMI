@@ -24,7 +24,6 @@
 </template>
 
 <style lang="scss" scoped>
-
 .footer {
     &-links {
         font-weight: 300;
@@ -61,6 +60,7 @@
         
         img {
             width: rem(37);
+            margin-bottom: rem(10);
         }
         :nth-child(3) {
             font-family: $font-poppins;
@@ -77,6 +77,34 @@
             width: rem(30);
         }
     }
+}
+
+//media queries
+@media (min-width: 1440px) {
+.footer {
+    &-links {
+        font-size: $size-16;
+        margin-bottom:rem(30);      
+    }
+
+    &-subtitles {
+        font-size: $size-26;
+        img {
+            width: rem(55);
+            margin-bottom: rem(15);
+        }
+        :nth-child(3) {
+            font-size: $size-21;
+        }
+    }
+    &-icons { 
+        img {
+            width: rem(40);
+        }
+    }
+
+}
+
 }
 
 </style>
