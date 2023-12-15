@@ -10,7 +10,7 @@
             <h2>Métiers du multimédia et de l'internet</h2>
         </div>
         <div class="footer-links">
-            <RouterLink to="mentions-legales"><p>Mentions légales</p></RouterLink>
+            <RouterLink to="/mentions-legales"><p>Mentions légales</p></RouterLink>
             <div></div>
             <RouterLink to="/confidentialite"><p>Confidentialité</p></RouterLink>
         </div>
