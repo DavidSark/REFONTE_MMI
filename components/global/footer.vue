@@ -15,9 +15,9 @@
             <RouterLink to="/confidentialite"><p>Confidentialité</p></RouterLink>
         </div>
         <div class="footer-icons">
-        <img src="/icons/icon-facebook.svg" alt="facebook">
-        <img src="/icons/icon-instagram.svg" alt="instagram">
-        <img src="/icons/icon-linkedin.svg" alt="linkedin">
+        <a href="https://www.facebook.com/mmimontbeliard" target="_blank"><img src="/icons/icon-facebook.svg" alt="facebook"></a>
+        <a href="https://www.instagram.com/mmi_montbeliard" target="_blank"><img src="/icons/icon-instagram.svg" alt="instagram"></a>
+        <a href="https://www.linkedin.com/school/mmimontbeliard" target="_blank"><img src="/icons/icon-linkedin.svg" alt="linkedin"></a>
         </div>
     </div>
 
