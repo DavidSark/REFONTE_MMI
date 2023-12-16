@@ -8,6 +8,7 @@
 </script>
 
 <template>
+
   <div class="container">
   <div class="section1-mentions">
     <div class="section1-mentions__sideleft">
