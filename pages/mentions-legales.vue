@@ -36,6 +36,7 @@
       <PrismicRichText :field="mentions.data.section2[0].titre" class="section2-mentions__sideleft-borderT__title"></PrismicRichText>
       </div>
       <div class="section2-mentions__sideleft-borderS">
+        <div class="section2-mentions__sideleft-borderS__c1">
         <p>Coordonnées</p>
         <p>Département MMI de Montbéliard Adresse : 4 Pl. Lucien Tharradin, 25200 Montbéliard<br>
         Téléphone : 03 81 99 47 34<br>
@@ -48,7 +49,8 @@
         <p>Université de Franche-Comté</p>
         <p>Propriété Intellectuelle</p>
         <p>Tous les contenus de ce site web, y compris mais sans s'y limiter, les textes, les images, les vidéos, les logos et les graphiques, sont la propriété du Département MMI de Montbéliard ou de tiers ayant accordé des droits d'utilisation.<br><br> Toute reproduction, distribution, modification ou utilisation de ces contenus sans autorisation écrite préalable est strictement interdite.</p>
-        
+        </div>
+        <div class="section2-mentions__sideleft-borderS__c2">
         <p>Protection des Données Personnelles</p>
         <p>Ce site web peut collecter des données personnelles dans le cadre de formulaires de contact ou d'inscription. Ces données seront utilisées conformément à notre politique de confidentialité, que vous pouvez consulter [lien vers la politique de confidentialité]. </p>
         <p>Cookies</p>
@@ -59,10 +61,10 @@
         <p>Le Département MMI de Montbéliard s'efforce de fournir des informations exactes et à jour sur ce site web. Cependant, nous ne pouvons pas garantir l'exactitude, l'exhaustivité ou la pertinence de ces informations. En conséquence, le Département MMI de Montbéliard décline toute responsabilité en cas d'erreurs ou d'omissions dans le contenu de ce site web.</p>
         <p>Droit Applicable</p>
         <p>L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.<br><br> La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement interdite sauf autorisation expresse du directeur de la publication.<br><br>Mentions légales rédigés le 10/11/2013</p>
-
+        </div>
       </div>
     </div>
-    <div class="section2-mentions__sideright"></div>
+    
   </div>
 </div>
 <Footer></Footer>
@@ -122,7 +124,6 @@
           font-size: $size-32;
           font-weight: 100;
           text-transform: uppercase;
-
           strong {
             font-weight: 800;
           }
@@ -176,6 +177,15 @@
       }
 
       &-borderS {
+
+        &__c1 {
+          display: flex;
+          flex-direction: column
+        }
+        &__c2 {
+          display: flex;
+          flex-direction: column;
+        }
         @include borderColorSubtitle;
 
         p:nth-of-type(odd) {
@@ -355,7 +365,14 @@
 
           &__title {
             font-size: $size-90;
+            margin-bottom: rem(10);
           }
+        }
+        &-borderS {
+        display: flex;
+        justify-content:center;
+        align-items: flex-start;
+        gap:rem(70);
         }
       }
     }
