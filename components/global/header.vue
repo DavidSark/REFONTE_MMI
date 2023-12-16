@@ -60,7 +60,7 @@ onMounted(() => {
   font-family: $font-poppins;
   font-size: $size-13;
   font-weight: bold;
-  padding: rem(20);
+  padding: rem(30) rem(20);
   background: transparent;
   transition: background-color 0.3s ease;
 
@@ -175,7 +175,11 @@ onMounted(() => {
 @media (min-width: 768px) {
   .header {
     font-size: $size-16;
-
+    padding: rem(30) rem(35);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     &-block {
       &__container {
         &-text {
@@ -183,7 +187,6 @@ onMounted(() => {
             height: rem(16);
           }
         }
-
         &-square {
           margin-left: rem(15);
         }
@@ -192,11 +195,17 @@ onMounted(() => {
   }
 }
 
+@media (min-width: 1236px) {
+  .header {
+    font-size: $size-21;
+  }
+}
+
+
 @media screen and (min-width: 1440px) {
   .header {
-    padding: rem(30) rem(50);
+    padding: rem(30) rem(60);
     font-size: rem(28);
-
     &-block {
       &__logo {
         img {

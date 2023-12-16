@@ -19,9 +19,11 @@ const className = computed (() => ({
     //couleur de fond du bouton
     ' -bgBlack': props.bgColor === 'bgBlack',
     ' -bgBlue': props.bgColor === 'bgBlue',
+    ' -bgTransparent' : props.bgColor === 'bgTransparent',
 
     //couleur du bord du bouton
     ' -borderBlue': props.borderColor === 'borderBlue',
+    ' -borderWhite': props.borderColor === 'borderWhite',
 }))
 
 </script>
@@ -65,8 +67,15 @@ button{
     background-color: $blue ;
 }
 
+.-bgTransparent{
+    background-color: transparent;
+}
+
 .-borderBlue{
     border-color: $blue;
 }
 
+.-borderWhite{
+    border-color: $white;
+}
 </style>
