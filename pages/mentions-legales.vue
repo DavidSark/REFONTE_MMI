@@ -2,9 +2,6 @@
   const { client } = usePrismic();
   const { data: mentions, error } = await useAsyncData('mentions', () => client.getSingle("mentions"));
 
-  const props = defineProps({
-    title: Array,
-  });
 </script>
 
 <template>
@@ -13,7 +10,7 @@
     <div class="section1-mentions__sideleft">
       <div class="section1-mentions__sideleft-borderT">
         <PrismicRichText :field="mentions.data.section1[0].titre" class="section1-mentions__sideleft-borderT__title"></PrismicRichText>
-        <div></div>
+        <!-- <div></div> -->
       </div>
       <div class="section1-mentions__sideleft-borderS">
         <PrismicRichText :field="mentions.data.section1[0].soustitre" class="section1-mentions__sideleft-borderS__soustitre"></PrismicRichText>
@@ -318,7 +315,7 @@
 
   @media (min-width: 1440px) {
     .container {
-      padding: rem(30) rem(60);
+      padding: rem(30) rem(75);
     }
 
     .section1-mentions {

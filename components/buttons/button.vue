@@ -34,7 +34,7 @@ const className = computed (() => ({
 
 <style lang="scss" scoped>
 button{
-    border: rem(3) solid $black;
+    border: rem(2) solid $black;
     border-radius: rem(30);
     padding: rem(12) rem(25);
     text-align: center;
