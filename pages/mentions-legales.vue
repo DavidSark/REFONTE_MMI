@@ -69,16 +69,18 @@
 </template>
 
 <style lang="scss">
-.container {
-  padding: rem(30) rem(20) ;
-}
-  //SECTION 1 - CONCEPTION
+  .container {
+    padding: rem(30) rem(20);
+  }
+
+  // SECTION 1 - CONCEPTION
   .section1-mentions {
-    margin-bottom: rem(40);
+    margin: rem(60) rem(0) rem(60) rem(0);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: rem(20);
+
     &__slider {
       display: flex;
       flex-direction: column;
@@ -88,43 +90,54 @@
       font-weight: 700;
       font-size: $size-13;
       gap: rem(10);
+
       span {
         font-weight: 300;
       }
+
       :nth-child(3) {
         width: rem(17);
       }
+
       :nth-child(1) {
         width: rem(196);
       }
     }
+
     &__sideleft {
       &-borderT {
         display: flex;
         align-items: flex-end;
         gap: rem(5);
+
         span {
           color: $blue;
         }
+
         @include borderColorTitle;
         border-color: $blue;
+
         &__title {
           font-family: $font-redhat;
           font-size: $size-32;
           font-weight: 100;
           text-transform: uppercase;
+
           strong {
             font-weight: 800;
           }
         }
       }
+
       &-borderS {
         @include borderColorSubtitle;
+
         &__soustitre {
           font-size: $size-13;
           font-family: $font-poppins;
           font-weight: 300;
           line-height: normal;
+
           strong {
             font-weight: 700;
             color: $blue;
@@ -134,60 +147,69 @@
     }
   }
 
-
-  //SECTION 2 - MENTIONS LEGALES
+  // SECTION 2 - MENTIONS LEGALES
   .section2-mentions {
+    margin-bottom: rem(60);
+
     &__sideleft {
       &-borderT {
         @include borderColorTitle;
-        border-color : $red;
+        border-color: $red;
         display: flex;
         align-items: flex-end;
         gap: rem(5);
+
         span {
           color: $blue;
         }
-        &__title{
+
+        &__title {
           font-family: $font-redhat;
           font-size: $size-32;
           font-weight: 200;
           text-transform: uppercase;
+
           strong {
             font-weight: 800;
           }
         }
       }
+
       &-borderS {
         @include borderColorSubtitle;
-          p:nth-of-type(odd){
-            margin :rem(10) 0;
-            font-family: $font-redhat;
-            text-transform: uppercase;
-            font-weight:700;
-            font-size : $size-16
-          }
-          p:nth-of-type(even) {
-            font-family: $font-poppins;
-            margin-bottom:rem(25);
-            font-weight: 300;
-            font-size: $size-13;
-            line-height: normal;
-          }
+
+        p:nth-of-type(odd) {
+          margin: rem(10) 0;
+          font-family: $font-redhat;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: $size-16;
+        }
+
+        p:nth-of-type(even) {
+          font-family: $font-poppins;
+          margin-bottom: rem(25);
+          font-weight: 300;
+          font-size: $size-13;
+          line-height: normal;
         }
       }
     }
+  }
 
-
-  // -----------------MEDIA QUERIES
+  // MEDIA QUERIES
   @media (min-width: 768px) {
     .container {
-  padding: rem(30) rem(35) ;
-}
+      padding: rem(30) rem(35);
+    }
+
     .section1-mentions {
+      margin: rem(80) rem(0) rem(120) rem(0);
       display: flex;
       flex-direction: row;
       justify-content: center;
       gap: rem(20);
+
       &__slider {
         font-size: $size-14;
 
@@ -195,16 +217,20 @@
           width: rem(20);
         }
       }
+
       &__sideleft {
         &-borderT {
           @include borderColorTitle;
           border-color: $blue;
+
           &__title {
             font-size: $size-32;
           }
         }
+
         &-borderS {
           @include borderColorSubtitle;
+
           &__soustitre {
             font-size: $size-16;
           }
@@ -212,85 +238,95 @@
       }
     }
 
-  .section2-mentions {
-  &__sideleft {
-      &-borderS {
-        @include borderColorSubtitle;
-          p:nth-of-type(odd){
-            font-size : $size-19
+    .section2-mentions {
+      &__sideleft {
+        &-borderS {
+          @include borderColorSubtitle;
+
+          p:nth-of-type(odd) {
+            font-size: $size-19;
           }
+
           p:nth-of-type(even) {
             font-size: $size-16;
           }
         }
       }
-  } 
+    }
   }
 
-
-
-  // Media queries
   @media (min-width: 1024px) {
     .container {
-  padding: rem(30) rem(40) ;
-}
+      padding: rem(30) rem(40);
+    }
 
     .section1-mentions {
       gap: rem(40);
+
       &__slider {
         font-size: $size-14;
+
         :nth-child(1) {
           width: rem(210);
         }
+
         :nth-child(3) {
           width: rem(20);
         }
       }
+
       &__sideleft {
         &-borderT {
           @include borderColorTitle;
           border-color: $blue;
+
           &__title {
             font-size: $size-45;
           }
         }
+
         &-borderS {
           @include borderColorSubtitle;
+
           &__soustitre {
             font-size: $size-16;
           }
         }
       }
     }
+
     .section2-mentions {
-  &__sideleft {
-    &-borderT {
-        &__title{
-          font-size: $size-45;
+      &__sideleft {
+        &-borderT {
+          &__title {
+            font-size: $size-45;
+          }
         }
       }
-      }
-  } 
-  
+    }
   }
 
-  // Media queries
   @media (min-width: 1440px) {
-
     .container {
-  padding: rem(30) rem(60) ;
-}
+      padding: rem(30) rem(60);
+    }
+
     .section1-mentions {
+      margin: rem(90) rem(0) rem(170) rem(0);
       gap: rem(40);
+
       &__slider {
         font-size: $size-16;
+
         :nth-child(1) {
           width: rem(280);
         }
+
         :nth-child(3) {
           width: rem(24);
         }
       }
+
       &__sideleft {
         &-borderT {
           @include borderColorTitle;
@@ -300,25 +336,28 @@
             font-size: $size-90;
           }
         }
+
         &-borderS {
           @include borderColorSubtitle;
+
           &__soustitre {
             font-size: $size-16;
           }
         }
       }
     }
-    .section2-mentions {
-    &__sideleft {
-    &-borderT {
-      @include borderColorTitle;
-      border-left: 15px solid $red;
 
-        &__title{
-          font-size: $size-90;
+    .section2-mentions {
+      &__sideleft {
+        &-borderT {
+          @include borderColorTitle;
+          border-left: 15px solid $red;
+
+          &__title {
+            font-size: $size-90;
+          }
         }
       }
-      }
-  } 
+    }
   }
 </style>
