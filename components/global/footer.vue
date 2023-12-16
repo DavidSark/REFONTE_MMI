@@ -25,6 +25,8 @@
 
 <style lang="scss" scoped>
 .footer {
+    padding: rem(25) 0;
+    border-top :2px solid $white-soft;
     &-links {
         font-weight: 300;
         font-family: $font-poppins;
@@ -83,23 +85,23 @@
 @media (min-width: 1440px) {
 .footer {
     &-links {
-        font-size: $size-16;
+        font-size: $size-13;
         margin-bottom:rem(30);      
     }
 
     &-subtitles {
         font-size: $size-26;
         img {
-            width: rem(55);
+            width: rem(45);
             margin-bottom: rem(15);
         }
         :nth-child(3) {
-            font-size: $size-21;
+            font-size: $size-16;
         }
     }
     &-icons { 
         img {
-            width: rem(40);
+            width: rem(30);
         }
     }
 
