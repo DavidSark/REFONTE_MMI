@@ -10,6 +10,7 @@
 
 <template>
 
+
     <div class="container">
         <div class="sectionB">
             <div class="sectionB-sideleft">
@@ -220,7 +221,6 @@
   
 }
 
-
   // MEDIA QUERIES
   @media (min-width: 768px) {
     .sectionB {
@@ -258,7 +258,7 @@
    }
    &-sideright__image {
     img {
-      max-width: 100%;
+      width: rem(1900);
     }
    }
   }
