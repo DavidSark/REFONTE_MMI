@@ -38,6 +38,7 @@ const props = defineProps({
 }
 
 @media (min-width: 768px) {
+
 .equipecard {
     display:grid;
     grid-template-columns: repeat(2, 1fr);
@@ -47,6 +48,11 @@ const props = defineProps({
 }
 
 @media (min-width: 1024px) {
+
+.section1-title {
+    font-size: $size-45;
+}
+
 .equipecard {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
@@ -56,6 +62,9 @@ const props = defineProps({
 
 
 @media (min-width: 1440px) {
+.section1-title {
+    font-size: $size-90;
+}
 .equipecard {
     display:grid;
     
