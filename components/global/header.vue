@@ -7,7 +7,6 @@ const props = defineProps({
   elements: Array
 })
 
-
 onMounted(() => {
   let scrolled = 0;
   let header = document.getElementsByClassName('header')[0];
@@ -20,6 +19,7 @@ onMounted(() => {
     }
   });
 });
+
 </script>
 <template>
   <div class="header ">

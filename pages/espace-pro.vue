@@ -3,15 +3,23 @@
   const { data: espacepro, error } = await useAsyncData('espacepro', () => client.getSingle("espacepro"));
 
   const props = defineProps({
-    title: Array,
+  
   });
 
 </script>
 
 <template>
-
-
     <div class="container">
+
+    <!-- Exemple d'affichage pour les sections avec les bords de couleur -->
+    <div class="">
+      <borderSection :title="espacepro.data.section1[0].titre"
+                       :subtitle="espacepro.data.section1[0].soustitre"
+                       color="green" 
+        />
+        <Button class="sectionB-sideleft__btn" size="small">Déposer une offre</Button>
+    </div>
+
         <div class="sectionB">
             <div class="sectionB-sideleft">
                 <div class="sectionB-sideleft__borderT">
