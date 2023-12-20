@@ -56,8 +56,6 @@
         &__borderT{
             display: flex;
             align-items: flex-end;
-
-            
             gap: rem(5);
           span {
             color: $blue;
@@ -76,6 +74,7 @@
      
 
         &.-red{
+           
             border-color: $red
         }
         &.-green{
@@ -94,6 +93,11 @@
         &__borderS {
         @include borderColorSubtitle;
 
+        strong {
+          font-weight: 700;
+          color :$blue;
+        }
+
         &.-right{
           border-left: none ;
           border-right: 3px solid $white-soft;
@@ -103,12 +107,14 @@
 
         &.-red{
             strong{
-                color: $red
+              font-weight: 700;
+                color: $red;
             }
             }
             &.-green{
             strong{
-                color: $green
+              font-weight: 700;
+                color: $green;
             }
          }
         &-subtitle {
@@ -194,7 +200,21 @@
     &-sideleft {
         &__borderT{
         @include borderColorTitle;
+        
+        &.-right {
+          border-right: 15px solid;
+          border-color: $blue;
+
+          &.-red {
+            border-color : $red
+          }
+          &.-green {
+            border-color : $green
+          }
+        }
         border-left: 15px solid $blue;
+          
+
         &-title {
           font-size: $size-90;
         }
