@@ -6,6 +6,7 @@
    title: Array,
    subtitle: Array,
    color: String,
+   borderPosition: String,
   });
 
   const className = computed(() =>({
@@ -13,8 +14,13 @@
     ' -red': props.color === 'red',
     ' -green': props.color === 'green',
 
-    
+    //Changemetn de côté pour les bords
+    ' -right': props.borderPosition === 'right',
+
   }))
+
+
+
 
 </script>
 
@@ -49,13 +55,26 @@
         }
         &__borderT{
             display: flex;
-        align-items: flex-end;
-        gap: rem(5);
-        span {
-          color: $blue;
-        }
+            align-items: flex-end;
+
+            
+            gap: rem(5);
+          span {
+            color: $blue;
+          }
         @include borderColorTitle;
         border-color: $blue;
+  
+        &.-right{
+          border-left: none ;
+          border-right: 10px solid ;
+          padding: rem(10);
+          justify-content: flex-end;
+          text-align: right;
+        }
+
+     
+
         &.-red{
             border-color: $red
         }
@@ -74,6 +93,14 @@
         }
         &__borderS {
         @include borderColorSubtitle;
+
+        &.-right{
+          border-left: none ;
+          border-right: 3px solid $white-soft;
+          padding: rem(20);
+          text-align: right;
+        }
+
         &.-red{
             strong{
                 color: $red

@@ -4,6 +4,7 @@
 const { client } = usePrismic();
 const { data: home, error } = await useAsyncData('home', () => client.getSingle("homepage"))
 const { data: espacepro } = await useAsyncData('espacepro', () => client.getSingle("espacepro"));
+
 </script>
 
 

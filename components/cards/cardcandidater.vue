@@ -167,7 +167,7 @@
             font-size:$size-55;
             padding: rem(10) rem(0);
             &-span {
-                font-size: $size-75;
+                font-size: $size-55;
                 -webkit-text-stroke-width: 2px;
 
             }
