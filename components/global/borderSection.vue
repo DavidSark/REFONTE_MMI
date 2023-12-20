@@ -45,13 +45,15 @@
     flex-direction: column;
     align-items: center;
     gap: rem(60);
-    margin: rem(60) rem(0) rem(60) rem(0);
+   
     &-sideleft {
         display:flex;
         flex-direction: column;
         &__btn {
+            cursor: pointer;
             margin: 0 rem(20);
-            width: rem(200);
+            margin-bottom: rem(40);
+            width: rem(230);
         }
         &__borderT{
             display: flex;
@@ -137,7 +139,6 @@
   // MEDIA QUERIES
   @media (min-width: 768px) {
     .sectionB {
-    margin: rem(80) rem(0) rem(120) rem(0);
     &-sideleft {
         &__borderT{
         @include borderColorTitle;
@@ -195,7 +196,7 @@
 
   @media (min-width: 1440px) {
     .sectionB {
-        margin: rem(90) rem(0) rem(170) rem(0);
+       
         gap: rem(100);
     &-sideleft {
         &__borderT{
