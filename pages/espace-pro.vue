@@ -52,7 +52,6 @@
 .section3-espacepro {
   display: flex;
   flex-direction: column;
-
   &__sideleft {
     padding: rem(0) rem(20);
     display: flex;
@@ -119,6 +118,7 @@
 @media (min-width: 1024px) {
 
   .section3-espacepro {
+    
    
     display: flex;
     flex-direction: row;
@@ -152,6 +152,12 @@
   }
 }
 @media (min-width: 1440px) {
+
+  .section3-espacepro{
+    padding: rem(30) rem(75);
+
+
+  }
   .section2-espacepro {
     padding: rem(30) rem(75);
     display: flex;
