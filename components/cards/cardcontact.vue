@@ -304,7 +304,7 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
 
     @media (min-width : 1440px) {
         .cardcontact {
-            gap:rem(120);
+            gap:rem(100);
             padding: rem(70) rem(75);
             &-jpo {
                 &__borderT {

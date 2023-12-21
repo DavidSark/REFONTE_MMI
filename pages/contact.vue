@@ -44,6 +44,12 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     <div class="section4-contact">
         <cardcontact></cardcontact>
     </div>
+    <div class="section5-contact">
+        <Formcontact></Formcontact>
+        <img src="/image-contact.webp" alt="">
+
+    </div>
+    <Footer></Footer>
 
 </template>
 
@@ -119,6 +125,14 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
         }
     }
 
+}
+
+.section5-contact {
+    display: flex;
+    flex-direction: column-reverse;;
+    img{
+        width: 100%;
+    }
 }
 
 @media (min-width : 768px) {
