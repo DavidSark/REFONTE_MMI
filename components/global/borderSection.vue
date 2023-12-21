@@ -31,6 +31,7 @@
                 <div class="sectionB-sideleft__borderT" :class="className">
                     <PrismicRichText :field="title" class="sectionB-sideleft__borderT-title"></PrismicRichText>
                 </div>
+                
                 <div class="sectionB-sideleft__borderS" :class="className">
                     <PrismicRichText :field="subtitle" class="sectionB-sideleft__borderS-subtitle"></PrismicRichText>
                 </div>
