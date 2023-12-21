@@ -129,7 +129,8 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
 
 .section5-contact {
     display: flex;
-    flex-direction: column-reverse;;
+    flex-direction: column-reverse;
+    margin-top: rem(80);
     img{
         width: 100%;
     }
@@ -158,6 +159,12 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
                 font-size: $size-13;
             }
         }
+    }
+
+    .section5-contact {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: stretch;
     }
 }
 
