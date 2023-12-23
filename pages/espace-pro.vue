@@ -14,7 +14,7 @@
       <borderSection :title="espacepro.data.section1[0].titre"
                   :subtitle="espacepro.data.section1[0].soustitre"
                      />
-      <Button class="sectionB-sideleft__btn" size="small">Déposer une offre</Button>
+      <Button  class="section-btn" size="small">Déposer une offre</Button>
       </div>
         <img src="/imageep-1.webp" alt="">
     </div>
@@ -27,7 +27,7 @@
                   color="green"
                   borderPosition="right"
                      />
-        <Button class="sectionB-sideleft__btn" size="small">Déposer une offre</Button>
+        <Button  class="section-btn"  size="small">Déposer une offre</Button>
       </div>
     </div>
 
@@ -37,26 +37,26 @@
                   :subtitle="espacepro.data.section3[0].soustitre"
                   color="red"
                      />
-        <Button class="sectionB-sideleft__btn" size="small">Déposer une offre</Button>
+        <Button class="section-btn" size="small">Déposer une offre</Button>
       </div>
       <img src="/section-projet.webp" alt="">
       
     </div>
-     
-
     <Footer></Footer>
 </template>
 
 <style lang="scss">
 
+.section-btn {
+  margin-left: rem(20);
+}
+
 .section3-espacepro {
   display: flex;
   flex-direction: column;
   &__sideleft {
-    padding: rem(0) rem(20);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    padding: rem(30) rem(20);
+
   }
   img {
     width: 100%;
@@ -64,30 +64,22 @@
 }
 
 .section2-espacepro {
+ 
   display: flex;
   flex-direction: column-reverse;
-  &__sideright {
-  padding: rem(0) rem(20);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  }
   img {
     width: 100%;
   }
-
+  &__sideright {
+    padding: rem(30) rem(20);
+  }
 }
 
 .section1-espacepro {
-  padding: rem(0) rem(20);
-
-  &__sideleft {
-    display: flex;
-    flex-direction: column;
-  }
-  padding: rem(30) rem(20);
   display: flex;
-  flex-direction: column;
+    flex-direction: column;
+    gap:rem(30);
+  padding: rem(30) rem(20);
   img {
     width: rem(230);
     margin:auto
@@ -101,47 +93,53 @@
       width: rem(300)
     }
   }
-}
-
-.section2-espacepro {
-  &__sideright {
-    padding: rem(0) rem(40);
+  .section2-espacepro {
+    &__sideright {
+      padding: rem(60) rem(40);
+    }
+  }
+  .section3-espacepro {
+    &__sideleft {
+      padding: rem(60) rem(40);
+    }
   }
 }
 
-.section3-espacepro {
-  &__sideleft {
-    padding:rem(60) rem(0) rem(0) rem(40);
-  }
-}
 
 @media (min-width: 1024px) {
 
   .section3-espacepro {
-    
-   
+    padding: rem(10) rem(40) rem(100) rem(40);
     display: flex;
+    gap:rem(40);
     flex-direction: row;
-    
+    &__sideleft {
+      padding:rem(0);
+      width:50%;
+
+    }
     img {
-      width: rem(470);
+      width: 50%;
       
     }
   }
 
   .section2-espacepro {
-  
+    padding: rem(100) rem(40);
     display: flex;
     flex-direction: row;
     align-items: center;
     gap:rem(20);
+    &__sideright {
+      padding:rem(0);
+      width: 50%;
+    }
     img {
-    width:rem(400);
-  
+    width:50%;
     }
   }
   .section1-espacepro {
-    padding: rem(30) rem(40);
+    padding: rem(100) rem(40) rem(20) rem(40);
     display: flex;
     flex-direction: row;
     gap: rem(50);
@@ -155,21 +153,30 @@
 
   .section3-espacepro{
     padding: rem(30) rem(75);
+    margin: rem(160) rem(0);
+    &__sideleft {
+      width:50%;
+    }
+    img {
+      width:50%;
+    }
 
 
   }
   .section2-espacepro {
-    padding: rem(30) rem(75);
-    display: flex;
-    align-items: center;
-
-    gap:rem(50);
+    padding: rem(0) rem(75);
+    margin: rem(1) rem(0);
+    gap:rem(30);
+    &__sideleft {
+      width : 50%;
+    }
     img {
-    width:rem(600)
+    width:50%;
     }
   }
 
   .section1-espacepro {
+    margin: rem(130) rem(0);
     padding: rem(30) rem(75);
     gap: rem(140);
  

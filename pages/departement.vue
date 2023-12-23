@@ -50,10 +50,10 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
                   :subtitle="departement.data.section3[0].subtitle"
                   color="red" borderPosition="right"
                      />
-  
         </div>
         <img src="/image-dep-bureau.webp" alt="">
     </div>
+    <Footer></Footer>
 
 
 </template>
@@ -63,6 +63,7 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
 .section3-departement {
     display: flex;
     flex-direction: column;
+
     &__sideright {
         padding:rem(30) rem(20);
     }
@@ -147,10 +148,11 @@ img {
 
     .section3-departement {
         padding:rem(30) rem(40);
-        display:flex ;
- 
+        
+    &__sideright {
+        padding:rem(40) rem(0);
     }
-
+    }
 
     .section1-departement {
         padding:rem(30) rem(40);
@@ -177,10 +179,26 @@ img {
             font-size: $size-45;
         }
     }
+    .section3-departement {
+        &__sideright {
+            width: 50%;
+        }
+        img {
+            width: 50%;
+        }
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+    
 }
 
 @media (min-width: 1440px) {
 
+    .section3-departement {
+          padding:rem(0) rem(75) rem(100) rem(75);
+
+    }
     .section1-departement{
         padding:rem(120) rem(75);
         display: grid;
@@ -190,7 +208,7 @@ img {
     }
 
     .section2-departement {
-        padding:rem(110) rem(75);
+        padding:rem(80) rem(75);
         &__title {
             font-size: $size-90;
         }
@@ -199,13 +217,20 @@ img {
             gap: rem(100);
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            align-items: center;
            h6 {
             font-size:$size-16;
            }
            p {
             font-size: $size-16;
            }
+           &-2 {
+            img {
+                width: 470px;
+            }
+           }
         }
+
     }
 }
 </style>

@@ -77,7 +77,7 @@ const props = defineProps({
             font-size: $size-14;
         }
         &__image1{
-            width: rem(200);
+            width: rem(220);
         }
         &__image2 {
             width:rem(29);

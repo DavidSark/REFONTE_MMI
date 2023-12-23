@@ -12,8 +12,8 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="container">
-        <PrismicRichText class="section1-title" :field="equipe.data.section1[0].titre"></PrismicRichText>
+    <div class="section1-equipe">
+        <PrismicRichText class="section1-equipe__title" :field="equipe.data.section1[0].titre"></PrismicRichText>
         <div class="equipecard">
             <equipecard :members="equipe.data.section2"></equipecard>
         </div>
@@ -26,7 +26,9 @@ const props = defineProps({
 </template>
 
 <style lang="scss">
-.section1-title {
+.section1-equipe{
+    padding:rem(30) rem(20);
+    &__title {
     font-family: $font-redhat;
     margin:rem(40) rem(0);
     font-size: $size-32;
@@ -37,7 +39,12 @@ const props = defineProps({
     }
 }
 
+}
 @media (min-width: 768px) {
+
+.section1-equipe {
+    padding:rem(60) rem(40);
+}
 
 .equipecard {
     display:grid;
@@ -49,8 +56,11 @@ const props = defineProps({
 
 @media (min-width: 1024px) {
 
-.section1-title {
+.section1-equipe {
+    padding:rem(60) rem(40);
+    &__title {
     font-size: $size-45;
+}
 }
 
 .equipecard {
@@ -62,8 +72,11 @@ const props = defineProps({
 
 
 @media (min-width: 1440px) {
-.section1-title {
+.section1-equipe {
+    padding:rem(100) rem(75);
+    &__title {
     font-size: $size-90;
+}
 }
 .equipecard {
     display:grid;
