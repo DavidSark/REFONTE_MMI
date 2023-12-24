@@ -14,6 +14,17 @@ const { data: design, error } = await useAsyncData('design', () => client.getSin
       </div>
         <img src="/image-design-1.webp" alt="">
     </div>
+
+    <div class="section2-design">
+        <Cardparcours :image="design.data.card[0].image.url"
+        :title="design.data.card[0].title"/>
+        <Cardparcours :image="design.data.card[0].image.url"
+        :title="design.data.card[0].title"/>
+        <Cardparcours :image="design.data.card[0].image.url"
+        :title="design.data.card[0].title"/>
+        
+        
+    </div>
 </template>
 
 <style lang="scss">
@@ -30,6 +41,13 @@ const { data: design, error } = await useAsyncData('design', () => client.getSin
     }
 }
 
+.section2-design {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    padding:rem(30) rem(20);
+}
+
 
 @media (min-width : 768px) {
     .section1-design {
@@ -37,6 +55,11 @@ const { data: design, error } = await useAsyncData('design', () => client.getSin
         img{
             width: rem(400);
         }
+    }
+
+    .section2-design{
+        padding:rem(30) rem(40);
+        flex-direction: row;
     }
 }
 
@@ -51,6 +74,7 @@ const { data: design, error } = await useAsyncData('design', () => client.getSin
             width: 40%;
         }
     }
+
 }
 
 
@@ -64,8 +88,11 @@ const { data: design, error } = await useAsyncData('design', () => client.getSin
         img{
             width: rem(470);
         }
-  
-     
+    }
+    .section2-design {
+        padding:rem(50) rem(75);
+        gap:rem(20)
+
     }
 }
 
