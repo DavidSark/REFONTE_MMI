@@ -18,8 +18,7 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
 .cardquote {
     background-color: $black;
     padding:rem(30) rem(20);
-    // width: 100%;
-    // height: 100%;
+
     &-content {
     
     &__title {

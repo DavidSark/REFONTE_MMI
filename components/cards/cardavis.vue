@@ -41,9 +41,7 @@ const className = computed(() =>({
   
    
     </div>
-   
-    <img :src="image">
-   
+    <img :src="image" :alt="alt">
    </div>
 
 </template>
@@ -65,6 +63,7 @@ const className = computed(() =>({
         flex-direction: column;
         gap: rem(10);
         padding:rem(0) rem(20);
+        
  
 
         &-border{

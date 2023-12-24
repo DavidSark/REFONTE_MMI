@@ -11,14 +11,186 @@ const { data: international, error } = await useAsyncData('international', () =>
                      />
     <img src="/image-international-1.webp" alt="">
  </div>
+ <div class="section2-international">
+        <img src="/image8.webp" alt="">
+        <img src="/image10.webp" alt="">
+    </div>
+
+    <div class="section3-international">
+        <div class="section3-international__sideleft">
+        <borderSection :title="international.data.section3[0].title"
+                    :subtitle="international.data.section3[0].subtitle"
+                    color="red"
+                        />
+        </div>
+        <div class="section3-international__sideright">
+            <div class="section3-international__sideright-title">
+            <div class="section3-international__sideright-border"></div>
+            <p><span>Vanier </span> college</p>
+            </div>
+            <img src="/image-international-2.webp" alt="">
+        </div>
+    </div>
+
+    <div class="section4-international">
+    <div class="section4-international__sideleft">
+    <borderSection :title="international.data.section4[0].title"
+                  :subtitle="international.data.section4[0].subtitle"
+                  borderPosition="right"
+                     />
+    </div>
+    <div class="section4-international__sideright">
+        <div class="section4-international__sideright-title">
+        <div class="section4-international__sideright-border"></div>
+        <p><span>Festival </span> offf</p>
+        </div>
+        <img src="/image-international-3.webp" alt="">
+    </div>
+    </div>
+
+    <div class="section5-international">
+        <div class="section5-international__cards"> 
+        <div class="section5-international__cards-sideleft">
+        <PrismicRichText class="section5-international__title" :field="international.data.section5[0].title"></PrismicRichText>
+        
+        <div class="section5-international__cards-sideleft__c">
+        <cardavis 
+        :image="international.data.testimonial[0].image.url"
+        :commentaire="international.data.testimonial[0].commentaire"
+        :name="international.data.testimonial[0].name"
+        :job="international.data.testimonial[0].job"
+        :promo="international.data.testimonial[0].promo"
+       />
+              
+       <cardavis
+        :image="international.data.testimonial[1].image.url"
+        :commentaire="international.data.testimonial[1].commentaire"
+        :name="international.data.testimonial[1].name"
+        :job="international.data.testimonial[1].job"
+        :promo="international.data.testimonial[1].promo"
+       />
+        </div>
+        </div>
+        <div class="section5-international__cards-sideright">
+            <Cardquote></Cardquote>
+
+        </div>
+    </div>
+    </div>
+
+
+
 </template>
 <style lang="scss">
 .section1-international {
     display: flex;
     flex-direction: column;
-    padding:rem(30) rem(20);
+    padding:rem(40) rem(20);
     gap:rem(40);
     align-items: center;
+}
+
+.section2-international {
+    display: flex;
+    flex-direction: column;
+    gap:rem(6);
+    overflow: hidden;
+    margin:rem(40) rem(0);
+}
+
+.section3-international {
+    display: flex;
+    flex-direction: column;
+    &__sideleft {
+        padding:rem(0) rem(20);
+    }
+    &__sideright {
+        display: flex;
+        flex-direction: column;
+        gap:rem(10);
+        padding:rem(30) rem(10);
+        &-border {
+            width: rem(10);
+            height: rem(15);
+            background-color: $black;
+        }
+        &-title {
+            display: flex;
+            align-items: center;
+            gap:rem(5);
+            text-transform: uppercase;
+            font-family: $font-poppins;
+            font-size: $size-13;
+            font-weight: 300;
+            span {
+                font-weight:700;
+            }
+        }
+    }
+}
+
+.section4-international {
+    display: flex;
+    flex-direction: column;
+    &__sideleft {
+        padding:rem(0) rem(20);
+    }
+    &__sideright {
+        display: flex;
+        flex-direction: column;
+        gap:rem(10);
+        padding:rem(30) rem(10);
+        &-border {
+            width: rem(10);
+            height: rem(15);
+            background-color: $black;
+        }
+        &-title {
+            display: flex;
+            align-items: center;
+            gap:rem(5);
+            text-transform: uppercase;
+            font-family: $font-poppins;
+            font-size: $size-13;
+            font-weight: 300;
+            span {
+                font-weight:700;
+            } 
+        }
+    }
+}
+
+.section5-international {
+   
+   &__title {
+   font-family: $font-redhat;
+   margin:rem(40) rem(0);
+   font-size: $size-32;
+   font-weight: 100;
+   text-transform: uppercase;
+   border-bottom: 2px solid $white-soft ;
+   display: inline-block;
+   letter-spacing: -2.34px;
+   padding-bottom: rem(20);
+   strong {
+   font-weight: 800;
+   }
+   }
+   &__cards {
+       &-sideleft {
+           padding:rem(30) rem(20);
+           &__c {
+               display: flex;
+               flex-direction: column;
+               gap: rem(60);
+           }
+     
+       }
+
+  
+       
+   }
+
 }
 
 @media (min-width : 768px) {
@@ -30,12 +202,99 @@ const { data: international, error } = await useAsyncData('international', () =>
             width: 40%;
         }
     }
+
+    .section2-international {
+        display: flex ;
+        flex-direction: row;
+        img {
+            width: 50%;
+        }
+    }
+
+    .section3-international {
+        gap:rem(40);
+        padding: rem(30) rem(40);
+        &__sideleft{
+            padding: rem(0);
+        }
+        &__sideright {
+            padding: rem(0);
+        }
+    }
+
+    .section4-international {
+        gap:rem(40);
+        padding: rem(30) rem(40);
+        &__sideleft{
+            padding: rem(0);
+        }
+        &__sideright {
+            padding: rem(0);
+        }
+    }
+
+    .section5-international {
+        margin-top:rem(50);
+      &__cards {
+          &-sideleft {
+              padding:rem(0) rem(40) rem(40) rem(40) ;
+          }
+      }
+  }
 }
+
+@media (min-width:1000px) {
+    .section5-international {
+        margin-top:rem(100);
+        &__title {
+        font-size: $size-45;
+        }
+        &__cards{
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            &-sideleft{
+                width:50%;
+            }
+            &-sideright {
+                background-color: $black;
+                flex:1;
+                width:40%;
+        
+         
+            }
+        }
+    }
+
+}
+
 
 @media(min-width : 1024px) {
     .section1-international {
         img {
             width: 45%;
+        }
+    }
+    .section3-international {
+        flex-direction: row;
+        align-items: center;
+        &__sideleft{
+            width: 60%;
+        }
+        &__sideright {
+            width: 40%;
+        }
+    }
+
+    .section4-international {
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: rem(70) rem(40);
+        &__sideleft{
+            width: 60%;
+        }
+        &__sideright {
+            width: 40%;
         }
     }
 }
@@ -47,7 +306,50 @@ const { data: international, error } = await useAsyncData('international', () =>
         img {
             width:45%;
     }
+    }
+    .section3-international {
+        padding:rem(100) rem(75);
+        gap:rem(100);
+        &__sideleft{
+            width: 60%;
+        }
+        &__sideright {
+            &-title {
+                font-size:$size-19
+            }
+            width: 50%;
+        }
+    }
+    .section4-international {
+        padding:rem(100) rem(75);
+        gap:rem(100);
+        &__sideleft{
+            width: 50%;
+        }
+        &__sideright {
+            &-title {
+                font-size:$size-19
+            }
+            width: 50%;
+        }
+    }
 
+    .section5-international {
+        margin-top:rem(150);
+   
+        &__cards {
+        
+            &-sideleft {
+                padding:rem(0) rem(75) rem(75) rem(75);
+                &__c {
+                gap: rem(80);
+            }
+            }
+        }
+    
+        &__title {
+    font-size: $size-90;
+    }
     }
 }
 </style>

@@ -53,8 +53,8 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
         </div>
         <img src="/image-dep-bureau.webp" alt="">
     </div>
+
     <div class="section4-departement">
-        
         <div class="section4-departement__cards"> 
         <div class="section4-departement__cards-sideleft">
         <PrismicRichText  class="section4-departement__title" :field="departement.data.section4[0].title"></PrismicRichText>
@@ -210,10 +210,10 @@ img {
 @media (min-width : 768px) {
 
     .section4-departement {
-      
+        margin-top:rem(50);
         &__cards {
             &-sideleft {
-                padding:rem(30) rem(40);
+                padding:rem(0) rem(40) rem(40) rem(40) ;
 
             }
         }
@@ -248,19 +248,22 @@ img {
 
 @media (min-width:1000px) {
     .section4-departement {
+        margin-top:rem(100);
         &__title {
         font-size: $size-45;
         }
         &__cards{
             display: flex;
             flex-direction: row;
-            align-items: flex-end;
+            align-items: stretch;
             &-sideleft{
                 width:50%;
             }
             &-sideright {
-              
-                width:40%
+                background-color: $black;
+                flex:1;
+                width:40%;
+        
          
             }
         }
@@ -294,9 +297,10 @@ img {
 @media (min-width: 1440px) {
 
     .section4-departement {
+        margin-top:rem(150);
         &__cards {
             &-sideleft {
-                padding:rem(100) rem(75);
+                padding:rem(0) rem(75) rem(75) rem(75);
                 &__c {
                 gap: rem(80);
             }
