@@ -64,7 +64,7 @@ const className = computed(() =>({
         display: flex;
         flex-direction: column;
         gap: rem(10);
-        padding:rem(0) rem(30);
+        padding:rem(0) rem(20);
  
 
         &-border{

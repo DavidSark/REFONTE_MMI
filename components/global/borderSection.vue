@@ -66,7 +66,7 @@
   
         &.-right{
           border-left: none ;
-          border-right: 10px solid ;
+          border-right: 10px solid $blue;
           padding: rem(10);
           justify-content: flex-end;
           text-align: right;

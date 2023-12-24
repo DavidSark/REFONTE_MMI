@@ -7,7 +7,9 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
 
 <template>
 <div class="cardquote">
-<p>sdffsd</p>
+    <div class="cardquote-content__title">
+    <PrismicRichText  class="cardquote-content__title" :field="departement.data.cardquote[0].title"></PrismicRichText>
+    </div>
 </div>
 </template>
 
@@ -15,11 +17,24 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
 
 .cardquote {
     background-color: $black;
-    width: 100%;
-    height: 100%;
-    p {
-        color:white;
+    padding:rem(30) rem(20);
+    // width: 100%;
+    // height: 100%;
+    &-content {
+    
+    &__title {
+    font-family: $font-redhat;
+    margin:rem(0) rem(0);
+    font-size: $size-26;
+    font-weight: 100;
+    text-transform: uppercase;
+    color:white;
+
+    strong {
+        font-weight: 700;
     }
+    }
+    }   
 }
 
 </style>

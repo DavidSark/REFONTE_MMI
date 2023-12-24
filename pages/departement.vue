@@ -254,12 +254,14 @@ img {
         &__cards{
             display: flex;
             flex-direction: row;
+            align-items: flex-end;
             &-sideleft{
-                width:60%
+                width:50%;
             }
             &-sideright {
-               
-                width: 40%;
+              
+                width:40%
+         
             }
         }
     }
