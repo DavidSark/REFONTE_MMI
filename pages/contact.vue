@@ -16,7 +16,9 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
                      />
         <Button class="sectionB-sideleft__btn" size="small">En savoir plus</Button>
         </div>
+        <div class="section1-contact__card">
         <Cardgooglemap></Cardgooglemap>
+        </div>
     </div>
     <div class="section2-contact">
         <img src="/image9.webp" alt="">
@@ -132,7 +134,7 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     .section1-contact {
         padding:rem(120) rem(75);
         display: grid;
-        grid-template-columns: repeat(1fr,1fr);
+        grid-template-columns: 1fr 1fr ;
         align-items: center;
         gap: rem(150);
         

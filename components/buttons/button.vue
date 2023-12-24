@@ -37,6 +37,7 @@ button{
     border: rem(2) solid $black;
     border-radius: rem(30);
     padding: rem(12) rem(25);
+    margin-left:rem(20);
     text-align: center;
     text-transform: uppercase;
     font-family: $font-poppins;
