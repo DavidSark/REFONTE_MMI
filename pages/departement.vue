@@ -297,7 +297,7 @@ img {
 @media (min-width: 1440px) {
 
     .section4-departement {
-        margin-top:rem(150);
+        margin-top:rem(100);
         &__cards {
             &-sideleft {
                 padding:rem(0) rem(75) rem(75) rem(75);

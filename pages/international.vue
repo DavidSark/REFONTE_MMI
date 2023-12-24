@@ -321,7 +321,7 @@ const { data: international, error } = await useAsyncData('international', () =>
         }
     }
     .section4-international {
-        padding:rem(100) rem(75);
+        padding:rem(90) rem(75);
         gap:rem(100);
         &__sideleft{
             width: 50%;
@@ -335,7 +335,7 @@ const { data: international, error } = await useAsyncData('international', () =>
     }
 
     .section5-international {
-        margin-top:rem(150);
+        margin-top:rem(120);
    
         &__cards {
         
