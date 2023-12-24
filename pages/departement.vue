@@ -53,12 +53,75 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
         </div>
         <img src="/image-dep-bureau.webp" alt="">
     </div>
+    <div class="section4-departement">
+        
+        <div class="section4-departement__cards"> 
+        <div class="section4-departement__cards-sideleft">
+        <PrismicRichText  class="section4-departement__title" :field="departement.data.section4[0].title"></PrismicRichText>
+        
+        <div class="section4-departement__cards-sideleft__c">
+        <cardavis 
+        :image="departement.data.testimonial[0].image.url"
+        :commentaire="departement.data.testimonial[0].commentaire"
+        :name="departement.data.testimonial[0].name"
+        :job="departement.data.testimonial[0].job"
+        :promo="departement.data.testimonial[0].promo"
+       />
+              
+       <cardavis
+        :image="departement.data.testimonial[1].image.url"
+        :commentaire="departement.data.testimonial[1].commentaire"
+        :name="departement.data.testimonial[1].name"
+        :job="departement.data.testimonial[1].job"
+        :promo="departement.data.testimonial[1].promo"
+       />
+        </div>
+        </div>
+        <div class="section4-departement__cards-sideright">
+            <Cardquote></Cardquote>
+
+        </div>
+    </div>
+    </div>
     <Footer></Footer>
 
 
 </template>
 
 <style lang="scss">
+
+.section4-departement {
+   
+    &__title {
+    font-family: $font-redhat;
+    margin:rem(40) rem(0);
+    font-size: $size-32;
+    font-weight: 100;
+    text-transform: uppercase;
+    border-bottom: 2px solid $white-soft ;
+    display: inline-block;
+    letter-spacing: -2.34px;
+    padding-bottom: rem(20);
+    strong {
+    font-weight: 800;
+    }
+    }
+    &__cards {
+        &-sideleft {
+            padding:rem(30) rem(20);
+            &__c {
+                display: flex;
+                flex-direction: column;
+                gap: rem(60);
+            }
+      
+        }
+
+   
+        
+    }
+
+}
 
 .section3-departement {
     display: flex;
@@ -122,8 +185,8 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
     }
    
     &__title {
-        
-        font-family: $font-redhat;
+    letter-spacing: -2.34px;
+    font-family: $font-redhat;
     margin:rem(40) rem(0);
     font-size: $size-32;
     font-weight: 100;
@@ -145,6 +208,16 @@ img {
 }
 
 @media (min-width : 768px) {
+
+    .section4-departement {
+      
+        &__cards {
+            &-sideleft {
+                padding:rem(30) rem(40);
+
+            }
+        }
+    }
 
     .section3-departement {
         padding:rem(30) rem(40);
@@ -173,7 +246,28 @@ img {
     }
 }
 
+@media (min-width:1000px) {
+    .section4-departement {
+        &__title {
+        font-size: $size-45;
+        }
+        &__cards{
+            display: flex;
+            flex-direction: row;
+            &-sideleft{
+                width:60%
+            }
+            &-sideright {
+               
+                width: 40%;
+            }
+        }
+    }
+
+}
+
 @media (min-width: 1024px ) {
+
     .section2-departement{
         &__title {
             font-size: $size-45;
@@ -193,10 +287,29 @@ img {
     
 }
 
+
+
 @media (min-width: 1440px) {
 
+    .section4-departement {
+        &__cards {
+            &-sideleft {
+                padding:rem(100) rem(75);
+                &__c {
+                gap: rem(80);
+            }
+            }
+        }
+    
+        &__title {
+    font-size: $size-90;
+    }
+    }
+
+
     .section3-departement {
-          padding:rem(0) rem(75) rem(100) rem(75);
+          padding:rem(70) rem(75) rem(100) rem(75);
+          gap:rem(30)
 
     }
     .section1-departement{
@@ -219,14 +332,14 @@ img {
             grid-template-columns: repeat(3, 1fr);
             align-items: center;
            h6 {
-            font-size:$size-16;
+            font-size:$size-20;
            }
            p {
             font-size: $size-16;
            }
            &-2 {
             img {
-                width: 470px;
+                width: 450px;
             }
            }
         }

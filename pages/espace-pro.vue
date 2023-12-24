@@ -54,9 +54,9 @@
 .section3-espacepro {
   display: flex;
   flex-direction: column;
+
   &__sideleft {
     padding: rem(30) rem(20);
-
   }
   img {
     width: 100%;
@@ -67,6 +67,7 @@
  
   display: flex;
   flex-direction: column-reverse;
+  align-items: flex-end;
   img {
     width: 100%;
   }
@@ -82,7 +83,7 @@
   padding: rem(30) rem(20);
   img {
     width: rem(230);
-    margin:auto
+    margin:auto;
   }
 }
 
@@ -94,6 +95,7 @@
     }
   }
   .section2-espacepro {
+
     &__sideright {
       padding: rem(60) rem(40);
     }
@@ -153,7 +155,7 @@
 
   .section3-espacepro{
     padding: rem(30) rem(75);
-    margin: rem(160) rem(0);
+    margin: rem(190) rem(0);
     &__sideleft {
       width:50%;
     }

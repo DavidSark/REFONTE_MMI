@@ -2,8 +2,7 @@
 const { client } = usePrismic();
 const { data: contact, error } = await useAsyncData('contact', () => client.getSingle("contact"));
 
-  const props = defineProps({
-  
+  const props = defineProps({  
 });
 
 

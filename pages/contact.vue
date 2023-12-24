@@ -112,7 +112,7 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
 
     .section5-contact {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
         align-items: stretch;
     }
 }
@@ -132,7 +132,7 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     .section1-contact {
         padding:rem(120) rem(75);
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1fr,1fr);
         align-items: center;
         gap: rem(150);
         

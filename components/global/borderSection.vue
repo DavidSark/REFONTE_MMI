@@ -20,8 +20,6 @@
   }))
 
 
-
-
 </script>
 
 <template>
@@ -88,6 +86,7 @@
           font-size: $size-32;
           font-weight: 100;
           text-transform: uppercase;
+          letter-spacing: -2.34px;
           strong {
             font-weight: 800;
           }
