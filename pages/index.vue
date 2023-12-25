@@ -75,7 +75,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
     }
 
     .section1-index{
-      padding: rem(30) rem(40);
+      padding: rem(90) rem(40);
     &__tagline{
       font-size: $size-32;
     }
@@ -94,7 +94,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
       display: block;
     }
     .section1-index{
-      padding: rem(30) rem(40);
+      padding: rem(130) rem(40);
     &__tagline{
       font-size: 4vw;
  
@@ -108,7 +108,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
     .section1-index{
       padding: rem(170) rem(75);
     &__tagline{
-      max-width: 1400px;
+      max-width: 1450px;
     }
    }
   }
