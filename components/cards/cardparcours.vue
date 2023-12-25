@@ -52,6 +52,9 @@ font-size: $size-13;
   transform: translate(-50%, -50%);
   background-color: $white; 
   padding: rem(15) rem(30);
+  text-align: center;
+  line-height: normal;
+  white-space: nowrap;
 }
 
 @media (min-width : 1024px ) {
@@ -65,6 +68,9 @@ font-size: $size-16;
   transform: translate(-50%, -50%);
   background-color: $white; 
   padding: rem(15) rem(30);
+  white-space: nowrap;
+  line-height: normal;
+  text-align: center;
 }
 
 

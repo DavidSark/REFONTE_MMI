@@ -18,10 +18,10 @@ const { data: communication, error } = await useAsyncData('communication', () =>
     <div class="section2-communication">
         <Cardparcours :image="communication.data.card[0].image.url"
         :title="communication.data.card[0].title"/>
-        <Cardparcours :image="communication.data.card[0].image.url"
-        :title="communication.data.card[0].title"/>
-        <Cardparcours :image="communication.data.card[0].image.url"
-        :title="communication.data.card[0].title"/>
+        <Cardparcours :image="communication.data.card[1].image.url"
+        :title="communication.data.card[1].title"/>
+        <Cardparcours :image="communication.data.card[2].image.url"
+        :title="communication.data.card[2].title"/>
     </div>
 
     <!-- <div class="section4-communication">
