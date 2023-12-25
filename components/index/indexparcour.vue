@@ -30,21 +30,23 @@
 .section-indexparcours{
     font-family: $font-poppins;
     font-weight: 700;
-    font-size: $size-24;
+    font-size: 7.5vw;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    gap: rem(10);
+    gap: 2.5vw;
+    letter-spacing: rem(-3);
     img{
-        margin:rem(0) rem(0) rem(4) rem(5)
+        margin:0 0 1vw 1.4vw;
+        width: 2.5vw;
     }
    &__design{
     display: flex;
     align-items: flex-end;
     div{
-        margin-bottom: rem(4);
-        width: rem(5);
-        height: rem(5);
+        margin-bottom: 0.95vw;
+        width: 1vw;
+        height: 1vw;
         background-color: $blue;
         border-radius: rem(10);
     }
@@ -53,9 +55,9 @@
     display: flex;
     align-items: flex-end;
     div{
-        margin-bottom: rem(4);
-        width: rem(5);
-        height: rem(5);
+        margin-bottom: 0.95vw;
+        width: 1vw;
+        height: 1vw;
         background-color: $red;
         border-radius: rem(10);
     }
@@ -64,12 +66,18 @@
     display: flex;
     align-items: flex-end;
     div{
-        margin-bottom: rem(4);
-        width: rem(5);
-        height: rem(5);
+        margin-bottom: 0.95vw;
+        width: 1vw;
+        height: 1vw;
         background-color: $green;
         border-radius: rem(10);
     }
    }
+}
+
+@media screen and (min-width:1440px) {
+    .section-indexparcours{
+        font-size: rem(133);
+    }
 }
 </style>
