@@ -16,12 +16,12 @@ const { data: design, error } = await useAsyncData('design', () => client.getSin
     </div>
 
     <div class="section2-design">
+        <Cardparcours :image="design.data.card[1].image.url"
+        :title="design.data.card[1].title"/>
         <Cardparcours :image="design.data.card[0].image.url"
         :title="design.data.card[0].title"/>
-        <Cardparcours :image="design.data.card[0].image.url"
-        :title="design.data.card[0].title"/>
-        <Cardparcours :image="design.data.card[0].image.url"
-        :title="design.data.card[0].title"/>
+        <Cardparcours :image="design.data.card[2].image.url"
+        :title="design.data.card[2].title"/>
     </div>
 
     <!-- <div class="section4-design">
