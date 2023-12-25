@@ -29,12 +29,16 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
         <div class="section1-index__tagline">
          <PrismicRichText :field="home.data.index_tagline"></PrismicRichText>
         </div>
+      </div>
 
-        <div class="section2-index__parcours">
+      <div class="section2-index">
+        <img src="/image-video-dep.webp" alt="">
+      </div>
+
+      <div class="section3-index">  
+        <div class="section3-index__parcours">
           <indexparcour/>
         </div>
-
-
       </div>
 
    <Footer></Footer>
@@ -51,11 +55,8 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
   &-heroC{
     display: none;
   }
-
   .section1-index{
     padding: rem(50) rem(20);
-   
-    
     &__tagline{
       font-family: $font-poppins;
       font-size: $size-24;
@@ -63,6 +64,17 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
       strong{
        font-weight: 700;
       }
+    }
+  }
+
+  .section2-index{
+    img{
+      width: 100%;
+    }
+  }
+  .section3-index{
+    &__parcours{
+      padding: rem(50) rem(20);
     }
   }
 
