@@ -29,7 +29,13 @@ const props = defineProps({
 
 .image {
   display: block;
-  width: 100%;
+        width: 100%;
+        filter: grayscale(100%);
+        transition: filter 0.2s ease-in-out;
+      
+      &:hover {
+        filter: grayscale(0%);
+      }
  
 }
 
