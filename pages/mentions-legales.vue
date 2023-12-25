@@ -8,13 +8,9 @@
   <div class="container">
   <div class="section1-mentions">
     <div class="section1-mentions__sideleft">
-      <div class="section1-mentions__sideleft-borderT">
-        <PrismicRichText :field="mentions.data.section1[0].titre" class="section1-mentions__sideleft-borderT__title"></PrismicRichText>
-        <!-- <div></div> -->
-      </div>
-      <div class="section1-mentions__sideleft-borderS">
-        <PrismicRichText :field="mentions.data.section1[0].soustitre" class="section1-mentions__sideleft-borderS__soustitre"></PrismicRichText>
-      </div>
+      <borderSection :title="mentions.data.section1[0].titre"
+                  :subtitle="mentions.data.section1[0].soustitre"
+                     />
     </div>
     <div class="section1-mentions__slider">
       <img src="/luka-jevremovic.webp" alt="">
@@ -102,47 +98,6 @@
         width: rem(196);
       }
     }
-
-    &__sideleft {
-      &-borderT {
-        display: flex;
-        align-items: flex-end;
-        gap: rem(5);
-
-        span {
-          color: $blue;
-        }
-
-        @include borderColorTitle;
-        border-color: $blue;
-
-        &__title {
-          font-family: $font-redhat;
-          font-size: $size-32;
-          font-weight: 100;
-          text-transform: uppercase;
-          strong {
-            font-weight: 800;
-          }
-        }
-      }
-
-      &-borderS {
-        @include borderColorSubtitle;
-
-        &__soustitre {
-          font-size: $size-13;
-          font-family: $font-poppins;
-          font-weight: 300;
-          line-height: normal;
-
-          strong {
-            font-weight: 700;
-            color: $blue;
-          }
-        }
-      }
-    }
   }
 
   // SECTION 2 - MENTIONS LEGALES
@@ -224,25 +179,6 @@
           width: rem(20);
         }
       }
-
-      &__sideleft {
-        &-borderT {
-          @include borderColorTitle;
-          border-color: $blue;
-
-          &__title {
-            font-size: $size-32;
-          }
-        }
-
-        &-borderS {
-          @include borderColorSubtitle;
-
-          &__soustitre {
-            font-size: $size-16;
-          }
-        }
-      }
     }
 
     .section2-mentions {
@@ -281,25 +217,6 @@
           width: rem(20);
         }
       }
-
-      &__sideleft {
-        &-borderT {
-          @include borderColorTitle;
-          border-color: $blue;
-
-          &__title {
-            font-size: $size-45;
-          }
-        }
-
-        &-borderS {
-          @include borderColorSubtitle;
-
-          &__soustitre {
-            font-size: $size-16;
-          }
-        }
-      }
     }
 
     .section2-mentions {
@@ -331,25 +248,6 @@
 
         :nth-child(3) {
           width: rem(24);
-        }
-      }
-
-      &__sideleft {
-        &-borderT {
-          @include borderColorTitle;
-          border-left: 15px solid $blue;
-
-          &__title {
-            font-size: $size-90;
-          }
-        }
-
-        &-borderS {
-          @include borderColorSubtitle;
-
-          &__soustitre {
-            font-size: $size-16;
-          }
         }
       }
     }
