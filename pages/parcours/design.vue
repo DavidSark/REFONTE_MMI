@@ -5,47 +5,47 @@ const { data: design, error } = await useAsyncData('design', () => client.getSin
 
 <template>
     <div class="section1-design">
-      <div class="section1-design__sideleft">
-      <borderSection :title="design.data.section1[0].title"
-                  :subtitle="design.data.section1[0].subtitle"
-                  color="red"
-                     />
-      <Button class="section1-design__sideleft-btn" size="small">Candidater</Button>
-      </div>
+        <div class="section1-design__sideleft">
+            <borderSection :title="design.data.section1[0].title" :subtitle="design.data.section1[0].subtitle"
+                color="red" />
+            <Button class="section1-design__sideleft-btn" size="small">Candidater</Button>
+        </div>
         <img src="/image-design-1.webp" alt="">
     </div>
 
     <div class="section2-design">
-        <Cardparcours :image="design.data.card[1].image.url"
-        :title="design.data.card[1].title"/>
-        <Cardparcours :image="design.data.card[0].image.url"
-        :title="design.data.card[0].title"/>
-        <Cardparcours :image="design.data.card[2].image.url"
-        :title="design.data.card[2].title"/>
+        <Cardparcours :image="design.data.card[1].image.url" :title="design.data.card[1].title" />
+        <Cardparcours :image="design.data.card[0].image.url" :title="design.data.card[0].title" />
+        <Cardparcours :image="design.data.card[2].image.url" :title="design.data.card[2].title" />
     </div>
 
-    <!-- <div class="section4-design">
-        <Cardetudiants :image="design.data.etudiants[0].image.url"
-        :job="design.data.etudiants[0].job"
-        :name="design.data.etudiants[0].name"
-        :link="design.data.etudiants[0].link.url"/>
-
-    </div> -->
+    <div class="section4-design">
+        <Cardetudiants :image="design.data.etudiants[0].image.url" :job="design.data.etudiants[0].job"
+            :name="design.data.etudiants[0].name" :link="design.data.etudiants[0].link.url" />
+        <Cardetudiants :image="design.data.etudiants[0].image.url" :job="design.data.etudiants[0].job"
+            :name="design.data.etudiants[0].name" :link="design.data.etudiants[0].link.url"
+            bgColor="bgRed" />
+        <Cardetudiants :image="design.data.etudiants[0].image.url" :job="design.data.etudiants[0].job"
+            :name="design.data.etudiants[0].name" :link="design.data.etudiants[0].link.url" 
+            bgColor="bgRed"/>
+    </div>
 </template>
 
 <style lang="scss">
 .section1-design {
-    padding:rem(30) rem(20);
+    padding: rem(30) rem(20);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:rem(50);
+    gap: rem(50);
+
     img {
         width: rem(250);
     }
+
     &__sideleft {
         &-btn {
-            width:rem(140);
+            width: rem(140);
         }
     }
 }
@@ -54,7 +54,7 @@ const { data: design, error } = await useAsyncData('design', () => client.getSin
     display: flex;
     flex-direction: column;
     gap: rem(10);
-    padding:rem(30) rem(20);
+    padding: rem(30) rem(20);
 }
 
 
@@ -62,15 +62,22 @@ const { data: design, error } = await useAsyncData('design', () => client.getSin
 
 @media (min-width : 768px) {
     .section1-design {
-        padding:rem(60) rem(40);
-        img{
+        padding: rem(60) rem(40);
+
+        img {
             width: rem(400);
         }
     }
 
-    .section2-design{
-        padding:rem(30) rem(40);
+    .section2-design {
+        padding: rem(30) rem(40);
         flex-direction: row;
+    }
+
+    .section4-design {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
     }
 }
 
@@ -78,12 +85,18 @@ const { data: design, error } = await useAsyncData('design', () => client.getSin
 
 @media (min-width : 1024px) {
     .section1-design {
-        padding:rem(90) rem(40);
+        padding: rem(90) rem(40);
         flex-direction: row;
-        gap:rem(50);
-        img{
+        gap: rem(50);
+
+        img {
             width: 40%;
         }
+    }
+    .section4-design {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
     }
 
 }
@@ -93,18 +106,18 @@ const { data: design, error } = await useAsyncData('design', () => client.getSin
 @media (min-width : 1440px) {
     .section1-design {
         margin: rem(130) rem(0);
-        padding:rem(30) rem(75);
+        padding: rem(30) rem(75);
         flex-direction: row;
-        gap:rem(100);
-        img{
+        gap: rem(100);
+
+        img {
             width: rem(470);
         }
     }
-    .section2-design {
-        padding:rem(50) rem(75);
-        gap:rem(20)
 
+    .section2-design {
+        padding: rem(50) rem(75);
+        gap: rem(20)
     }
 }
-
 </style>
