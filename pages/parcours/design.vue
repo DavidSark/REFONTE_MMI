@@ -22,9 +22,15 @@ const { data: design, error } = await useAsyncData('design', () => client.getSin
         :title="design.data.card[0].title"/>
         <Cardparcours :image="design.data.card[0].image.url"
         :title="design.data.card[0].title"/>
-        
-        
     </div>
+
+    <!-- <div class="section4-design">
+        <Cardetudiants :image="design.data.etudiants[0].image.url"
+        :job="design.data.etudiants[0].job"
+        :name="design.data.etudiants[0].name"
+        :link="design.data.etudiants[0].link.url"/>
+
+    </div> -->
 </template>
 
 <style lang="scss">
@@ -34,6 +40,9 @@ const { data: design, error } = await useAsyncData('design', () => client.getSin
     flex-direction: column;
     align-items: center;
     gap:rem(50);
+    img {
+        width: rem(250);
+    }
     &__sideleft {
         &-btn {
             width:rem(140);
@@ -47,6 +56,8 @@ const { data: design, error } = await useAsyncData('design', () => client.getSin
     gap: rem(10);
     padding:rem(30) rem(20);
 }
+
+
 
 
 @media (min-width : 768px) {
