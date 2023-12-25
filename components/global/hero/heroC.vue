@@ -49,7 +49,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
         &-title{
         padding: rem(0) rem(35) rem(35) rem(35);
         :nth-child(1){
-            font-size: $size-60;      
+            font-size: $size-60; 
             font-weight: 700;
             text-transform: uppercase;
             display: table-caption;
@@ -58,7 +58,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
             font-size: $size-16;    
             letter-spacing: rem(3);
             color: $gray-soft;   
-            
+            text-transform: uppercase;
         }
         }
         &-buttons{
@@ -104,13 +104,12 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
     &__left{
         &-title{
             :nth-child(1){
-            font-size: $size-75;          
+            font-size: 5.5vw;        
         }
             :nth-child(2){
-                font-size: $size-20;    
-                   
+                font-size: 1.5vw;     
                 font-weight: 300;
-                letter-spacing: rem(4);
+               
             }
         }
         &-buttons{
@@ -132,6 +131,10 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
   }
 }
 
+
+
+
+
 //Media queries pour adapter l'espacement vertical du hero
   @media (min-width: 1440px) {
     .container-hero {
@@ -145,6 +148,16 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
         &-social{
             padding: rem(0) rem(60) rem(35) rem(60);
         } 
+        &-title{
+            :nth-child(1){
+            font-size: 6vw;          
+          }
+          :nth-child(2){
+            font-size: 1.75vw;  
+                letter-spacing: 0.2vw;    
+                white-space: nowrap;
+            }
+        }
     }
   }
 } 

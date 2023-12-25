@@ -106,6 +106,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
         }
 
        &-icons{
+        margin-top: rem(10) ;
         display: flex;
         gap: 15px;
         img{

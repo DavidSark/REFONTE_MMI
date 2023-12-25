@@ -57,7 +57,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
             font-size: $size-16;    
             letter-spacing: rem(3);
             color: $gray-soft;   
-            
+            text-transform: uppercase;
         }
         }
         &-buttons{
@@ -107,7 +107,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
         }
             :nth-child(2){
                 font-size: $size-20;    
-                   
+               
                 font-weight: 300;
                 letter-spacing: rem(4);
             }
