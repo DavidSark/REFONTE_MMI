@@ -30,7 +30,10 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
          <PrismicRichText :field="home.data.index_tagline"></PrismicRichText>
         </div>
 
-        
+        <div class="section2-index__parcours">
+          <indexparcour/>
+        </div>
+
 
       </div>
 
