@@ -15,18 +15,30 @@ useSeoMeta({
 <template>
     <div class="section1-faq">
         <div class="section1-faq__sideleft">
-            <borderSection :title="faq.data.section1[0].title" :subtitle="faq.data.section1[0].subtitle" />
+            <div class="section1-faq__sideleft-container">
+                <borderSection :title="faq.data.section1[0].title" :subtitle="faq.data.section1[0].subtitle" />
+                <Button bgColor="bgBlack" color="white" size="small">Découvrir la formation</Button>
+                <Button size="small">Nous contacter</Button>
+            </div>
         </div>
         <div class="section1-faq__canva">
-            <p></p>
         </div>
     </div>
 </template>
 
 <style lang="scss">
 .section1-faq {
+    display: flex;
+
     &__sideleft {
         padding: rem(30) rem(20);
+
+        &-container {
+            :nth-child(2) {
+                margin-bottom: 10px;
+            }
+
+        }
     }
 }
 
