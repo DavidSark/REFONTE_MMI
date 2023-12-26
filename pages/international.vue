@@ -281,7 +281,7 @@ useSeoMeta({
 @media(min-width : 1024px) {
     .section1-international {
         img {
-            width: 45%;
+            width: rem(450);
         }
     }
     .section3-international {
@@ -313,7 +313,7 @@ useSeoMeta({
         padding: rem(100) rem(75) rem(100) rem(40);
         gap:rem(40);
         img {
-            width:45%;
+            width:rem(530);
     }
     }
     .section3-international {

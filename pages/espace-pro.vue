@@ -123,6 +123,7 @@
     display: flex;
     gap:rem(40);
     flex-direction: row;
+    align-items: center;
     &__sideleft {
       padding:rem(0);
       width:50%;
