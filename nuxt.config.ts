@@ -1,6 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/icons/icon-mmi-white.svg' }, 
+      ],
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+    }
+  },
   components: [
     {
     path: '~/components',
@@ -30,5 +39,7 @@ export default defineNuxtConfig({
         }
       }
     }
+    
   }
+  
 })

@@ -6,6 +6,14 @@
   
   });
 
+  useSeoMeta({
+    title: espacepro.value.data.meta_title,
+    description: espacepro.value.data.meta_description,
+    ogDescription: espacepro.value.data.meta_description,
+    ogImage: espacepro.value.data.meta_image.url,
+    twitterCard:'summary_large_image',
+})
+
 </script>
 
 <template>

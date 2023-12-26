@@ -2,6 +2,15 @@
   const { client } = usePrismic();
   const { data: mentions, error } = await useAsyncData('mentions', () => client.getSingle("mentions"));
 
+  // Set SEO metadata for the page based on the homepage data
+  useSeoMeta({
+    title: mentions.value.data.meta_title,
+    description: mentions.value.data.meta_description,
+    ogDescription: mentions.value.data.meta_description,
+    ogImage: mentions.value.data.meta_image.url,
+    twitterCard:'summary_large_image',
+})
+
 </script>
 
 <template>

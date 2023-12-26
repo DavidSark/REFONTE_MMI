@@ -2,9 +2,13 @@
 const { client } = usePrismic();
 const { data: departement, error } = await useAsyncData('departement', () => client.getSingle("departement"));
 
-  const props = defineProps({
-  
-});
+useSeoMeta({
+    title: departement.value.data.meta_title,
+    description: departement.value.data.meta_description,
+    ogDescription: departement.value.data.meta_description,
+    ogImage: departement.value.data.meta_image.url,
+    twitterCard:'summary_large_image',
+})
 </script>
 <template>
     <div class="section1-departement">

@@ -1,6 +1,15 @@
 <script setup>
 const { client } = usePrismic();
 const { data: developpement, error } = await useAsyncData('developpement', () => client.getSingle("developpement"));
+
+useSeoMeta({
+    title: developpement.value.data.meta_title,
+    description: developpement.value.data.meta_description,
+    ogDescription: developpement.value.data.meta_description,
+    ogImage: developpement.value.data.meta_image.url,
+    twitterCard:'summary_large_image',
+})
+
 </script>
 
 <template>

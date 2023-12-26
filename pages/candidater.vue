@@ -2,7 +2,13 @@
   const { client } = usePrismic();
   const { data: canditater, error } = await useAsyncData('canditater', () => client.getSingle ("canditater"));
 
-
+  useSeoMeta({
+    title: canditater.value.data.meta_title,
+    description: canditater.value.data.meta_description,
+    ogDescription: canditater.value.data.meta_description,
+    ogImage: canditater.value.data.meta_image.url,
+    twitterCard:'summary_large_image',
+})
 
 </script>
 

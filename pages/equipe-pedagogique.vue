@@ -7,6 +7,15 @@ const props = defineProps({
   members: Array
 })
 
+useSeoMeta({
+    title: equipe.value.data.meta_title,
+    description: equipe.value.data.meta_description,
+    ogDescription: equipe.value.data.meta_description,
+    ogImage: equipe.value.data.meta_image.url,
+    twitterCard:'summary_large_image',
+})
+
+
 
   
 </script>
