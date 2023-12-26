@@ -237,7 +237,7 @@ img {
     }
 
     .section1-departement {
-        padding: rem(30) rem(40);
+        padding: rem(60) rem(40);
     }
 
     .section2-departement {
