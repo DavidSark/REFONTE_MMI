@@ -7,7 +7,7 @@ useSeoMeta({
     description: design.value.data.meta_description,
     ogDescription: design.value.data.meta_description,
     ogImage: design.value.data.meta_image.url,
-    twitterCard:'summary_large_image',
+    twitterCard: 'summary_large_image',
 })
 
 </script>
@@ -32,11 +32,9 @@ useSeoMeta({
         <Cardetudiants :image="design.data.etudiants[0].image.url" :job="design.data.etudiants[0].job"
             :name="design.data.etudiants[0].name" :link="design.data.etudiants[0].link.url" />
         <Cardetudiants :image="design.data.etudiants[0].image.url" :job="design.data.etudiants[0].job"
-            :name="design.data.etudiants[0].name" :link="design.data.etudiants[0].link.url"
-            bgColor="bgRed" />
+            :name="design.data.etudiants[0].name" :link="design.data.etudiants[0].link.url" bgColor="bgRed" />
         <Cardetudiants :image="design.data.etudiants[0].image.url" :job="design.data.etudiants[0].job"
-            :name="design.data.etudiants[0].name" :link="design.data.etudiants[0].link.url" 
-            bgColor="bgRed"/>
+            :name="design.data.etudiants[0].name" :link="design.data.etudiants[0].link.url" bgColor="bgRed" />
     </div>
 </template>
 
@@ -102,6 +100,7 @@ useSeoMeta({
             width: 40%;
         }
     }
+
     .section4-design {
         display: grid;
         grid-template-columns: repeat(3, 1fr);

@@ -1,10 +1,10 @@
 <script setup>
 const { client } = usePrismic();
-  const { data: equipe, error } = await useAsyncData('equipe', () => client.getSingle("equipe"));
+const { data: equipe, error } = await useAsyncData('equipe', () => client.getSingle("equipe"));
 
 
 const props = defineProps({
-  members: Array
+    members: Array
 })
 
 useSeoMeta({
@@ -12,12 +12,12 @@ useSeoMeta({
     description: equipe.value.data.meta_description,
     ogDescription: equipe.value.data.meta_description,
     ogImage: equipe.value.data.meta_image.url,
-    twitterCard:'summary_large_image',
+    twitterCard: 'summary_large_image',
 })
 
 
 
-  
+
 </script>
 
 <template>
@@ -26,75 +26,77 @@ useSeoMeta({
         <div class="equipecard">
             <equipecard :members="equipe.data.section2"></equipecard>
         </div>
-       
+
     </div>
-    
-<Footer></Footer>
 
-
+    <Footer></Footer>
 </template>
 
 <style lang="scss">
-.section1-equipe{
-    padding:rem(30) rem(20);
+.section1-equipe {
+    padding: rem(30) rem(20);
+
     &__title {
-    font-family: $font-redhat;
-    margin:rem(40) rem(0);
-    font-size: $size-32;
-    font-weight: 100;
-    text-transform: uppercase;
-    strong {
-    font-weight: 800;
+        font-family: $font-redhat;
+        margin: rem(40) rem(0);
+        font-size: $size-32;
+        font-weight: 100;
+        text-transform: uppercase;
+
+        strong {
+            font-weight: 800;
+        }
     }
-}
 
 }
+
 @media (min-width: 768px) {
 
-.section1-equipe {
-    padding:rem(60) rem(40);
-}
+    .section1-equipe {
+        padding: rem(60) rem(40);
+    }
 
-.equipecard {
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: rem(90) rem(0);
- 
-}
+    .equipecard {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: rem(90) rem(0);
+
+    }
 }
 
 @media (min-width: 1024px) {
 
-.section1-equipe {
-    padding:rem(60) rem(40);
-    &__title {
-    font-size: $size-45;
-}
-}
+    .section1-equipe {
+        padding: rem(60) rem(40);
 
-.equipecard {
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
- 
-}
+        &__title {
+            font-size: $size-45;
+        }
+    }
+
+    .equipecard {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
 }
 
 
 @media (min-width: 1440px) {
-.section1-equipe {
-    padding:rem(100) rem(75);
-    &__title {
-    font-size: $size-90;
-}
-}
-.equipecard {
-    display:grid;
-    
-    grid-template-columns: repeat(4, 1fr);
-    margin: rem(100) rem(0);
- 
-}
-}
+    .section1-equipe {
+        padding: rem(100) rem(75);
 
+        &__title {
+            font-size: $size-90;
+        }
+    }
 
+    .equipecard {
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+        margin: rem(100) rem(0);
+
+    }
+}
 </style>

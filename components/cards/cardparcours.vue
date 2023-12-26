@@ -3,8 +3,8 @@ const { client } = usePrismic();
 const { data: design, error } = await useAsyncData('design', () => client.getSingle("design"));
 
 const props = defineProps({
-    title: Array,
-    image:String,
+  title: Array,
+  image: String,
 
 });
 
@@ -17,8 +17,6 @@ const props = defineProps({
       <PrismicRichText :field="title"></PrismicRichText>
     </div>
   </div>
-   
-
 </template>
 
 <style lang="scss">
@@ -29,51 +27,50 @@ const props = defineProps({
 
 .image {
   display: block;
-        width: 100%;
-        filter: grayscale(100%);
-        transition: filter 0.2s ease-in-out;
-      
-      &:hover {
-        filter: grayscale(0%);
-      }
- 
+  width: 100%;
+  filter: grayscale(100%);
+  transition: filter 0.2s ease-in-out;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+
 }
 
 .text-container {
-font-family: $font-poppins;
-text-transform: uppercase;
-font-weight: 300;
-letter-spacing: 5.445px;
-font-size: $size-13;
+  font-family: $font-poppins;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 5.445px;
+  font-size: $size-13;
 
   position: absolute;
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: $white; 
+  background-color: $white;
   padding: rem(15) rem(30);
   text-align: center;
   line-height: normal;
   white-space: nowrap;
 }
 
-@media (min-width : 1024px ) {
-    
-.text-container {
-font-size: $size-16;
+@media (min-width : 1024px) {
 
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: $white; 
-  padding: rem(15) rem(30);
-  white-space: nowrap;
-  line-height: normal;
-  text-align: center;
+  .text-container {
+    font-size: $size-16;
+
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    padding: rem(15) rem(30);
+    white-space: nowrap;
+    line-height: normal;
+    text-align: center;
+  }
+
+
 }
-
-
-}
-
 </style>
