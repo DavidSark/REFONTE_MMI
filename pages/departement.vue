@@ -291,6 +291,7 @@ img {
         }
         display: flex;
         flex-direction: row-reverse;
+        align-items: center;
 
     }
     
@@ -341,17 +342,14 @@ img {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             align-items: center;
+           
            h6 {
             font-size:$size-20;
            }
            p {
             font-size: $size-16;
            }
-           &-2 {
-            img {
-                width: 450px;
-            }
-           }
+
         }
 
     }
