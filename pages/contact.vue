@@ -98,7 +98,9 @@ useSeoMeta({
     flex-direction: column-reverse;
     margin-top: rem(80);
 
+
     img {
+     
         width: 100%;
     }
 }

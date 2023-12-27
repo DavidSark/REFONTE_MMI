@@ -29,7 +29,7 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     <input type="text" name="prenom" required  placeholder="Votre message...">
   </div>
   <div class="form-contact__info">
-    <Button  class="form-contact__info-btn" size="small" color="white" bgColor="bgBlue" borderColor="borderBlue" >Envoyer</Button>
+    <Button class="form-contact__info-btn" size="small" color="white" bgColor="bgBlue" borderColor="borderBlue" >Envoyer</Button>
     <img src="/icons/icon-cloud.svg" alt="">
     <input type="file" accept=".pdf, .doc, .docx"  id="fileUpload" name="fileUpload">
   </div>
@@ -48,7 +48,7 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
 
 .form-contact {
 
-  margin:rem(20);
+  // margin:rem(20);
   padding:rem(25);
   border: 1px solid $white-soft;
   &__mmi {
@@ -71,6 +71,8 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
 
 
     &-btn {
+      margin-left:0;
+      margin-right:rem(15);
        cursor: pointer;
       font-size:$size-12;
       width: rem(100);
