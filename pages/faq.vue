@@ -20,6 +20,7 @@ useSeoMeta({
                 <Button bgColor="bgBlack" color="white" size="small">Découvrir la formation</Button>
                 <Button size="small">Nous contacter</Button>
             </div>
+            <Cardfaq></Cardfaq>
         </div>
         <div class="section1-faq__canva">
         </div>
