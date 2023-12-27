@@ -2,12 +2,12 @@
 const { client } = usePrismic();
 const { data: faq, error } = await useAsyncData('faq', () => client.getSingle("faq"));
 
-const props = defineProps({
-    // question: Array,
-    // reponse: Array,
-    tabs: Array,
+// const props = defineProps({
+//     // question: Array,
+//     // reponse: Array,
+//     tabs: Array,
 
-});
+// });
 
 </script>
 
@@ -15,20 +15,62 @@ const props = defineProps({
     <div class="row" >
         <div class="col" >
             <div class="tabs" >
-                <div class="tab" v-for="item in tabs">
+                <!-- <div class="tab" v-for="item in tabs">
                     <input type="checkbox" id="chck1">
                     <label class="tab-label" for="chck1">    <PrismicRichText :field="item.question"></PrismicRichText></label>
                     <div class="tab-content">
                     <PrismicRichText :field="item.reponse"></PrismicRichText>
                     </div>
-                </div>
-                <!-- <div class="tab">
-                    <input type="checkbox" id="chck2">
-                    <label class="tab-label" for="chck2">Item 2</label>
-                    <div class="tab-content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
-                    </div>
                 </div> -->
+                <div class="tab">
+                    <input type="checkbox" id="chck1">
+                    <label class="tab-label" for="chck1">Quand se déroule les portes ouvertes ?</label>
+                    <div class="tab-content">
+                        L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. 
+                    </div>
+                </div>
+                <div class="tab">
+                    <input type="checkbox" id="chck2">
+                    <label class="tab-label" for="chck2">Quand se déroule les portes ouvertes ?</label>
+                    <div class="tab-content">
+                        L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. 
+                    </div>
+                </div>
+                <div class="tab">
+                    <input type="checkbox" id="chck3">
+                    <label class="tab-label" for="chck3">Quand se déroule les portes ouvertes ?</label>
+                    <div class="tab-content">
+                        L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. 
+                    </div>
+                </div>
+                <div class="tab">
+                    <input type="checkbox" id="chck4">
+                    <label class="tab-label" for="chck4">Quand se déroule les portes ouvertes ?</label>
+                    <div class="tab-content">
+                        L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. 
+                    </div>
+                </div>
+                <div class="tab">
+                    <input type="checkbox" id="chck5">
+                    <label class="tab-label" for="chck5">Quand se déroule les portes ouvertes ?</label>
+                    <div class="tab-content">
+                        L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. 
+                    </div>
+                </div>
+                <div class="tab">
+                    <input type="checkbox" id="chck6">
+                    <label class="tab-label" for="chck6">Quand se déroule les portes ouvertes ?</label>
+                    <div class="tab-content">
+                        L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. 
+                    </div>
+                </div>
+                <div class="tab">
+                    <input type="checkbox" id="chck7">
+                    <label class="tab-label" for="chck7">Quand se déroule les portes ouvertes ?</label>
+                    <div class="tab-content">
+                        L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. 
+                    </div>
+                </div>
             </div>
         </div>
     </div>

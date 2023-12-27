@@ -44,12 +44,13 @@ button{
     text-transform: uppercase;
     font-family: $font-poppins;
     font-size: $size-21;
-    background-color: $white ;  
+    background-color: $white ;
+  
 }   
 
 
 .-small{
-    padding: rem(8) rem(13);
+    padding: rem(8) rem(20);
     font-size: rem(14);
 }
 

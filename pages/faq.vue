@@ -21,7 +21,8 @@ useSeoMeta({
                 <Button size="small">Nous contacter</Button>
             </div>
             <div class="section1-faq__sideleft-accordion">
-                <Cardfaq :tabs="faq.data.questions"></Cardfaq>
+                <Cardfaq></Cardfaq>
+                <!-- <Cardfaq :tabs="faq.data.questions"></Cardfaq> -->
                 <!-- <Cardfaq :question="faq.data.questions[0].question"
                     :reponse="faq.data.questions[1].reponse"></Cardfaq> -->
             </div>

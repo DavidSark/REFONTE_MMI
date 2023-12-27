@@ -197,7 +197,7 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     font-size: $size-16;
   }
   input {
-    font-size: $size-14;
+    font-size: $size-16;
   }
   }
 
