@@ -36,9 +36,11 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
       </div>
 
       <div class="section3-index">  
-        <div class="section3-index__parcours">
           <indexparcour/>
-        </div>
+      </div>
+
+      <div class="section4-index">
+          <indexcards/>
       </div>
 
    <Footer></Footer>
@@ -72,12 +74,6 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
       width: 100%;
     }
   }
-  .section3-index{
-    &__parcours{
-      padding: rem(50) rem(20);
-    }
-  }
-
 }
 
 @media screen and (min-width:768px) {
