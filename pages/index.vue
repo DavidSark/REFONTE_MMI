@@ -58,7 +58,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
     display: none;
   }
   .section1-index{
-    padding: rem(50) rem(20);
+    margin: rem(50) rem(20);
     &__tagline{
       font-family: $font-poppins;
       font-size: $size-24;
@@ -73,6 +73,10 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
     img{
       width: 100%;
     }
+  }
+
+  .section4-index{
+    margin: rem(50) rem(20);
   }
 }
 
@@ -105,7 +109,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
       display: block;
     }
     .section1-index{
-      padding: rem(130) rem(40);
+      margin: rem(130) rem(40);
     &__tagline{
       font-size: 4vw;
  
@@ -117,7 +121,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
 @media screen and (min-width:1440px) {
   .container__index{
     .section1-index{
-      padding: rem(170) rem(75);
+      margin: rem(170) rem(75);
     &__tagline{
       max-width: 1450px;
     }
