@@ -22,11 +22,11 @@ useSeoMeta({
       <borderSection :title="espacepro.data.section1[0].titre" :subtitle="espacepro.data.section1[0].soustitre" />
       <Button class="section-btn" size="small">Déposer une offre</Button>
     </div>
-    <img src="/imageep-1.webp" alt="">
+    <img src="/imageep-1.webp" alt="Etudiant">
   </div>
 
   <div class="section2-espacepro">
-    <img src="/image6.webp" alt="">
+    <img src="/image6.webp" alt="Etudiantes">
     <div class="section2-espacepro__sideright">
       <borderSection :title="espacepro.data.section2[0].titre" :subtitle="espacepro.data.section2[0].soustitre"
         color="green" borderPosition="right" />
@@ -40,7 +40,7 @@ useSeoMeta({
         color="red" />
       <Button class="section-btn" size="small">Déposer une offre</Button>
     </div>
-    <img src="/section-projet.webp" alt="">
+    <img src="/section-projet.webp" alt="Mmi montbéliard">
 
   </div>
   <Footer></Footer>

@@ -5,7 +5,7 @@
 <template>
   <div class="section3-candidater">
     <div class="section3-candidater__image">
-      <img src="/image-candidater.webp" alt="">
+      <img src="/image-candidater.webp" alt="Etudiantes qui travaillent">
       <p class="section3-candidater__image-text">Prêt à vous <span class="section3-candidater__image-text__span1">lancer
         </span>
         <span class="section3-candidater__image-text__span2">?</span>

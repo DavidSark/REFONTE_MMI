@@ -18,11 +18,11 @@ useSeoMeta({
                   :subtitle="international.data.section1[0].subtitle"
                   borderPosition="right"
                      />
-    <img src="/image-international-1.webp" alt="">
+    <img src="/image-international-1.webp" alt="Etudiant">
  </div>
  <div class="section2-international">
-        <img src="/image8.webp" alt="">
-        <img src="/image10.webp" alt="">
+        <img src="/image8.webp" alt="Always feel free to make explore and do what you love">
+        <img src="/image10.webp" alt="Festival OFFF 2023">
     </div>
 
     <div class="section3-international">
@@ -37,7 +37,7 @@ useSeoMeta({
             <div class="section3-international__sideright-border"></div>
             <p><span>Vanier </span> college</p>
             </div>
-            <img src="/image-international-2.webp" alt="">
+            <img src="/image-international-2.webp" alt="College Vanier">
         </div>
     </div>
 
@@ -53,7 +53,7 @@ useSeoMeta({
         <div class="section4-international__sideright-border"></div>
         <p><span>Festival </span> offf</p>
         </div>
-        <img src="/image-international-3.webp" alt="">
+        <img src="/image-international-3.webp" alt="Festival OFFF">
     </div>
     </div>
 

@@ -19,7 +19,7 @@ useSeoMeta({
                 :subtitle="developpement.data.section1[0].subtitle" />
             <Button class="section1-developpement__sideleft-btn" size="small">Candidater</Button>
         </div>
-        <img src="/image-design-1.webp" alt="">
+        <img src="/image-design-1.webp" alt="Etudiant">
     </div>
 
     <div class="section2-developpement">

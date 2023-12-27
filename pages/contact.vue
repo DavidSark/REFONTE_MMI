@@ -26,8 +26,8 @@ useSeoMeta({
         </div>
     </div>
     <div class="section2-contact">
-        <img src="/image9.webp" alt="">
-        <img src="/image13.webp" alt="">
+        <img src="/image9.webp" alt="Mmi montbéliard">
+        <img src="/image13.webp" alt="Mmi montbéliard">
     </div>
     <div class="section3-contact">
         <div class="section3-contact_content">
@@ -42,7 +42,7 @@ useSeoMeta({
     </div>
     <div class="section5-contact">
         <Formcontact></Formcontact>
-        <img src="/image-contact.webp" alt="">
+        <img src="/image-contact.webp" alt="Mmi montbéliard">
 
     </div>
     <Footer></Footer>

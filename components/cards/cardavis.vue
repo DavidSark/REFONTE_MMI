@@ -24,7 +24,8 @@ const className = computed(() => ({
     <div class="card-avis">
 
         <div class="card-avis__content" :class="className">
-            <img src="/icons/icon-quote.svg" alt="">
+            <img src="/icons/icon-quote.svg" alt="Guillemet">
+            
 
             <PrismicRichText class="card-avis__content-commentaire" :field="commentaire"></PrismicRichText>
             <div class="card-avis__content-border">

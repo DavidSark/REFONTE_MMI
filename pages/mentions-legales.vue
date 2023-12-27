@@ -20,14 +20,14 @@ useSeoMeta({
         <borderSection :title="mentions.data.section1[0].titre" :subtitle="mentions.data.section1[0].soustitre" />
       </div>
       <div class="section1-mentions__slider">
-        <img src="/luka-jevremovic.webp" alt="">
+        <img src="/luka-jevremovic.webp" alt="Luka Jevremovic">
         <p>Luka <span>Jevremovic</span></p>
-        <img src="/icons/icon-linkedin.svg" alt="">
+        <img src="/icons/icon-linkedin.svg" alt="Icone linkedin">
       </div>
       <div class="section1-mentions__slider">
-        <img src="/justine-duval.webp" alt="">
+        <img src="/justine-duval.webp" alt="Justine Duval">
         <p>Justine <span>Duval</span></p>
-        <img src="/icons/icon-linkedin.svg" alt="">
+        <img src="/icons/icon-linkedin.svg" alt="Icone Linkedin">
       </div>
     </div>
     <div class="section2-mentions">

@@ -19,7 +19,7 @@ useSeoMeta({
                 color="red" />
             <Button class="section1-design__sideleft-btn" size="small">Candidater</Button>
         </div>
-        <img src="/image-design-1.webp" alt="">
+        <img src="/image-design-1.webp" alt="Etudiant">
     </div>
 
     <div class="section2-design">
