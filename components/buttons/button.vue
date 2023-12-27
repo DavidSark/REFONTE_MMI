@@ -45,6 +45,7 @@ button{
     font-family: $font-poppins;
     font-size: $size-21;
     background-color: $white ;
+    color:$black;
   
 }   
 
