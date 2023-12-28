@@ -9,6 +9,19 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
 </script>
 
 <template>
+
+<!-- <form id="contactForm" action="http://localhost:3001/email" method="POST">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required placeholder="Votre nom..."><br><br>
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required placeholder="Votre email..."><br><br>
+
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" required placeholder="Votre message..."></textarea><br><br>
+
+    <input type="submit" value="Envoyer">
+  </form> -->
 <div class="form-contact">  
   <div class="form-contact__mmi">
     <img src="/icons/icon-mmi.svg" alt="">
@@ -16,20 +29,23 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     <p>Contactez-nous</p>
 
   </div>
+  <form id="contactForm" action="http://localhost:3001/contact" method="POST">
   <div class="form-contact__input">
     <label for="nom">Prénom & NOM</label>
     <input type="text" id="nom" name="nom" required placeholder="Prénom & NOM...">
   </div>
   <div class="form-contact__input">
     <label for="email">Email</label>
-    <input type="text" id="email" name="email" required  placeholder="youremail@gmail.com....">
+    <input type="email" id="email" name="email" required  placeholder="youremail@gmail.com....">
   </div>
   <div class="form-contact__input">
     <label for="message">Message</label>
     <input type="text" id="message" name="message" required  placeholder="Votre message...">
   </div>
+  <input type="submit" value="Envoyer">
+</form>
   <div class="form-contact__info">
-    <input class="form-contact__info-submit" type="submit" value="Envoyer">
+    
     <!-- <Button class="form-contact__info-btn" size="small" color="white" bgColor="bgBlue" borderColor="borderBlue" >Envoyer</Button> -->
     
     <input type="file" accept=".pdf, .doc, .docx"  id="fileUpload" name="fileUpload">
@@ -69,19 +85,7 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     img{
       display: none;
     }
-    input:nth-child(1) {
 
-      border-radius: rem(30);
-    padding: rem(12) rem(25);
-    margin-right:rem(20);
-    text-align: center;
-    text-transform: uppercase;
-    font-family: $font-poppins;
-    font-size: $size-14;
-    background-color: $blue ;
-    color:$white;
-    font-weight: 400;
-    }
     &-btn {
       margin-left:0;
       margin-right:rem(15);
@@ -106,6 +110,7 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     margin-bottom: rem(5);
   }
   input {
+
     font-size: $size-12;
     border: none;
     border-bottom: 1px solid $white-soft;
