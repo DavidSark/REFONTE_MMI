@@ -56,6 +56,9 @@ useSeoMeta({
   margin-right:rem(20);
 
 }
+.btn-margin {
+    margin-left:rem(20);
+}
 
 @media (min-width: 768px) {
   .section1-candidater {

@@ -61,6 +61,9 @@ useSeoMeta({
     }
 }
 
+.btn-margin {
+    margin-left:rem(20);
+}
 @media (min-width : 768px) {
     .section1-faq {
         &__sideleft {

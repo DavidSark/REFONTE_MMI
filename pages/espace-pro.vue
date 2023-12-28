@@ -64,6 +64,11 @@ useSeoMeta({
   }
 }
 
+.btn-margin__right {
+  margin-right:rem(20);
+
+}
+
 .section2-espacepro {
 
   display: flex;
