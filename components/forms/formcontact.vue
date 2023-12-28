@@ -17,20 +17,21 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
 
   </div>
   <div class="form-contact__input">
-    <label for="prenom">Prénom & NOM</label>
-    <input type="text" name="prenom"  required placeholder="Prénom & NOM...">
+    <label for="nom">Prénom & NOM</label>
+    <input type="text" id="nom" name="nom" required placeholder="Prénom & NOM...">
   </div>
   <div class="form-contact__input">
-    <label for="prenom">Email</label>
-    <input type="text" name="prenom" required  placeholder="youremail@gmail.com....">
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" required  placeholder="youremail@gmail.com....">
   </div>
   <div class="form-contact__input">
-    <label for="prenom">Message</label>
-    <input type="text" name="prenom" required  placeholder="Votre message...">
+    <label for="message">Message</label>
+    <input type="text" id="message" name="message" required  placeholder="Votre message...">
   </div>
   <div class="form-contact__info">
-    <Button class="form-contact__info-btn" size="small" color="white" bgColor="bgBlue" borderColor="borderBlue" >Envoyer</Button>
-    <img src="/icons/icon-cloud.svg" alt="">
+    <input class="form-contact__info-submit" type="submit" value="Envoyer">
+    <!-- <Button class="form-contact__info-btn" size="small" color="white" bgColor="bgBlue" borderColor="borderBlue" >Envoyer</Button> -->
+    
     <input type="file" accept=".pdf, .doc, .docx"  id="fileUpload" name="fileUpload">
   </div>
 
@@ -68,8 +69,19 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     img{
       display: none;
     }
+    input:nth-child(1) {
 
-
+      border-radius: rem(30);
+    padding: rem(12) rem(25);
+    margin-right:rem(20);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font-poppins;
+    font-size: $size-14;
+    background-color: $blue ;
+    color:$white;
+    font-weight: 400;
+    }
     &-btn {
       margin-left:0;
       margin-right:rem(15);
