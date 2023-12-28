@@ -45,7 +45,6 @@ useSeoMeta({
         <img src="/image-contact.webp" alt="Mmi montbéliard">
 
     </div>
-    <Footer></Footer>
 </template>
 
 <style lang="scss">

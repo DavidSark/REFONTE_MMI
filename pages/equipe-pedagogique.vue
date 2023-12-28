@@ -28,8 +28,6 @@ useSeoMeta({
         </div>
 
     </div>
-
-    <Footer></Footer>
 </template>
 
 <style lang="scss">

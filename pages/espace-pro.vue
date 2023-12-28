@@ -43,7 +43,6 @@ useSeoMeta({
     <img src="/section-projet.webp" alt="Mmi montbéliard">
 
   </div>
-  <Footer></Footer>
 </template>
 
 <style lang="scss">
