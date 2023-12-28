@@ -90,11 +90,16 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
     }
 
     .section1-index{
-      padding: rem(90) rem(40);
+      padding: rem(90) rem(0);
+      max-width: rem(1200);
     &__tagline{
       font-size: $size-32;
     }
    }
+
+   .section4-index{
+    margin: rem(50) rem(40);
+  }
   }
 }
 @media screen and (min-width:1024px) {
@@ -126,6 +131,13 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
       max-width: 1450px;
     }
    }
+   .section4-index{
+    margin: rem(50) rem(75);
+    &__tagline{
+      font-size: rem(75);
+ 
+    }
+  }
   }
 }
 </style>

@@ -103,6 +103,7 @@
 
 @media  screen and (min-width: 768px) {
     .section-indexparcours{
+        margin: rem(160) rem(0);
     img{
         width: 3vw;
     }
