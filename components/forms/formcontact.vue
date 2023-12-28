@@ -29,7 +29,7 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     <p>Contactez-nous</p>
 
   </div>
-  <form id="contactForm" action="http://localhost:3001/contact" method="POST">
+  <form class="form-contact__form" id="contactForm" action="http://localhost:3001/contact" method="POST">
   <div class="form-contact__input">
     <label for="nom">Prénom & NOM</label>
     <input type="text" id="nom" name="nom" required placeholder="Prénom & NOM...">
@@ -42,13 +42,14 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     <label for="message">Message</label>
     <input type="text" id="message" name="message" required  placeholder="Votre message...">
   </div>
-  <input type="submit" value="Envoyer">
+  <input class="form-contact__submit" type="submit" value="Envoyer">
+  <!-- <input type="file" accept=".pdf, .doc, .docx"  id="fileUpload" name="fileUpload"> -->
 </form>
   <div class="form-contact__info">
     
     <!-- <Button class="form-contact__info-btn" size="small" color="white" bgColor="bgBlue" borderColor="borderBlue" >Envoyer</Button> -->
     
-    <input type="file" accept=".pdf, .doc, .docx"  id="fileUpload" name="fileUpload">
+
   </div>
 
 </div>
@@ -56,6 +57,9 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
 </template>
 
 <style lang="scss" scoped>
+
+
+
 .square {
   width: rem(9);
   height: rem(15);
@@ -64,8 +68,6 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
 
 
 .form-contact {
-
-  // margin:rem(20);
   padding:rem(25);
   border: 1px solid $white-soft;
   &__mmi {
@@ -81,6 +83,22 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
       width:rem(25) ;
     }
   }
+  &__submit {
+    border-radius: rem(30);
+    padding: rem(8) rem(20);
+    font-size: rem(14);
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font-poppins;
+    margin-top: rem(30);
+    margin-bottom: rem(30);
+    background-color: $blue;
+    color:$white;
+    cursor: pointer;
+ 
+  }
+
   &__info {
     img{
       display: none;
@@ -108,7 +126,12 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     font-size: $size-12;
     font-weight: 500;
     margin-bottom: rem(5);
+    margin-top:rem(20);
   }
+  &__input {
+    margin-bottom:rem(20);
+
+
   input {
 
     font-size: $size-12;
@@ -120,7 +143,7 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
   &:focus {
     outline: none;
   }
-  
+}
 
   }
   &__input {
@@ -213,10 +236,14 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     label {
     font-size: $size-16;
   }
+  &__input {
+    margin-bottom:rem(40);
+
   input {
     font-size: $size-16;
   }
   }
+}
 
 }
 
