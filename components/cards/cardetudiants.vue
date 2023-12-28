@@ -68,11 +68,11 @@ const className = computed(() => ({
     }
 
     &__content {
-    
+        padding:rem(0) rem(10);
         font-family: $font-poppins;
         display: flex;
         flex-direction: column;
-        gap: rem(15);
+        gap: rem(10);
         text-align: center;
         margin-bottom: rem(20);
         color: $white;
@@ -130,7 +130,7 @@ const className = computed(() => ({
             width: rem(250);
         }
         &__content {
-            padding:rem(0) rem(20);
+            padding:rem(0) rem(50);
             gap:rem(25);
             
             font-size: 2.6vh;

@@ -16,7 +16,7 @@ useSeoMeta({
     <div class="section1-design">
         <div class="section1-design__sideleft">
             <borderSection :title="design.data.section1[0].title" :subtitle="design.data.section1[0].subtitle"
-                color="red" />
+                />
             <Button class="section1-design__sideleft-btn" size="small">Candidater</Button>
         </div>
         <img src="/image-design-1.webp" alt="Etudiant">
