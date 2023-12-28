@@ -28,13 +28,14 @@ useSeoMeta({
         <Cardparcours :image="communication.data.card[2].image.url" :title="communication.data.card[2].title" />
     </div>
 
-    <!-- <div class="section4-communication">
-        <Cardetudiants :image="communication.data.etudiants[0].image.url"
-        :job="communication.data.etudiants[0].job"
-        :name="communication.data.etudiants[0].name"
-        :link="communication.data.etudiants[0].link.url"/>
-
-    </div> -->
+    <div class="section4-communication">
+        <Cardetudiants :image="communication.data.etudiants[0].image.url" :job="communication.data.etudiants[0].job"
+            :name="communication.data.etudiants[0].name" :link="communication.data.etudiants[0].link.url" bgColor="bgRed"/>
+        <Cardetudiants :image="communication.data.etudiants[1].image.url" :job="communication.data.etudiants[1].job"
+            :name="communication.data.etudiants[1].name" :link="communication.data.etudiants[1].link.url"  bgColor="bgRed"/>
+        <Cardetudiants :image="communication.data.etudiants[2].image.url" :job="communication.data.etudiants[2].job"
+            :name="communication.data.etudiants[2].name" :link="communication.data.etudiants[2].link.url" bgColor="bgRed" />
+    </div>
 </template>
 
 <style lang="scss">
@@ -79,6 +80,13 @@ useSeoMeta({
         padding: rem(30) rem(40);
         flex-direction: row;
     }
+
+    .section4-communication {
+        padding: rem(30) rem(40);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
 }
 
 
@@ -92,6 +100,13 @@ useSeoMeta({
         img {
             width: 40%;
         }
+    }
+
+    .section4-communication {
+        margin-top:rem(100);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
     }
 
 }
@@ -114,5 +129,17 @@ useSeoMeta({
         padding: rem(50) rem(75);
         gap: rem(20)
     }
+
+    .section4-communication {
+        margin-top:rem(160);
+
+    }
 }
+
+@media(min-width : 1750px) {
+    .section4-communication{
+        display: none;
+    }
+}
+
 </style>

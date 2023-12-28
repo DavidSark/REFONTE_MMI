@@ -31,10 +31,10 @@ useSeoMeta({
     <div class="section4-design">
         <Cardetudiants :image="design.data.etudiants[0].image.url" :job="design.data.etudiants[0].job"
             :name="design.data.etudiants[0].name" :link="design.data.etudiants[0].link.url" />
-        <Cardetudiants :image="design.data.etudiants[0].image.url" :job="design.data.etudiants[0].job"
-            :name="design.data.etudiants[0].name" :link="design.data.etudiants[0].link.url" bgColor="bgRed" />
-        <Cardetudiants :image="design.data.etudiants[0].image.url" :job="design.data.etudiants[0].job"
-            :name="design.data.etudiants[0].name" :link="design.data.etudiants[0].link.url" bgColor="bgGreen" />
+        <Cardetudiants :image="design.data.etudiants[1].image.url" :job="design.data.etudiants[1].job"
+            :name="design.data.etudiants[1].name" :link="design.data.etudiants[1].link.url"  />
+        <Cardetudiants :image="design.data.etudiants[2].image.url" :job="design.data.etudiants[2].job"
+            :name="design.data.etudiants[2].name" :link="design.data.etudiants[2].link.url" />
     </div>
 </template>
 
@@ -103,7 +103,7 @@ useSeoMeta({
     }
 
     .section4-design {
-        margin-top:rem(40);
+        margin-top:rem(100);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
 
@@ -128,6 +128,10 @@ useSeoMeta({
     .section2-design {
         padding: rem(50) rem(75);
         gap: rem(20)
+    }
+    .section4-design {
+        margin-top:rem(160);
+
     }
 }
 
