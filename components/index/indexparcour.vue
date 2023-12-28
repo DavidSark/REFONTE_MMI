@@ -34,7 +34,7 @@
     margin: rem(50) rem(0);
     font-family: $font-poppins;
     font-weight: 700;
-    font-size: 7.5vw;
+    font-size: 8vw;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
@@ -121,7 +121,6 @@
 
 @media screen and (min-width:1440px) {
     .section-indexparcours{
-        font-size: $size-100;
         &__design{
             padding: rem(0) rem(75);
         }
@@ -132,6 +131,11 @@
             padding: rem(0) rem(75);
         }
     }
-   
+}
+
+@media screen and (min-width: 1540px) {
+    .section-indexparcours{
+        font-size: $size-123;
+    }
 }
 </style>

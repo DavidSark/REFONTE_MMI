@@ -43,6 +43,10 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
           <indexcards/>
       </div>
 
+      <div class="section5-index">
+        <indexdep/>
+      </div>
+
    <Footer></Footer>
   </div>
 </template>
@@ -75,7 +79,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
     }
   }
 
-  .section4-index{
+  .section4-index, .section5-index{
     margin: rem(50) rem(20);
   }
 }
@@ -97,7 +101,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
     }
    }
 
-   .section4-index{
+   .section4-index ,.section5-index{
     margin: rem(50) rem(40);
   }
   }
@@ -127,17 +131,26 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
   .container__index{
     .section1-index{
       margin: rem(170) rem(75);
-    &__tagline{
-      max-width: 1450px;
-    }
+      max-width: rem(1500);
    }
-   .section4-index{
+   .section4-index, .section5-index{
     margin: rem(50) rem(75);
     &__tagline{
-      font-size: rem(75);
+      font-size: $size-75;
+      background-color: red;
  
     }
   }
   }
 }
+
+@media screen and (min-width:1920px) {
+  .container__index{
+    .section1-index{
+    &__tagline{
+      font-size: $size-75;
+    }
+   }
+  }
+  }
 </style>
