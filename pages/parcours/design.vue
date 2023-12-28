@@ -17,7 +17,7 @@ useSeoMeta({
         <div class="section1-design__sideleft">
             <borderSection :title="design.data.section1[0].title" :subtitle="design.data.section1[0].subtitle"
                 />
-            <Button class="section1-design__sideleft-btn" size="small">Candidater</Button>
+            <Button class="btn-margin" size="small">Candidater</Button>
         </div>
         <img src="/image-design-1.webp" alt="Etudiant">
     </div>
@@ -64,7 +64,13 @@ useSeoMeta({
     padding: rem(30) rem(20);
 }
 
+.btn-margin__right {
+  margin-right:rem(20);
 
+}
+.btn-margin {
+    margin-left:rem(20);
+}
 
 
 @media (min-width : 768px) {
