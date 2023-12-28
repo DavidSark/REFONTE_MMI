@@ -13,8 +13,8 @@ const props = defineProps({
 
 const className = computed(() => ({
 
-    ' -bgRed': props.bgColor === 'bgRed',
-    ' -bgGreen': props.bgColor === 'bgGreen',
+    'bgRed': props.bgColor === 'bgRed',
+    'bgGreen': props.bgColor === 'bgGreen',
 }))
 
 </script>
@@ -38,12 +38,14 @@ const className = computed(() => ({
 .card-etudiants {
     background: $blue;
 
-    .-bgRed {
+    &.bgRed {
         background: $red;
+        background-image: url('/image-filtre.png');
     }
 
-    .-bgGreen {
+    &.bgGreen {
         background: $green;
+        background-image: url('/image-filtre.png');
     }
 
     background-image: url('/image-filtre.png');
@@ -66,6 +68,7 @@ const className = computed(() => ({
     }
 
     &__content {
+    
         font-family: $font-poppins;
         display: flex;
         flex-direction: column;
@@ -96,4 +99,59 @@ const className = computed(() => ({
 }
 
 
-@media(min-width : 1440px) {}</style>
+@media(min-width : 768px) {
+    .card-etudiants{
+        margin:50px auto;
+    }
+
+}
+
+@media(min-width : 1024px) {
+    .card-etudiants {
+        width: rem(300);
+        height: rem(380);
+        img {
+            width: rem(200);
+        }
+        &__content {
+            
+            img {
+                width:initial;
+            }
+        }
+    }
+}
+
+@media (min-width : 1440px) {
+    .card-etudiants {
+        width: rem(390);
+        height: rem(450);
+        img {
+            width: rem(250);
+        }
+        &__content {
+            padding:rem(0) rem(20);
+            gap:rem(25);
+            
+            font-size: 2.6vh;
+            margin-bottom: 20px;
+            
+            :nth-child(2) {
+
+            font-weight: 700;
+            font-family: $font-redhat;
+            line-height: -10px;
+            font-size: $size-39;
+            letter-spacing: -0.5px;
+            }
+            img {
+                width:initial;
+            }
+        }
+    }
+
+}
+
+
+
+</style>

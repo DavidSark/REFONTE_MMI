@@ -34,7 +34,7 @@ useSeoMeta({
         <Cardetudiants :image="design.data.etudiants[0].image.url" :job="design.data.etudiants[0].job"
             :name="design.data.etudiants[0].name" :link="design.data.etudiants[0].link.url" bgColor="bgRed" />
         <Cardetudiants :image="design.data.etudiants[0].image.url" :job="design.data.etudiants[0].job"
-            :name="design.data.etudiants[0].name" :link="design.data.etudiants[0].link.url" bgColor="bgRed" />
+            :name="design.data.etudiants[0].name" :link="design.data.etudiants[0].link.url" bgColor="bgGreen" />
     </div>
 </template>
 
@@ -82,9 +82,10 @@ useSeoMeta({
     }
 
     .section4-design {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-
+        padding: rem(30) rem(40);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
     }
 }
 
@@ -102,6 +103,7 @@ useSeoMeta({
     }
 
     .section4-design {
+        margin-top:rem(40);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
 
@@ -128,4 +130,11 @@ useSeoMeta({
         gap: rem(20)
     }
 }
+
+@media(min-width : 1750px) {
+    .section4-design{
+        display: none;
+    }
+}
+
 </style>
