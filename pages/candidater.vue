@@ -33,7 +33,7 @@ useSeoMeta({
   <Cardcandidater></Cardcandidater>
 </template>
   
-<style lang="scss" scoped>
+<style lang="scss" >
 .section1-candidater {
   padding: rem(30) rem(20);
 
@@ -47,9 +47,7 @@ useSeoMeta({
     flex-direction: column;
     align-items: flex-end;
 
-    .sectionB-sideleft__btn {
-      width: rem(120);
-    }
+
 
   }
 }

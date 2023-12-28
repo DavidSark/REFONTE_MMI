@@ -30,7 +30,7 @@ useSeoMeta({
     <div class="section2-espacepro__sideright">
       <borderSection :title="espacepro.data.section2[0].titre" :subtitle="espacepro.data.section2[0].soustitre"
         color="green" borderPosition="right" />
-      <Button class="section-btn" size="small">Déposer une offre</Button>
+      <Button class="btn-margin__right" size="small">Déposer une offre</Button>
     </div>
   </div>
 
@@ -75,6 +75,9 @@ useSeoMeta({
   }
 
   &__sideright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     padding: rem(30) rem(20);
   }
 }
