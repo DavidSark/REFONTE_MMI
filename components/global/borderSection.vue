@@ -52,7 +52,7 @@
             cursor: pointer;
             margin: 0 rem(20);
             margin-bottom: rem(40);
-            width: rem(230);
+        
         }
         &__borderT{
             display: flex;

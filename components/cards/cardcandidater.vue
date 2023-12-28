@@ -42,12 +42,6 @@
       margin-top: rem(30);
 
       &__text {
-        &:hover {
-          border-bottom: 1px solid transparent;
-        }
-
-        transition: border-bottom 0.2s ease-in-out;
-
         border-bottom: 1px solid $gray-soft;
         margin-top: rem(10);
         padding: rem(5) rem(0);

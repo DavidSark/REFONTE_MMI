@@ -17,8 +17,8 @@ useSeoMeta({
         <div class="section1-faq__sideleft">
             <div class="section1-faq__sideleft-container">
                 <borderSection :title="faq.data.section1[0].title" :subtitle="faq.data.section1[0].subtitle" />
-                <Button bgColor="bgBlack" color="white" size="small">Découvrir la formation</Button>
-                <Button size="small">Nous contacter</Button>
+                <Button class="btn-margin" bgColor="bgBlack" color="white" size="small">Découvrir la formation</Button>
+                <Button class="btn-margin" size="small">Nous contacter</Button>
             </div>
             <div class="section1-faq__sideleft-accordion">
                 <Cardfaq></Cardfaq>

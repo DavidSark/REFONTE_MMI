@@ -29,8 +29,8 @@ const className = computed (() => ({
 </script>
 
 <template>
-     <button :class="className" :href="href">
-        <slot></slot>
+     <button :class="className" :href="href"><span>
+        <slot></slot></span>
      </button>
 </template>
 
@@ -39,15 +39,42 @@ button{
     border: rem(2) solid $black;
     border-radius: rem(30);
     padding: rem(12) rem(25);
-    margin-left:rem(20);
+    // margin-left:rem(20);
     text-align: center;
     text-transform: uppercase;
     font-family: $font-poppins;
     font-size: $size-21;
     background-color: $white ;
     color:$black;
+    cursor: pointer;
+    transition: all 0.5s;
+    span {
+    cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+    }
   
 }   
+
+
+button span:after {
+  content: '\203A';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
 
 .-small{

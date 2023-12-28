@@ -19,7 +19,7 @@ useSeoMeta({
     <div class="section1-contact">
         <div class="section1-contact__side">
             <borderSection :title="contact.data.section1[0].title" :subtitle="contact.data.section1[0].subtitle" />
-            <Button class="sectionB-sideleft__btn" size="small">En savoir plus</Button>
+            <Button class="btn-margin" size="small">En savoir plus</Button>
         </div>
         <div class="section1-contact__card">
             <Cardgooglemap></Cardgooglemap>
@@ -105,6 +105,10 @@ useSeoMeta({
     }
 }
 
+
+.btn-margin {
+    margin-left:rem(20);
+}
 @media (min-width : 768px) {
     .section1-contact {
         padding: rem(30) rem(40);

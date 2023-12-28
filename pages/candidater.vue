@@ -17,7 +17,7 @@ useSeoMeta({
     <div class="section1-candidater__sideleft">
       <borderSection :title="canditater.data.section1[0].title" :subtitle="canditater.data.section1[0].subtitle" />
       <a href="https://www.parcoursup.gouv.fr/" target="_blank">
-        <Button class="sectionB-sideleft__btn" size="small" color="white" bgColor="bgBlack">S'inscrire à
+        <Button class="btn-margin" size="small" color="white" bgColor="bgBlack">S'inscrire à
           parcoursup</Button>
       </a>
     </div>
@@ -25,7 +25,7 @@ useSeoMeta({
       <borderSection :title="canditater.data.section2[0].title" :subtitle="canditater.data.section2[0].subtitle"
         color="red" borderPosition="right" />
       <a href="https://www.linkedin.com/school/mmimontbeliard/?originalSubdomain=fr" target="_blank">
-        <Button class="sectionB-sideleft__btn" size="small" color="white" bgColor="bgBlack">S'inscrire</Button>
+        <Button class="btn-margin__right" size="small" color="white" bgColor="bgBlack">S'inscrire</Button>
       </a>
     </div>
   </div>
@@ -52,6 +52,11 @@ useSeoMeta({
     }
 
   }
+}
+
+.btn-margin__right {
+  margin-right:rem(20);
+
 }
 
 @media (min-width: 768px) {
