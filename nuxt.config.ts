@@ -10,9 +10,6 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
     }
   },
-  plugins: [
-    { src: '~/plugins/locomotive-scroll.js', mode: 'client' }
-  ],
   components: [
     {
     path: '~/components',

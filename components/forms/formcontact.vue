@@ -72,7 +72,7 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
   }
   &__submit {
     border-radius: rem(30);
-    padding: rem(8) rem(20);
+    padding: rem(8) rem(25);
     font-size: rem(14);
     border: none;
     text-align: center;
@@ -81,8 +81,15 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     margin-top: rem(30);
     margin-bottom: rem(30);
     background-color: $blue;
+    border : 1px solid $blue;
     color:$white;
     cursor: pointer;
+
+    &:hover {
+    border: 1px solid $blue;
+    background-color: white;
+    color: $blue; /* Optionnel : changer la couleur du texte au survol */
+  }
  
   }
 

@@ -2,6 +2,7 @@
 const { client } = usePrismic();
 const { data: espacepro, error } = await useAsyncData('espacepro', () => client.getSingle("espacepro"));
 
+import LocomotiveScroll from 'locomotive-scroll';
 
 
 useSeoMeta({
@@ -16,7 +17,17 @@ useSeoMeta({
 
 <template>
 
-
+<!-- 
+<div class="test" data-scroll-container>
+    <div data-scroll-section>
+        <h1 data-scroll>Hey</h1>
+        <p data-scroll>👋</p>
+    </div>
+    <div data-scroll-section>
+        <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+        <p data-scroll data-scroll-speed="2">😬</p>
+    </div>
+</div> -->
 
   <div class="section1-espacepro">
     <div class="section1-espacepro__sideleft">
@@ -47,6 +58,15 @@ useSeoMeta({
 </template>
 
 <style lang="scss">
+
+.test {
+  padding:300px;
+  height: 100vh;
+  font-size:40px;
+  display:flex;
+  flex-direction:column;
+  gap: 40px;
+}
 .section-btn {
   margin-left: rem(20);
 }

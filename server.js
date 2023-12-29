@@ -17,7 +17,7 @@ async function main() {
             const { nom, email, message } = req.body;
 
             try {
-                const database = client.db('form-test'); // Remplacez 'myDatabase' par le nom de votre base de données
+                const database = client.db('form-test'); 
                 const collection = database.collection('contacts'); // Collection pour stocker les formulaires de contact
 
                 // Insérer les données du formulaire dans la collection MongoDB
