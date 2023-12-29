@@ -79,8 +79,12 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
     }
   }
 
-  .section4-index, .section5-index{
+  .section4-index{
     margin: rem(50) rem(20);
+  }
+
+  .section5-index{
+    margin: rem(80) rem(20);
   }
 }
 
@@ -101,8 +105,11 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
     }
    }
 
-   .section4-index ,.section5-index{
+   .section4-index {
     margin: rem(50) rem(40);
+  }
+  .section5-index{
+    margin: rem(120) rem(40);
   }
   }
 }
@@ -133,13 +140,15 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
       margin: rem(170) rem(75);
       max-width: rem(1500);
    }
-   .section4-index, .section5-index{
+   .section4-index{
     margin: rem(50) rem(75);
     &__tagline{
       font-size: $size-75;
-      background-color: red;
- 
     }
+  }
+
+  .section5-index{
+    margin: rem(160) rem(75);
   }
   }
 }
