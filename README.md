@@ -1,75 +1,34 @@
-# Nuxt 3 Minimal Starter
+# MMI Project - Web Development
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This project is a web application developed as part of the Web Development track in the MMI program at Montbéliard. The primary goal is to create an interactive platform to showcase various multimedia-related content.
 
-## Setup
+## Features
 
-Make sure to install the dependencies:
+- **Interactive User Interface:** Using Nuxt.js to create a responsive and fluid user interface.
+- **Dynamic Content Management:** Integration of dynamic data to present information on various multimedia aspects.
+- **Styling with SCSS:** Implementation of SCSS for modular and scalable stylesheet development.
+- **Front-end Development:** Implementation of visual elements, interactions, and client-side navigation.
+- **Back-end Development:** Creation of an API to fetch data for display on the front-end.
 
-```bash
-# npm
-npm install
+## Installation
 
-# pnpm
-pnpm install
+1. Clone this repository to your local machine.
+2. Ensure you have [Node.js](https://nodejs.org) installed.
+3. Install dependencies using `npm install` command.
+4. Start the development server with `npm run dev`.
+5. Access the application in your browser at `http://localhost:3000`.
 
-# yarn
-yarn install
+## Technologies Used
 
-# bun
-bun install
-```
+- [Nuxt.js](https://nuxtjs.org) - JavaScript framework for server-side rendering and client-side rendering.
+- [SCSS](https://sass-lang.com) - CSS preprocessor for efficient stylesheet development.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Programming language used for both front-end and back-end.
+- [Locomotive Scroll](https://github.com/locomotivemtl/locomotive-scroll) - JavaScript library for smooth scrolling effects.
 
-## Development Server
+## Contributors
 
-Start the development server on `http://localhost:3000`:
+- [@Melina-Blm] & [@DavidSark]
 
-```bash
-# npm
-npm run dev
+## License
 
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+This project is licensed under the MMI Montbéliard.
