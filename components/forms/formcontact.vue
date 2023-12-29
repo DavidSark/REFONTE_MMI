@@ -9,19 +9,6 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
 </script>
 
 <template>
-
-<!-- <form id="contactForm" action="http://localhost:3001/email" method="POST">
-    <label for="nom">Nom :</label>
-    <input type="text" id="nom" name="nom" required placeholder="Votre nom..."><br><br>
-
-    <label for="email">Email :</label>
-    <input type="email" id="email" name="email" required placeholder="Votre email..."><br><br>
-
-    <label for="message">Message :</label>
-    <textarea id="message" name="message" required placeholder="Votre message..."></textarea><br><br>
-
-    <input type="submit" value="Envoyer">
-  </form> -->
 <div class="form-contact">  
   <div class="form-contact__mmi">
     <img src="/icons/icon-mmi.svg" alt="">

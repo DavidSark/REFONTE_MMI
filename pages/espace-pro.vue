@@ -2,9 +2,7 @@
 const { client } = usePrismic();
 const { data: espacepro, error } = await useAsyncData('espacepro', () => client.getSingle("espacepro"));
 
-const props = defineProps({
 
-});
 
 useSeoMeta({
   title: espacepro.value.data.meta_title,
@@ -17,6 +15,9 @@ useSeoMeta({
 </script>
 
 <template>
+
+
+
   <div class="section1-espacepro">
     <div class="section1-espacepro__sideleft">
       <borderSection :title="espacepro.data.section1[0].titre" :subtitle="espacepro.data.section1[0].soustitre" />
