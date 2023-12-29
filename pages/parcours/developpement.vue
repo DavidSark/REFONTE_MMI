@@ -15,8 +15,8 @@ useSeoMeta({
 <template>
     <div class="section1-developpement">
         <div class="section1-developpement__sideleft">
-            <borderSection :title="developpement.data.section1[0].title"
-                :subtitle="developpement.data.section1[0].subtitle" color="green"/>
+            <borderSection :title="developpement.data.section1[0].title" :subtitle="developpement.data.section1[0].subtitle"
+                color="green" />
             <Button class="btn-margin" size="small">Candidater</Button>
         </div>
         <img src="/image-design-1.webp" alt="Etudiant">
@@ -29,12 +29,19 @@ useSeoMeta({
     </div>
 
     <div class="section4-developpement">
-        <Cardetudiants :image="developpement.data.etudiants[0].image.url" :job="developpement.data.etudiants[0].job"
-            :name="developpement.data.etudiants[0].name" :link="developpement.data.etudiants[0].link.url" bgColor="bgGreen"/>
-        <Cardetudiants :image="developpement.data.etudiants[1].image.url" :job="developpement.data.etudiants[1].job"
-            :name="developpement.data.etudiants[1].name" :link="developpement.data.etudiants[1].link.url" bgColor="bgGreen" />
-        <Cardetudiants :image="developpement.data.etudiants[2].image.url" :job="developpement.data.etudiants[2].job"
-            :name="developpement.data.etudiants[2].name" :link="developpement.data.etudiants[2].link.url" bgColor="bgGreen"/>
+
+        <PrismicRichText class="section4-developpement__title" :field="developpement.data.titlesection4"></PrismicRichText>
+        <div class="section4-developpement__cards">
+            <Cardetudiants :image="developpement.data.etudiants[0].image.url" :job="developpement.data.etudiants[0].job"
+                :name="developpement.data.etudiants[0].name" :link="developpement.data.etudiants[0].link.url"
+                bgColor="bgGreen" />
+            <Cardetudiants :image="developpement.data.etudiants[1].image.url" :job="developpement.data.etudiants[1].job"
+                :name="developpement.data.etudiants[1].name" :link="developpement.data.etudiants[1].link.url"
+                bgColor="bgGreen" />
+            <Cardetudiants :image="developpement.data.etudiants[2].image.url" :job="developpement.data.etudiants[2].job"
+                :name="developpement.data.etudiants[2].name" :link="developpement.data.etudiants[2].link.url"
+                bgColor="bgGreen" />
+        </div>
     </div>
 </template>
 
@@ -65,12 +72,29 @@ useSeoMeta({
 }
 
 
+.section4-developpement {
+    &__title {
+        padding: rem(0) rem(20);
+        margin-top:rem(30);
+        font-family: $font-redhat;
+          font-size: $size-32;
+          font-weight: 100;
+          text-transform: uppercase;
+          letter-spacing: -2.34px;
+          strong {
+            font-weight: 800;
+          }
+    }
+}
+
+
 .btn-margin__right {
-  margin-right:rem(20);
+    margin-right: rem(20);
 
 }
+
 .btn-margin {
-    margin-left:rem(20);
+    margin-left: rem(20);
 }
 
 
@@ -87,12 +111,19 @@ useSeoMeta({
         padding: rem(30) rem(40);
         flex-direction: row;
     }
-    
+
     .section4-developpement {
         padding: rem(30) rem(40);
+        &__cards {
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
+    }
+        &__title {
+        padding: rem(30) rem(0);
+        margin-top:rem(0);
+    
+}
     }
 }
 
@@ -108,10 +139,20 @@ useSeoMeta({
             width: 40%;
         }
     }
+
     .section4-developpement {
-        margin-top:rem(100);
+        &__cards {
+        margin-top: rem(100);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+    &__title {
+        padding: rem(0) rem(0);
+        margin-top:rem(50);
+        font-size:$size-43;
+    
+}
+
 
     }
 
@@ -135,15 +176,21 @@ useSeoMeta({
         padding: rem(50) rem(75);
         gap: rem(20)
     }
-    .section4-developpement {
-        margin-top:rem(160);
 
+    .section4-developpement {
+        padding: rem(50) rem(75);
+        &__cards {
+        margin-top: rem(130);
+    }
+    &__title {
+        margin-top:rem(100);
+        font-size:$size-90;
+    }
     }
 }
+
 @media(min-width : 1750px) {
-    .section4-developpement{
+    .section4-developpement {
         display: none;
     }
-}
-
-</style>
+}</style>

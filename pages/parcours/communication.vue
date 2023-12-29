@@ -16,7 +16,7 @@ useSeoMeta({
     <div class="section1-communication">
         <div class="section1-communication__sideleft">
             <borderSection :title="communication.data.section1[0].title" :subtitle="communication.data.section1[0].subtitle"
-            color="red"  />
+                color="red" />
             <Button class="btn-margin" size="small">Candidater</Button>
         </div>
         <img src="/image-design-1.webp" alt="Etudiant">
@@ -29,15 +29,18 @@ useSeoMeta({
     </div>
 
     <div class="section4-communication">
-         
-    <PrismicRichText class="section4-communication__title" :field="communication.data.titlesection4"></PrismicRichText>
+
+        <PrismicRichText class="section4-communication__title" :field="communication.data.titlesection4"></PrismicRichText>
         <div class="section4-communication__cards">
-        <Cardetudiants :image="communication.data.etudiants[0].image.url" :job="communication.data.etudiants[0].job"
-            :name="communication.data.etudiants[0].name" :link="communication.data.etudiants[0].link.url" bgColor="bgRed"/>
-        <Cardetudiants :image="communication.data.etudiants[1].image.url" :job="communication.data.etudiants[1].job"
-            :name="communication.data.etudiants[1].name" :link="communication.data.etudiants[1].link.url"  bgColor="bgRed"/>
-        <Cardetudiants :image="communication.data.etudiants[2].image.url" :job="communication.data.etudiants[2].job"
-            :name="communication.data.etudiants[2].name" :link="communication.data.etudiants[2].link.url" bgColor="bgRed" />
+            <Cardetudiants :image="communication.data.etudiants[0].image.url" :job="communication.data.etudiants[0].job"
+                :name="communication.data.etudiants[0].name" :link="communication.data.etudiants[0].link.url"
+                bgColor="bgRed" />
+            <Cardetudiants :image="communication.data.etudiants[1].image.url" :job="communication.data.etudiants[1].job"
+                :name="communication.data.etudiants[1].name" :link="communication.data.etudiants[1].link.url"
+                bgColor="bgRed" />
+            <Cardetudiants :image="communication.data.etudiants[2].image.url" :job="communication.data.etudiants[2].job"
+                :name="communication.data.etudiants[2].name" :link="communication.data.etudiants[2].link.url"
+                bgColor="bgRed" />
         </div>
     </div>
 </template>
@@ -71,26 +74,29 @@ useSeoMeta({
 .section4-communication {
     &__title {
         padding: rem(0) rem(20);
-        margin-top:rem(30);
+        margin-top: rem(30);
         font-family: $font-redhat;
-          font-size: $size-32;
-          font-weight: 100;
-          text-transform: uppercase;
-          letter-spacing: -2.34px;
-          strong {
+        font-size: $size-32;
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: -2.34px;
+
+        strong {
             font-weight: 800;
-          }
+        }
     }
 
 }
 
 .btn-margin__right {
-  margin-right:rem(20);
+    margin-right: rem(20);
 
 }
+
 .btn-margin {
-    margin-left:rem(20);
+    margin-left: rem(20);
 }
+
 @media (min-width : 768px) {
     .section1-communication {
         padding: rem(60) rem(40);
@@ -107,16 +113,18 @@ useSeoMeta({
 
     .section4-communication {
         padding: rem(30) rem(40);
+
         &__cards {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
         }
+
         &__title {
-        padding: rem(30) rem(0);
-        margin-top:rem(0);
-    
-}
+            padding: rem(30) rem(0);
+            margin-top: rem(0);
+
+        }
     }
 }
 
@@ -134,23 +142,23 @@ useSeoMeta({
     }
 
     .section4-communication {
-      
+
         &__cards {
-        margin-top:rem(100);
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-    &__title {
-        padding: rem(0) rem(0);
-        margin-top:rem(50);
-        font-size:$size-43;
-    
-}
+            margin-top: rem(100);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &__title {
+            padding: rem(0) rem(0);
+            margin-top: rem(50);
+            font-size: $size-43;
+
+        }
 
     }
 
 }
-
 
 
 @media (min-width : 1440px) {
@@ -171,22 +179,22 @@ useSeoMeta({
     }
 
     .section4-communication {
-        padding:rem(50) rem(75);
+        padding: rem(50) rem(75);
+
         &__cards {
-        margin-top:rem(130);
-    }
-    &__title {
-        margin-top:rem(100);
-        font-size:$size-90;
-    }
+            margin-top: rem(130);
+        }
+
+        &__title {
+            margin-top: rem(100);
+            font-size: $size-90;
+        }
 
     }
 }
 
 @media(min-width : 1750px) {
-    .section4-communication{
+    .section4-communication {
         display: none;
     }
-}
-
-</style>
+}</style>
