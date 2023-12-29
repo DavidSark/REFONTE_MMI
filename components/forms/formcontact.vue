@@ -84,11 +84,11 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     border : 1px solid $blue;
     color:$white;
     cursor: pointer;
-
+    transition: 0.5s;
     &:hover {
     border: 1px solid $blue;
     background-color: white;
-    color: $blue; /* Optionnel : changer la couleur du texte au survol */
+    color: $blue; 
   }
  
   }
