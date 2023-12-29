@@ -1,9 +1,21 @@
 <script setup>
+// import easyScrollDots from './easyScrollDots.js';
+
+
+// easyScrollDots({
+//   'fixedNav': false,
+//   'fixedNavId': '',
+//   'fixedNavUpward': false,
+//   'offset': 0
+// });
+
 
 </script>
 
 
 <template>
+
+  <scrollbar/>
   <div>
     <NuxtPage />
   </div>

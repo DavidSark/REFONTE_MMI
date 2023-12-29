@@ -3,6 +3,7 @@
 const { client } = usePrismic();
 const { data: faq, error } = await useAsyncData('faq', () => client.getSingle("faq"));
 
+
 useSeoMeta({
     title: faq.value.data.meta_title,
     description: faq.value.data.meta_description,
@@ -13,8 +14,9 @@ useSeoMeta({
 </script>
 
 <template>
+    <!-- <scrollbar/> -->
     <div class="section1-faq">
-        <div class="section1-faq__sideleft">
+        <div class="section1-faq__sideleft" data-scroll-indicator-title="Hello World">
             <div class="section1-faq__sideleft-container">
                 <borderSection :title="faq.data.section1[0].title" :subtitle="faq.data.section1[0].subtitle" />
                 <Button class="btn-margin" bgColor="bgBlack" color="white" size="small">Découvrir la formation</Button>

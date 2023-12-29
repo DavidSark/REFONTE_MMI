@@ -2,7 +2,6 @@
 const { client } = usePrismic();
 const { data: espacepro, error } = await useAsyncData('espacepro', () => client.getSingle("espacepro"));
 
-import LocomotiveScroll from 'locomotive-scroll';
 
 
 useSeoMeta({
