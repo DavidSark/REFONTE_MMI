@@ -28,13 +28,20 @@ useSeoMeta({
         <Cardparcours :image="design.data.card[2].image.url" :title="design.data.card[2].title" />
     </div>
 
-    <div class="section4-design">
+
+
+   <div class="section4-design">
+ 
+   
+    <PrismicRichText class="section4-design__title" :field="design.data.titlesection4"></PrismicRichText>
+    <div class="section4-design__cards">
         <Cardetudiants :image="design.data.etudiants[0].image.url" :job="design.data.etudiants[0].job"
             :name="design.data.etudiants[0].name" :link="design.data.etudiants[0].link.url" />
         <Cardetudiants :image="design.data.etudiants[1].image.url" :job="design.data.etudiants[1].job"
             :name="design.data.etudiants[1].name" :link="design.data.etudiants[1].link.url"  />
         <Cardetudiants :image="design.data.etudiants[2].image.url" :job="design.data.etudiants[2].job"
             :name="design.data.etudiants[2].name" :link="design.data.etudiants[2].link.url" />
+    </div>
     </div>
 </template>
 
@@ -54,6 +61,21 @@ useSeoMeta({
         &-btn {
             width: rem(140);
         }
+    }
+}
+
+.section4-design {
+    &__title {
+        padding: rem(0) rem(20);
+        margin-top:rem(30);
+        font-family: $font-redhat;
+          font-size: $size-32;
+          font-weight: 100;
+          text-transform: uppercase;
+          letter-spacing: -2.34px;
+          strong {
+            font-weight: 800;
+          }
     }
 }
 
@@ -89,9 +111,16 @@ useSeoMeta({
 
     .section4-design {
         padding: rem(30) rem(40);
+        &__cards{   
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
+        }
+        &__title {
+        padding: rem(30) rem(0);
+        margin-top:rem(0);
+    
+}
     }
 }
 
@@ -109,9 +138,17 @@ useSeoMeta({
     }
 
     .section4-design {
-        margin-top:rem(100);
+        &__cards {
+        margin-top:rem(80);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+    &__title {
+        padding: rem(0) rem(0);
+        margin-top:rem(50);
+        font-size:$size-43;
+    
+}
 
     }
 
@@ -136,14 +173,23 @@ useSeoMeta({
         gap: rem(20)
     }
     .section4-design {
-        margin-top:rem(160);
+        padding:rem(50) rem(75);
+        &__cards {
+        margin-top:rem(130);
+    }
+    &__title {
+        margin-top:rem(100);
+        font-size:$size-90;
+    }
 
     }
 }
 
 @media(min-width : 1750px) {
     .section4-design{
+        &__cards {
         display: none;
+    }
     }
 }
 

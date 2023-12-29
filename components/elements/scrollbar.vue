@@ -33,9 +33,10 @@
   </script>
   
   <style lang="scss" scoped>
-  .scrollbar-container {
+    .scrollbar-container {
+    display: none;
     position: fixed;
-    left: rem(25);
+    left: rem(15);
     top: 50%;
     transform: translateY(-50%);
     height: 200px; /* Height of the scrollbar container */
@@ -59,6 +60,20 @@
   
   .scrollbar-button.active {
     background-color: $black; /* Active button color */
+  }
+
+  @media (min-width : 1024px) {
+    .scrollbar-container{
+      display:block;
+    }
+    
+  }
+
+  @media (min-width : 1440px) {
+    .scrollbar-container{
+      left: rem(30);
+    }
+    
   }
   </style>
   
