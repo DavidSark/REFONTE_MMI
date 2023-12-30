@@ -16,8 +16,8 @@
 
         <div class="section-indexdep__image">
             <img src="mmi_ellipse.webp" alt="">
-            <img src="mmi_ellipse.webp" alt="">
-            <img src="mmi_ellipse.webp" alt="">
+            <img src="mmi_ellipse2.webp" alt="">
+            <img src="mmi_ellipse3.webp" alt="">
             <div class="section-indexdep__blackellipse"></div>
             <div class="section-indexdep__blackellipse3"></div>
         </div>
@@ -35,7 +35,12 @@
         height: 50%;
         justify-content: flex-end;
         position: relative;
-
+        img{
+        width: rem(189);
+        height: rem(189);
+        object-fit: cover;
+        border-radius: 100%;
+        }
         :nth-child(2),
         :nth-child(3) {
             display: none;
