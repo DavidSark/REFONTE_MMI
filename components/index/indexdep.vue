@@ -15,9 +15,9 @@
         </div>
 
         <div class="section-indexdep__image">
-            <img src="mmi_ellipse.webp" alt="">
-            <img src="mmi_ellipse2.webp" alt="">
-            <img src="mmi_ellipse3.webp" alt="">
+            <img src="/mmi_ellipse.webp" alt="image du département">
+            <img src="/mmi_ellipse2.webp" alt="image du département">
+            <img src="/mmi_ellipse3.webp" alt="image du département">
             <div class="section-indexdep__blackellipse"></div>
             <div class="section-indexdep__blackellipse3"></div>
         </div>

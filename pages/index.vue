@@ -50,7 +50,6 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
 
       <div class="section6-index">
         <indexespacepro/>
-       
       </div>
 
    <Footer></Footer>
@@ -101,6 +100,10 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
         z-index: -3;
     }
   }
+
+  .section6-index{
+    margin: rem(80) rem(20);
+  }
 }
 
 @media screen and (min-width:768px) {
@@ -123,7 +126,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
    .section4-index {
     margin: rem(50) rem(40);
   }
-  .section5-index{
+  .section5-index, .section6-index{
     margin: rem(120) rem(40);
   }
   }
@@ -162,7 +165,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
     }
   }
 
-  .section5-index{
+  .section5-index, .section6-index{
     margin: rem(160) rem(75);
   }
   }
