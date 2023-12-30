@@ -311,8 +311,6 @@ img {
 
 }
 
-
-
 @media (min-width: 1440px) {
 
     .section4-departement {
