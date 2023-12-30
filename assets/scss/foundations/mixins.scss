@@ -6,3 +6,12 @@
     border-left: 3px solid $white-soft;
     padding: 20px;
 }
+
+//décoration arc de cercle 
+@mixin blackEllipse{
+    position: absolute;
+    background-color: $black;
+    overflow: hidden;
+    transform: rotate(-90deg);
+    z-index: -1;
+}

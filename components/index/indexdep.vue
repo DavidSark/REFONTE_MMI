@@ -19,6 +19,7 @@
             <img src="mmi_ellipse.webp" alt="">
             <img src="mmi_ellipse.webp" alt="">
             <div class="section-indexdep__blackellipse"></div>
+            <div class="section-indexdep__blackellipse3"></div>
         </div>
         <div class="section-indexdep__blackellipse2"></div>
     </div>
@@ -39,17 +40,15 @@
         :nth-child(3) {
             display: none;
         }
+
+      
     }
 
     &__blackellipse {
-        position: absolute;
+        @include blackEllipse;
         width: rem(200);
         height: rem(100);
         border-radius: rem(100) rem(100) 0 0;
-        background-color: $black;
-        overflow: hidden;
-        position: absolute;
-        transform: rotate(-90deg);
         top: rem(40);
         right: rem(-70);
         z-index: -1;
@@ -152,17 +151,14 @@
         }
 
         &__blackellipse2 {
-            position: absolute;
+            @include blackEllipse;
             width: rem(402.5);
             height: rem(201.25);
             border-radius: rem(500) rem(500) 0 0;
-            background-color: $black;
-            overflow: hidden;
-            position: absolute;
-            transform: rotate(-90deg);
             top: rem(100);
             right: rem(-140);
             z-index: -1;
+            
         }
     }
 }
@@ -192,14 +188,10 @@
         }
 
         &__blackellipse2 {
-            position: absolute;
+            @include blackEllipse;
             width: 40vw;
             height: 20vw;
-            border-radius: rem(500) rem(500) 0 0;
-            background-color: $black;
-            overflow: hidden;
-            position: absolute;
-            transform: rotate(-90deg);
+            border-radius: rem(500) rem(500) 0 0;       
             top: 20vh;
             right: -14.9vw;
             z-index: -1;

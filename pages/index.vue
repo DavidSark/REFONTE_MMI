@@ -93,7 +93,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
         width: 100%;
         height: rem(1);
         background-color: $white-soft;
-        z-index: -1;
+        z-index: -3;
     }
   }
 }
