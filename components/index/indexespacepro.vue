@@ -9,10 +9,10 @@
             <p>Un environnement propice <span>au développement des étudiants.</span></p>
         </div>
 
-        <div class="section-espacepro__button">
-            <Button size="small">déposer une offre</Button>
-            <Button>déposer une offre</Button>
-        </div>
+       
+            <Button class="section-espacepro__btn-small" size="small">déposer une offre</Button>
+            <Button class="section-espacepro__btn-big">déposer une offre</Button>
+     
 
         
         <div class="section-espacepro__image">
@@ -50,11 +50,9 @@
         }
     }
     
-    &__button {
-        :nth-child(2) {
-            display: none;
-        }
-    }
+   &__btn-big{
+    display: none;
+   }
 
     &__image {
         position: relative;
@@ -154,15 +152,13 @@
             }
         }
 
-        &__button {
-            :nth-child(1) {
-                display: none;
-            }
-
-            :nth-child(2) {
-                display: block;
-            }
+        &__btn-big{
+            display: block;
         }
+        &__btn-small{
+            display: none;
+        }
+
     }
 }
 

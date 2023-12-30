@@ -9,10 +9,10 @@
             <p>Un environnement propice <span>au développement des étudiants.</span></p>
         </div>
 
-        <div class="section-indexdep__button">
-            <Button size="small">découvrir</Button>
-            <Button>découvrir</Button>
-        </div>
+    
+            <Button class="section-indexdep__btn-small" size="small">découvrir</Button>
+            <Button class="section-indexdep__btn-big">découvrir</Button>
+        
 
         <div class="section-indexdep__image">
             <img src="/mmi_ellipse.webp" alt="image du département">
@@ -81,10 +81,8 @@
         }
     }
 
-    &__button {
-        :nth-child(2) {
+    &__btn-big  {      
             display: none;
-        }
     }
 }
 
@@ -167,15 +165,12 @@
             margin-bottom: rem(60);
         }
 
-        &__button {
-            :nth-child(1) {
-                display: none;
-            }
-
-            :nth-child(2) {
-                display: block;
-            }
-        }
+       &__btn-big{
+        display: block;
+       }
+       &__btn-small{
+        display: none;
+       }
 
         &__image {
             gap: rem(70);
