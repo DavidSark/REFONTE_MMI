@@ -10,7 +10,7 @@
         <div class="section-indexparcours__design">
             <h2>design<span>.</span></h2>
             <!-- <div></div> -->
-            <img src="/arrow.svg" alt="">
+            <img src="/icons/Arrow.svg" alt="">
         </div>
         <div class="section-indexparcours__line"></div>
         <div class="section-indexparcours__com">
@@ -22,7 +22,7 @@
         <div class="section-indexparcours__dev">
             <h2>développement web<span>.</span></h2>
             <!-- <div></div> -->
-            <img src="/arrow.svg" alt="">
+            <img src="/icons/Arrow.svg" alt="">
         </div>
         <div class="section-indexparcours__line"></div>
     </div>
