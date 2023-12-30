@@ -23,17 +23,15 @@ async function main() {
                 // Insérer les données du formulaire dans la collection MongoDB
                 const result = await collection.insertOne({ nom, email, message });
 
-
-                res.redirect('https://refonte-mmi-davidsark.vercel.app/contact');
                 // res.redirect('/contact');
                 // Envoyer une réponse au client
-                // res.send(`
-                //     <h1>Formulaire de contact</h1>
-                //     <p>Nom: ${nom}</p>
-                //     <p>Email: ${email}</p>
-                //     <p>Message: ${message}</p>
-                //     <p>Formulaire envoyé avec succès et enregistré dans la base de données !</p>
-                // `);
+                res.send(`
+                    <h1>Formulaire de contact</h1>
+                    <p>Nom: ${nom}</p>
+                    <p>Email: ${email}</p>
+                    <p>Message: ${message}</p>
+                    <p>Formulaire envoyé avec succès et enregistré dans la base de données !</p>
+                `);
             } catch (error) {
                 console.error('Error inserting contact form data:', error);
                 res.status(500).send('Erreur lors de l\'enregistrement du formulaire.');
