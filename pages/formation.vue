@@ -27,6 +27,14 @@ const { data: formation, error } = await useAsyncData('formation', () => client.
             </div>
         </div>
 
+        <div class="section3-formation">
+            <div class="section3-formation__content">
+                <borderSection  color="green" :title="formation.data.section3[0].title"
+                    :subtitle="formation.data.section3[0].subtitle" ></borderSection>
+            </div>
+
+            <img src="image14.webp" alt="">
+        </div>
 
     </div>
 </template>
@@ -58,10 +66,24 @@ const { data: formation, error } = await useAsyncData('formation', () => client.
     }
 }
 
+.section3-formation{
+    display: flex;
+    flex-direction: column;
+    &__content{
+        padding: rem(30) rem(20);
+    }
+}
+
 @media screen and (min-width: 768px) {
     .section1-formation, .section2-formation{
     padding: rem(60) rem(40);
+    
+}   .section3-formation{
+    padding: rem(30) rem(40);
+    &__content{
+        padding: rem(40) rem(0);
     }
+}
 }
 
 @media screen and (min-width: 1024px) {
@@ -78,6 +100,20 @@ const { data: formation, error } = await useAsyncData('formation', () => client.
             height: initial;
         }
 }
+    .section3-formation{
+        display: flex;;
+        flex-direction: row;
+        align-items: center;
+      
+        &__content{
+            width: 50%;
+        }
+       img{
+        width: 50%;
+       }
+    }
+
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -93,7 +129,7 @@ const { data: formation, error } = await useAsyncData('formation', () => client.
         }
     } 
 
-    .section2-formation{
+    .section2-formation, .section3-formation{
         padding: rem(120) rem(75);
 }
 }
