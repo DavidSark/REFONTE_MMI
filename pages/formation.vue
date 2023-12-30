@@ -17,6 +17,17 @@ const { data: formation, error } = await useAsyncData('formation', () => client.
                 
             </div>
         </div>
+
+        <div class="section2-formation">
+            <div class="section2-formation__content">
+                <borderSection color="red" :title="formation.data.section2[0].title"
+                    :subtitle="formation.data.section2[0].subtitle" ></borderSection>
+            </div>
+            <div class="section2-formation__parcours">
+            </div>
+        </div>
+
+
     </div>
 </template>
 
@@ -32,12 +43,41 @@ const { data: formation, error } = await useAsyncData('formation', () => client.
         width: 100%;
         height: rem(400);
     }
+    
+}
+
+.section2-formation{
+    padding: rem(30) rem(20);
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+    &__parcours{
+        background-color: $black;
+        width: 100%;
+        height: rem(150);
+    }
 }
 
 @media screen and (min-width: 768px) {
-    .section1-formation{
+    .section1-formation, .section2-formation{
     padding: rem(60) rem(40);
-    } 
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .section2-formation{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: rem(40);
+        
+        &__content{
+            width: 50%;
+        }
+        &__parcours{          
+            width: 50%;
+            height: initial;
+        }
+}
 }
 
 @media screen and (min-width: 1440px) {
@@ -52,5 +92,9 @@ const { data: formation, error } = await useAsyncData('formation', () => client.
             height: 100%;
         }
     } 
+
+    .section2-formation{
+        padding: rem(120) rem(75);
+}
 }
 </style>
