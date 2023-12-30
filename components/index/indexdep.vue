@@ -43,15 +43,15 @@
 
     &__blackellipse {
         position: absolute;
-        width: 200px;
-        height: 100px;
-        border-radius: 100px 100px 0 0;
+        width: rem(200);
+        height: rem(100);
+        border-radius: rem(100) rem(100) 0 0;
         background-color: $black;
         overflow: hidden;
         position: absolute;
         transform: rotate(-90deg);
-        top: 40px;
-        right: -70px;
+        top: rem(40);
+        right: rem(-70);
         z-index: -1;
     }
 
@@ -103,7 +103,7 @@
         }
 
         &__image {
-            gap: 30px;
+            gap: rem(30);
 
             :nth-child(2) {
                 display: block;
@@ -128,7 +128,7 @@
         }
 
         &__blackellipse {
-            right: -90px;
+            right: rem(-90);
         }
     }
 }
@@ -153,15 +153,15 @@
 
         &__blackellipse2 {
             position: absolute;
-            width: 402.5px;
-            height: 201.25px;
-            border-radius: 500px 500px 0 0;
+            width: rem(402.5);
+            height: rem(201.25);
+            border-radius: rem(500) rem(500) 0 0;
             background-color: $black;
             overflow: hidden;
             position: absolute;
             transform: rotate(-90deg);
-            top: 100px;
-            right: -140px;
+            top: rem(100);
+            right: rem(-140);
             z-index: -1;
         }
     }
@@ -184,7 +184,7 @@
         }
 
         &__image {
-            gap: 70px;
+            gap: rem(70);
 
             :nth-child(3) {
                 display: block;
@@ -195,7 +195,7 @@
             position: absolute;
             width: 40vw;
             height: 20vw;
-            border-radius: 500px 500px 0 0;
+            border-radius: rem(500) rem(500) 0 0;
             background-color: $black;
             overflow: hidden;
             position: absolute;
