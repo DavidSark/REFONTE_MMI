@@ -7,14 +7,14 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
 <template>
     <div class="container-hero">
       <div class="container-hero__top">
-        <img src="image1.webp" alt="Cours en MMI">
+        <img src="/image1.webp" alt="Cours en MMI">
       </div>
       <div class="container-hero__middle">
         <h1>Mmi Montbéliard</h1>
         <h2>Métiers du Multimédia et de l'internet</h2>
       </div>
       <div class="container-hero__bottom">
-        <img src="image3.webp" alt="Cours en MMI">
+        <img src="/image3.webp" alt="Cours en MMI">
         <div class="container-hero__bottom-buttons">
           <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">Candidater</Button>
           <Button size="small" bgColor="bgTransparent" borderColor="borderWhite" color="white">Formation</Button>

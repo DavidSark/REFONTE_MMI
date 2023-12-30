@@ -30,7 +30,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
       </div>
      
       <div class="container-hero__right">
-        <img src="image1.webp" alt="Cours en MMI">      
+        <img src="/image1.webp" alt="Cours en MMI">      
       </div>
     </div>
 </template>

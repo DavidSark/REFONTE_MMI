@@ -49,7 +49,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
       </div>
 
       <div class="section6-index">
-        <indexespacepro/>
+        <indexespacepro/>       
       </div>
 
    <Footer></Footer>
@@ -92,7 +92,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
     position: relative;
     margin: rem(80) rem(20);
     &__line{
-      position: absolute;
+        position: absolute;
         bottom: rem(85);
         width: 100%;
         height: rem(1);

@@ -45,8 +45,6 @@
         :nth-child(3) {
             display: none;
         }
-
-      
     }
 
     &__blackellipse {
