@@ -52,6 +52,10 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
         <indexespacepro/>       
       </div>
 
+      <div class="section7-index">
+        <indexactualite/>       
+      </div>
+
    <Footer></Footer>
   </div>
 </template>
@@ -70,7 +74,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
     margin: rem(50) rem(20);
     &__tagline{
       font-family: $font-poppins;
-      font-size: $size-24;
+      font-size: $size-20;
       text-transform: uppercase;
       strong{
        font-weight: 700;

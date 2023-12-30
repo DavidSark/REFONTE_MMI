@@ -42,7 +42,7 @@
     &-title{
         margin-top: rem(10);
         font-family: $font-poppins;
-        font-size: $size-24;
+        font-size: $size-20;
         text-transform: uppercase;
         border-left: rem(6) solid;
         padding: rem(0) rem(10);
@@ -76,7 +76,7 @@
         text-align: end;
         margin-top: rem(10);
         font-family: $font-poppins;
-        font-size: $size-24;
+        font-size: $size-20;
         text-transform: uppercase;
         border-right: rem(6) solid;
         padding: rem(0) rem(10);

@@ -63,7 +63,7 @@
         margin-bottom: rem(15);
 
         h2 {
-            font-size: $size-39;
+            font-size: $size-32;
             font-weight: 700;
             margin-bottom: rem(15);
 
@@ -73,7 +73,7 @@
         }
 
         p {
-            font-size: $size-24;
+            font-size: $size-16;
         }
 
         span {
@@ -120,7 +120,7 @@
 
             p {
                 max-width: rem(600);
-                font-size: $size-32;
+                font-size: $size-24;
             }
         }
 
