@@ -183,7 +183,7 @@
         position: absolute;
         transform: rotate(-90deg);
         top: 20vh;
-        right: -15.2vw;
+        right: -14.9vw;
         z-index: -1;
     }
     }
