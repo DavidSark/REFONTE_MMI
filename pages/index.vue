@@ -48,6 +48,11 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
         <div class="section5-index__line"></div>
       </div>
 
+      <div class="section6-index">
+        <indexespacepro/>
+       
+      </div>
+
    <Footer></Footer>
   </div>
 </template>
