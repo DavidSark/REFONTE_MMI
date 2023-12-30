@@ -33,16 +33,22 @@
 <style lang="scss" scoped>
 .section3-candidater {
   font-family: $font-redhat;
+  color:$white;
   text-transform: uppercase;
 
   &__qualites {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
     padding: rem(50) rem(25);
+    background-color: $black;
 
     &-group {
       margin-top: rem(30);
 
       &__text {
-        border-bottom: 1px solid $gray-soft;
+        border-bottom: 1px solid $white-soft;
         margin-top: rem(10);
         padding: rem(5) rem(0);
         font-size:$size-24;
@@ -52,14 +58,14 @@
           color: transparent;
           font-size: $size-28;
           -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: $black;
+          -webkit-text-stroke-color: $white;
         }
       }
 
     }
 
     &-title {
-      color: $black;
+      color: $white;
       font-size: $size-33;
       line-height: 100%;
       letter-spacing: -2.34px;
@@ -121,6 +127,7 @@
   .section3-candidater {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
 
     &__image {
       position: relative;
@@ -134,10 +141,12 @@
 
 @media (min-width: 1024px) {
   .section3-candidater {
-    align-items: center;
+    align-items: stretch;
+
 
     &__qualites {
       &-group {
+      
         &__text {
           font-size: $size-33;
 
@@ -149,7 +158,7 @@
       }
 
       &-title {
-        color: $black;
+        color: $white;
         font-size: $size-55;
         line-height: 100%;
         letter-spacing: -2.34px;
@@ -197,7 +206,7 @@
       }
 
       &-title {
-        color: $black;
+
         font-size: $size-90;
         line-height: 100%;
         letter-spacing: -2.34px;
