@@ -29,11 +29,12 @@
         font-family: $font-poppins;
         text-transform: uppercase;
         margin-bottom: rem(15);
-
+       
         h2 {
             font-size: $size-39;
             font-weight: 700;
             margin-bottom: rem(15);
+            display: table-caption;
 
             span {
                 color: $blue;
@@ -86,7 +87,6 @@
     .section-espacepro{
         &__image{
             margin-top: 0;
-       
             img{
                 width: 50%;
                 height: auto;
@@ -96,26 +96,50 @@
         }
     }
 }
+
+@media screen and (min-width:480px) {
+    .section-espacepro{
+       &__text{
+            p {
+                max-width: rem(500);
+            }
+       }
+    }
+}
+
 @media screen and (min-width:768px) {
     .section-espacepro{
         &__image{
-            margin-top: 0;
             img{
                 width: 60%;
-                // object-position: 0 30%;
-                // width: 921px;
-                // height: 410px;
             }
         }
+        &__text {
+            p {
+                max-width: rem(600);
+                font-size: $size-32;
+            }
+        }  
     }
 }
 @media screen and (min-width:1024px) {
     .section-espacepro{
         &__image{
-            margin-top: 0;
             img{
                 max-width: rem(560);
                 max-height: rem(360);
+            }
+        }
+
+        &__text {
+            h2 {
+                font-size: 7.5vw;
+                margin-bottom: rem(40);
+            }
+
+            p {
+                max-width: initial;
+                font-size: 4vw;
             }
         }
     }
@@ -123,15 +147,41 @@
 @media screen and (min-width:1440px) {
     .section-espacepro{
         &__image{
-            margin-top: 0;
             img{
+                max-width: rem(700);
+                max-height: rem(310);
+                transform: initial;
+            }
+        }
+
+        &__button {
+            :nth-child(1) {
+                display: none;
+            }
+
+            :nth-child(2) {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1760px) {
+    .section-espacepro {
+        &__text {
+            h2 {
+                font-size: $size-123
+            }
+
+            p {
+                font-size: $size-75
+            }
+        }
+        img{
                 max-width: rem(921);
                 max-height: rem(410);
                 transform: initial;
-                // width: 921px;
-                // height: 410px;
             }
-        }
     }
 }
 </style>

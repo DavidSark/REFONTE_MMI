@@ -95,13 +95,10 @@
             h2 {
                 //font-size: $size-24;
             }
-
             p {
                 // font-size: $size-16;
                 max-width: rem(500);
             }
-
-            ;
         }
 
         &__image {
@@ -125,8 +122,6 @@
                 max-width: rem(600);
                 font-size: $size-32;
             }
-
-            ;
         }
 
         &__blackellipse {
@@ -212,8 +207,6 @@
             p {
                 font-size: $size-75
             }
-
-            ;
         }
     }
 }
