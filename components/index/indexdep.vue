@@ -5,7 +5,7 @@
 <template>
     <div class="section-indexdep">
         <div class="section-indexdep__text">
-            <h2>Le département<span>.</span></h2>
+            <h2>Le <br/> département<span>.</span></h2>
             <p>Un environnement propice <span>au développement des étudiants.</span></p>
         </div>
 
