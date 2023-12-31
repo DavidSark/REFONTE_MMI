@@ -79,6 +79,7 @@ const props = defineProps({
       height: rem(1);
       width: 100%;
       background-color: $white-soft;
+ 
     }
 
 
@@ -118,9 +119,21 @@ const props = defineProps({
       position: absolute;
       z-index: 10;
       top: 0;
-      right: 0;
-      width: rem(100);
-      height: rem(100);
+      right: 10vw;
+      width: rem(270);
+      height: rem(375);
+      border-radius: rem(36);
+      transform: rotate(8.63deg);
+      box-shadow: 16px 16px 33.3px 0px rgba(0, 0, 0, 0.25);
+
+
+      img{
+        border-radius: rem(36);
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+      }
     }
     
     &:hover {
