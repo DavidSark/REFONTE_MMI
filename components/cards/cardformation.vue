@@ -4,12 +4,19 @@ const { data: projets, error } = await useAsyncData('projets', () => client.getS
 
 const props = defineProps({
   items: Array,
+  color: String,
 });
+
+const className  = computed(() =>({
+  ' -red': props.color ==='red',
+  ' -green': props.color ==='green',
+  
+}))
 </script>
 
 <template>
   <div class="formation-container">
-    <div class="formation-container__title">
+    <div class="formation-container__title" :class="className">
       <PrismicRichText :field="projets.data.title"></PrismicRichText>
     </div>
     <div class="formationcard-itemM" v-for="item in items">
@@ -55,7 +62,15 @@ const props = defineProps({
     @include borderColorTitle;
     border-color: $blue;
     font-size: $size-32;
+      &.-red{ 
+          border-color: $red
+       }
+      &.-green{
+         border-color: $green
+       }
   }
+
+ 
 
   .formationcard-itemP {
     display: none;
@@ -122,12 +137,22 @@ const props = defineProps({
     .formationcard-itemP {
       @include borderColorSubtitle;
       padding: rem(0) rem(20);     
-     
+    
       display: flex;
       flex-direction: column;
       // gap: rem(10);
       position: relative;
       cursor: pointer;
+
+
+      &.-red{
+ 
+          border-color: $red
+       }
+      &.-green{
+         border-color: $green
+       }
+
 
       &__container {
         

@@ -39,10 +39,7 @@ const { data: projets } = await useAsyncData('projets', () => client.getSingle("
 
 
         <div class="section4-formation">
-
-            
-
-            <cardformation :items="projets.data.projects"></cardformation>
+            <cardformation color="green" :items="projets.data.projects"></cardformation>
         </div>
     </div>
 </template>
