@@ -129,7 +129,7 @@ const props = defineProps({
 
       img{
         border-radius: rem(36);
-        object-fit: contain;
+        object-fit: cover;
         width: 100%;
         height: 100%;
         z-index: 10;
