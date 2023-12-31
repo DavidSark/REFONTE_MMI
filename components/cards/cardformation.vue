@@ -28,7 +28,7 @@ const props = defineProps({
       <div class="formationcard-itemP__container">
         <div class="formationcard-itemP__container__content">
           <img src="/icons/Arrow.svg" alt="">
-          <PrismicRichText :field="item.title"></PrismicRichText>
+          <PrismicRichText class="formation-transform" :field="item.title"></PrismicRichText>
         </div>
 
         <div class="formationcard-itemP__container__image">
@@ -113,7 +113,6 @@ const props = defineProps({
   .formation-container {
     &__title {
       font-size: $size-43;
-
     }
 
     .formationcard-itemM {
@@ -136,12 +135,15 @@ const props = defineProps({
           display: flex;
           gap: rem(20);
           font-size: $size-32;
-
+          .formation-transform{
+            transition: transform .3s ease-in-out;
+          }
           img {
-            display: none;
+            position: absolute;
+            top: 65%;
             width: rem(20);
-            transform: rotate(46deg);
-
+            transform: translate(-500%) rotate(46deg);
+            transition: transform 0.3s ease-in-out;
           }
         }
 
@@ -164,6 +166,7 @@ const props = defineProps({
             width: 100%;
             height: 100%;
             z-index: 10;
+           
           }
         }
 
@@ -177,14 +180,17 @@ const props = defineProps({
         }
 
         .formationcard-itemP__container__content {
-          img {
-            display: block;
-            transition: display 1s ease-in-out;
+          img {    
+            transform: translateX(0) rotate(46deg);
           }
+        }
+
+        .formation-transform{
+          transform: translateX(12%);
+         
         }
       }
 
- 
         &__line {
         margin: rem(20) rem(0);
         height: rem(1);
@@ -209,10 +215,12 @@ const props = defineProps({
     .formationcard-itemP {
       &__container {
         &__content {
+    
           font-size: $size-60;
 
           img {
             width: rem(40);
+            top: 50%;
           }
         }
       }
