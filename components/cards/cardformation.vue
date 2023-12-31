@@ -24,9 +24,8 @@ const props = defineProps({
     </div>
 
     <div class="formationcard-itemP" v-for="item in items">
+      <div class="formationcard-itemP__line"></div>
       <div class="formationcard-itemP__container">
-        <div class="formationcard-itemP__container__line"></div>
-
         <div class="formationcard-itemP__container__content">
           <img src="/icons/Arrow.svg" alt="">
           <PrismicRichText :field="item.title"></PrismicRichText>
@@ -124,9 +123,10 @@ const props = defineProps({
     .formationcard-itemP {
       @include borderColorSubtitle;
       padding: rem(0) rem(20);     
+     
       display: flex;
       flex-direction: column;
-      gap: rem(10);
+      // gap: rem(10);
       position: relative;
       cursor: pointer;
 
@@ -184,14 +184,14 @@ const props = defineProps({
         }
       }
 
-      &__container{
+ 
         &__line {
-          margin: rem(20) rem(0);
+        margin: rem(20) rem(0);
         height: rem(1);
         width: 100%;
         background-color: $white-soft;
         }
-      }
+      
     }
   }
 }
