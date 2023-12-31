@@ -15,6 +15,7 @@ const props = defineProps({
     <div class="formationcard-itemM" v-for="item in items">
       <div class="formationcard-itemM__line"></div>
 
+      
       <PrismicRichText :field="item.title"></PrismicRichText>
       <div class="formationcard-itemM__image">
         <img :src="item.image.url" alt="">
@@ -25,11 +26,14 @@ const props = defineProps({
     <div class="formationcard-itemP" v-for="item in items">
       <div class="formationcard-itemP__line"></div>
 
-      <PrismicRichText :field="item.title"></PrismicRichText>
+      <div class="formationcard-itemP__content">
+        <img src="/icons/Arrow.svg" alt="">
+        <PrismicRichText :field="item.title"></PrismicRichText>
+      </div>
+     
       <div class="formationcard-itemP__image">
         <img :src="item.image.url" alt="">
       </div>
-
     </div>
 
   </div>
@@ -114,12 +118,23 @@ const props = defineProps({
     gap: rem(10);
     position: relative;
 
+    &__content{
+      display: flex;
+      gap: rem(20);
+      img{
+        display: none;
+        width: rem(20);
+        transform: rotate(46deg);
+      }
+    }
+
     &__image{
       opacity: 0;
       position: absolute;
       z-index: 10;
-      top: 0;
-      right: 10vw;
+      top: -200%;
+      left: 60vw;
+      
       width: rem(270);
       height: rem(375);
       border-radius: rem(36);
@@ -139,6 +154,11 @@ const props = defineProps({
     &:hover {
       .formationcard-itemP__image{
         opacity: 1;
+      }
+      .formationcard-itemP__content{
+        img{
+          display: block;
+        }
       }
     }
 
