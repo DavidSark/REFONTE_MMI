@@ -1,6 +1,4 @@
 <script setup>
-
-
 const { client } = usePrismic();
 const { data: home, error } = await useAsyncData('home', () => client.getSingle("homepage"))
 const { data: espacepro } = await useAsyncData('espacepro', () => client.getSingle("espacepro"));
@@ -12,9 +10,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
 <template>
     <div class="container__index">
 
-      <Header :elements="home.data.header"></Header>
-
-      <div class="container__index-heroM">
+        <div class="container__index-heroM">
         <HeroM></HeroM>
       </div>
     
