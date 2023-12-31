@@ -117,14 +117,16 @@ const props = defineProps({
     flex-direction: column;
     gap: rem(10);
     position: relative;
-
+    cursor: pointer;
     &__content{
       display: flex;
       gap: rem(20);
+      
       img{
         display: none;
         width: rem(20);
         transform: rotate(46deg);
+  
       }
     }
 
@@ -134,7 +136,7 @@ const props = defineProps({
       z-index: 10;
       top: -200%;
       left: 60vw;
-      
+      transition: opacity 0.3s ease;
       width: rem(270);
       height: rem(375);
       border-radius: rem(36);
@@ -154,10 +156,12 @@ const props = defineProps({
     &:hover {
       .formationcard-itemP__image{
         opacity: 1;
+        transition: opacity .3s ease-in-out;
       }
       .formationcard-itemP__content{
         img{
           display: block;
+          transition: display 1s ease-in-out;
         }
       }
     }
