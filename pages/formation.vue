@@ -1,6 +1,7 @@
 <script setup>
 const { client } = usePrismic();
 const { data: formation, error } = await useAsyncData('formation', () => client.getSingle("formation"));
+const { data: projets } = await useAsyncData('projets', () => client.getSingle("projets"));
 </script>
 
 <template>
@@ -36,6 +37,13 @@ const { data: formation, error } = await useAsyncData('formation', () => client.
             <img src="image14.webp" alt="">
         </div>
 
+
+        <div class="section4-formation">
+
+            
+
+            <cardformation :items="projets.data.projects"></cardformation>
+        </div>
     </div>
 </template>
 
