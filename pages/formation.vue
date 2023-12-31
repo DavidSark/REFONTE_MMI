@@ -34,7 +34,7 @@ const { data: projets } = await useAsyncData('projets', () => client.getSingle("
                     :subtitle="formation.data.section3[0].subtitle" ></borderSection>
             </div>
 
-            <img src="image14.webp" alt="">
+            <img src="/image14.webp" alt="">
         </div>
 
 
