@@ -313,7 +313,7 @@ useSeoMeta({
         padding: rem(100) rem(75) rem(100) rem(40);
         gap:rem(40);
         img {
-            width:45%;
+            max-width:rem(597);
     }
     }
     .section3-international {
