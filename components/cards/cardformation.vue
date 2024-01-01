@@ -49,7 +49,8 @@ const className  = computed(() =>({
 
 <style lang="scss" >
 .formation-container {
-  font-family: $font-poppins;
+  font-family: $font-redhat;
+  margin-bottom: rem(70);
   text-transform: uppercase;
   font-size: $size-24;
   padding: rem(30) rem(20);
@@ -128,7 +129,9 @@ const className  = computed(() =>({
   .formation-container {
     &__title {
       font-size: $size-43;
+   
     }
+
 
     .formationcard-itemM {
       display: none;
@@ -235,6 +238,8 @@ const className  = computed(() =>({
 
     &__title {
       font-size: $size-90;
+      @include borderColorTitle;
+      border-left: 15px solid;
     }
 
     .formationcard-itemP {

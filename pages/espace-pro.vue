@@ -1,7 +1,7 @@
 <script setup>
 const { client } = usePrismic();
 const { data: espacepro, error } = await useAsyncData('espacepro', () => client.getSingle("espacepro"));
-
+const { data: projets } = await useAsyncData('projets', () => client.getSingle("projets"));
 
 
 useSeoMeta({
@@ -52,8 +52,10 @@ useSeoMeta({
       <Button class="section-btn" size="small">Déposer une offre</Button>
     </div>
     <img src="/section-projet.webp" alt="Mmi montbéliard">
-
   </div>
+  <div class="section4-formation">
+            <cardformation color="green" :items="projets.data.projects"></cardformation>
+    </div>
 </template>
 
 <style lang="scss">
@@ -196,7 +198,7 @@ useSeoMeta({
 
   .section3-espacepro {
     padding: rem(30) rem(75);
-    margin: rem(190) rem(0);
+    margin: rem(130) rem(0);
 
     &__sideleft {
       width: 50%;
