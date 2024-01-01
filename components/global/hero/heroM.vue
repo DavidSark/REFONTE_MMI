@@ -16,7 +16,8 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
       <div class="container-hero__bottom">
         <img src="/image3.webp" alt="Cours en MMI">
         <div class="container-hero__bottom-buttons">
-          <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">Candidater</Button>
+          <RouterLink to="/candidater" >
+          <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">Candidater</Button></RouterLink>
           <Button size="small" bgColor="bgTransparent" borderColor="borderWhite" color="white">Formation</Button>
         </div>
         <div class="container-hero__bottom-social">
@@ -85,7 +86,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
         top: rem(15);
         left: rem(20);
         :nth-child(2) {
-          margin-left: rem(10)
+          margin-left: rem(10);
         }
       }
 

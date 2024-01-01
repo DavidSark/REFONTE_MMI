@@ -19,8 +19,12 @@ useSeoMeta({
         <div class="section1-faq__sideleft" data-scroll-indicator-title="Hello World">
             <div class="section1-faq__sideleft-container">
                 <borderSection :title="faq.data.section1[0].title" :subtitle="faq.data.section1[0].subtitle" />
+                <RouterLink to="/formation">
                 <Button class="btn-margin" bgColor="bgBlack" color="white" size="small">Découvrir la formation</Button>
+            </RouterLink>
+            <RouterLink to="/contact">
                 <Button class="btn-margin" size="small">Nous contacter</Button>
+                </RouterLink>
             </div>
             <div class="section1-faq__sideleft-accordion">
                 <Cardfaq></Cardfaq>

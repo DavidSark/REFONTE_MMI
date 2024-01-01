@@ -9,9 +9,12 @@
             <p>Un environnement propice <span>au développement des étudiants.</span></p>
         </div>
 
-       
+            <RouterLink to="/espace-pro" >
             <Button class="section-espacepro__btn-small" size="small">déposer une offre</Button>
+            </RouterLink>
+            <RouterLink to="/espace-pro">
             <Button class="section-espacepro__btn-big">déposer une offre</Button>
+            </RouterLink>
      
 
         

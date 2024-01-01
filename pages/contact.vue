@@ -19,7 +19,9 @@ useSeoMeta({
     <div class="section1-contact">
         <div class="section1-contact__side">
             <borderSection :title="contact.data.section1[0].title" :subtitle="contact.data.section1[0].subtitle" />
+            <RouterLink to="/departement">
             <Button class="btn-margin" size="small">En savoir plus</Button>
+            </RouterLink>
         </div>
         <div class="section1-contact__card">
             <Cardgooglemap></Cardgooglemap>

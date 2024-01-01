@@ -16,22 +16,12 @@ useSeoMeta({
 
 <template>
 
-<!-- 
-<div class="test" data-scroll-container>
-    <div data-scroll-section>
-        <h1 data-scroll>Hey</h1>
-        <p data-scroll>👋</p>
-    </div>
-    <div data-scroll-section>
-        <h2 data-scroll data-scroll-speed="1">What's up?</h2>
-        <p data-scroll data-scroll-speed="2">😬</p>
-    </div>
-</div> -->
-
   <div class="section1-espacepro">
     <div class="section1-espacepro__sideleft">
       <borderSection :title="espacepro.data.section1[0].titre" :subtitle="espacepro.data.section1[0].soustitre" />
+      <a href="https://stage.mmimontbeliard.com/" target="_blank">
       <Button class="section-btn" size="small">Déposer une offre</Button>
+      </a>  
     </div>
     <img src="/imageep-1.webp" alt="Etudiant">
   </div>
@@ -41,7 +31,11 @@ useSeoMeta({
     <div class="section2-espacepro__sideright">
       <borderSection :title="espacepro.data.section2[0].titre" :subtitle="espacepro.data.section2[0].soustitre"
         color="green" borderPosition="right" />
+        
+        <a href="https://stage.mmimontbeliard.com/" target="_blank">
       <Button class="btn-margin__right" size="small">Déposer une offre</Button>
+       </a>
+ 
     </div>
   </div>
 
@@ -49,7 +43,9 @@ useSeoMeta({
     <div class="section3-espacepro__sideleft">
       <borderSection :title="espacepro.data.section3[0].titre" :subtitle="espacepro.data.section3[0].soustitre"
         color="red" />
+        <a href="https://stage.mmimontbeliard.com/" target="_blank">
       <Button class="section-btn" size="small">Déposer une offre</Button>
+        </a>
     </div>
     <img src="/section-projet.webp" alt="Mmi montbéliard">
   </div>

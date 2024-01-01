@@ -21,7 +21,9 @@ const props = defineProps({
                 </PrismicRichText>
 
             </div>
+            <a href="https://www.facebook.com/mmimontbeliard" target="_blank">
             <Button class="sectionB-sideleft__btn" borderColor="borderBlue" color="blue" size="small">consulter</Button>
+            </a>
         </div>
 
         <div class="cardcontact-superieur">

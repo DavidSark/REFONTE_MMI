@@ -13,8 +13,11 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
         </div>
        
         <div class="container-hero__left-buttons">
+          <RouterLink to="/candidater">
           <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">Candidater</Button>
-          <Button size="small" bgColor="bgTransparent" >Formation</Button>
+          </RouterLink>
+          <RouterLink to="/formation">
+          <Button size="small" bgColor="bgTransparent" >Formation</Button></RouterLink>
 
 
         </div>

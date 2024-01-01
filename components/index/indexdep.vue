@@ -9,9 +9,12 @@
             <p>Un environnement propice <span>au développement des étudiants.</span></p>
         </div>
 
-    
+             <RouterLink to="/departement" >
             <Button class="section-indexdep__btn-small" size="small">découvrir</Button>
+            </RouterLink>
+            <RouterLink to="/departement">
             <Button class="section-indexdep__btn-big">découvrir</Button>
+            </RouterLink>
         
 
         <div class="section-indexdep__image">

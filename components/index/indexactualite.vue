@@ -13,19 +13,25 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
             <img src="/image-dep-card1.webp" alt="">
             <h6><span>Bienvenue aux </span>étudiants 2023</h6>
             <p>C’est partie pour une nouvelle édition de la journée. <span>Bienvenue aux étudiants</span> où les différentes promos de MMI ont pu se réunir pour participer à un jeu de piste !</p>
+            <a href="https://www.instagram.com/mmi_montbeliard/" target="_blank">
             <Button class="section2-departement__card__btn" size="small" >En savoir plus</Button>
+             </a>
         </div>
         <div class="section2-departement__card-2">
             <img src="/image-dep-card2.webp" alt="">
             <h6><span>offf </span>barcelona 2023</h6>
             <p>Certains de nos étudiants ont pu partir en voyage à Barcelone en participant au <span>Festival du Design “OFFF”.</span></p>
+            <a href="https://www.instagram.com/mmi_montbeliard/" target="_blank">
             <Button class="section2-departement__card__btn" size="small" >En savoir plus</Button>
+            </a>
         </div>
         <div class="section2-departement__card-3">
             <img src="/image-dep-card3.webp" alt="">
             <h6><span>rentrée </span>2023</h6>
             <p>C’est partie pour une <span>nouvelle année</span>, pour nos étudiants de MMI. Au programme quelques jours de découverte pour nos nouveaux étudiants.</p>
+            <a href="https://www.instagram.com/mmi_montbeliard/" target="_blank">
             <Button class="section2-departement__card__btn" size="small" >En savoir plus</Button>
+            </a>
         </div>
     </div>
     </div>

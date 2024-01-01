@@ -18,7 +18,9 @@ useSeoMeta({
         <div class="section1-communication__sideleft">
             <borderSection :title="communication.data.section1[0].title" :subtitle="communication.data.section1[0].subtitle"
                 color="red" />
+                <RouterLink to="/candidater">
             <Button class="btn-margin" size="small">Candidater</Button>
+        </RouterLink>
         </div>
         <img src="/image-design-1.webp" alt="Etudiant">
     </div>
