@@ -1,4 +1,6 @@
 <script setup>
+const { client } = usePrismic();
+const { data: home, error } = await useAsyncData('home', () => client.getSingle("homepage"))
 
 useSeoMeta({
   title: 'Page 404 - MMI Montbéliard',
@@ -18,9 +20,9 @@ const handleError = () => clearError({ redirect: '/404' })
 <template>
 
 <div>
-    <NuxtLayout>
+    <Header :elements="home.data.header"></Header>
         <hero></hero>
-    </NuxtLayout>
+  
   </div>
 
 
