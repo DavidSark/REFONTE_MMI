@@ -29,7 +29,7 @@ useSeoMeta({
         <Cardparcours :image="communication.data.card[2].image.url" :title="communication.data.card[2].title" />
     </div>
     <div class="section3-communication">
-            <card-projet-com :items="projets.data.projets_com"></card-projet-com>
+            <card-projet-com color="red" :items="projets.data.projets_com"></card-projet-com>
     </div>
 
     <div class="section4-communication">
