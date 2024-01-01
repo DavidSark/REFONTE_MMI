@@ -2,6 +2,15 @@
 const { client } = usePrismic();
 const { data: formation, error } = await useAsyncData('formation', () => client.getSingle("formation"));
 const { data: projets } = await useAsyncData('projets', () => client.getSingle("projets"));
+
+useSeoMeta({
+    title: formation.value.data.meta_title,
+    description: formation.value.data.meta_description,
+    ogDescription: formation.value.data.meta_description,
+    ogImage: formation.value.data.meta_image.url,
+    twitterCard: 'summary_large_image',
+})
+
 </script>
 
 <template>
@@ -12,7 +21,7 @@ const { data: projets } = await useAsyncData('projets', () => client.getSingle("
         <div class="section1-formation">
             <div class="section1-formation__content">
                 <borderSection :title="formation.data.section1[0].title"
-                :subtitle="formation.data.section1[0].subtitle" ></borderSection>
+                :subtitle="formation.data.section1[0].subtitle"  ></borderSection>
             </div>
             <div class="section1-formation__parcours">
                 
@@ -22,7 +31,7 @@ const { data: projets } = await useAsyncData('projets', () => client.getSingle("
         <div class="section2-formation">
             <div class="section2-formation__content">
                 <borderSection color="red" :title="formation.data.section2[0].title"
-                    :subtitle="formation.data.section2[0].subtitle" ></borderSection>
+                    :subtitle="formation.data.section2[0].subtitle" borderPosition="right" ></borderSection>
             </div>
             <div class="section2-formation__parcours">
             </div>
@@ -39,7 +48,7 @@ const { data: projets } = await useAsyncData('projets', () => client.getSingle("
 
 
         <div class="section4-formation">
-            <cardformation color="green" :items="projets.data.projects"></cardformation>
+            <cardformation color="red" :items="projets.data.projects"></cardformation>
         </div>
     </div>
 </template>
@@ -109,6 +118,7 @@ const { data: projets } = await useAsyncData('projets', () => client.getSingle("
         display: flex;;
         flex-direction: row;
         align-items: center;
+        gap:rem(60);
       
         &__content{
             width: 50%;
