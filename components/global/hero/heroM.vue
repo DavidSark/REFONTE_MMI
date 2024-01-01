@@ -40,12 +40,14 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
       padding: rem(20);
       :nth-child(1) {
         font-size: $size-39;
+        letter-spacing: -2.28px;
         font-weight: 700;
         display: table-caption;
       }
       :nth-child(2) {
         font-size: $size-13;
         letter-spacing: calc(1px + (10 - 1) * ((100vw - 320px) / (1440 - 320)));
+        font-weight: 300;
         color: $gray-soft;   
       }
     }

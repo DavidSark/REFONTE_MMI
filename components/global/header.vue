@@ -77,7 +77,7 @@ onMounted(() => {
     &__container {
       margin: 0 rem(10);
       display: flex;
-      align-items: center;
+     
       justify-content: space-between;
 
       &-square {
@@ -104,7 +104,7 @@ onMounted(() => {
         transition: all .5s;
         width: rem(20);
         height: rem(.5);
-        background-color: $black;
+        background-color: $white;
         margin: rem(8) 0;
       }
 
@@ -117,7 +117,7 @@ onMounted(() => {
       border-radius: 50%;
       background: transparent;
       border: rem(1) solid;
-      border-color: $black ;
+      border-color: $white ;
 
       &::before {
         content: '';
@@ -165,7 +165,7 @@ onMounted(() => {
     .tagline {
       display: block;
       color: $gray-soft;
-      font-weight: normal;
+      font-weight: 300;
     }
   }
 }
@@ -198,6 +198,28 @@ onMounted(() => {
 @media (min-width: 1236px) {
   .header {
     font-size: $size-21;
+     &-block {
+      &__logo {
+        img {
+          width: rem(40);
+        }
+      }
+
+      &__container {
+        &-text {
+          :nth-child(2) {
+            margin: 0 rem(20);
+            height: rem(18);
+          }
+        }
+
+        &-square {
+          margin-left: rem(10);
+          width: rem(15);
+          height: rem(20);
+        }
+      }
+    }
   }
 }
 
@@ -205,24 +227,24 @@ onMounted(() => {
 @media screen and (min-width: 1440px) {
   .header {
     padding: rem(30) rem(60);
-    font-size: rem(28);
+    font-size: rem(21);
     &-block {
       &__logo {
         img {
-          width: rem(50);
+          width: rem(45);
         }
       }
 
       &__container {
         &-text {
           :nth-child(2) {
-            margin: 0 rem(30);
-            height: rem(28);
+            margin: 0 rem(20);
+            height: rem(18);
           }
         }
 
         &-square {
-          margin-left: rem(40);
+          margin-left: rem(20);
           width: rem(15);
           height: rem(20);
         }

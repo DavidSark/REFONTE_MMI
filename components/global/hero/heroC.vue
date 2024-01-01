@@ -39,6 +39,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
  <style lang="scss" scoped>
 .container-hero {
     font-family: $font-poppins;
+
     display: flex;
     height: 100vh;
     &__left{
@@ -49,6 +50,8 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
         &-title{
         padding: rem(0) rem(35) rem(35) rem(35);
         :nth-child(1){
+          font-family: $font-redhat;
+          letter-spacing: -6.38px;
             font-size: $size-60; 
             font-weight: 700;
             text-transform: uppercase;
@@ -67,12 +70,14 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
             gap: rem(20);
         }
         &-social{
+            
             text-transform: uppercase;
             display: flex;
             flex-direction: column;
             gap: rem(10);
             padding: rem(0) rem(35) rem(35) rem(35);
             font-size: $size-13;
+            font-weight: 300;
             color: $gray-soft;
             &-icons{
              display: flex;
@@ -89,6 +94,8 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
     &__right{
         width: 50%;
         display: flex;
+        gap:rem(5);
+        overflow: hidden;
         img{
             width: 50%;
             object-fit: cover;
@@ -104,7 +111,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
     &__left{
         &-title{
             :nth-child(1){
-            font-size: 5.5vw;        
+            font-size: 6.3vw;        
         }
             :nth-child(2){
                 font-size: 1.5vw;     
@@ -140,20 +147,29 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
     .container-hero {
     &__left{
         &-title{
-        padding: rem(0) rem(60) rem(35) rem(60);
+        padding: rem(0) rem(0) rem(35) rem(60);
         }
         &-buttons{
             padding: rem(0) rem(60) rem(35) rem(60);
         }
         &-social{
+          font-size: $size-16;
+         
             padding: rem(0) rem(60) rem(35) rem(60);
+            &-icons{
+              gap: rem(19);
+              img{
+                width: rem(25);
+                height: rem(25);
+             }
+            }
         } 
         &-title{
             :nth-child(1){
-            font-size: 6vw;          
+            font-size: 6.3vw;          
           }
           :nth-child(2){
-            font-size: 1.75vw;  
+            font-size: 1.80vw;  
                 letter-spacing: 0.2vw;    
                 white-space: nowrap;
             }
