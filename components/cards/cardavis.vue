@@ -24,24 +24,24 @@ const className = computed(() => ({
     <div class="card-avis">
 
         <div class="card-avis__content" :class="className">
-            <img src="/icons/icon-quote.svg" alt="Guillemet">
-            
+            <img class="svg" src="/icons/icon-quote.svg" alt="Guillemet">
 
             <PrismicRichText class="card-avis__content-commentaire" :field="commentaire"></PrismicRichText>
+
             <div class="card-avis__content-border">
-                <span></span>
                 <div class="card-avis__content-border__info">
+                    <span></span>
                     <PrismicRichText class="card-avis__content-name" :field="name"></PrismicRichText>
                     <div class="card-avis__content-border__info-bar">|</div>
                     <PrismicRichText class="card-avis__content-name" :field="job"></PrismicRichText>
                     <div class="card-avis__content-border__info-bar">|</div>
-                    <PrismicRichText class="card-avis__content-name" :field="promo"></PrismicRichText>
-                </div>
+                    <PrismicRichText class="card-avis__content-name" :field="promo"></PrismicRichText>  
+                </div> 
+             
+                    <img :src="image" :alt="alt">
+             
             </div>
-
-
         </div>
-        <img :src="image" :alt="alt">
     </div>
 </template>
 
@@ -50,8 +50,6 @@ const className = computed(() => ({
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
-
     img {
         width: rem(100);
     }
@@ -61,26 +59,21 @@ const className = computed(() => ({
         flex-direction: column;
         gap: rem(10);
         padding: rem(0) rem(20);
-
-
-
+       
+ 
         &-border {
             margin-top: rem(5);
             display: flex;
-            flex-direction: row;
+            justify-content: space-between;
             align-items: center;
-            gap: rem(10);
-
-            span {
-                height: 55px;
-                width: 5px;
-                background-color: $blue;
-            }
+            @include borderColorTitle;
+            border-color: $blue;
+            padding: 0 rem(10);
 
             &__info {
                 display: flex;
                 flex-direction: column;
-
+               
                 &-bar {
                     display: none;
                 }
@@ -93,7 +86,7 @@ const className = computed(() => ({
             text-transform: uppercase;
             line-height: normal;
             font-size: $size-19;
-
+         
             strong {
                 font-weight: 700;
             }
@@ -118,15 +111,24 @@ const className = computed(() => ({
         }
 
         &.-red {
-            img {
-                border: 1px solid red
+            .svg {
+                filter: brightness(0) saturate(100%) invert(14%) sepia(98%) saturate(3527%) hue-rotate(354deg) brightness(85%) contrast(117%)
             }
         }
 
         &.-green {
-            img {
-                border: 1px solid green;
+            .svg {
+                filter: brightness(0) saturate(100%) invert(42%) sepia(24%) saturate(931%) hue-rotate(111deg) brightness(98%) contrast(94%)
             }
+        }
+    }
+}
+
+@media screen and (min-width:697px) {
+    .card-avis{
+        &__content{
+            width: rem(650);
+            margin: 0 auto;
         }
     }
 }
@@ -137,13 +139,19 @@ const className = computed(() => ({
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+    
 
         &__content {
+            width: 100%;
+            justify-content: flex-start;
             &-commentaire {
                 font-size: $size-16;
+               
             }
 
             &-border {
+                border: none;
+                padding: 0;
                 span {
                     height: rem(20);
                     width: rem(15);
@@ -154,7 +162,7 @@ const className = computed(() => ({
                 &__info {
                     flex-direction: row;
                     gap: rem(10);
-
+                    justify-content: flex-start;
                     &-bar {
                         display: block;
                     }
