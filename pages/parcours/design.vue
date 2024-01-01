@@ -1,6 +1,7 @@
 <script setup>
 const { client } = usePrismic();
 const { data: design, error } = await useAsyncData('design', () => client.getSingle("design"));
+const { data: projets } = await useAsyncData('projets', () => client.getSingle("projets"));
 
 useSeoMeta({
     title: design.value.data.meta_title,
@@ -26,6 +27,10 @@ useSeoMeta({
         <Cardparcours :image="design.data.card[1].image.url" :title="design.data.card[1].title" />
         <Cardparcours :image="design.data.card[0].image.url" :title="design.data.card[0].title" />
         <Cardparcours :image="design.data.card[2].image.url" :title="design.data.card[2].title" />
+    </div>
+
+    <div class="section3-design">
+            <card-projet-design :items="projets.data.projets_design"></card-projet-design>
     </div>
 
 
