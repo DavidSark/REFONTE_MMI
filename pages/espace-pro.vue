@@ -53,7 +53,7 @@ useSeoMeta({
     </div>
     <img src="/section-projet.webp" alt="Mmi montbéliard">
   </div>
-  <div class="section4-formation">
+  <div class="section4-espacepro">
             <cardformation color="green" :items="projets.data.projects"></cardformation>
     </div>
 </template>

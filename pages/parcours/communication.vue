@@ -1,6 +1,7 @@
 <script setup>
 const { client } = usePrismic();
 const { data: communication, error } = await useAsyncData('communication', () => client.getSingle("communication"));
+const { data: projets } = await useAsyncData('projets', () => client.getSingle("projets"));
 
 
 useSeoMeta({
@@ -26,6 +27,11 @@ useSeoMeta({
         <Cardparcours :image="communication.data.card[0].image.url" :title="communication.data.card[0].title" />
         <Cardparcours :image="communication.data.card[1].image.url" :title="communication.data.card[1].title" />
         <Cardparcours :image="communication.data.card[2].image.url" :title="communication.data.card[2].title" />
+    </div>
+    <div class="section3-communication">
+        <div class="section4-formation">
+            <card-projet-com :items="projets.data.projets_com"></card-projet-com>
+        </div>
     </div>
 
     <div class="section4-communication">
@@ -175,6 +181,7 @@ useSeoMeta({
 
     .section2-communication {
         padding: rem(50) rem(75);
+        margin-bottom: rem(100);
         gap: rem(20)
     }
 
