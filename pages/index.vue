@@ -34,7 +34,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
       <div class="section3-index">  
           <indexparcour/>
       </div>
-
+  
       <div class="section4-index">
           <indexcards/>
       </div>
