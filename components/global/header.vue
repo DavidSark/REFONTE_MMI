@@ -7,23 +7,6 @@ const props = defineProps({
   elements: Array
 })
 
-onMounted(() => {
-  let isScrolled = 0;
-  let header = document.getElementsByClassName('header')[0];
-  document.addEventListener('scroll', (e) => {
-    isScrolled = window.scrollY;
-    if (isScrolled > 0) {
-      header.classList.add('-bg-white');
-    } else {
-      header.classList.remove('-bg-white');
-    }
-  });
-});
-
-
-
-
-
 </script>
 <template> 
   <div class="header " >

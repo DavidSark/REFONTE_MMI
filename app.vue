@@ -21,8 +21,16 @@ onMounted(()=>{
       smooth: true,
     },
   });
-  console.log(scroll);
 
+  // console.log(scroll);
+  scroll.on('scroll', (args) => {
+    const header = document.getElementsByClassName('header')[0];
+    if (args.scroll.y > 0) {
+      header.classList.add('-bg-white');
+    } else {
+      header.classList.remove('-bg-white');
+    }
+  });
 });
 
 
