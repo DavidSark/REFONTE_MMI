@@ -8,11 +8,11 @@ const props = defineProps({
 })
 
 onMounted(() => {
-  let scrolled = 0;
+  let isScrolled = 0;
   let header = document.getElementsByClassName('header')[0];
   document.addEventListener('scroll', (e) => {
-    scrolled = window.scrollY;
-    if (scrolled > 0) {
+    isScrolled = window.scrollY;
+    if (isScrolled > 0) {
       header.classList.add('-bg-white');
     } else {
       header.classList.remove('-bg-white');
@@ -20,9 +20,13 @@ onMounted(() => {
   });
 });
 
+
+
+
+
 </script>
-<template>
-  <div class="header ">
+<template> 
+  <div class="header " >
     <div class="header-block">
       <div class="header-block__logo" v-for="item in elements">
         <img :src="item.header_logo.url" :alt="item.header_logo.alt">

@@ -41,6 +41,12 @@ export default defineNuxtConfig({
       }
     }
     
-  }
+  },
+
+  plugins: [
+    { 
+      src: '~/plugins/locomotive-scroll.client.js', 
+      mode: 'client' },
+  ],
   
 })
