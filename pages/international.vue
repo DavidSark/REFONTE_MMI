@@ -63,7 +63,7 @@ useSeoMeta({
         <PrismicRichText class="section5-international__title" :field="international.data.section5[0].title"></PrismicRichText>
         
         <div class="section5-international__cards-sideleft__c">
-        <cardavis 
+        <cardavis color="green"
         :image="international.data.testimonial[0].image.url"
         :commentaire="international.data.testimonial[0].commentaire"
         :name="international.data.testimonial[0].name"
@@ -71,7 +71,7 @@ useSeoMeta({
         :promo="international.data.testimonial[0].promo"
        />
               
-       <cardavis
+       <cardavis color="green"
         :image="international.data.testimonial[1].image.url"
         :commentaire="international.data.testimonial[1].commentaire"
         :name="international.data.testimonial[1].name"

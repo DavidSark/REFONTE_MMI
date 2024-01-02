@@ -15,20 +15,21 @@ const props = defineProps({
 const className = computed(() => ({
     ' -red': props.color === 'red',
     ' -green': props.color === 'green',
+    '-borderGreen': props.color === 'green'
 
 }))
 
 </script>
 
 <template>
-    <div class="card-avis">
+    <div class="card-avis"  >
 
-        <div class="card-avis__content" :class="className">
-            <img class="svg" src="/icons/icon-quote.svg" alt="Guillemet">
+        <div class="card-avis__content"  :class="className">
+            <img  class="svg" src="/icons/icon-quote.svg" alt="Guillemet">
 
             <PrismicRichText class="card-avis__content-commentaire" :field="commentaire"></PrismicRichText>
 
-            <div class="card-avis__content-border">
+            <div class="card-avis__content-border"  :class="className">
                 <div class="card-avis__content-border__info">
                     <span></span>
                     <PrismicRichText class="card-avis__content-name" :field="name"></PrismicRichText>
@@ -38,7 +39,9 @@ const className = computed(() => ({
                     <PrismicRichText class="card-avis__content-name" :field="promo"></PrismicRichText>  
                 </div> 
              
+                <div class="image-avis">
                     <img :src="image" :alt="alt">
+                </div>
              
             </div>
         </div>
@@ -68,7 +71,13 @@ const className = computed(() => ({
             align-items: center;
             @include borderColorTitle;
             border-color: $blue;
+            &.-borderGreen {
+                border-color: $green; // Utilisez votre variable de couleur définie pour le vert
+            }
+
             padding: 0 rem(10);
+            
+
 
             &__info {
                 display: flex;
@@ -117,9 +126,11 @@ const className = computed(() => ({
         }
 
         &.-green {
+    
             .svg {
                 filter: brightness(0) saturate(100%) invert(42%) sepia(24%) saturate(931%) hue-rotate(111deg) brightness(98%) contrast(94%)
             }
+
         }
     }
 }
@@ -191,9 +202,17 @@ const className = computed(() => ({
 
             img {
                 margin-left: rem(-40);
-                width: rem(54);
+                width: rem(47);
             }
+
         }
     }
 
-}</style>
+    .image-avis {
+        img {
+            width: rem(85)
+        }
+    }
+}
+
+</style>

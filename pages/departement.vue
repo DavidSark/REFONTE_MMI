@@ -76,7 +76,7 @@ useSeoMeta({
                         :name="departement.data.testimonial[0].name" :job="departement.data.testimonial[0].job"
                         :promo="departement.data.testimonial[0].promo" />
 
-                    <cardavis color="green" :image="departement.data.testimonial[1].image.url"
+                    <cardavis :image="departement.data.testimonial[1].image.url"
                         :commentaire="departement.data.testimonial[1].commentaire"
                         :name="departement.data.testimonial[1].name" :job="departement.data.testimonial[1].job"
                         :promo="departement.data.testimonial[1].promo" />
