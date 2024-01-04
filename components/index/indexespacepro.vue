@@ -6,14 +6,14 @@
      <div class="section-espacepro">
         <div class="section-espacepro__text">
             <h2>Espace profesionnel<span>.</span></h2>
-            <p>Un environnement propice <span>au développement des étudiants.</span></p>
+            <p>nous sommes ravis de pouvoir aider <span>des entreprises en réalisant leur projet.</span></p>
         </div>
 
             <RouterLink to="/espace-pro" >
             <Button class="section-espacepro__btn-small" size="small">déposer une offre</Button>
             </RouterLink>
             <RouterLink to="/espace-pro">
-            <Button class="section-espacepro__btn-big">déposer une offre</Button>
+            <Button size="small" class="section-espacepro__btn-big">déposer une offre</Button>
             </RouterLink>
      
 
@@ -32,15 +32,19 @@
         font-family: $font-poppins;
         text-transform: uppercase;
         margin-bottom: rem(15);
+        font-weight: 300;
+        
        
         h2 {
+            letter-spacing: -10px;
             font-size: $size-32;
             font-weight: 700;
             margin-bottom: rem(15);
             display: table-caption;
 
             span {
-                color: $blue;
+                margin-left:10px;
+                color: $green;
             }
         }
 

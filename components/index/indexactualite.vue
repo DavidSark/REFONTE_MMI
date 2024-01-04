@@ -6,7 +6,9 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
 
 <template>
      <div class="section2-departement">
-        <PrismicRichText class="section2-departement__title" :field="departement.data.actualites[0].title"></PrismicRichText>
+        <div class="section2-departement__title">
+            <h2>Les <br><span>actualités</span><span>.</span></h2>
+        </div>
 
         <div class="section2-departement__card">
         <div class="section2-departement__card-1">
@@ -98,12 +100,21 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
     font-family: $font-redhat;
     margin:rem(40) rem(0);
     font-size: $size-32;
-    font-weight: 100;
+    font-weight: 700;
     text-transform: uppercase;
-    strong {
-    font-weight: 800;
-    }
-    }
+    color: $black;
+
+ 
+        :nth-child(2){
+            font-weight: 100;
+            color: $black;
+        }
+        :nth-child(3){
+            font-weight: 700;
+            color: $red;
+        }
+   
+        }
 }
 
 
@@ -144,7 +155,7 @@ img {
 @media (min-width: 1440px) {
 
     .section2-departement {
-        padding:rem(80) rem(75);
+        padding:rem(20) rem(75);
         &__card{
             margin:rem(100) rem(0);
             gap: rem(100);
@@ -172,6 +183,14 @@ img {
         &__title {
                 font-size: $size-123
         }
+        &__card {
+            &-2 {
+            img {
+                width: 100%;
+            }
+           }
+        }
+ 
     }
 }
 

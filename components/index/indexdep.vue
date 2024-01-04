@@ -5,7 +5,7 @@
 <template>
     <div class="section-indexdep">
         <div class="section-indexdep__text">
-            <h2>Le <br/> département<span>.</span></h2>
+            <h2> <br/> département<span>.</span></h2>
             <p>Un environnement propice <span>au développement des étudiants.</span></p>
         </div>
 
@@ -13,7 +13,7 @@
             <Button class="section-indexdep__btn-small" size="small">découvrir</Button>
             </RouterLink>
             <RouterLink to="/departement">
-            <Button class="section-indexdep__btn-big">découvrir</Button>
+            <Button size="small" class="section-indexdep__btn-big">découvrir</Button>
             </RouterLink>
         
 
@@ -64,8 +64,11 @@
         font-family: $font-poppins;
         text-transform: uppercase;
         margin-bottom: rem(15);
+        font-weight: 300;
+        
 
         h2 {
+            letter-spacing: -11px;
             font-size: $size-32;
             font-weight: 700;
             margin-bottom: rem(15);

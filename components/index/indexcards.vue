@@ -48,6 +48,7 @@
         padding: rem(0) rem(10);
         border-color: $blue;
         line-height: 110%;
+        font-weight: 300;
         //à voir
         
         span{
@@ -82,6 +83,7 @@
         padding: rem(0) rem(10);
         border-color: $red;
         line-height: 110%;
+        font-weight: 300;
       
         span{
         font-weight: 700;
@@ -184,12 +186,21 @@
     .section-indexcards{
         &__card{         
             &-title{
+                margin-top:rem(35);
+                padding: rem(5) rem(25);
                 font-size: $size-60;
+                border-left: rem(10) solid;
+                border-color:$blue;
+       
             }
         }
         &__card2{       
             &-title{
+                margin-top:rem(35);
+                padding: rem(5) rem(25);
                 font-size: $size-60;  
+                border-right: rem(10) solid;
+                border-color:$red;
             }
         }
     }

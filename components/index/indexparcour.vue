@@ -31,11 +31,16 @@
 
 <style lang="scss" >
 .section-indexparcours{
+    h2 {
+        cursor: pointer;
+        letter-spacing: -9px;
+    }
     margin: rem(50) rem(0);
     font-family: $font-poppins;
     font-weight: 700;
     font-size: 8vw;
     text-transform: uppercase;
+    
     display: flex;
     flex-direction: column;
     gap: 1vw;

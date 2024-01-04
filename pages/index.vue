@@ -61,14 +61,13 @@ useSeoMeta({
       <div class="section7-index">
         <indexactualite/>       
       </div>
-
-   <Footer></Footer>
   </div>
 </template>
 
 
 <style lang="scss" >
 .container__index{
+  overflow: hidden;
   //pour le hero
   &-heroT{
     display: none;
@@ -81,6 +80,7 @@ useSeoMeta({
     &__tagline{
       font-family: $font-poppins;
       font-size: $size-20;
+      font-weight: 300;
       text-transform: uppercase;
       strong{
        font-weight: 700;
@@ -155,7 +155,7 @@ useSeoMeta({
     .section1-index{
       margin: rem(130) rem(40);
     &__tagline{
-      font-size: 4vw;
+      font-size: 4.7vw;
  
     }
    }

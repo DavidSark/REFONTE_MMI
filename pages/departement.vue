@@ -376,4 +376,20 @@ img {
         }
 
     }
-}</style>
+}
+
+@media screen and (min-width:1760px) {
+    .section2-departement {
+        &__card {
+            &-2 {
+            img {
+                width: 100%;
+            }
+           }
+        }
+ 
+    }
+}
+
+
+</style>
