@@ -3,6 +3,16 @@ const { client } = usePrismic();
 const { data: home, error } = await useAsyncData('home', () => client.getSingle("homepage"))
 const { data: espacepro } = await useAsyncData('espacepro', () => client.getSingle("espacepro"));
 const { data: contact } = await useAsyncData('contact', () => client.getSingle("contact"));
+
+useSeoMeta({
+    title: home.value.data.meta_title,
+    description: home.value.data.meta_description,
+    ogDescription: home.value.data.meta_description,
+    ogImage: home.value.data.meta_image.url,
+    twitterCard: 'summary_large_image',
+})
+
+
 </script>
 
 
