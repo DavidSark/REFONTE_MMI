@@ -7,9 +7,10 @@ const props = defineProps({
   elements: Array
 })
 
+
 </script>
 <template> 
-  <div class="header " >
+  <div class="header" >
     <div class="header-block">
       <div class="header-block__logo" v-for="item in elements">
         <img :src="item.header_logo.url" :alt="item.header_logo.alt">
@@ -72,6 +73,7 @@ const props = defineProps({
         width: rem(13);
         height: rem(13);
         background-color: $black;
+
       }
     }
   }
@@ -106,6 +108,18 @@ const props = defineProps({
       border: rem(1) solid;
       border-color: $white ;
 
+      &.-colorBlack{
+        
+          border-color: $black;
+        
+          background-color: transparent;
+          .header-menu-center{
+            div{
+              background-color: $black;
+            }
+          }
+        }
+
       &::before {
         content: '';
         position: absolute;
@@ -126,8 +140,9 @@ const props = defineProps({
   }
 
   &.-bg-white {
-    background: $white;
+    background: white;
   }
+
 }
 
 //media queries
