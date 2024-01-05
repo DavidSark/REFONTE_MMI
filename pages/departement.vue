@@ -283,7 +283,7 @@ img {
             }
 
             &-sideright {
-                background-color: $black;
+
                 flex: 1;
                 width: 40%;
 
