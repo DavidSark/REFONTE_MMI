@@ -79,7 +79,7 @@ useSeoMeta({
     margin: rem(50) rem(20);
     &__tagline{
       font-family: $font-redhat;
-      letter-spacing: -3px;
+      letter-spacing: -3%;
       font-size: $size-20;
       font-weight: 300;
       text-transform: uppercase;

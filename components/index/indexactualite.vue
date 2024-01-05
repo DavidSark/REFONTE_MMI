@@ -97,7 +97,7 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
     }
    
     &__title {
-    letter-spacing: -5.34px;
+    letter-spacing: -5.34%;
     font-family: $font-redhat;
     margin:rem(40) rem(0);
     font-size: $size-32;
@@ -157,6 +157,9 @@ img {
 
     .section2-departement {
         padding:rem(20) rem(75);
+        &__title {
+            letter-spacing: -9px;
+        }
         &__card{
             margin:rem(100) rem(0);
             gap: rem(100);

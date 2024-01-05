@@ -33,7 +33,7 @@
 .section-indexparcours{
     h2 {
         cursor: pointer;
-        letter-spacing: -9px;
+        letter-spacing: -9%;
     }
     margin: rem(50) rem(0);
     font-family: $font-redhat;
@@ -126,6 +126,10 @@
 
 @media screen and (min-width:1440px) {
     .section-indexparcours{
+        h2 {
+        cursor: pointer;
+        letter-spacing: -9px;
+    }
         &__design{
             padding: rem(0) rem(75);
         }

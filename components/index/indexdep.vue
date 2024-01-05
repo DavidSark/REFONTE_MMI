@@ -71,7 +71,7 @@
         
 
         h2 {
-            letter-spacing: -9px;
+            letter-spacing: -9%;
             font-size: $size-32;
             font-weight: 700;
             font-family: $font-redhat;
@@ -173,6 +173,7 @@
     .section-indexdep {
         h2 {
             margin-bottom: rem(60);
+            letter-spacing: -9px;
         }
 
        &__btn-big{

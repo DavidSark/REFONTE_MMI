@@ -36,7 +36,7 @@
         
        
         h2 {
-            letter-spacing: -9px;
+            letter-spacing: -9%;
             font-family: $font-redhat;
             font-size: $size-32;
             font-weight: 700;
@@ -145,6 +145,8 @@
             h2 {
                 font-size: 7.5vw;
                 margin-bottom: rem(40);
+           
+            letter-spacing: -9px;
             }
 
             p {

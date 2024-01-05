@@ -261,6 +261,8 @@ img {
             }
         }
     }
+
+    
 }
 
 @media (min-width:1000px) {
@@ -377,6 +379,7 @@ img {
 
     }
 }
+
 
 @media screen and (min-width:1760px) {
     .section2-departement {
