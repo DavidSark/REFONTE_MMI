@@ -7,19 +7,20 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
 <template>
   <div class="container-hero">
     <div class="container-hero__left">
+      <div class="container-hero__left-main">
+        <div class="container-hero__left-main-title">
+          <h1>Mmi Montbéliard</h1>
+          <h2>Métiers du Multimédia et de l'internet</h2>
+        </div>
 
-      <div class="container-hero__left-title">
-        <h1>Mmi Montbéliard</h1>
-        <h2>Métiers du Multimédia et de l'internet</h2>
-      </div>
-
-      <div class="container-hero__left-buttons">
-        <RouterLink to="/candidater">
-          <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">Candidater</Button>
-        </RouterLink>
-        <RouterLink to="/formation">
-          <Button size="small" bgColor="bgTransparent">Formation</Button>
-        </RouterLink>
+        <div class="container-hero__left-main-buttons">
+          <RouterLink to="/candidater">
+            <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">Candidater</Button>
+          </RouterLink>
+          <RouterLink to="/formation">
+            <Button size="small" bgColor="bgTransparent">Formation</Button>
+          </RouterLink>
+        </div>
       </div>
 
 
@@ -53,14 +54,20 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
   display: flex;
   height: 100vh;
 
+ 
   &__left {
-
     width: 50%;
     display: flex;
     justify-content: center;
     flex-direction: column;
 
-    &-title {
+    
+    &-main{
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+      &-title {
       padding: rem(0) rem(35) rem(35) rem(35);
 
       :nth-child(1) {
@@ -85,6 +92,8 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
       display: flex;
       gap: rem(20);
     }
+  }
+   
 
     &-social {
 
@@ -137,7 +146,9 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
 @media (min-width: 1024px) {
   .container-hero {
     &__left {
-      &-title {
+
+      &-main{
+        &-title {
         :nth-child(1) {
           font-size: 6.3vw;
         }
@@ -145,12 +156,11 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
         :nth-child(2) {
           font-size: 1.5vw;
           font-weight: 300;
-
         }
       }
 
-      &-buttons {}
-
+      }
+     
       &-social {
         display: flex;
         flex-direction: row-reverse;
@@ -176,13 +186,17 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
 @media (min-width: 1440px) {
   .container-hero {
     &__left {
-      &-title {
+
+      &-main{
+        &-title {
         padding: rem(0) rem(0) rem(35) rem(60);
       }
 
       &-buttons {
         padding: rem(0) rem(60) rem(35) rem(60);
       }
+      }
+    
 
       &-social {
         font-size: $size-16;
@@ -212,4 +226,5 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
       }
     }
   }
-}</style>
+}
+</style>

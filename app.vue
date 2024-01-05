@@ -1,7 +1,5 @@
 <script setup>
 // import easyScrollDots from './easyScrollDots.js';
-
-
 // easyScrollDots({
 //   'fixedNav': false,
 //   'fixedNavId': '',
@@ -32,8 +30,6 @@
 //     }
 //   });
 // });
-
-
 
 </script>
 
