@@ -8,7 +8,7 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
 
 
 <template>
-    <div class="container__index">
+    <div class="container__index" data-scroll-container>
 
         <div class="container__index-heroM">
         <HeroM></HeroM>

@@ -13,24 +13,34 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="section1-candidater">
-    <div class="section1-candidater__sideleft">
-      <borderSection :title="canditater.data.section1[0].title" :subtitle="canditater.data.section1[0].subtitle" />
-      <a href="https://www.parcoursup.gouv.fr/" target="_blank">
-        <Button class="btn-margin" size="small" color="white" bgColor="bgBlack">S'inscrire à
-          parcoursup</Button>
-      </a>
+  <div data-scroll-container>
+    <div class="section1-candidater">
+      <div class="section1-candidater__sideleft">
+        <borderSection :title="canditater.data.section1[0].title" :subtitle="canditater.data.section1[0].subtitle" />
+        <a href="https://www.parcoursup.gouv.fr/" target="_blank">
+          <Button class="btn-margin" size="small" color="white" bgColor="bgBlack">S'inscrire à
+            parcoursup</Button>
+        </a>
+      </div>
+      <div class="section1-candidater__sideright">
+        <borderSection :title="canditater.data.section2[0].title" :subtitle="canditater.data.section2[0].subtitle"
+          color="red" borderPosition="right" />
+        <a href="https://www.linkedin.com/school/mmimontbeliard/?originalSubdomain=fr" target="_blank">
+          <Button class="btn-margin__right" size="small" color="white" bgColor="bgBlack">S'inscrire</Button>
+        </a>
+      </div>
     </div>
-    <div class="section1-candidater__sideright">
-      <borderSection :title="canditater.data.section2[0].title" :subtitle="canditater.data.section2[0].subtitle"
-        color="red" borderPosition="right" />
-      <a href="https://www.linkedin.com/school/mmimontbeliard/?originalSubdomain=fr" target="_blank">
-        <Button class="btn-margin__right" size="small" color="white" bgColor="bgBlack">S'inscrire</Button>
-      </a>
-    </div>
-  </div>
 
-  <Cardcandidater></Cardcandidater>
+
+    <RouterLink to="/">Retour accueil</RouterLink>
+    <br>
+    <RouterLink to="/formation">formation</RouterLink>
+    <br>
+    <RouterLink to="/departement">département</RouterLink>
+
+    <Cardcandidater></Cardcandidater>
+
+  </div>
 </template>
   
 <style lang="scss" >
@@ -53,11 +63,12 @@ useSeoMeta({
 }
 
 .btn-margin__right {
-  margin-right:rem(20);
+  margin-right: rem(20);
 
 }
+
 .btn-margin {
-    margin-left:rem(20);
+  margin-left: rem(20);
 }
 
 @media (min-width: 768px) {

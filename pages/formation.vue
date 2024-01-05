@@ -10,15 +10,14 @@ useSeoMeta({
     ogImage: formation.value.data.meta_image.url,
     twitterCard: 'summary_large_image',
 })
-
 </script>
 
 <template>
-    <div>
+    <div data-scroll-container>
         <div>
             <hero></hero>
         </div>
-        <div class="section1-formation">
+        <div class="section1-formation"  >
             <div class="section1-formation__content">
                 <borderSection :title="formation.data.section1[0].title"
                 :subtitle="formation.data.section1[0].subtitle"  ></borderSection>

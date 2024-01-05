@@ -11,80 +11,84 @@ useSeoMeta({
 })
 </script>
 <template>
-    <div class="section1-departement">
-        <div class="section1-departement__content">
-            <borderSection :title="departement.data.section1[0].title" :subtitle="departement.data.section1[0].subtitle" />
-        </div>
-        <div class="section1-departement__card">
-            <cardgooglemap></cardgooglemap>
-        </div>
-
-    </div>
-    <img src="/image-video-dep.webp" alt="">
-
-    <div class="section2-departement">
-        <PrismicRichText class="section2-departement__title" :field="departement.data.actualites[0].title">
-        </PrismicRichText>
-
-        <div class="section2-departement__card">
-            <div class="section2-departement__card-1">
-                <img src="/image-dep-card1.webp" alt="">
-                <h6><span>Bienvenue aux </span>étudiants 2023</h6>
-                <p>C’est partie pour une nouvelle édition de la journée. <span>Bienvenue aux étudiants</span> où les
-                    différentes promos de MMI ont pu se réunir pour participer à un jeu de piste !</p>
-                <a href="https://www.instagram.com/mmi_montbeliard/" target="_blank">
-                <Button class="section2-departement__card__btn" size="small">En savoir plus</Button>
-                </a>
+    <div data-scroll-container>
+        <div class="section1-departement">
+            <div class="section1-departement__content">
+                <borderSection :title="departement.data.section1[0].title"
+                    :subtitle="departement.data.section1[0].subtitle" />
             </div>
-            <div class="section2-departement__card-2">
-                <img src="/image-dep-card2.webp" alt="">
-                <h6><span>offf </span>barcelona 2023</h6>
-                <p>Certains de nos étudiants ont pu partir en voyage à Barcelone en participant au <span>Festival du Design
-                        “OFFF”.</span></p>
-                <a href="https://www.instagram.com/mmi_montbeliard/" target="_blank">
-                <Button class="section2-departement__card__btn" size="small">En savoir plus</Button>
-                </a>
+            <div class="section1-departement__card">
+                <cardgooglemap></cardgooglemap>
             </div>
-            <div class="section2-departement__card-3">
-                <img src="/image-dep-card3.webp" alt="">
-                <h6><span>rentrée </span>2023</h6>
-                <p>C’est partie pour une <span>nouvelle année</span>, pour nos étudiants de MMI. Au programme quelques jours
-                    de découverte pour nos nouveaux étudiants.</p>
+        </div>
+        <img src="/image-video-dep.webp" alt="">
+
+        <div class="section2-departement">
+            <PrismicRichText class="section2-departement__title" :field="departement.data.actualites[0].title">
+            </PrismicRichText>
+
+            <div class="section2-departement__card">
+                <div class="section2-departement__card-1">
+                    <img src="/image-dep-card1.webp" alt="">
+                    <h6><span>Bienvenue aux </span>étudiants 2023</h6>
+                    <p>C’est partie pour une nouvelle édition de la journée. <span>Bienvenue aux étudiants</span> où les
+                        différentes promos de MMI ont pu se réunir pour participer à un jeu de piste !</p>
                     <a href="https://www.instagram.com/mmi_montbeliard/" target="_blank">
-                <Button class="section2-departement__card__btn" size="small">En savoir plus</Button>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="section3-departement">
-        <div class="section3-departement__sideright">
-            <borderSection :title="departement.data.section3[0].title" :subtitle="departement.data.section3[0].subtitle"
-                color="red" borderPosition="right" />
-        </div>
-        <img src="/image-dep-bureau.webp" alt="">
-    </div>
-
-    <div class="section4-departement">
-        <div class="section4-departement__cards">
-            <div class="section4-departement__cards-sideleft">
-                <PrismicRichText class="section4-departement__title" :field="departement.data.section4[0].title">
-                </PrismicRichText>
-
-                <div class="section4-departement__cards-sideleft__c">
-                    <cardavis  :image="departement.data.testimonial[0].image.url"
-                        :commentaire="departement.data.testimonial[0].commentaire"
-                        :name="departement.data.testimonial[0].name" :job="departement.data.testimonial[0].job"
-                        :promo="departement.data.testimonial[0].promo" />
-
-                    <cardavis :image="departement.data.testimonial[1].image.url"
-                        :commentaire="departement.data.testimonial[1].commentaire"
-                        :name="departement.data.testimonial[1].name" :job="departement.data.testimonial[1].job"
-                        :promo="departement.data.testimonial[1].promo" />
+                        <Button class="section2-departement__card__btn" size="small">En savoir plus</Button>
+                    </a>
+                </div>
+                <div class="section2-departement__card-2">
+                    <img src="/image-dep-card2.webp" alt="">
+                    <h6><span>offf </span>barcelona 2023</h6>
+                    <p>Certains de nos étudiants ont pu partir en voyage à Barcelone en participant au <span>Festival du
+                            Design
+                            “OFFF”.</span></p>
+                    <a href="https://www.instagram.com/mmi_montbeliard/" target="_blank">
+                        <Button class="section2-departement__card__btn" size="small">En savoir plus</Button>
+                    </a>
+                </div>
+                <div class="section2-departement__card-3">
+                    <img src="/image-dep-card3.webp" alt="">
+                    <h6><span>rentrée </span>2023</h6>
+                    <p>C’est partie pour une <span>nouvelle année</span>, pour nos étudiants de MMI. Au programme quelques
+                        jours
+                        de découverte pour nos nouveaux étudiants.</p>
+                    <a href="https://www.instagram.com/mmi_montbeliard/" target="_blank">
+                        <Button class="section2-departement__card__btn" size="small">En savoir plus</Button>
+                    </a>
                 </div>
             </div>
-            <div class="section4-departement__cards-sideright">
-                <Cardquote></Cardquote>
+        </div>
+        <div class="section3-departement">
+            <div class="section3-departement__sideright">
+                <borderSection :title="departement.data.section3[0].title" :subtitle="departement.data.section3[0].subtitle"
+                    color="red" borderPosition="right" />
+            </div>
+            <img src="/image-dep-bureau.webp" alt="">
+        </div>
 
+        <div class="section4-departement">
+            <div class="section4-departement__cards">
+                <div class="section4-departement__cards-sideleft">
+                    <PrismicRichText class="section4-departement__title" :field="departement.data.section4[0].title">
+                    </PrismicRichText>
+
+                    <div class="section4-departement__cards-sideleft__c">
+                        <cardavis :image="departement.data.testimonial[0].image.url"
+                            :commentaire="departement.data.testimonial[0].commentaire"
+                            :name="departement.data.testimonial[0].name" :job="departement.data.testimonial[0].job"
+                            :promo="departement.data.testimonial[0].promo" />
+
+                        <cardavis :image="departement.data.testimonial[1].image.url"
+                            :commentaire="departement.data.testimonial[1].commentaire"
+                            :name="departement.data.testimonial[1].name" :job="departement.data.testimonial[1].job"
+                            :promo="departement.data.testimonial[1].promo" />
+                    </div>
+                </div>
+                <div class="section4-departement__cards-sideright">
+                    <Cardquote></Cardquote>
+
+                </div>
             </div>
         </div>
     </div>
