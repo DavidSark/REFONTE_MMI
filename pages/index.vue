@@ -8,6 +8,8 @@ const { data: contact } = await useAsyncData('contact', () => client.getSingle("
 
 
 <template>
+
+  <!-- Ajout de data-scroll-container pour le locomotive scroll -->
     <div class="container__index" data-scroll-container>
 
         <div class="container__index-heroM">

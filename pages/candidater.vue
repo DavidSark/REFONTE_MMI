@@ -13,6 +13,8 @@ useSeoMeta({
 </script>
 
 <template>
+
+  <!-- Ajout de data-scroll-container pour le locomotive scroll -->
   <div data-scroll-container>
     <div class="section1-candidater">
       <div class="section1-candidater__sideleft">
@@ -31,7 +33,7 @@ useSeoMeta({
       </div>
     </div>
 
-
+<!-- Ici, il s'agit d'un test pour voir si le locomotive scroll se comporte bien avec les routes -->
     <RouterLink to="/">Retour accueil</RouterLink>
     <br>
     <RouterLink to="/formation">formation</RouterLink>

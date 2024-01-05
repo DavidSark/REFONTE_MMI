@@ -13,6 +13,7 @@ useSeoMeta({
 </script>
 
 <template>
+    <!-- Ajout de data-scroll-container pour le locomotive scroll -->
     <div data-scroll-container>
         <div>
             <hero></hero>

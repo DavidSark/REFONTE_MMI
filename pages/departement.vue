@@ -11,6 +11,7 @@ useSeoMeta({
 })
 </script>
 <template>
+    <!-- Ajout de data-scroll-container pour le locomotive scroll -->
     <div data-scroll-container>
         <div class="section1-departement">
             <div class="section1-departement__content">
