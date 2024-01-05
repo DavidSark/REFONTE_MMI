@@ -2,13 +2,21 @@
 const { client } = usePrismic();
 const { data: departement, error } = await useAsyncData('departement', () => client.getSingle("departement"));
 
+const props = defineProps ({
+    color: String, 
+}); 
+
+const className = computed (() => ({
+    ' -green': props.color === 'green',
+}))
+
 
 </script>
 
 <template>
     <div class="cardquote">
         <div class="cardquote-content">
-            <div class="cardquote-content__svg">
+            <div class="cardquote-content__svg" :class="className">   
                 <img  class="svg" src="/icons/icon-quote-stroke.svg" alt="Guillemet">
                 <img  class="svg" src="/icons/icon-quote-stroke.svg" alt="Guillemet">
                 <img  class="svg" src="/icons/icon-quote-stroke.svg" alt="Guillemet">   
@@ -37,7 +45,13 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
 
     &-content {
         &__svg {
-            
+            &.-green {
+                :nth-child(1), :nth-child(2), :nth-child(3){
+                filter: brightness(0) saturate(100%) invert(42%) sepia(24%) saturate(931%) hue-rotate(111deg) brightness(98%) contrast(94%)
+                }
+                
+
+            }
             :nth-child(1){
                 position: absolute;
                 top: 15%;

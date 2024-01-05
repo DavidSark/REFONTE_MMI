@@ -81,7 +81,7 @@ useSeoMeta({
         </div>
         </div>
         <div class="section5-international__cards-sideright">
-            <Cardquote></Cardquote>
+            <Cardquote color="green"></Cardquote>
 
         </div>
     </div>
