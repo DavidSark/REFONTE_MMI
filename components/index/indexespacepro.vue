@@ -19,7 +19,7 @@
 
         
         <div class="section-espacepro__image">
-            <img src="/image2.webp" alt="">
+            <img src="/image-espacepro.webp" alt="">
             <div class="section-espacepro__image-line"></div>
         </div>
     </div>
@@ -75,8 +75,12 @@
         height: rem(150);
         object-fit: cover;
         transform: scale(1.2);
-
+        filter: grayscale(100%);
+        transition: filter 0.5s ease-in-out;
         }
+        &:hover img {
+      filter: grayscale(0%);
+    }
     &-line{
         position: absolute;
         bottom: 50%;
