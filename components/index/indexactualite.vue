@@ -53,6 +53,7 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
                 margin:rem(10) rem(0);
                 text-transform: uppercase;
                 font-family: $font-redhat;
+           
                 font-size:$size-14;
                 span {
                     font-weight: 700;
@@ -96,7 +97,7 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
     }
    
     &__title {
-    letter-spacing: -2.34px;
+    letter-spacing: -5.34px;
     font-family: $font-redhat;
     margin:rem(40) rem(0);
     font-size: $size-32;

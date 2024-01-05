@@ -36,7 +36,8 @@
         
        
         h2 {
-            letter-spacing: -10px;
+            letter-spacing: -9px;
+            font-family: $font-redhat;
             font-size: $size-32;
             font-weight: 700;
             margin-bottom: rem(15);

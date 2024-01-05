@@ -78,7 +78,8 @@ useSeoMeta({
   .section1-index{
     margin: rem(50) rem(20);
     &__tagline{
-      font-family: $font-poppins;
+      font-family: $font-redhat;
+      letter-spacing: -3px;
       font-size: $size-20;
       font-weight: 300;
       text-transform: uppercase;

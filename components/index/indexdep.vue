@@ -39,11 +39,14 @@
         justify-content: flex-end;
         position: relative;
         img{
+        filter: grayscale(100%);
+        transition: filter 0.5s ease-in-out;
         width: rem(189);
         height: rem(189);
         object-fit: cover;
         border-radius: 100%;
         }
+        
         :nth-child(2),
         :nth-child(3) {
             display: none;
@@ -68,9 +71,10 @@
         
 
         h2 {
-            letter-spacing: -11px;
+            letter-spacing: -9px;
             font-size: $size-32;
             font-weight: 700;
+            font-family: $font-redhat;
             margin-bottom: rem(15);
 
             span {

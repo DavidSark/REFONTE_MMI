@@ -36,7 +36,7 @@
         letter-spacing: -9px;
     }
     margin: rem(50) rem(0);
-    font-family: $font-poppins;
+    font-family: $font-redhat;
     font-weight: 700;
     font-size: 8vw;
     text-transform: uppercase;

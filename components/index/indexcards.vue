@@ -8,7 +8,7 @@
     <div class="section-indexcards">
         <div class="section-indexcards__card">
             <div class="section-indexcards__card-image">
-                <img src="/image7.webp" alt="image mmi">
+                <img src="/image-projets.webp" alt="image mmi">
             </div>
             <div class="section-indexcards__card-title">
                 <h2><span>Des projets</span> concrêts</h2>
@@ -17,7 +17,7 @@
      
         <div class="section-indexcards__card2">
             <div class="section-indexcards__card2-image2">
-                <img src="/image11.webp" alt="image mmi">
+                <img src="/image-cegep.webp" alt="image mmi">
             </div>
             <div class="section-indexcards__card2-title">
                 <h2><span>Un semestre au</span> canada</h2>
@@ -41,7 +41,7 @@
     }
     &-title{
         margin-top: rem(10);
-        font-family: $font-poppins;
+        font-family: $font-redhat;
         font-size: $size-20;
         text-transform: uppercase;
         border-left: rem(6) solid;
