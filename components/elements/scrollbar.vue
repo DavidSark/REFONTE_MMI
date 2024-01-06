@@ -1,104 +1,173 @@
 <template>
- <div class="scrollbar-container" ref="scrollContainer" @scroll="handleScroll">
-    <div class="scrollbar">
-      <div
-        v-for="(button, index) in buttons"
-        :key="index"
-        :class="{ 'active': activeButton === index }"
-        class="scrollbar-button"
-      ></div>
-    </div>
+  <div>
+    <nav class="navbar">
+      <ul>
+        <li v-for="(section, index) in sections" :key="index">
+          <a :href="`#${section.id}`" :class="{ 'dot': true, 'active': activeSection === index }" :data-scroll="section.id">
+            <span>{{ section.label }}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section v-for="(section, index) in sections" :key="index" :id="section.id" class="sec">{{ section.label }}</section>
   </div>
-  </template>
-  
-  <script setup>
-  import { ref, onMounted } from 'vue';
+</template>
 
-const scrollContainer = ref(null);
-const buttons = [0, 1, 2, 3, 4];
-let activeButton = 0;
+<script>
+export default {
+  setup() {
+    const sections = [
+      { id: 'home', label: 'home' },
+      { id: 'about', label: 'about' },
+      { id: 'service', label: 'service' },
+      { id: 'project', label: 'project' },
+      { id: 'contact', label: 'contact' }
+    ];
 
-const handleScroll = () => {
-  const scrollPosition = scrollContainer.value.scrollTop;
-  const containerHeight = scrollContainer.value.clientHeight;
-  const totalScrollHeight = scrollContainer.value.scrollHeight;
-  const percentageScrolled = (scrollPosition / (totalScrollHeight - containerHeight)) * 100;
+    const activeSection = ref(0);
 
-  activeButton = Math.floor((percentageScrolled / 100) * buttons.length);
+    const handleScroll = () => {
+      const links = document.querySelectorAll('.navbar a.dot');
+      const top = window.scrollY;
 
-  // Supposez que vous avez des ancres avec les IDs "section-1", "section-2", etc.
-  const section1 = document.getElementById('section-1');
-  const section2 = document.getElementById('section-2');
-  // ... Ajoutez d'autres ancres si nécessaire
+      sections.forEach((section, index) => {
+        const el = document.getElementById(section.id);
+        if (el) {
+          const height = el.offsetHeight;
+          const offset = el.offsetTop - 150;
 
-  if (section1) {
-    const section1Top = section1.offsetTop;
-    const section1Height = section1.offsetHeight;
+          if (top >= offset && top < offset + height) {
+            links.forEach(link => link.classList.remove('active'));
+            links[index].classList.add('active');
+            activeSection.value = index;
+          }
+        }
+      });
+    };
 
-    if (scrollPosition >= section1Top && scrollPosition < section1Top + section1Height) {
-      activeButton = 0;
-    }
+    onMounted(() => {
+      window.addEventListener('scroll', handleScroll);
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener('scroll', handleScroll);
+    });
+
+    return {
+      sections,
+      activeSection
+    };
   }
-
-  if (section2) {
-    const section2Top = section2.offsetTop;
-    const section2Height = section2.offsetHeight;
-
-    if (scrollPosition >= section2Top && scrollPosition < section2Top + section2Height) {
-      activeButton = 1;
-    }
-  }
-  // Répétez pour d'autres ancres
-
 };
+</script>
 
-onMounted(() => {
-  handleScroll(); // Effectuer la vérification initiale du défilement
-});
-  </script>
-  
-  <style lang="scss" scoped>
-    .scrollbar-container {
-    display: none;
-    position: fixed;
-    left: rem(15);
-    top: 50%;
-    transform: translateY(-50%);
-    height: 200px; /* Height of the scrollbar container */
-    overflow-y: auto;
-  }
-  
-  .scrollbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .scrollbar-button {
-    width: rem(9);
-    height: rem(9);
-    border-radius: 50%;
-    margin-bottom: 20px; /* Space between buttons */
-    background-color: $white-soft; /* Default button color */
-    transition: background-color 0.3s ease;
-  }
-  
-  .scrollbar-button.active {
-    background-color: $black; /* Active button color */
-  }
+<style>
 
-  @media (min-width : 1024px) {
-    .scrollbar-container{
-      display:block;
-    }
-    
-  }
+.sec {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  color: #777;
+  background: #f9f9f9;
+  letter-spacing: 2px;
+}
 
-  @media (min-width : 1440px) {
-    .scrollbar-container{
-      left: rem(30);
-    }
-    
-  }
-  </style>
-  
+.sec:nth-child(odd) {
+  background: #ddd;
+}
+
+.navbar {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  width: 200px;
+  position: relative;
+  text-align: right;
+}
+
+.navbar ul li .dot {
+  color: #fff;
+  display: block;
+  padding: 5px 0;
+}
+
+.navbar ul li .dot span {
+  display: inline-block;
+  background: #f44336;
+  letter-spacing: 1px;
+  padding: 10px 25px;
+  margin-right: 30px;
+  border-radius: 3px;
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+.navbar ul li:hover .dot span {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.navbar ul li .dot span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(7px, -50%);
+  border-left: 7px solid #f44336;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  display: block;
+}
+
+.navbar ul li .dot::before,
+.navbar ul li .dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  display: block;
+  transition: 0.2s ease-out;
+}
+
+.navbar ul li .dot::before {
+  height: 5px;
+  width: 5px;
+  border: 2px solid #333;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.navbar ul li .dot.active::before,
+.navbar ul li:hover .dot::before {
+  border-color: #f44336;
+  background: #f44336;
+}
+
+.navbar ul li .dot::after {
+  height: 15px;
+  width: 15px;
+  border: 2px solid #f44336;
+  right: -5px;
+  transform: translateY(-50%) scale(0);
+}
+
+.navbar ul li .dot.active::after,
+.navbar ul li:hover .dot::after {
+  transform: translateY(-50%) scale(1);
+}
+</style>

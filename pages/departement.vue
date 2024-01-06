@@ -23,11 +23,11 @@ useSeoMeta({
     </div>
     <img src="/image-video-dep.webp" alt="">
 
-    <div class="section2-departement" id="section-2">
+    <div class="section2-departement" >
         <PrismicRichText class="section2-departement__title" :field="departement.data.actualites[0].title">
         </PrismicRichText>
 
-        <div class="section2-departement__card">
+        <div class="section2-departement__card" >
             <div class="section2-departement__card-1">
                 <img src="/image-dep-card1.webp" alt="">
                 <h6><span>Bienvenue aux </span>étudiants 2023</h6>
