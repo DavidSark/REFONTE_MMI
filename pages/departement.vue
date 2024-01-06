@@ -12,7 +12,7 @@ useSeoMeta({
 </script>
 <template>
     
-    <div class="section1-departement">
+    <div class="section1-departement" id="section1">
         <div class="section1-departement__content">
             <borderSection :title="departement.data.section1[0].title" :subtitle="departement.data.section1[0].subtitle" />
         </div>
@@ -21,13 +21,13 @@ useSeoMeta({
         </div>
 
     </div>
-    <img src="/image-video-dep.webp" alt="">
+    <img src="/image-video-dep.webp" alt="" id="section2" name="okok">
 
-    <div class="section2-departement" >
+    <div class="section2-departement" id="section3">
         <PrismicRichText class="section2-departement__title" :field="departement.data.actualites[0].title">
         </PrismicRichText>
 
-        <div class="section2-departement__card" >
+        <div class="section2-departement__card"  >
             <div class="section2-departement__card-1">
                 <img src="/image-dep-card1.webp" alt="">
                 <h6><span>Bienvenue aux </span>étudiants 2023</h6>
@@ -57,7 +57,7 @@ useSeoMeta({
             </div>
         </div>
     </div>
-    <div class="section3-departement">
+    <div class="section3-departement" id="section4">
         <div class="section3-departement__sideright">
             <borderSection :title="departement.data.section3[0].title" :subtitle="departement.data.section3[0].subtitle"
                 color="red" borderPosition="right" />
@@ -65,7 +65,7 @@ useSeoMeta({
         <img src="/image-dep-bureau.webp" alt="">
     </div>
 
-    <div class="section4-departement">
+    <div class="section4-departement" id="section5">
         <div class="section4-departement__cards">
             <div class="section4-departement__cards-sideleft">
                 <PrismicRichText class="section4-departement__title" :field="departement.data.section4[0].title">

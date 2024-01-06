@@ -4,13 +4,13 @@
       <ul>
         <li v-for="(section, index) in sections" :key="index">
           <a :href="`#${section.id}`" :class="{ 'dot': true, 'active': activeSection === index }" :data-scroll="section.id">
-            <span>{{ section.label }}</span>
+            <!-- <span>{{ section.label }}</span> -->
           </a>
         </li>
       </ul>
     </nav>
 
-    <section v-for="(section, index) in sections" :key="index" :id="section.id" class="sec">{{ section.label }}</section>
+    <!-- <section v-for="(section, index) in sections" :key="index" :id="section.id" class="sec">{{ section.label }}</section> -->
   </div>
 </template>
 
@@ -18,11 +18,11 @@
 export default {
   setup() {
     const sections = [
-      { id: 'home', label: 'home' },
-      { id: 'about', label: 'about' },
-      { id: 'service', label: 'service' },
-      { id: 'project', label: 'project' },
-      { id: 'contact', label: 'contact' }
+      { id: 'section1', label: 'section1'},
+      { id: 'section2', label: 'section2'},
+      { id: 'section3', label: 'section3' },
+      { id: 'section4', label: 'section4' },
+      { id: 'section5', label: 'section5' }
     ];
 
     const activeSection = ref(0);
@@ -83,7 +83,7 @@ export default {
 .navbar {
   position: fixed;
   top: 50%;
-  right: 30px;
+  left: 10px;
   transform: translateY(-50%);
   z-index: 1000;
 }
@@ -95,7 +95,7 @@ export default {
 }
 
 .navbar ul li {
-  width: 200px;
+  width: 30px;
   position: relative;
   text-align: right;
 }
@@ -103,7 +103,7 @@ export default {
 .navbar ul li .dot {
   color: #fff;
   display: block;
-  padding: 5px 0;
+  padding: 25px 0;
 }
 
 .navbar ul li .dot span {
@@ -147,21 +147,22 @@ export default {
 .navbar ul li .dot::before {
   height: 5px;
   width: 5px;
-  border: 2px solid #333;
+  background-color: #EBEBEB;
+  border: 2px solid #EBEBEB;
   right: 0;
   transform: translateY(-50%);
 }
 
 .navbar ul li .dot.active::before,
 .navbar ul li:hover .dot::before {
-  border-color: #f44336;
-  background: #f44336;
+  border-color: #0264F6;
+  background: #0264F6;
 }
 
 .navbar ul li .dot::after {
   height: 15px;
   width: 15px;
-  border: 2px solid #f44336;
+  border: 2px solid #0264F6;
   right: -5px;
   transform: translateY(-50%) scale(0);
 }
