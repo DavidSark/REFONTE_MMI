@@ -31,7 +31,7 @@ useSeoMeta({
         <div class="section2-departement__card"  >
             <div class="section2-departement__card-1">
                 <img src="/image-dep-card1.webp" alt="">
-                <h6><span>Bienvenue aux </span>étudiants 2023</h6>
+                <h3><span>Bienvenue aux </span>étudiants 2023</h3>
                 <p>C’est partie pour une nouvelle édition de la journée. <span>Bienvenue aux étudiants</span> où les
                     différentes promos de MMI ont pu se réunir pour participer à un jeu de piste !</p>
                 <a href="https://www.instagram.com/mmi_montbeliard/" target="_blank">
@@ -40,7 +40,7 @@ useSeoMeta({
             </div>
             <div class="section2-departement__card-2">
                 <img src="/image-dep-card2.webp" alt="">
-                <h6><span>offf </span>barcelona 2023</h6>
+                <h3><span>offf </span>barcelona 2023</h3>
                 <p>Certains de nos étudiants ont pu partir en voyage à Barcelone en participant au <span>Festival du Design
                         “OFFF”.</span></p>
                 <a href="https://www.instagram.com/mmi_montbeliard/" target="_blank">
@@ -49,7 +49,7 @@ useSeoMeta({
             </div>
             <div class="section2-departement__card-3">
                 <img src="/image-dep-card3.webp" alt="">
-                <h6><span>rentrée </span>2023</h6>
+                <h3><span>rentrée </span>2023</h3>
                 <p>C’est partie pour une <span>nouvelle année</span>, pour nos étudiants de MMI. Au programme quelques jours
                     de découverte pour nos nouveaux étudiants.</p>
                     <a href="https://www.instagram.com/mmi_montbeliard/" target="_blank">
@@ -147,11 +147,11 @@ useSeoMeta({
         flex-direction: column;
         gap: rem(60);
 
-        h6 {
+        h3 {
             margin: rem(10) rem(0);
             text-transform: uppercase;
             font-family: $font-redhat;
-            font-size: $size-14;
+            font-size: $size-16;
 
             span {
                 font-weight: 700;
@@ -220,6 +220,7 @@ useSeoMeta({
 
 img {
     width: 100%;
+    height: auto;
 }
 
 @media (min-width : 768px) {
@@ -254,7 +255,7 @@ img {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
 
-            h6 {
+            h3 {
                 font-size: $size-16;
             }
 
@@ -389,6 +390,7 @@ img {
             &-2 {
             img {
                 width: 100%;
+                height: auto;
             }
            }
         }

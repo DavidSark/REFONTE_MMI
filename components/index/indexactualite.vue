@@ -44,7 +44,7 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
 
 
 .section2-departement {
-    padding:rem(0) rem(20);
+    padding:rem(0) rem(20) rem(60) rem(20);
     &__card {
         display: flex;
         flex-direction: column;
@@ -54,7 +54,7 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
                 text-transform: uppercase;
                 font-family: $font-redhat;
            
-                font-size:$size-14;
+                font-size:$size-16;
                 span {
                     font-weight: 700;
                 }
@@ -121,6 +121,7 @@ const { data: departement, error } = await useAsyncData('departement', () => cli
 
 img {
     width: 100%;
+    height: auto;
 }
 
 @media (min-width : 768px) {
@@ -175,6 +176,7 @@ img {
            &-2 {
             img {
                 width: 450px;
+                height: auto;
             }
            }
         }
@@ -191,6 +193,7 @@ img {
             &-2 {
             img {
                 width: 100%;
+                height: auto;
             }
            }
         }
