@@ -22,7 +22,7 @@ export default {
       { id: 'section2', label: 'section2'},
       { id: 'section3', label: 'section3' },
       { id: 'section4', label: 'section4' },
-      { id: 'section5', label: 'section5' }
+  
     ];
 
     const activeSection = ref(0);
@@ -63,7 +63,9 @@ export default {
 </script>
 
 <style>
-
+html {
+  scroll-behavior: smooth;
+}
 .sec {
   min-height: 100vh;
   width: 100vw;
@@ -82,7 +84,7 @@ export default {
 
 .navbar {
   position: fixed;
-  top: 50%;
+  top: 46%;
   left: 10px;
   transform: translateY(-50%);
   z-index: 1000;
