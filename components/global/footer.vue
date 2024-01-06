@@ -71,6 +71,7 @@
 
         img {
             width: rem(37);
+            height: rem(37);
             margin-bottom: rem(10);
 
         }
@@ -112,6 +113,7 @@
 
             img {
                 width: rem(45);
+                height: rem(45);
                 margin-bottom: rem(15);
             }
 
@@ -123,6 +125,7 @@
         &-icons {
             img {
                 width: rem(30);
+                height: rem(30);
             }
         }
 
