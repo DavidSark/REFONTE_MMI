@@ -11,6 +11,7 @@ useSeoMeta({
 })
 </script>
 <template>
+    
     <div class="section1-departement">
         <div class="section1-departement__content">
             <borderSection :title="departement.data.section1[0].title" :subtitle="departement.data.section1[0].subtitle" />
@@ -22,7 +23,7 @@ useSeoMeta({
     </div>
     <img src="/image-video-dep.webp" alt="">
 
-    <div class="section2-departement">
+    <div class="section2-departement" id="section-2">
         <PrismicRichText class="section2-departement__title" :field="departement.data.actualites[0].title">
         </PrismicRichText>
 
