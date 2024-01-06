@@ -15,8 +15,8 @@ useSeoMeta({
 </script>
 
 <template>
-
-  <div class="section1-espacepro">
+<scrollbar/>
+  <div class="section1-espacepro" id="section1">
     <div class="section1-espacepro__sideleft">
       <borderSection :title="espacepro.data.section1[0].titre" :subtitle="espacepro.data.section1[0].soustitre" />
       <a href="https://stage.mmimontbeliard.com/" target="_blank">
@@ -26,7 +26,7 @@ useSeoMeta({
     <img src="/imageep-1.webp" alt="Etudiant">
   </div>
 
-  <div class="section2-espacepro">
+  <div class="section2-espacepro" id="section2">
     <img src="/image6.webp" alt="Etudiantes">
     <div class="section2-espacepro__sideright">
       <borderSection :title="espacepro.data.section2[0].titre" :subtitle="espacepro.data.section2[0].soustitre"
@@ -39,7 +39,7 @@ useSeoMeta({
     </div>
   </div>
 
-  <div class="section3-espacepro">
+  <div class="section3-espacepro" id="section3">
     <div class="section3-espacepro__sideleft">
       <borderSection :title="espacepro.data.section3[0].titre" :subtitle="espacepro.data.section3[0].soustitre"
         color="red" />
@@ -49,7 +49,7 @@ useSeoMeta({
     </div>
     <img src="/section-projet.webp" alt="Mmi montbéliard">
   </div>
-  <div class="section4-espacepro">
+  <div class="section4-espacepro" id="section4">
             <cardformation color="green" :items="projets.data.projects"></cardformation>
     </div>
 </template>

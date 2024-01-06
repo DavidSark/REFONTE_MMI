@@ -36,7 +36,7 @@
 
 <template>
 
-  <scrollbar/>
+  
   <div>
     <NuxtLayout>
       <NuxtPage/>

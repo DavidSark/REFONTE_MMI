@@ -16,7 +16,8 @@ useSeoMeta({
 </script>
 
 <template>
-    <div class="section1-contact">
+    <scrollbar/>
+    <div class="section1-contact" id="section1">
         <div class="section1-contact__side">
             <borderSection :title="contact.data.section1[0].title" :subtitle="contact.data.section1[0].subtitle" />
             <RouterLink to="/departement">
@@ -27,11 +28,11 @@ useSeoMeta({
             <Cardgooglemap></Cardgooglemap>
         </div>
     </div>
-    <div class="section2-contact">
+    <div class="section2-contact" id="section2">
         <img src="/image9.webp" alt="Mmi montbéliard">
         <img src="/image13.webp" alt="Mmi montbéliard">
     </div>
-    <div class="section3-contact">
+    <div class="section3-contact" id="section3">
         <div class="section3-contact_content">
             <PrismicRichText class="section3-contact__content-tagline" :field="contact.data.section3[0].tagline">
             </PrismicRichText>
@@ -42,7 +43,7 @@ useSeoMeta({
     <div class="section4-contact">
         <cardcontact></cardcontact>
     </div>
-    <div class="section5-contact">
+    <div class="section5-contact" id="section4">
         <Formcontact></Formcontact>
         <img src="/image-contact.webp" alt="Mmi montbéliard">
 

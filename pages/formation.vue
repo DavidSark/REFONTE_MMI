@@ -14,11 +14,12 @@ useSeoMeta({
 </script>
 
 <template>
+    <scrollbar/>
     <div>
         <div>
             <hero></hero>
         </div>
-        <div class="section1-formation">
+        <div class="section1-formation" id="section1">
             <div class="section1-formation__content">
                 <borderSection :title="formation.data.section1[0].title"
                 :subtitle="formation.data.section1[0].subtitle"  ></borderSection>
@@ -28,7 +29,7 @@ useSeoMeta({
             </div>
         </div>
 
-        <div class="section2-formation">
+        <div class="section2-formation" id="section2">
             <div class="section2-formation__content">
                 <borderSection color="red" :title="formation.data.section2[0].title"
                     :subtitle="formation.data.section2[0].subtitle" borderPosition="right" ></borderSection>
@@ -37,7 +38,7 @@ useSeoMeta({
             </div>
         </div>
 
-        <div class="section3-formation">
+        <div class="section3-formation" id="section3">
             <div class="section3-formation__content">
                 <borderSection  color="green" :title="formation.data.section3[0].title"
                     :subtitle="formation.data.section3[0].subtitle" ></borderSection>
@@ -47,7 +48,7 @@ useSeoMeta({
         </div>
 
 
-        <div class="section4-formation">
+        <div class="section4-formation" id="section4">
             <cardformation color="red" :items="projets.data.projects"></cardformation>
         </div>
     </div>

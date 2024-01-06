@@ -1,79 +1,183 @@
 <template>
-    <div class="scrollbar-container" ref="scrollContainer" @scroll="handleScroll">
-      <div class="scrollbar">
-        <div
-          v-for="(button, index) in buttons"
-          :key="index"
-          :class="{ 'active': activeButton >= index }"
-          class="scrollbar-button"
-        ></div>
-      </div>
-    </div>
-  </template>
-  
-  <script setup>
-  import { ref, onMounted } from 'vue';
-  
-  const scrollContainer = ref(null);
-  const buttons = [0, 1, 2, 3, 4];
-  let activeButton = 0;
-  
-  const handleScroll = () => {
-    const scrollPosition = scrollContainer.value.scrollTop;
-    const containerHeight = scrollContainer.value.clientHeight;
-    const totalScrollHeight = scrollContainer.value.scrollHeight;
-    const percentageScrolled = (scrollPosition / (totalScrollHeight - containerHeight)) * 100;
-  
-    activeButton = Math.floor((percentageScrolled / 100) * buttons.length);
-  };
-  
-  onMounted(() => {
-    handleScroll(); // Perform initial scroll check
-  });
-  </script>
-  
-  <style lang="scss" scoped>
-    .scrollbar-container {
-    display: none;
-    position: fixed;
-    left: rem(15);
-    top: 50%;
-    transform: translateY(-50%);
-    height: 200px; /* Height of the scrollbar container */
-    overflow-y: auto;
-  }
-  
-  .scrollbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .scrollbar-button {
-    width: rem(9);
-    height: rem(9);
-    border-radius: 50%;
-    margin-bottom: 20px; /* Space between buttons */
-    background-color: $white-soft; /* Default button color */
-    transition: background-color 0.3s ease;
-  }
-  
-  .scrollbar-button.active {
-    background-color: $black; /* Active button color */
-  }
+  <div>
+    <nav class="navbar">
+      <ul>
+        <li v-for="(section, index) in sections" :key="index">
+          <a :href="`#${section.id}`" :class="{ 'dot': true, 'active': activeSection === index }" :data-scroll="section.id">
+            <!-- <span>{{ section.label }}</span> -->
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-  @media (min-width : 1024px) {
-    .scrollbar-container{
-      display:block;
-    }
-    
-  }
+    <!-- <section v-for="(section, index) in sections" :key="index" :id="section.id" class="sec">{{ section.label }}</section> -->
+  </div>
+</template>
 
-  @media (min-width : 1440px) {
-    .scrollbar-container{
-      left: rem(30);
-    }
-    
-  }
-  </style>
+<script>
+export default {
+  setup() {
+    const sections = [
+      { id: 'section1', label: 'section1'},
+      { id: 'section2', label: 'section2'},
+      { id: 'section3', label: 'section3' },
+      { id: 'section4', label: 'section4' },
   
+    ];
+
+    const activeSection = ref(0);
+
+    const handleScroll = () => {
+      const links = document.querySelectorAll('.navbar a.dot');
+      const top = window.scrollY;
+
+      sections.forEach((section, index) => {
+        const el = document.getElementById(section.id);
+        if (el) {
+          const height = el.offsetHeight;
+          const offset = el.offsetTop - 150;
+
+          if (top >= offset && top < offset + height) {
+            links.forEach(link => link.classList.remove('active'));
+            links[index].classList.add('active');
+            activeSection.value = index;
+          }
+        }
+      });
+    };
+
+    onMounted(() => {
+      window.addEventListener('scroll', handleScroll);
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener('scroll', handleScroll);
+    });
+
+    return {
+      sections,
+      activeSection
+    };
+  }
+};
+</script>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+.sec {
+  display: none;
+}
+
+@media (min-width: 1440px ) {
+  .sec {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  color: #777;
+  background: #f9f9f9;
+  letter-spacing: 2px;
+}
+
+.sec:nth-child(odd) {
+  background: #ddd;
+}
+
+.navbar {
+  position: fixed;
+  top: 46%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  width: 30px;
+  position: relative;
+  text-align: right;
+}
+
+.navbar ul li .dot {
+  color: #fff;
+  display: block;
+  padding: 25px 0;
+}
+
+.navbar ul li .dot span {
+  display: inline-block;
+  background: #f44336;
+  letter-spacing: 1px;
+  padding: 10px 25px;
+  margin-right: 30px;
+  border-radius: 3px;
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+.navbar ul li:hover .dot span {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.navbar ul li .dot span::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(7px, -50%);
+  border-left: 7px solid #f44336;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  display: block;
+}
+
+.navbar ul li .dot::before,
+.navbar ul li .dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  border-radius: 50%;
+  display: block;
+  transition: 0.2s ease-out;
+}
+
+.navbar ul li .dot::before {
+  height: 5px;
+  width: 5px;
+  background-color: #EBEBEB;
+  border: 2px solid #EBEBEB;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.navbar ul li .dot.active::before,
+.navbar ul li:hover .dot::before {
+  border-color: #0264F6;
+  background: #0264F6;
+}
+
+.navbar ul li .dot::after {
+  height: 15px;
+  width: 15px;
+  border: 2px solid #0264F6;
+  right: -5px;
+  transform: translateY(-50%) scale(0);
+}
+
+.navbar ul li .dot.active::after,
+.navbar ul li:hover .dot::after {
+  transform: translateY(-50%) scale(1);
+}
+}
+
+</style>

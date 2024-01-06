@@ -21,13 +21,7 @@ const handleError = () => clearError({ redirect: '/404' })
 
 <div>
     <Header :elements="home.data.header"></Header>
-        <hero></hero>
+    <hero></hero>
   
   </div>
-
-
-  <!-- <div>
-    <h2>{{error.statusCode }}</h2>
-    <button @click="handleError">Clear errors</button>
-  </div> -->
 </template>
