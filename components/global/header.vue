@@ -47,26 +47,6 @@ watch(
 
 <template>
   <div class="header">
-
-    <div>
-      <div>
-        <button @click="toggleMenu">
-          Open Menu
-        </button>
-
-        <div v-if="isMenuOpen" class="menu">
-          <!-- Contenu du menu ici -->
-          <p>Menu content goes here.</p>
-          <RouterLink to="/formation"><button>formation</button></RouterLink>
-          <br>
-          <RouterLink to="/"><button>Accueil</button></RouterLink>
-          <br>
-          <button @click="toggleMenu">
-            Close Menu
-          </button>
-        </div>
-      </div>
-    </div>
     <div class="header-block">
       <div class="header-block__logo" v-for="item in elements">
         <img :src="item.header_logo.url" :alt="item.header_logo.alt">
@@ -83,7 +63,7 @@ watch(
       </div>
     </div>
 
-    <div class="header-menu -circle">
+    <div class="header-menu -circle" @click="toggleMenu">
       <div class="header-menu-center ">
         <div></div>
         <div></div>
@@ -91,21 +71,44 @@ watch(
       </div>
     </div>
 
+    <div>
+        <div v-if="isMenuOpen" class="menu">
+          <!-- Contenu du menu ici -->
+          <div class="menu-content__leave">
+            <p>quitter</p>
+            <button @click="toggleMenu">
+              <img src="/icons/x.svg" alt="">
+            </button>
+          </div>
+         
+          <div class="menu-content">
+            <p>MENU</p>
 
+            <div class="menu-contact__text">
+              <RouterLink to="/formation"><p>formation</p></RouterLink>
+              <RouterLink to="/departement"><p>departement</p></RouterLink>
+              <RouterLink to="/international"><p>international</p></RouterLink>
+              <RouterLink to="/candidater"><p>candidater</p></RouterLink>
+              <RouterLink to="/espace-pro"><p>espace-professionnel</p></RouterLink>
+              <RouterLink to="/contact"><p>contact</p></RouterLink>
+              <RouterLink to="/faq"><p>faq</p></RouterLink>
+            </div>
+          </div>
+          
+          <div class="menu-contact__line"></div>
+       
+          <Button size="small" bgColor="bgBlue"  borderColor="borderBlue" color="white">s'inscrire</Button>
+         
+
+
+        </div>
+      </div>
 
   </div>
 </template>
 
 <style lang="scss" scoped>
-.menu {
-  background: red;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 50px 10px;
-}
+
 
 .header {
   .button {
@@ -168,7 +171,7 @@ watch(
         transition: all .5s;
         width: rem(20);
         height: rem(.5);
-        background-color: $white;
+        background-color: $black;
         margin: rem(8) 0;
       }
 
@@ -181,7 +184,7 @@ watch(
       border-radius: 50%;
       background: transparent;
       border: rem(1) solid;
-      border-color: $white ;
+      border-color: $black ;
       cursor: pointer;
 
       &::before {
@@ -320,4 +323,19 @@ watch(
       }
     }
   }
-}</style>
+
+
+}
+.menu {
+  background: $white;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &-content__leave{
+    
+  }
+}
+</style>
