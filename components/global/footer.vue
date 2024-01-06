@@ -46,7 +46,7 @@
 
         a {
             text-decoration-line: underline;
-            color: $gray-soft;
+            color: $gray-black;
         }
 
         :nth-child(2) {
