@@ -14,7 +14,8 @@ useSeoMeta({
 </script>
 
 <template>
-    <div class="section1-design">
+    <scrollbar/>
+    <div class="section1-design" id="section1">
         <div class="section1-design__sideleft">
             <borderSection :title="design.data.section1[0].title" :subtitle="design.data.section1[0].subtitle"
                 />
@@ -25,19 +26,19 @@ useSeoMeta({
         <img src="/image-design-1.webp" alt="Etudiant">
     </div>
 
-    <div class="section2-design">
+    <div class="section2-design" id="section2">
         <Cardparcours :image="design.data.card[1].image.url" :title="design.data.card[1].title" />
         <Cardparcours :image="design.data.card[0].image.url" :title="design.data.card[0].title" />
         <Cardparcours :image="design.data.card[2].image.url" :title="design.data.card[2].title" />
     </div>
 
-    <div class="section3-design">
+    <div class="section3-design" id="section3">
             <card-projet-design :items="projets.data.projets_design"></card-projet-design>
     </div>
 
 
 
-   <div class="section4-design">
+   <div class="section4-design" id="section4">
  
    
     <PrismicRichText class="section4-design__title" :field="design.data.titlesection4"></PrismicRichText>
