@@ -14,7 +14,7 @@
                 <p>Mentions légales</p>
             </RouterLink>
             <div></div>
-            <RouterLink to="/confidentialite">
+            <RouterLink to="/mentions-legales">
                 <p>Confidentialité</p>
             </RouterLink>
         </div>
