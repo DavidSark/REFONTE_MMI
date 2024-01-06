@@ -67,6 +67,11 @@ html {
   scroll-behavior: smooth;
 }
 .sec {
+  display: none;
+}
+
+@media (min-width: 1440px ) {
+  .sec {
   min-height: 100vh;
   width: 100vw;
   display: flex;
@@ -173,4 +178,6 @@ html {
 .navbar ul li:hover .dot::after {
   transform: translateY(-50%) scale(1);
 }
+}
+
 </style>
