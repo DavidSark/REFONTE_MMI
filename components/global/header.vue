@@ -7,6 +7,31 @@ const props = defineProps({
   elements: Array
 })
 
+
+
+const menuOpen = ref(null)
+onMounted(() => {
+    let scrolled = 0;
+    let header = document.getElementsByClassName('header')[0];
+    document.addEventListener('scroll', (e) => {
+        scrolled = window.scrollY;
+        if(scrolled > 0){
+            header.classList.add('-bg-white');
+        } else {
+            header.classList.remove('-bg-white'); 
+        }
+    });
+
+
+    const isMenuOpen = ref(false);
+    const toggleMenu = () => {
+      isMenuOpen.value = !isMenuOpen.value;
+}  
+});
+
+
+
+
 </script>
 <template> 
   <div class="header " >
@@ -25,17 +50,38 @@ const props = defineProps({
         </div>
       </div>
     </div>
-    <div class="header-menu -circle">
+
+    <button :onClick="toggleMenu">Toggle Menu</button>
+    <div v-if="isMenuOpen" class="menu">
+      <!-- Contenu du menu -->
+      <p>Menu Content</p>
+    </div>
+    <div class="header-menu -circle" >
       <div class="header-menu-center ">
         <div></div>
         <div></div>
         <div></div>
       </div>
     </div>
+
+
+    <div class="menuOpen">
+
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
 .header {
   z-index: 99;
   position: sticky;
@@ -77,6 +123,7 @@ const props = defineProps({
   }
 
   &-menu {
+   
     &-center {
       width: fit-content;
       text-align: center;
@@ -88,6 +135,7 @@ const props = defineProps({
       }
 
       div {
+      
         transition: all .5s;
         width: rem(20);
         height: rem(.5);
@@ -105,7 +153,7 @@ const props = defineProps({
       background: transparent;
       border: rem(1) solid;
       border-color: $white ;
-
+      cursor: pointer;
       &::before {
         content: '';
         position: absolute;
