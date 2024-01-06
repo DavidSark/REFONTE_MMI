@@ -7,34 +7,66 @@ const props = defineProps({
   elements: Array
 })
 
-
-
-const menuOpen = ref(null)
-onMounted(() => {
-    let scrolled = 0;
-    let header = document.getElementsByClassName('header')[0];
-    document.addEventListener('scroll', (e) => {
-        scrolled = window.scrollY;
-        if(scrolled > 0){
-            header.classList.add('-bg-white');
-        } else {
-            header.classList.remove('-bg-white'); 
-        }
-    });
-
-
-    const isMenuOpen = ref(false);
-    const toggleMenu = () => {
-      isMenuOpen.value = !isMenuOpen.value;
-}  
-});
+//création de deux constantes + utilisation de vue-router pour la route
+const isMenuOpen = ref(false);
+const route = useRoute();
 
 
 
+//constante toggleMenu avec une fonction qui va
+//ouvrir ou fermer le menu + appel à la fonction
+//updateBodyOverflow pour retirer le scroll si ouvert
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+  updateBodyOverflow();
+};
+
+
+//constante updateBodyOverflow avec une fonction qui va 
+//retirer le scroll si le menu est ouvert ou fermé
+const updateBodyOverflow = () => {
+  if(isMenuOpen.value == true){
+    document.body.style.overflow = 'hidden';
+  }else{
+    document.body.style.overflow = '';
+  }
+};
+
+//watchers pour vérifier si on change de page ou non
+//afin de fermer le menu si on change de page ou non
+
+watch(
+  () => route.fullPath,
+  () => {
+    isMenuOpen.value = false;
+    updateBodyOverflow();
+  }
+);
 
 </script>
-<template> 
-  <div class="header " >
+
+<template>
+  <div class="header">
+
+    <div>
+      <div>
+        <button @click="toggleMenu">
+          Open Menu
+        </button>
+
+        <div v-if="isMenuOpen" class="menu">
+          <!-- Contenu du menu ici -->
+          <p>Menu content goes here.</p>
+          <RouterLink to="/formation"><button>formation</button></RouterLink>
+          <br>
+          <RouterLink to="/"><button>Accueil</button></RouterLink>
+          <br>
+          <button @click="toggleMenu">
+            Close Menu
+          </button>
+        </div>
+      </div>
+    </div>
     <div class="header-block">
       <div class="header-block__logo" v-for="item in elements">
         <img :src="item.header_logo.url" :alt="item.header_logo.alt">
@@ -51,12 +83,7 @@ onMounted(() => {
       </div>
     </div>
 
-    <button :onClick="toggleMenu">Toggle Menu</button>
-    <div v-if="isMenuOpen" class="menu">
-      <!-- Contenu du menu -->
-      <p>Menu Content</p>
-    </div>
-    <div class="header-menu -circle" >
+    <div class="header-menu -circle">
       <div class="header-menu-center ">
         <div></div>
         <div></div>
@@ -65,24 +92,26 @@ onMounted(() => {
     </div>
 
 
-    <div class="menuOpen">
 
-    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-
 .menu {
+  background: red;
+  width: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
-  right: 0;
-  background-color: #f0f0f0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin-top: 10px;
+  left: 0;
+  padding: 50px 10px;
 }
+
 .header {
+  .button {
+    height: max-content;
+  }
+
   z-index: 99;
   position: sticky;
   top: 0;
@@ -110,7 +139,7 @@ onMounted(() => {
     &__container {
       margin: 0 rem(10);
       display: flex;
-     
+
       justify-content: space-between;
 
       &-square {
@@ -123,7 +152,7 @@ onMounted(() => {
   }
 
   &-menu {
-   
+
     &-center {
       width: fit-content;
       text-align: center;
@@ -135,7 +164,7 @@ onMounted(() => {
       }
 
       div {
-      
+
         transition: all .5s;
         width: rem(20);
         height: rem(.5);
@@ -154,6 +183,7 @@ onMounted(() => {
       border: rem(1) solid;
       border-color: $white ;
       cursor: pointer;
+
       &::before {
         content: '';
         position: absolute;
@@ -215,6 +245,7 @@ onMounted(() => {
     top: 0;
     right: 0;
     left: 0;
+
     &-block {
       &__container {
         &-text {
@@ -222,6 +253,7 @@ onMounted(() => {
             height: rem(16);
           }
         }
+
         &-square {
           margin-left: rem(15);
         }
@@ -233,7 +265,8 @@ onMounted(() => {
 @media (min-width: 1236px) {
   .header {
     font-size: $size-21;
-     &-block {
+
+    &-block {
       &__logo {
         img {
           width: rem(40);
@@ -263,6 +296,7 @@ onMounted(() => {
   .header {
     padding: rem(30) rem(60);
     font-size: rem(21);
+
     &-block {
       &__logo {
         img {
@@ -286,5 +320,4 @@ onMounted(() => {
       }
     }
   }
-}
-</style>
+}</style>
