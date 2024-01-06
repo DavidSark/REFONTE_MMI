@@ -13,7 +13,8 @@ useSeoMeta({
 </script>
 
 <template>
- <div class="section1-international">
+<scrollbar/>
+ <div class="section1-international" id="section1">
     <borderSection :title="international.data.section1[0].title"
                   :subtitle="international.data.section1[0].subtitle"
                   borderPosition="right"
@@ -25,7 +26,7 @@ useSeoMeta({
         <img src="/image10.webp" alt="Festival OFFF 2023">
     </div>
 
-    <div class="section3-international">
+    <div class="section3-international" id="section2">
         <div class="section3-international__sideleft">
         <borderSection :title="international.data.section3[0].title"
                     :subtitle="international.data.section3[0].subtitle"
@@ -41,7 +42,7 @@ useSeoMeta({
         </div>
     </div>
 
-    <div class="section4-international">
+    <div class="section4-international" id="section3">
     <div class="section4-international__sideleft">
     <borderSection :title="international.data.section4[0].title"
                   :subtitle="international.data.section4[0].subtitle"
@@ -57,7 +58,7 @@ useSeoMeta({
     </div>
     </div>
 
-    <div class="section5-international">
+    <div class="section5-international" id="section4">
         <div class="section5-international__cards"> 
         <div class="section5-international__cards-sideleft">
         <PrismicRichText class="section5-international__title" :field="international.data.section5[0].title"></PrismicRichText>

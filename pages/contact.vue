@@ -40,7 +40,7 @@ useSeoMeta({
             </PrismicRichText>
         </div>
     </div>
-    <div class="section4-contact" >
+    <div class="section4-contact">
         <cardcontact></cardcontact>
     </div>
     <div class="section5-contact" id="section4">
