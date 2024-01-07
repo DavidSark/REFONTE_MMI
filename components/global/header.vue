@@ -25,16 +25,16 @@ const toggleMenu = () => {
 //constante updateBodyOverflow avec une fonction qui va 
 //retirer le scroll si le menu est ouvert ou fermé
 const updateBodyOverflow = () => {
-  if(isMenuOpen.value == true){
-    document.body.style.overflow = 'hidden';
-  }else{
-    document.body.style.overflow = '';
+  const body = document.body;
+  if (isMenuOpen.value == true) {
+    body.style.overflow = 'hidden';
+  } else {
+    body.style.overflow = 'auto';
   }
 };
 
 //watchers pour vérifier si on change de page ou non
 //afin de fermer le menu si on change de page ou non
-
 watch(
   () => route.fullPath,
   () => {
@@ -44,7 +44,6 @@ watch(
 );
 
 </script>
-
 <template>
   <div class="header">
     <div class="header-block">
@@ -71,45 +70,55 @@ watch(
       </div>
     </div>
 
-    <div>
-        <div v-if="isMenuOpen" class="menu">
-          <!-- Contenu du menu ici -->
-          <div class="menu-content__leave">
-            <p>quitter</p>
-            <button @click="toggleMenu">
-              <img src="/icons/x.svg" alt="">
-            </button>
-          </div>
-         
-          <div class="menu-content">
-            <p>MENU</p>
-
-            <div class="menu-contact__text">
-              <RouterLink to="/formation"><p>formation</p></RouterLink>
-              <RouterLink to="/departement"><p>departement</p></RouterLink>
-              <RouterLink to="/international"><p>international</p></RouterLink>
-              <RouterLink to="/candidater"><p>candidater</p></RouterLink>
-              <RouterLink to="/espace-pro"><p>espace-professionnel</p></RouterLink>
-              <RouterLink to="/contact"><p>contact</p></RouterLink>
-              <RouterLink to="/faq"><p>faq</p></RouterLink>
-            </div>
-          </div>
-          
-          <div class="menu-contact__line"></div>
-       
-          <Button size="small" bgColor="bgBlue"  borderColor="borderBlue" color="white">s'inscrire</Button>
-         
-
-
+  
+      <div v-if="isMenuOpen" class="menu">
+        <!-- Contenu du menu ici -->
+        <div class="menu-content__leave">
+          <p>quitter</p>
+          <button @click="toggleMenu">
+            <img src="/icons/x.svg" alt="">
+          </button>
         </div>
-      </div>
 
-  </div>
+        <div class="menu-content">
+          <p class="menu-content__title">menu</p>
+          <div class="menu-content__text">
+            <RouterLink to="/formation">
+              <p>la formation</p>
+            </RouterLink>
+            <RouterLink to="/departement">
+              <p>le departement</p>
+            </RouterLink>
+            <RouterLink to="/international">
+              <p>international</p>
+            </RouterLink>
+            <RouterLink to="/candidater">
+              <p>candidater</p>
+            </RouterLink>
+            <RouterLink to="/espace-pro">
+              <p>espace professionnel</p>
+            </RouterLink>
+            <RouterLink to="/contact">
+              <p>contact</p>
+            </RouterLink>
+            <RouterLink to="/faq">
+              <p>faq</p>
+            </RouterLink>
+          </div>
+        </div>
+      
+
+        <div class="menu-contact__line"></div>
+
+        <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">s'inscrire</Button>
+
+      </div>
+    </div>
+
+
 </template>
 
 <style lang="scss" scoped>
-
-
 .header {
   .button {
     height: max-content;
@@ -210,6 +219,60 @@ watch(
     background: $white;
   }
 }
+
+
+  .menu {
+    position: absolute;
+    background: $white;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    overflow-y: auto;
+      &::-webkit-scrollbar {
+      width: 0;
+    }
+    &-content__leave {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: rem(40) rem(40) rem(20) rem(40);
+      font-size: $size-21;
+      font-weight: 300;
+      color: $gray-soft;
+
+      button {
+        border: none;
+        background: none;
+        display: inline-flex;
+      }
+    }
+
+    &-content {
+      margin: rem(10) rem(40);
+     
+      &__title {
+        font-size: $size-80;
+      }
+
+      a {
+        text-decoration: none;
+        color: $black;
+        font-size: $size-24;
+        font-weight: 300;
+      }
+
+      &__text {
+        margin: rem(30) rem(0) rem(0) rem(0);
+        display: flex;
+        flex-direction: column;
+        gap: rem(25);
+      }
+  }
+}
+
+
 
 //media queries
 //adaptation du menu à 625px pour afficher la tagline du menu
@@ -325,17 +388,5 @@ watch(
   }
 
 
-}
-.menu {
-  background: $white;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  &-content__leave{
-    
-  }
 }
 </style>
