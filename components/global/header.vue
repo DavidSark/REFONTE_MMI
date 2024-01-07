@@ -25,16 +25,16 @@ const toggleMenu = () => {
 //constante updateBodyOverflow avec une fonction qui va 
 //retirer le scroll si le menu est ouvert ou fermé
 const updateBodyOverflow = () => {
-  if(isMenuOpen.value == true){
-    document.body.style.overflow = 'hidden';
-  }else{
-    document.body.style.overflow = '';
+  const body = document.body;
+  if (isMenuOpen.value == true) {
+    body.style.overflow = 'hidden';
+  } else {
+    body.style.overflow = 'auto';
   }
 };
 
 //watchers pour vérifier si on change de page ou non
 //afin de fermer le menu si on change de page ou non
-
 watch(
   () => route.fullPath,
   () => {
@@ -44,29 +44,8 @@ watch(
 );
 
 </script>
-
 <template>
   <div class="header">
-
-    <div>
-      <div>
-        <button @click="toggleMenu">
-          Open Menu
-        </button>
-
-        <div v-if="isMenuOpen" class="menu">
-          <!-- Contenu du menu ici -->
-          <p>Menu content goes here.</p>
-          <RouterLink to="/formation"><button>formation</button></RouterLink>
-          <br>
-          <RouterLink to="/"><button>Accueil</button></RouterLink>
-          <br>
-          <button @click="toggleMenu">
-            Close Menu
-          </button>
-        </div>
-      </div>
-    </div>
     <div class="header-block">
       <div class="header-block__logo" v-for="item in elements">
         <img :src="item.header_logo.url" :alt="item.header_logo.alt">
@@ -83,7 +62,7 @@ watch(
       </div>
     </div>
 
-    <div class="header-menu -circle">
+    <div class="header-menu -circle" @click="toggleMenu">
       <div class="header-menu-center ">
         <div></div>
         <div></div>
@@ -92,25 +71,74 @@ watch(
     </div>
 
 
+    <div v-if="isMenuOpen" class="menu">
+      <!-- Contenu du menu ici -->
+      <div class="menu-content__leave">
+        <p>quitter</p>
+        <button @click="toggleMenu">
+          <img src="/icons/x.svg" alt="">
+        </button>
+      </div>
+
+      <div class="menu-content">
+        <p class="menu-content__title">menu</p>
+        <div class="menu-content__text">
+          <RouterLink to="/formation">
+            <p>la formation</p>
+          </RouterLink>
+          <RouterLink to="/departement">
+            <p>le departement</p>
+          </RouterLink>
+          <RouterLink to="/international">
+            <p>international</p>
+          </RouterLink>
+          <RouterLink to="/candidater">
+            <p>candidater</p>
+          </RouterLink>
+          <RouterLink to="/espace-pro">
+            <p>espace professionnel</p>
+          </RouterLink>
+          <RouterLink to="/contact">
+            <p>contact</p>
+          </RouterLink>
+          <RouterLink to="/faq">
+            <p>faq</p>
+          </RouterLink>
+        </div>
+        <div class="menu-content__line"></div>
+
+        <div class="menu-content__button">
+          <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">s'inscrire</Button>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="header-block menu-tagline">
+        <div class="header-block__logo" v-for="item in elements">
+          <img :src="item.header_logo.url" :alt="item.header_logo.alt">
+        </div>
+        <div class="header-block__container">
+          <div class="header-block__container-square">
+            <div></div>
+          </div>
+          <div class="header-block__container-text" v-for="item in elements">
+            <PrismicRichText :field="item.header_title"></PrismicRichText>
+            <div></div>
+            <PrismicRichText :field="item.header_tagline" class="tagline"></PrismicRichText>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
   </div>
 </template>
 
 <style lang="scss" scoped>
-.menu {
-  background: red;
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 50px 10px;
-}
-
 .header {
-  .button {
-    height: max-content;
-  }
 
   z-index: 99;
   position: sticky;
@@ -168,7 +196,7 @@ watch(
         transition: all .5s;
         width: rem(20);
         height: rem(.5);
-        background-color: $white;
+        background-color: $black;
         margin: rem(8) 0;
       }
 
@@ -181,7 +209,7 @@ watch(
       border-radius: 50%;
       background: transparent;
       border: rem(1) solid;
-      border-color: $white ;
+      border-color: $black ;
       cursor: pointer;
 
       &::before {
@@ -207,6 +235,76 @@ watch(
     background: $white;
   }
 }
+
+
+.menu {
+  position: absolute;
+  background: $white;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &-content__leave {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: rem(40) rem(40) rem(20) rem(40);
+    font-size: $size-21;
+    font-weight: 300;
+    color: $gray-soft;
+
+    button {
+      border: none;
+      background: none;
+      display: inline-flex;
+    }
+  }
+
+  &-content {
+    margin: rem(10) rem(40);
+
+    &__title {
+      font-size: $size-80;
+    }
+
+    a {
+      text-decoration: none;
+      color: $black;
+      font-size: $size-24;
+      font-weight: 300;
+    }
+
+    &__text {
+      margin: rem(30) rem(0) rem(0) rem(0);
+      display: flex;
+      flex-direction: column;
+      gap: rem(25);
+    }
+
+    &__line {
+      background: $black;
+      height: rem(1);
+      width: 100%;
+      margin: rem(40) rem(0);
+    }
+  }
+
+.menu-tagline{
+  margin: rem(120) rem(40) rem(30) rem(40);
+  img{
+    width: rem(30);
+  }
+}
+}
+
+
 
 //media queries
 //adaptation du menu à 625px pour afficher la tagline du menu
@@ -320,4 +418,7 @@ watch(
       }
     }
   }
-}</style>
+
+
+}
+</style>
