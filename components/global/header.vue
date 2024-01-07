@@ -70,59 +70,75 @@ watch(
       </div>
     </div>
 
-  
-      <div v-if="isMenuOpen" class="menu">
-        <!-- Contenu du menu ici -->
-        <div class="menu-content__leave">
-          <p>quitter</p>
-          <button @click="toggleMenu">
-            <img src="/icons/x.svg" alt="">
-          </button>
+
+    <div v-if="isMenuOpen" class="menu">
+      <!-- Contenu du menu ici -->
+      <div class="menu-content__leave">
+        <p>quitter</p>
+        <button @click="toggleMenu">
+          <img src="/icons/x.svg" alt="">
+        </button>
+      </div>
+
+      <div class="menu-content">
+        <p class="menu-content__title">menu</p>
+        <div class="menu-content__text">
+          <RouterLink to="/formation">
+            <p>la formation</p>
+          </RouterLink>
+          <RouterLink to="/departement">
+            <p>le departement</p>
+          </RouterLink>
+          <RouterLink to="/international">
+            <p>international</p>
+          </RouterLink>
+          <RouterLink to="/candidater">
+            <p>candidater</p>
+          </RouterLink>
+          <RouterLink to="/espace-pro">
+            <p>espace professionnel</p>
+          </RouterLink>
+          <RouterLink to="/contact">
+            <p>contact</p>
+          </RouterLink>
+          <RouterLink to="/faq">
+            <p>faq</p>
+          </RouterLink>
+        </div>
+        <div class="menu-content__line"></div>
+
+        <div class="menu-content__button">
+          <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">s'inscrire</Button>
+
         </div>
 
-        <div class="menu-content">
-          <p class="menu-content__title">menu</p>
-          <div class="menu-content__text">
-            <RouterLink to="/formation">
-              <p>la formation</p>
-            </RouterLink>
-            <RouterLink to="/departement">
-              <p>le departement</p>
-            </RouterLink>
-            <RouterLink to="/international">
-              <p>international</p>
-            </RouterLink>
-            <RouterLink to="/candidater">
-              <p>candidater</p>
-            </RouterLink>
-            <RouterLink to="/espace-pro">
-              <p>espace professionnel</p>
-            </RouterLink>
-            <RouterLink to="/contact">
-              <p>contact</p>
-            </RouterLink>
-            <RouterLink to="/faq">
-              <p>faq</p>
-            </RouterLink>
-          </div>
-        </div>
-      
-
-        <div class="menu-contact__line"></div>
-
-        <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">s'inscrire</Button>
 
       </div>
+
+
+      <div class="header-block menu-tagline">
+        <div class="header-block__logo" v-for="item in elements">
+          <img :src="item.header_logo.url" :alt="item.header_logo.alt">
+        </div>
+        <div class="header-block__container">
+          <div class="header-block__container-square">
+            <div></div>
+          </div>
+          <div class="header-block__container-text" v-for="item in elements">
+            <PrismicRichText :field="item.header_title"></PrismicRichText>
+            <div></div>
+            <PrismicRichText :field="item.header_tagline" class="tagline"></PrismicRichText>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .header {
-  .button {
-    height: max-content;
-  }
 
   z-index: 99;
   position: sticky;
@@ -221,55 +237,71 @@ watch(
 }
 
 
-  .menu {
-    position: absolute;
-    background: $white;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    text-transform: uppercase;
-    overflow-y: auto;
-      &::-webkit-scrollbar {
-      width: 0;
-    }
-    &-content__leave {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      margin: rem(40) rem(40) rem(20) rem(40);
-      font-size: $size-21;
-      font-weight: 300;
-      color: $gray-soft;
+.menu {
+  position: absolute;
+  background: $white;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  overflow-y: auto;
 
-      button {
-        border: none;
-        background: none;
-        display: inline-flex;
-      }
-    }
-
-    &-content {
-      margin: rem(10) rem(40);
-     
-      &__title {
-        font-size: $size-80;
-      }
-
-      a {
-        text-decoration: none;
-        color: $black;
-        font-size: $size-24;
-        font-weight: 300;
-      }
-
-      &__text {
-        margin: rem(30) rem(0) rem(0) rem(0);
-        display: flex;
-        flex-direction: column;
-        gap: rem(25);
-      }
+  &::-webkit-scrollbar {
+    width: 0;
   }
+
+  &-content__leave {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: rem(40) rem(40) rem(20) rem(40);
+    font-size: $size-21;
+    font-weight: 300;
+    color: $gray-soft;
+
+    button {
+      border: none;
+      background: none;
+      display: inline-flex;
+    }
+  }
+
+  &-content {
+    margin: rem(10) rem(40);
+
+    &__title {
+      font-size: $size-80;
+    }
+
+    a {
+      text-decoration: none;
+      color: $black;
+      font-size: $size-24;
+      font-weight: 300;
+    }
+
+    &__text {
+      margin: rem(30) rem(0) rem(0) rem(0);
+      display: flex;
+      flex-direction: column;
+      gap: rem(25);
+    }
+
+    &__line {
+      background: $black;
+      height: rem(1);
+      width: 100%;
+      margin: rem(40) rem(0);
+    }
+  }
+
+.menu-tagline{
+  margin: rem(120) rem(40) rem(30) rem(40);
+  img{
+    width: rem(30);
+  }
+}
 }
 
 
