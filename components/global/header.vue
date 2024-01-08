@@ -137,6 +137,34 @@ watch(
               <p>International</p>
             </div>
           </div>
+          <div class="menu-right__content-section1">
+            <img src="image-international-2.webp" alt="">
+            <div class="menu-right__content-section1-text">
+              <p>04</p>
+              <p>Candidater</p>
+            </div>
+          </div>
+          <div class="menu-right__content-section1">
+            <img src="image-international-2.webp" alt="">
+            <div class="menu-right__content-section1-text">
+              <p>05</p>
+              <p>Espace pro</p>
+            </div>
+          </div>
+          <div class="menu-right__content-section1">
+            <img src="image-international-2.webp" alt="">
+            <div class="menu-right__content-section1-text">
+              <p>06</p>
+              <p>Contact</p>
+            </div>
+          </div>
+          <div class="menu-right__content-section1">
+            <img src="image-international-2.webp" alt="">
+            <div class="menu-right__content-section1-text">
+              <p>07</p>
+              <p>FAQ</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -399,12 +427,30 @@ watch(
     width: 80%;
       &__content {
         overflow-x: auto;
-        display: flex;
         overflow-x: visible ;
+        display: flex;
+        gap: rem(10);
+     
+        :hover{
+            img{
+              filter: none;
+              transform: scale(1.2);
+            }
+            .menu-right__content-section1-text{
+              :nth-child(1){
+                color: $white;
+                -webkit-text-stroke-width: none;
+                -webkit-text-stroke-color: none;
+              }
+            }
+          }
         &-section1{
+          overflow: hidden;
           display: flex;
           position: relative;
+
           img{
+            transition: transform .4s ;
             object-fit: cover;
             width: rem(360);
             filter: grayscale(100);
@@ -429,12 +475,16 @@ watch(
               color: transparent;
               -webkit-text-stroke-width: 1px;
               -webkit-text-stroke-color: $white;
+              transition: all .4s ;
             }
           }
         }    
       }
     }
   }
+
+
+
 }
 
 
