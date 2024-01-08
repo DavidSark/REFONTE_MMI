@@ -112,36 +112,32 @@ watch(
             <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">s'inscrire</Button>
           </div>
         </div>
-
-
-        <div class="header-block menu-tagline">
-          <div class="header-block__logo" v-for="item in elements">
-            <img :src="item.header_logo.url" :alt="item.header_logo.alt">
-          </div>
-          <div class="header-block__container">
-            <div class="header-block__container-square">
-              <div></div>
-            </div>
-            <div class="header-block__container-text" v-for="item in elements">
-              <PrismicRichText :field="item.header_title"></PrismicRichText>
-              <div></div>
-              <PrismicRichText :field="item.header_tagline" class="tagline"></PrismicRichText>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div class="menu-right">
         <div class="menu-right__content">
-          <div class="menu-right__content-image">
-          <img src="image1.webp" alt="">
-            <div class="menu-right__content-image-text">
+          <div class="menu-right__content-section1">
+            <img src="image1.webp" alt="">
+            <div class="menu-right__content-section1-text">
               <p>01</p>
               <p>La formation</p>
             </div>
-          </div>  
+          </div>
+          <div class="menu-right__content-section1">
+            <img src="image2.webp" alt="">
+            <div class="menu-right__content-section1-text">
+              <p>02</p>
+              <p>Le département</p>
+            </div>
+          </div>
+          <div class="menu-right__content-section1">
+            <img src="image-international-2.webp" alt="">
+            <div class="menu-right__content-section1-text">
+              <p>03</p>
+              <p>International</p>
+            </div>
+          </div>
         </div>
-       
       </div>
     </div>
   </div>
@@ -247,9 +243,10 @@ watch(
 
 
 .menu {
-  &-right{
+  &-right {
     display: none;
   }
+
   position: absolute;
   background: $white;
   width: 100vw;
@@ -382,11 +379,10 @@ watch(
 
 @media screen and (min-width: 1024px) {
   .menu {
-   &-left{
-    width: 50%;
-   }
     display: flex;
-  
+    &-left {
+      width: 50%;
+    }
     &-content {
       &__leave {
         display: flex;
@@ -395,53 +391,50 @@ watch(
     }
 
 
-    &-right{
-   
-      display: flex;
-      width: 80%;
-      overflow-x: auto;
-      overflow-y:hidden ;
-      
-      &__content{
-        display: flex;  
-        &-image{
+    &-right {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+     flex: 1;
+    width: 80%;
+      &__content {
+        overflow-x: auto;
+        display: flex;
+        overflow-x: visible ;
+        &-section1{
           display: flex;
-          
-          img{ 
-            width: 50%;
+          position: relative;
+          img{
             object-fit: cover;
-         
-            border: 1px solid red;
-
+            width: rem(360);
+            filter: grayscale(100);
           }
           &-text{
-            position: absolute;
             z-index: 5;
+            position: absolute;
+            right: rem(20);
+            bottom: rem(80);
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            right: 0;
-            
             font-weight: 100;
             color: $white;
             font-size: $size-40;
             white-space: nowrap;
-            :nth-child(1){
+
+            :nth-child(1) {
               font-size: $size-80;
               font-weight: 600;
               letter-spacing: -5.37px;
               color: transparent;
               -webkit-text-stroke-width: 1px;
               -webkit-text-stroke-color: $white;
-              
             }
           }
-        }
+        }    
       }
     }
   }
-
-
 }
 
 
@@ -506,5 +499,4 @@ watch(
   }
 
 
-}
-</style>
+}</style>
