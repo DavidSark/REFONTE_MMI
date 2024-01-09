@@ -70,7 +70,7 @@ html {
   display: none;
 }
 
-@media (min-width: 1440px ) {
+@media (min-width: 1024px ) {
   .sec {
   min-height: 100vh;
   width: 100vw;
@@ -90,7 +90,7 @@ html {
 .navbar {
   position: fixed;
   top: 46%;
-  left: 10px;
+  left: -5px;
   transform: translateY(-50%);
   z-index: 1000;
 }
@@ -110,7 +110,7 @@ html {
 .navbar ul li .dot {
   color: #fff;
   display: block;
-  padding: 25px 0;
+  padding: 25px 0px;
 }
 
 .navbar ul li .dot span {
@@ -177,6 +177,17 @@ html {
 .navbar ul li .dot.active::after,
 .navbar ul li:hover .dot::after {
   transform: translateY(-50%) scale(1);
+}
+}
+
+
+@media (min-width: 1440px ) {
+.navbar {
+  position: fixed;
+  top: 46%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 1000;
 }
 }
 
