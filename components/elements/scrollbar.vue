@@ -88,11 +88,11 @@ html {
 }
 
 .navbar {
-  position: fixed;
+  position: fixed;    
   top: 46%;
   left: -5px;
   transform: translateY(-50%);
-  z-index: 1000;
+  z-index: 1;
 }
 
 .navbar ul {
@@ -187,7 +187,7 @@ html {
   top: 46%;
   left: 10px;
   transform: translateY(-50%);
-  z-index: 1000;
+  z-index: 1;
 }
 }
 

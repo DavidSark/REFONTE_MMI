@@ -329,6 +329,7 @@ onUnmounted(() => {
 }
 
 .menu {
+
   &-right {
     display: none;
   }
@@ -341,6 +342,7 @@ onUnmounted(() => {
   left: 0;
   text-transform: uppercase;
   overflow-y: auto;
+  z-index: 100;
 
   &-left {
     margin: rem(40) rem(40) rem(20) rem(40);
@@ -494,6 +496,7 @@ onUnmounted(() => {
 
 @media screen and (min-width: 1024px) {
   .menu {
+    z-index: 100;
 
     display: flex;
 
@@ -596,6 +599,10 @@ onUnmounted(() => {
 
 
 @media (min-width: 1236px) {
+
+  .menu {
+    z-index: 100;
+  }
   .header {
     font-size: $size-21;
 
