@@ -43,6 +43,24 @@ watch(
   }
 );
 
+const handleMouseWheel = (event) => {
+  const scrollContainer = document.querySelector(".menu-right__content");
+
+  if (scrollContainer) {
+    event.preventDefault();
+    scrollContainer.scrollLeft += event.deltaY;
+  }
+};
+
+onMounted(() => {
+  console.log("Component mounted");
+  document.addEventListener('wheel', handleMouseWheel, { passive: false });
+});
+
+onUnmounted(() => {
+  document.removeEventListener('wheel', handleMouseWheel);
+});
+
 </script>
 <template>
   <div class="header">
@@ -284,10 +302,6 @@ watch(
   text-transform: uppercase;
   overflow-y: auto;
 
-  &::-webkit-scrollbar {
-    width: 0;
-  }
-
   &-content__leave {
     display: flex;
     align-items: center;
@@ -407,6 +421,7 @@ watch(
 
 @media screen and (min-width: 1024px) {
   .menu {
+ 
     display: flex;
     &-left {
       width: 50%;
@@ -420,17 +435,15 @@ watch(
 
 
     &-right {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-     flex: 1;
-    width: 80%;
+      position: relative;
+      display: flex;
+      flex: 1;
+      width: 50%;
+      
       &__content {
-        overflow-x: auto;
-        overflow-x: visible ;
         display: flex;
-        gap: rem(10);
-     
+        gap: rem(10); 
+        overflow-x: auto;
         :hover{
             img{
               filter: none;
@@ -444,11 +457,12 @@ watch(
               }
             }
           }
+          
         &-section1{
           overflow: hidden;
           display: flex;
-          position: relative;
-
+          flex: 0 0 auto;
+          position: relative;  
           img{
             transition: transform .4s ;
             object-fit: cover;
@@ -481,9 +495,19 @@ watch(
         }    
       }
     }
+
+   
+    ::-webkit-scrollbar{
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: red;
+    border-radius: 10px;
+  }
+  
   }
 
-
+  
 
 }
 
