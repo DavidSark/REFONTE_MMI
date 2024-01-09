@@ -78,9 +78,7 @@
         filter: grayscale(100%);
         transition: filter 0.5s ease-in-out;
         }
-        &:hover img {
-      filter: grayscale(0%);
-    }
+
     &-line{
         position: absolute;
         bottom: 50%;
