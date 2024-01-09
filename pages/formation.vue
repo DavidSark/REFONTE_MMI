@@ -102,6 +102,26 @@ useSeoMeta({
 }
 
 @media screen and (min-width: 1024px) {
+
+    .section1-formation{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: rem(40);
+    &__content {
+        width: 60%;
+        height: auto;
+    }
+
+    &__parcours{
+        width: 50%;
+        height:500px;
+    
+    }
+    
+}
+
     .section2-formation{
         display: flex;
         flex-direction: row-reverse;
