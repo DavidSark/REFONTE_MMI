@@ -147,6 +147,14 @@ useSeoMeta({
             }
         }
     }
+    .section1-contact {
+        padding: rem(100) rem(40);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+ 
+
+    }
 }
 
 
