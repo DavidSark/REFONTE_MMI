@@ -303,6 +303,14 @@ img {
         &__title {
             font-size: $size-45;
         }
+        &__card {
+            margin: rem(100) rem(0);
+            gap: rem(100);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: flex-start;
+
+        }
     }
 
     .section3-departement {
