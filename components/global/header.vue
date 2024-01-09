@@ -490,6 +490,7 @@ onUnmounted(() => {
     }
 
     &-content {
+      margin: rem(80) rem(80);
       &__leave {
         display: flex;
         flex-direction: row-reverse;
@@ -507,7 +508,7 @@ onUnmounted(() => {
         gap: rem(10);
         overflow-x: auto;
         position: relative;
-
+     
         &::-webkit-scrollbar {
           display: none;
         }
@@ -633,5 +634,11 @@ onUnmounted(() => {
     }
   }
 
+
+  .menu{
+    &-left{
+      width:32%
+    }
+  }
 
 }</style>
