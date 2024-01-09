@@ -126,7 +126,7 @@
 
 @media screen and (min-width: 1024px) {
     .section-indexparcours{
-        font-size: $size-75;
+        font-size: $size-80;
     }
 }
 
