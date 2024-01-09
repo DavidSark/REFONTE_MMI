@@ -135,6 +135,7 @@ onUnmounted(() => {
       <div class="menu-right">
         <div class="menu-right__content">
           <div class="menu-right__content-section1">
+        
             <img src="image1.webp" alt="">
             <div class="menu-right__content-section1-text">
               <p>01</p>
@@ -202,7 +203,7 @@ onUnmounted(() => {
   font-family: $font-poppins;
   font-size: $size-13;
   font-weight: bold;
-  background: red;
+  background: transparent;
   transition: background-color 0.3s ease;
 
   &-block {
@@ -421,11 +422,13 @@ onUnmounted(() => {
 
 @media screen and (min-width: 1024px) {
   .menu {
- 
+
     display: flex;
+
     &-left {
       width: 50%;
     }
+
     &-content {
       &__leave {
         display: flex;
@@ -439,37 +442,45 @@ onUnmounted(() => {
       display: flex;
       flex: 1;
       width: 50%;
-      
+
+     
       &__content {
         display: flex;
-        gap: rem(10); 
+        gap: rem(10);
         overflow-x: auto;
-        :hover{
-            img{
-              filter: none;
-              transform: scale(1.2);
-            }
-            .menu-right__content-section1-text{
-              :nth-child(1){
-                color: $white;
-                -webkit-text-stroke-width: none;
-                -webkit-text-stroke-color: none;
-              }
+        position: relative;
+        &::-webkit-scrollbar{
+         display: none;
+        }
+        :hover {
+          img {
+            filter: none;
+            transform: scale(1.2);
+          }
+
+          .menu-right__content-section1-text {
+            :nth-child(1) {
+              color: $white;
+              -webkit-text-stroke-width: none;
+              -webkit-text-stroke-color: none;
             }
           }
-          
-        &-section1{
+        }
+
+        &-section1 {
           overflow: hidden;
           display: flex;
           flex: 0 0 auto;
-          position: relative;  
-          img{
-            transition: transform .4s ;
+          position: relative;
+
+          img {
+            transition: transform .4s;
             object-fit: cover;
             width: rem(360);
             filter: grayscale(100);
           }
-          &-text{
+
+          &-text {
             z-index: 5;
             position: absolute;
             right: rem(20);
@@ -489,25 +500,15 @@ onUnmounted(() => {
               color: transparent;
               -webkit-text-stroke-width: 1px;
               -webkit-text-stroke-color: $white;
-              transition: all .4s ;
+              transition: all .4s;
             }
           }
-        }    
+        }
       }
     }
-
-   
-    ::-webkit-scrollbar{
-    background: transparent;
-  }
-  ::-webkit-scrollbar-thumb{
-    background: red;
-    border-radius: 10px;
-  }
-  
   }
 
-  
+
 
 }
 
