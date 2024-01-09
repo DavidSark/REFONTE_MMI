@@ -124,11 +124,18 @@
 }
 }
 
+@media screen and (min-width: 1024px) {
+    .section-indexparcours{
+        font-size: $size-75;
+    }
+}
+
 @media screen and (min-width:1440px) {
     .section-indexparcours{
+        font-size: $size-100;
         h2 {
         cursor: pointer;
-        letter-spacing: -9px;
+   
     }
         &__design{
             padding: rem(0) rem(75);

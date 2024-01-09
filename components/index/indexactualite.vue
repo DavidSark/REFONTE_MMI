@@ -131,6 +131,7 @@ img {
         &__card{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+       
            h6 {
             font-size:$size-16;
            }
@@ -150,6 +151,14 @@ img {
         &__title {
             font-size: 7.5vw;
         }
+        &__card{
+            margin:rem(100) rem(0);
+            gap: rem(100);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: flex-start;
+        }
+
     }
     
 }
