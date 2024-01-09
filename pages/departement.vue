@@ -299,6 +299,14 @@ img {
 
 @media (min-width: 1024px) {
 
+    .section1-departement {
+        padding: rem(100) rem(40);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+       
+    }
+
     .section2-departement {
         &__title {
             font-size: $size-45;
