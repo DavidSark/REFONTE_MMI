@@ -93,10 +93,6 @@
       transition: filter 0.5s ease-in-out;
     }
 
-    &:hover img {
-      filter: grayscale(0%);
-    }
-
     .section3-candidater__image-text {
       position: absolute;
       bottom: 20px;
