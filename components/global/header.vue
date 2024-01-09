@@ -162,54 +162,67 @@ onUnmounted(() => {
       <div class="menu-right">
         <div class="menu-right__content">
           <div class="menu-right__content-section1">
-
-            <img src="image1.webp" alt="">
-            <div class="menu-right__content-section1-text">
-              <p>01</p>
-              <p>La formation</p>
-            </div>
+            <RouterLink to="/formation">
+              <img src="image1.webp" alt="">
+              <div class="menu-right__content-section1-text">
+                <p>01</p>
+                <p>La formation</p>
+              </div>
+            </RouterLink>
           </div>
           <div class="menu-right__content-section1">
-            <img src="image2.webp" alt="">
-            <div class="menu-right__content-section1-text">
-              <p>02</p>
-              <p>Le département</p>
-            </div>
+            <RouterLink to="/departement">
+              <img src="image2.webp" alt="">
+              <div class="menu-right__content-section1-text">
+                <p>02</p>
+                <p>Le département</p>
+              </div>
+            </RouterLink>
           </div>
           <div class="menu-right__content-section1">
-            <img src="image-international-2.webp" alt="">
-            <div class="menu-right__content-section1-text">
-              <p>03</p>
-              <p>International</p>
-            </div>
+            <RouterLink to="/international">
+              <img src="image-international-2.webp" alt="">
+              <div class="menu-right__content-section1-text">
+                <p>03</p>
+                <p>International</p>
+              </div>
+            </RouterLink>
           </div>
           <div class="menu-right__content-section1">
-            <img src="image-international-2.webp" alt="">
-            <div class="menu-right__content-section1-text">
-              <p>04</p>
-              <p>Candidater</p>
-            </div>
+            <RouterLink to="/candiater">
+              <img src="image-international-2.webp" alt="">
+              <div class="menu-right__content-section1-text">
+                <p>04</p>
+                <p>Candidater</p>
+              </div>
+            </RouterLink>
           </div>
           <div class="menu-right__content-section1">
-            <img src="image-international-2.webp" alt="">
-            <div class="menu-right__content-section1-text">
-              <p>05</p>
-              <p>Espace pro</p>
-            </div>
+            <RouterLink to="/espace-pro">
+              <img src="image-international-2.webp" alt="">
+              <div class="menu-right__content-section1-text">
+                <p>05</p>
+                <p>Espace pro</p>
+              </div>
+            </RouterLink>
           </div>
           <div class="menu-right__content-section1">
-            <img src="image-international-2.webp" alt="">
-            <div class="menu-right__content-section1-text">
-              <p>06</p>
-              <p>Contact</p>
-            </div>
+            <RouterLink to="/contact">
+              <img src="image-international-2.webp" alt="">
+              <div class="menu-right__content-section1-text">
+                <p>06</p>
+                <p>Contact</p>
+              </div>
+            </RouterLink>
           </div>
           <div class="menu-right__content-section1">
-            <img src="image-international-2.webp" alt="">
-            <div class="menu-right__content-section1-text">
-              <p>07</p>
-              <p>FAQ</p>
-            </div>
+            <RouterLink to="/faq">
+              <img src="image-international-2.webp" alt="">
+              <div class="menu-right__content-section1-text">
+                <p>07</p>
+                <p>FAQ</p>
+              </div>
+            </RouterLink>
           </div>
         </div>
       </div>
@@ -533,6 +546,13 @@ onUnmounted(() => {
           display: flex;
           flex: 0 0 auto;
           position: relative;
+          :link{
+            overflow: hidden;
+            display: flex;
+            flex: 0 0 auto;
+            position: relative;
+          }
+         
 
           img {
             transition: transform .4s;
