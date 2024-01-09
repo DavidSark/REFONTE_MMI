@@ -102,27 +102,54 @@ onUnmounted(() => {
         <div class="menu-content">
           <p class="menu-content__title">menu</p>
           <div class="menu-content__text">
-            <RouterLink to="/formation">
-              <p>la formation</p>
-            </RouterLink>
-            <RouterLink to="/departement">
-              <p>le departement</p>
-            </RouterLink>
-            <RouterLink to="/international">
-              <p>international</p>
-            </RouterLink>
-            <RouterLink to="/candidater">
-              <p>candidater</p>
-            </RouterLink>
-            <RouterLink to="/espace-pro">
-              <p>espace professionnel</p>
-            </RouterLink>
-            <RouterLink to="/contact">
-              <p>contact</p>
-            </RouterLink>
-            <RouterLink to="/faq">
-              <p>faq</p>
-            </RouterLink>
+            <div class="menu-content__text-flex">
+              <div class="bouton"></div>
+              <RouterLink to="/formation">
+                <p>la formation</p>
+              </RouterLink>
+            </div>
+            <div class="menu-content__text-flex">
+              <div class="bouton"></div>
+              <RouterLink to="/departement">
+                <p>le departement</p>
+              </RouterLink>
+            </div>
+            <div class="menu-content__text-flex">
+              <div class="bouton"></div>
+              <RouterLink to="/international">
+                <p>international</p>
+              </RouterLink>
+            </div>
+            <div class="menu-content__text-flex">
+              <div class="bouton"></div>
+              <RouterLink to="/candidater">
+                <p>candidater</p>
+              </RouterLink>
+            </div>
+            <div class="menu-content__text-flex">
+              <div class="bouton"></div>
+              <RouterLink to="/espace-pro">
+                <p>espace professionnel</p>
+              </RouterLink>
+            </div>
+            <div class="menu-content__text-flex">
+              <div class="bouton"></div>
+              <RouterLink to="/contact">
+                <p>contact</p>
+              </RouterLink>
+            </div>
+
+            <div class="menu-content__text-flex">
+              <div class="bouton"></div>
+
+              <RouterLink to="/faq">
+                <p>faq</p>
+              </RouterLink>
+            </div>
+
+
+
+
             <div class="menu-content__line"></div>
           </div>
 
@@ -135,7 +162,7 @@ onUnmounted(() => {
       <div class="menu-right">
         <div class="menu-right__content">
           <div class="menu-right__content-section1">
-        
+
             <img src="image1.webp" alt="">
             <div class="menu-right__content-section1-text">
               <p>01</p>
@@ -288,7 +315,6 @@ onUnmounted(() => {
   }
 }
 
-
 .menu {
   &-right {
     display: none;
@@ -303,11 +329,15 @@ onUnmounted(() => {
   text-transform: uppercase;
   overflow-y: auto;
 
+  &-left {
+    margin: rem(40) rem(40) rem(20) rem(40);
+  }
+
   &-content__leave {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin: rem(40) rem(40) rem(20) rem(40);
+
     font-size: $size-21;
     font-weight: 300;
     color: $gray-soft;
@@ -338,6 +368,35 @@ onUnmounted(() => {
       display: flex;
       flex-direction: column;
       gap: rem(25);
+
+      :hover {
+
+        .bouton {
+          transform: translateX(-150%);
+          opacity: 1;
+          width: rem(10);
+          height: rem(10);
+        }
+
+      }
+
+      &-flex {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .bouton {
+          position: absolute;
+          width: 2%;
+          height: 2%;
+          background: $black;
+          border-radius: rem(20);
+          transform: translateX(-450%);
+          opacity: 0;
+          transition: all .2s;
+        }
+      }
+
     }
 
     &__line {
@@ -427,6 +486,7 @@ onUnmounted(() => {
 
     &-left {
       width: 50%;
+
     }
 
     &-content {
@@ -436,22 +496,22 @@ onUnmounted(() => {
       }
     }
 
-
     &-right {
       position: relative;
       display: flex;
       flex: 1;
       width: 50%;
 
-     
       &__content {
         display: flex;
         gap: rem(10);
         overflow-x: auto;
         position: relative;
-        &::-webkit-scrollbar{
-         display: none;
+
+        &::-webkit-scrollbar {
+          display: none;
         }
+
         :hover {
           img {
             filter: none;
