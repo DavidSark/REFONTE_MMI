@@ -43,6 +43,24 @@ watch(
   }
 );
 
+const handleMouseWheel = (event) => {
+  const scrollContainer = document.querySelector(".menu-right__content");
+
+  if (scrollContainer) {
+    event.preventDefault();
+    scrollContainer.scrollLeft += event.deltaY;
+  }
+};
+
+onMounted(() => {
+  console.log("Component mounted");
+  document.addEventListener('wheel', handleMouseWheel, { passive: false });
+});
+
+onUnmounted(() => {
+  document.removeEventListener('wheel', handleMouseWheel);
+});
+
 </script>
 <template>
   <div class="header">
@@ -73,67 +91,142 @@ watch(
 
     <div v-if="isMenuOpen" class="menu">
       <!-- Contenu du menu ici -->
-      <div class="menu-content__leave">
-        <p>quitter</p>
-        <button @click="toggleMenu">
-          <img src="/icons/x.svg" alt="">
-        </button>
-      </div>
-
-      <div class="menu-content">
-        <p class="menu-content__title">menu</p>
-        <div class="menu-content__text">
-          <RouterLink to="/formation">
-            <p>la formation</p>
-          </RouterLink>
-          <RouterLink to="/departement">
-            <p>le departement</p>
-          </RouterLink>
-          <RouterLink to="/international">
-            <p>international</p>
-          </RouterLink>
-          <RouterLink to="/candidater">
-            <p>candidater</p>
-          </RouterLink>
-          <RouterLink to="/espace-pro">
-            <p>espace professionnel</p>
-          </RouterLink>
-          <RouterLink to="/contact">
-            <p>contact</p>
-          </RouterLink>
-          <RouterLink to="/faq">
-            <p>faq</p>
-          </RouterLink>
-        </div>
-        <div class="menu-content__line"></div>
-
-        <div class="menu-content__button">
-          <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">s'inscrire</Button>
-
+      <div class="menu-left">
+        <div class="menu-content__leave">
+          <p>quitter</p>
+          <button @click="toggleMenu">
+            <img src="/icons/x.svg" alt="">
+          </button>
         </div>
 
+        <div class="menu-content">
+          <p class="menu-content__title">menu</p>
+          <div class="menu-content__text">
+            <div class="menu-content__text-flex">
+              <div class="bouton"></div>
+              <RouterLink to="/formation">
+                <p>la formation</p>
+              </RouterLink>
+            </div>
+            <div class="menu-content__text-flex">
+              <div class="bouton"></div>
+              <RouterLink to="/departement">
+                <p>le departement</p>
+              </RouterLink>
+            </div>
+            <div class="menu-content__text-flex">
+              <div class="bouton"></div>
+              <RouterLink to="/international">
+                <p>international</p>
+              </RouterLink>
+            </div>
+            <div class="menu-content__text-flex">
+              <div class="bouton"></div>
+              <RouterLink to="/candidater">
+                <p>candidater</p>
+              </RouterLink>
+            </div>
+            <div class="menu-content__text-flex">
+              <div class="bouton"></div>
+              <RouterLink to="/espace-pro">
+                <p>espace professionnel</p>
+              </RouterLink>
+            </div>
+            <div class="menu-content__text-flex">
+              <div class="bouton"></div>
+              <RouterLink to="/contact">
+                <p>contact</p>
+              </RouterLink>
+            </div>
 
-      </div>
+            <div class="menu-content__text-flex">
+              <div class="bouton"></div>
+
+              <RouterLink to="/faq">
+                <p>faq</p>
+              </RouterLink>
+            </div>
 
 
-      <div class="header-block menu-tagline">
-        <div class="header-block__logo" v-for="item in elements">
-          <img :src="item.header_logo.url" :alt="item.header_logo.alt">
-        </div>
-        <div class="header-block__container">
-          <div class="header-block__container-square">
-            <div></div>
+
+
+            <div class="menu-content__line"></div>
           </div>
-          <div class="header-block__container-text" v-for="item in elements">
-            <PrismicRichText :field="item.header_title"></PrismicRichText>
-            <div></div>
-            <PrismicRichText :field="item.header_tagline" class="tagline"></PrismicRichText>
+
+          <div class="menu-content__button">
+            <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">s'inscrire</Button>
           </div>
         </div>
       </div>
 
+      <div class="menu-right">
+        <div class="menu-right__content">
+          <div class="menu-right__content-section1">
+            <RouterLink to="/formation">
+              <img src="image1.webp" alt="">
+              <div class="menu-right__content-section1-text">
+                <p>01</p>
+                <p>La formation</p>
+              </div>
+            </RouterLink>
+          </div>
+          <div class="menu-right__content-section1">
+            <RouterLink to="/departement">
+              <img src="image2.webp" alt="">
+              <div class="menu-right__content-section1-text">
+                <p>02</p>
+                <p>Le département</p>
+              </div>
+            </RouterLink>
+          </div>
+          <div class="menu-right__content-section1">
+            <RouterLink to="/international">
+              <img src="image-international-2.webp" alt="">
+              <div class="menu-right__content-section1-text">
+                <p>03</p>
+                <p>International</p>
+              </div>
+            </RouterLink>
+          </div>
+          <div class="menu-right__content-section1">
+            <RouterLink to="/candiater">
+              <img src="image-international-2.webp" alt="">
+              <div class="menu-right__content-section1-text">
+                <p>04</p>
+                <p>Candidater</p>
+              </div>
+            </RouterLink>
+          </div>
+          <div class="menu-right__content-section1">
+            <RouterLink to="/espace-pro">
+              <img src="image-international-2.webp" alt="">
+              <div class="menu-right__content-section1-text">
+                <p>05</p>
+                <p>Espace pro</p>
+              </div>
+            </RouterLink>
+          </div>
+          <div class="menu-right__content-section1">
+            <RouterLink to="/contact">
+              <img src="image-international-2.webp" alt="">
+              <div class="menu-right__content-section1-text">
+                <p>06</p>
+                <p>Contact</p>
+              </div>
+            </RouterLink>
+          </div>
+          <div class="menu-right__content-section1">
+            <RouterLink to="/faq">
+              <img src="image-international-2.webp" alt="">
+              <div class="menu-right__content-section1-text">
+                <p>07</p>
+                <p>FAQ</p>
+              </div>
+            </RouterLink>
+          </div>
+        </div>
+      </div>
     </div>
-
   </div>
 </template>
 
@@ -150,7 +243,6 @@ watch(
   font-family: $font-poppins;
   font-size: $size-13;
   font-weight: bold;
-  padding: rem(30) rem(20);
   background: transparent;
   transition: background-color 0.3s ease;
 
@@ -236,8 +328,11 @@ watch(
   }
 }
 
-
 .menu {
+  &-right {
+    display: none;
+  }
+
   position: absolute;
   background: $white;
   width: 100vw;
@@ -247,15 +342,15 @@ watch(
   text-transform: uppercase;
   overflow-y: auto;
 
-  &::-webkit-scrollbar {
-    width: 0;
+  &-left {
+    margin: rem(40) rem(40) rem(20) rem(40);
   }
 
   &-content__leave {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin: rem(40) rem(40) rem(20) rem(40);
+
     font-size: $size-21;
     font-weight: 300;
     color: $gray-soft;
@@ -286,22 +381,56 @@ watch(
       display: flex;
       flex-direction: column;
       gap: rem(25);
+
+      :hover {
+
+        .bouton {
+          transform: translateX(-150%);
+          opacity: 1;
+          width: rem(10);
+          height: rem(10);
+        }
+
+      }
+
+      &-flex {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .bouton {
+          position: absolute;
+          width: 2%;
+          height: 2%;
+          background: $black;
+          border-radius: rem(20);
+          transform: translateX(-450%);
+          opacity: 0;
+          transition: all .2s;
+        }
+      }
+
     }
 
     &__line {
       background: $black;
       height: rem(1);
       width: 100%;
-      margin: rem(40) rem(0);
+      margin: rem(20) rem(0);
+    }
+
+    &__button {
+      margin-top: rem(25);
     }
   }
 
-.menu-tagline{
-  margin: rem(120) rem(40) rem(30) rem(40);
-  img{
-    width: rem(30);
+  .menu-tagline {
+    margin: rem(120) rem(40) rem(30) rem(40);
+
+    img {
+      width: rem(30);
+    }
   }
-}
 }
 
 
@@ -359,6 +488,112 @@ watch(
     }
   }
 }
+
+
+
+
+@media screen and (min-width: 1024px) {
+  .menu {
+
+    display: flex;
+
+    &-left {
+      width: 50%;
+
+    }
+
+    &-content {
+      margin: rem(80) rem(80);
+      &__leave {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+    }
+
+    &-right {
+      position: relative;
+      display: flex;
+      flex: 1;
+      width: 50%;
+
+      &__content {
+        display: flex;
+        gap: rem(10);
+        overflow-x: auto;
+        position: relative;
+     
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        :hover {
+          img {
+            filter: none;
+            transform: scale(1.2);
+          }
+
+          .menu-right__content-section1-text {
+            :nth-child(1) {
+              color: $white;
+              -webkit-text-stroke-width: none;
+              -webkit-text-stroke-color: none;
+            }
+          }
+        }
+
+        &-section1 {
+          overflow: hidden;
+          display: flex;
+          flex: 0 0 auto;
+          position: relative;
+          :link{
+            overflow: hidden;
+            display: flex;
+            flex: 0 0 auto;
+            position: relative;
+          }
+         
+
+          img {
+            transition: transform .4s;
+            object-fit: cover;
+            width: rem(360);
+            filter: grayscale(100);
+          }
+
+          &-text {
+            z-index: 5;
+            position: absolute;
+            right: rem(20);
+            bottom: rem(80);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            font-weight: 100;
+            color: $white;
+            font-size: $size-40;
+            white-space: nowrap;
+
+            :nth-child(1) {
+              font-size: $size-80;
+              font-weight: 600;
+              letter-spacing: -5.37px;
+              color: transparent;
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: $white;
+              transition: all .4s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+}
+
+
 
 @media (min-width: 1236px) {
   .header {
@@ -420,5 +655,10 @@ watch(
   }
 
 
-}
-</style>
+  .menu{
+    &-left{
+      width:32%
+    }
+  }
+
+}</style>
