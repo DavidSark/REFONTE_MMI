@@ -163,7 +163,7 @@ onUnmounted(() => {
         <div class="menu-right__content">
           <div class="menu-right__content-section1">
             <RouterLink to="/formation">
-              <img src="image1.webp" alt="">
+              <img src="/image1.webp" alt="">
               <div class="menu-right__content-section1-text">
                 <p>01</p>
                 <p>La formation</p>
@@ -172,7 +172,7 @@ onUnmounted(() => {
           </div>
           <div class="menu-right__content-section1">
             <RouterLink to="/departement">
-              <img src="image2.webp" alt="">
+              <img src="/image2.webp" alt="">
               <div class="menu-right__content-section1-text">
                 <p>02</p>
                 <p>Le département</p>
@@ -181,7 +181,7 @@ onUnmounted(() => {
           </div>
           <div class="menu-right__content-section1">
             <RouterLink to="/international">
-              <img src="image-international-2.webp" alt="">
+              <img src="/image-international-2.webp" alt="">
               <div class="menu-right__content-section1-text">
                 <p>03</p>
                 <p>International</p>
@@ -190,7 +190,7 @@ onUnmounted(() => {
           </div>
           <div class="menu-right__content-section1">
             <RouterLink to="/candiater">
-              <img src="image-international-2.webp" alt="">
+              <img src="/image-international-2.webp" alt="">
               <div class="menu-right__content-section1-text">
                 <p>04</p>
                 <p>Candidater</p>
@@ -199,7 +199,7 @@ onUnmounted(() => {
           </div>
           <div class="menu-right__content-section1">
             <RouterLink to="/espace-pro">
-              <img src="image-international-2.webp" alt="">
+              <img src="/image-international-2.webp" alt="">
               <div class="menu-right__content-section1-text">
                 <p>05</p>
                 <p>Espace pro</p>
@@ -208,7 +208,7 @@ onUnmounted(() => {
           </div>
           <div class="menu-right__content-section1">
             <RouterLink to="/contact">
-              <img src="image-international-2.webp" alt="">
+              <img src="/image-international-2.webp" alt="">
               <div class="menu-right__content-section1-text">
                 <p>06</p>
                 <p>Contact</p>
@@ -217,7 +217,7 @@ onUnmounted(() => {
           </div>
           <div class="menu-right__content-section1">
             <RouterLink to="/faq">
-              <img src="image-international-2.webp" alt="">
+              <img src="/image-international-2.webp" alt="">
               <div class="menu-right__content-section1-text">
                 <p>07</p>
                 <p>FAQ</p>
