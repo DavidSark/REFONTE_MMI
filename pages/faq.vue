@@ -37,17 +37,18 @@ useSeoMeta({
             </div>
         </div>
         <div class="section1-faq__sideright">
-            <p>sdmjkfgflkjg</p>
+           <canva-bulle></canva-bulle>
         </div>
     </div>
 </template>
 
 <style lang="scss">
 .section1-faq {
-    &__sideright {
-        background-color: $black;
-    }
 
+
+    &__sideright {
+        display: none;
+    }
     &__sideleft {
         padding: rem(30) rem(20);
 
@@ -74,6 +75,7 @@ useSeoMeta({
     .section1-faq {
         &__sideleft {
             padding: rem(60) rem(40);
+            
         }
     }
 }
@@ -83,11 +85,14 @@ useSeoMeta({
         display: flex;
 
         &__sideright {
-            width: 40%;
+            margin-top: rem(70);
+            display: block;
+            
+            overflow: hidden;
         }
 
         &__sideleft {
-            width: 60%;
+            width: 50%;
 
         }
     }
@@ -97,6 +102,13 @@ useSeoMeta({
     .section1-faq {
         &__sideleft {
             padding: rem(100) rem(75);
+        }
+        &__sideright{
+            margin-top:100px;
+            // background-color: red;
+       
+        
+
         }
     }
 }</style>
