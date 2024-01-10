@@ -46,6 +46,9 @@ useSeoMeta({
 .section1-faq {
 
 
+    &__sideright {
+        display: none;
+    }
     &__sideleft {
         padding: rem(30) rem(20);
 
@@ -72,6 +75,7 @@ useSeoMeta({
     .section1-faq {
         &__sideleft {
             padding: rem(60) rem(40);
+            
         }
     }
 }
@@ -81,11 +85,14 @@ useSeoMeta({
         display: flex;
 
         &__sideright {
-            width: 40%;
+            margin-top: rem(70);
+            display: block;
+            
+            overflow: hidden;
         }
 
         &__sideleft {
-            width: 60%;
+            width: 50%;
 
         }
     }
@@ -98,7 +105,10 @@ useSeoMeta({
         }
         &__sideright{
             margin-top:100px;
-            overflow: hidden;
+            // background-color: red;
+       
+        
+
         }
     }
 }</style>
