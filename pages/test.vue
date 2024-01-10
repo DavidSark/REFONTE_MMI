@@ -1,3 +1,55 @@
+
+<script setup>
+import { ref } from 'vue';
+
+const formValues = ref({
+  lastName: '',
+  firstName: '',
+  email: '',
+  message: ''
+});
+
+const showSuccessPopup = ref(false);
+
+const handleSubmit = async () => {
+  try {
+    const formData = new FormData();
+    formData.append('lastName', formValues.value.lastName);
+    formData.append('firstName', formValues.value.firstName);
+    formData.append('email', formValues.value.email);
+    formData.append('message', formValues.value.message);
+
+    const response = await fetch('/contact', {
+      method: 'POST',
+      body: formData
+    });
+
+    if (response.ok) {
+      // Réinitialiser les valeurs du formulaire après l'envoi réussi
+      formValues.value = {
+        lastName: '',
+        firstName: '',
+        email: '',
+        message: ''
+      };
+
+      // Afficher le message de succès
+      showSuccessPopup.value = true;
+
+      // Masquer le message de succès après quelques secondes
+      setTimeout(() => {
+        showSuccessPopup.value = false;
+      }, 5000);
+    } else {
+      console.error('Une erreur s\'est produite lors de l\'envoi du formulaire.');
+    }
+  } catch (error) {
+    console.error('Une erreur s\'est produite lors de la soumission du formulaire :', error);
+  }
+};
+</script>
+
+
 <template>
     <div>
       <h1>Formulaire de Contact</h1>
@@ -9,7 +61,7 @@
         <input type="text" id="firstName" name="firstName" v-model="formValues.firstName" required>
   
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" v-model="formValues.email" required>
+        <input type="email" id="email"  name="email" v-model="formValues.email" required>
   
         <label for="message">Message</label>
         <textarea id="message" name="message" v-model="formValues.message" required></textarea>
@@ -25,51 +77,4 @@
     </div>
   </template>
   
-  <script setup>
-  import { ref } from 'vue';
-  
-  const formValues = ref({
-    lastName: '',
-    firstName: '',
-    email: '',
-    message: ''
-  });
-  
-  const showSuccessPopup = ref(false);
-  
-  const handleSubmit = async () => {
-    try {
-      const response = await fetch('/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formValues.value)
-      });
-  
-      if (response.ok) {
-        // Réinitialiser les valeurs du formulaire après l'envoi réussi
-        formValues.value = {
-          lastName: '',
-          firstName: '',
-          email: '',
-          message: ''
-        };
-  
-        // Afficher le message de succès
-        showSuccessPopup.value = true;
-
-  
-        // Masquer le message de succès après quelques secondes
-        setTimeout(() => {
-          showSuccessPopup.value = false;
-        }, 5000);
-      } else {
-        console.error('Une erreur s\'est produite lors de l\'envoi du formulaire.');
-      }
-    } catch (error) {
-      console.error('Une erreur s\'est produite lors de la soumission du formulaire :', error);
-    }
-  };
-  </script>
   
