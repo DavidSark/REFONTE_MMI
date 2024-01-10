@@ -7,6 +7,28 @@ const props = defineProps({
   elements: Array
 })
 
+
+//on scroll le background est blanc
+onMounted(() => {
+  let scrolled = 0;
+  let header = document.getElementsByClassName('header')[0];
+  document.addEventListener('scroll', (e) => {
+    scrolled = window.scrollY;
+    if (scrolled > 0) {
+      header.classList.add('-bg-white');
+    } else {
+      header.classList.remove('-bg-white');
+    }
+  });
+});
+
+
+
+
+
+
+
+
 //création de deux constantes + utilisation de vue-router pour la route
 const isMenuOpen = ref(false);
 const route = useRoute();
