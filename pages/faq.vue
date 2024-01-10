@@ -96,6 +96,10 @@ useSeoMeta({
         &__sideleft {
             padding: rem(100) rem(75);
         }
+        &__sideright{
+            margin-top:100px;
+            overflow: hidden;
+        }
     }
 }</style>
 
