@@ -30,7 +30,6 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     <input type="text" id="message" name="message" required  placeholder="Votre message...">
   </div>
   <input class="form-contact__submit" type="submit" value="Envoyer">
-  <!-- <input type="file" accept=".pdf, .doc, .docx"  id="fileUpload" name="fileUpload"> -->
 </form>
   <div class="form-contact__info">
     
