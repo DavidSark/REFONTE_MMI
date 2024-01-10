@@ -70,6 +70,7 @@ useSeoMeta({
 
 .btn-margin {
     margin-left:rem(20);
+    margin-bottom: rem(10);
 }
 @media (min-width : 768px) {
     .section1-faq {
