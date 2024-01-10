@@ -37,16 +37,14 @@ useSeoMeta({
             </div>
         </div>
         <div class="section1-faq__sideright">
-            <p>sdmjkfgflkjg</p>
+           <canva-bulle></canva-bulle>
         </div>
     </div>
 </template>
 
 <style lang="scss">
 .section1-faq {
-    &__sideright {
-        background-color: $black;
-    }
+
 
     &__sideleft {
         padding: rem(30) rem(20);
