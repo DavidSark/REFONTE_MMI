@@ -19,7 +19,7 @@ const handleSubmit = async () => {
     formData.append('email', formValues.value.email);
     formData.append('message', formValues.value.message);
 
-    const response = await fetch('/contact', {
+    const response = await fetch('/test', {
       method: 'POST',
       body: formData
     });

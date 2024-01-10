@@ -27,7 +27,8 @@ contactEmail.verify((error) => {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.post("/contact", (req, res) => {
+app.post("/test", (req, res) => {
+  console.log('premier console log')
   const nom = req.body.lastName + ' ' + req.body.firstName;
   const email = req.body.email;
   const message = req.body.message;
@@ -46,8 +47,12 @@ app.post("/contact", (req, res) => {
   contactEmail.sendMail(mail, (error) => {
     if (error) {
       res.json(error);
+      console.log("gegeg");
+      console.log("TEST");
     } else {
       res.json({ code: 200, status: "Message sent" });
+      console.log('test2');
+      console.log(response);
     }
   });
 });
