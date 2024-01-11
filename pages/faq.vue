@@ -14,7 +14,16 @@ useSeoMeta({
 </script>
 
 <template>
-    <!-- <scrollbar/> -->
+      <div class="container__index-heroM">
+    <heroM title="Foire aux questions" tagline="Posez-nous vos questions !" TopImage="/images/faq-heroM-1.webp" BottomImage="/images/faq-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></heroM>
+    </div>
+    <div class="container__index-heroT">
+        <HeroT title="Foire aux questions" tagline="Posez-nous vos questions!" TopImage="images/faq-heroM-1.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></HeroT>
+      </div>
+      <div class="container__index-heroC">
+        <heroC-hover  title="Foire aux questions" tagline="Posez-nous vos questions !" TopImage="/images/faq-heroM-1.webp" BottomImage="/images/faq-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"> 
+        </heroC-hover>
+      </div> 
     <div class="section1-faq">
         <div class="section1-faq__sideleft" data-scroll-indicator-title="Hello World">
             <div class="section1-faq__sideleft-container">
