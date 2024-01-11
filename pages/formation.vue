@@ -32,6 +32,7 @@ useSeoMeta({
                 :subtitle="formation.data.section1[0].subtitle"  ></borderSection>
             </div>
             <div class="section1-formation__parcours">
+                <card-parcours-circle></card-parcours-circle>
                 
             </div>
         </div>
@@ -67,11 +68,13 @@ useSeoMeta({
     display: flex;
     flex-direction: column;
     gap: rem(40);
+  
 
     &__parcours{
-        background-color: $black;
-        width: 100%;
-        height: rem(400);
+      
+        // background-color: $black;
+        // width: 100%;
+        // height: rem(400);
     }
     
 }
@@ -117,7 +120,7 @@ useSeoMeta({
     align-items: center;
     gap: rem(40);
     &__content {
-        width: 60%;
+        width: 100%;
         height: auto;
     }
 

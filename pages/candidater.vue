@@ -46,6 +46,9 @@ useSeoMeta({
 <style lang="scss" >
 .section1-candidater {
   padding: rem(30) rem(20);
+  display: flex;
+  flex-direction: column;
+  gap: rem(50);
 
   &__sideleft {
     display: flex;
