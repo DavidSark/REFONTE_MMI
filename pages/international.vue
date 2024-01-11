@@ -14,6 +14,16 @@ useSeoMeta({
 
 <template>
 <scrollbar/>
+<div class="container__index-heroM">
+    <heroM title="partir à l’étranger" tagline="représente ta formation au delà" TopImage="/images/international-heroM-1.webp" BottomImage="/images/international-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></heroM>
+    </div>
+    <div class="container__index-heroT">
+        <HeroT title="partir à l’étranger" tagline="représente ta formation au delà" TopImage="images/international-heroM-1.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></HeroT>
+      </div>
+      <div class="container__index-heroC">
+        <heroC-hover  title="partir à l’étranger" tagline="représente ta formation au delà" TopImage="/images/international-heroM-1.webp" BottomImage="/images/international-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"> 
+        </heroC-hover>
+      </div> 
  <div class="section1-international" id="section1">
     <borderSection :title="international.data.section1[0].title"
                   :subtitle="international.data.section1[0].subtitle"
