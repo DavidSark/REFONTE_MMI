@@ -18,13 +18,13 @@ useSeoMeta({
 <template>
     <scrollbar/>
     <div class="container__index-heroM">
-    <heroM title="Nous rencontrer" tagline="Entrez dans le monde supérieur" TopImage="/images/image-contact-hero1.webp" BottomImage="/images/image-contact-hero2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></heroM>
+    <heroM title="Nous rencontrer" tagline="Entrez dans le monde supérieur" TopImage="/images/contact-heroM-1.webp" BottomImage="/images/contact-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></heroM>
     </div>
     <div class="container__index-heroT">
-        <HeroT title="Nous rencontrer" tagline="Entrez dans le monde supérieur" TopImage="/images/image-contact-hero1.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></HeroT>
+        <HeroT title="Nous rencontrer" tagline="Entrez dans le monde supérieur" TopImage="images/contact-heroM-1.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></HeroT>
       </div>
       <div class="container__index-heroC">
-        <heroC-hover  title="Nous rencontrer" tagline="Entrez dans le monde supérieur" TopImage="/images/image-contact-hero1.webp" BottomImage="/images/image-contact-hero2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"> 
+        <heroC-hover  title="Nous rencontrer" tagline="Entrez dans le monde supérieur" TopImage="/images/contact-heroM-1.webp" BottomImage="/images/contact-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"> 
         </heroC-hover>
       </div> 
 

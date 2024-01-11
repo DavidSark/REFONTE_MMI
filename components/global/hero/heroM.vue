@@ -86,7 +86,7 @@ const props = defineProps ({
         object-fit: cover;
         filter: grayscale(1);
         object-position: 10% 10%;
-        transform: scale(150%);
+        transform: scale(100%);
       }
     }
     &__bottom{
@@ -97,8 +97,8 @@ const props = defineProps ({
         max-height: rem(360);
         object-fit: cover;
         filter: grayscale(1);
-        object-position: rem(-55) rem(30);
-        transform: scale(1.8);
+        object-position: rem(-5) rem(30);
+        transform: scale(1.4);
       }
 
       &-buttons {
