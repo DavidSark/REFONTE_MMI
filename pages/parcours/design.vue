@@ -15,6 +15,16 @@ useSeoMeta({
 
 <template>
     <scrollbar/>
+    <div class="container__index-heroM">
+    <heroM title="parcours design" tagline="Pour les créatifs et curieux" TopImage="/images/espacepro-heroM-1.webp" BottomImage="/images/espacepro-heroM-2.webp" Button1="contact" Button2="Formation" Button1Url="/contact" Button2Url="/formation"></heroM>
+    </div>
+    <div class="container__index-heroT">
+        <HeroT title="parcours design" tagline="Pour les créatifs et curieux" TopImage="images/espacepro-heroM-1.webp" Button1="contact" Button2="Formation" Button1Url="/contact" Button2Url="/formation"></HeroT>
+      </div>
+      <div class="container__index-heroC">
+        <heroC-hover  title="parcours design" tagline="Pour les créatifs et curieux" TopImage="/images/espacepro-heroM-1.webp" BottomImage="/images/espacepro-heroM-2.webp" Button1="contact" Button2="Formation" Button1Url="/contact" Button2Url="/formation"> 
+        </heroC-hover>
+      </div> 
     <div class="section1-design" id="section1">
         <div class="section1-design__sideleft">
             <borderSection :title="design.data.section1[0].title" :subtitle="design.data.section1[0].subtitle"
