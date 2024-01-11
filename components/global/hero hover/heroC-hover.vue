@@ -79,6 +79,7 @@ const props = defineProps ({
       flex: 1;
       justify-content: center;
       &-title {
+    margin-top: 60px;
       padding: rem(0) rem(35) rem(35) rem(35);
 
       :nth-child(1) {
