@@ -15,10 +15,17 @@ useSeoMeta({
 
 <template>
     <scrollbar/>
+    <div class="container__index-heroM">
+    <heroM title="la formation" tagline="un espace rempli de créativité" TopImage="/images/formation-heroM-1.webp" BottomImage="/images/formation-heroM-2.webp" Button1="Candidater" Button2="Département" Button1Url="/candidater" Button2Url="/departement"></heroM>
+    </div>
+    <div class="container__index-heroT">
+        <HeroT title="la formation" tagline="un espace rempli de créativité" TopImage="images/formation-heroM-1.webp" Button1="Candidater" Button2="Département" Button1Url="/candidater" Button2Url="/departement"></HeroT>
+      </div>
+      <div class="container__index-heroC">
+        <heroC-hover  title="la formation" tagline="un espace rempli de créativité" TopImage="/images/formation-heroM-1.webp" BottomImage="/images/formation-heroM-2.webp" Button1="Candidater" Button2="Département" Button1Url="/candidater" Button2Url="/departement"> 
+        </heroC-hover>
+      </div> 
     <div>
-        <div>
-            <hero></hero>
-        </div>
         <div class="section1-formation" id="section1">
             <div class="section1-formation__content">
                 <borderSection :title="formation.data.section1[0].title"
