@@ -21,6 +21,16 @@ useSeoMeta({
 </script>
 
 <template>
+     <div class="container__index-heroM">
+    <heroM title="L’équipe pédagogique" tagline="un espace rempli de créativité" TopImage="/images/departement-heroM-1.webp" BottomImage="/images/departement-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></heroM>
+    </div>
+    <div class="container__index-heroT">
+        <HeroT title="L’équipe pédagogique" tagline="un espace rempli de créativité" TopImage="images/departement-heroM-1.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></HeroT>
+      </div>
+      <div class="container__index-heroC">
+        <heroC-hover  title="L’équipe pédagogique" tagline="un espace rempli de créativité" TopImage="/images/departement-heroM-1.webp" BottomImage="/images/departement-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"> 
+        </heroC-hover>
+      </div> 
     <div class="section1-equipe">
         <PrismicRichText class="section1-equipe__title" :field="equipe.data.section1[0].titre"></PrismicRichText>
         <div class="equipecard">
