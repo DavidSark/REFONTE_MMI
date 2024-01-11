@@ -69,7 +69,7 @@ const props = defineProps ({
         font-size: $size-13;
         letter-spacing: calc(1px + (10 - 1) * ((100vw - 320px) / (1440 - 320)));
         font-weight: 300;
-        color: $gray-soft;   
+        color: $gray-black; 
       }
     }
 

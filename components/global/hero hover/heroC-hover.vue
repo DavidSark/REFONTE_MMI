@@ -93,7 +93,7 @@ const props = defineProps ({
       :nth-child(2) {
         font-size: $size-16;
         letter-spacing: rem(3);
-        color: $gray-soft;
+        color: $gray-black;
         text-transform: uppercase;
       }
     }
@@ -160,6 +160,8 @@ const props = defineProps ({
 
       &-main{
         &-title {
+   
+ 
         :nth-child(1) {
           font-size: 6.3vw;
         }

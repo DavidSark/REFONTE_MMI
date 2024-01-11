@@ -82,7 +82,7 @@ const props = defineProps ({
           font-weight: 300;
           font-size: $size-16;
           letter-spacing: rem(3);
-          color: $gray-soft;
+          color: $gray-black;
           text-transform: uppercase;
         }
       }

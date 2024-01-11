@@ -82,7 +82,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
       :nth-child(2) {
         font-size: $size-16;
         letter-spacing: rem(3);
-        color: $gray-soft;
+        color: $gray-black;
         text-transform: uppercase;
       }
     }

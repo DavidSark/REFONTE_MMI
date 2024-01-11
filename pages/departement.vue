@@ -19,7 +19,7 @@ useSeoMeta({
         <HeroT title="le département" tagline="un espace rempli de créativité" TopImage="images/departement-heroM-1.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></HeroT>
       </div>
       <div class="container__index-heroC">
-        <heroC-hover  title="le département" tagline="un espace rempli de créativité" TopImage="/images/departement-heroM-1.webp" BottomImage="/images/departement-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"> 
+        <heroC-hover  title="le département" tagline="un espace rempli de créativité" TopImage="/images/formation-heroM-1.webp" BottomImage="/images/formation-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"> 
         </heroC-hover>
       </div> 
     <div class="section1-departement" id="section1">
