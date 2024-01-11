@@ -22,11 +22,11 @@ useSeoMeta({
     <div class="container__index">
 
         <div class="container__index-heroM">
-        <HeroM></HeroM>
+        <HeroM title="MMI Montbéliard" tagline="Métiers du Multimédia et de l'Internet" TopImage="/image1.webp" BottomImage="/image3.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></HeroM>
       </div>
     
       <div class="container__index-heroT">
-        <HeroT></HeroT>
+        <HeroT  title="MMI Montbéliard" tagline="Métiers du Multimédia et de l'Internet" TopImage="/image1.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></HeroT>
       </div>
       <div class="container__index-heroC">
         <HeroC></HeroC>

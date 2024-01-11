@@ -17,6 +17,18 @@ useSeoMeta({
 
 <template>
     <scrollbar/>
+    <div class="container__index-heroM">
+    <heroM title="Nous rencontrer" tagline="Entrez dans le monde supérieur" TopImage="/images/image-contact-hero1.webp" BottomImage="/images/image-contact-hero2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></heroM>
+    </div>
+    <div class="container__index-heroT">
+        <HeroT title="Nous rencontrer" tagline="Entrez dans le monde supérieur" TopImage="/images/image-contact-hero1.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></HeroT>
+      </div>
+      <div class="container__index-heroC">
+        <heroC-hover  title="Nous rencontrer" tagline="Entrez dans le monde supérieur" TopImage="/images/image-contact-hero1.webp" BottomImage="/images/image-contact-hero2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"> 
+        </heroC-hover>
+      </div> 
+
+
     <div class="section1-contact" id="section1">
         <div class="section1-contact__side">
             <borderSection :title="contact.data.section1[0].title" :subtitle="contact.data.section1[0].subtitle" />

@@ -2,23 +2,40 @@
 const { client } = usePrismic();
 const { data: home, error } = await useAsyncData('home', () => client.getSingle("homepage"))
 
+const props = defineProps ({
+  title: String, 
+  tagline: String, 
+  TopImage: String,
+  BottomImage : String, 
+  Button1 : String, 
+  Button2 : String,  
+  Button1Url : String, 
+  Button2Url : String, 
+
+
+
+})
+
+
 </script>
 
 <template>
     <div class="container-hero">
       <div class="container-hero__top">
-        <img src="/image1.webp" alt="Cours en MMI">
+        <img :src="TopImage" alt="Cours en MMI">
       </div>
       <div class="container-hero__middle">
-        <h1>Mmi Montbéliard</h1>
-        <h2>Métiers du Multimédia et de l'internet</h2>
+        <h1 >{{title}}</h1>
+        <h2>{{tagline}}</h2>
       </div>
       <div class="container-hero__bottom">
-        <img src="/image3.webp" alt="Cours en MMI">
+        <img :src="BottomImage" alt="MMI Montbéliard">
         <div class="container-hero__bottom-buttons">
-          <RouterLink to="/candidater" >
-          <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">Candidater</Button></RouterLink>
-          <Button size="small" bgColor="bgTransparent" borderColor="borderWhite" color="white">Formation</Button>
+          <NuxtLink :to="Button1Url" >
+          <Button  size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">{{Button1}}</Button></NuxtLink>
+          <NuxtLink :to="Button2Url">
+          <Button  size="small" bgColor="bgTransparent" borderColor="borderWhite" color="white">{{Button2}}</Button>
+        </NuxtLink>
         </div>
         <div class="container-hero__bottom-social">
             <p>retrouvez-nous sur nos réseaux sociaux !</p>
@@ -38,6 +55,9 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
   text-transform: uppercase;
 
     &__middle {
+      h1 {
+        font-family: $font-redhat;
+      }
       padding: rem(20);
       :nth-child(1) {
         font-size: $size-39;
