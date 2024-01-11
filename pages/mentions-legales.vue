@@ -15,6 +15,16 @@ useSeoMeta({
 </script>
 
 <template>
+  <div class="container__index-heroM">
+    <heroM title="Mentions légales" tagline="MÉTIERS DU MULTIMÉDIA ET DE L’INTERNET" TopImage="/images/mentionslegales-heroM-1.webp" BottomImage="/images/mentionslegales-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></heroM>
+    </div>
+    <div class="container__index-heroT">
+        <HeroT title="Mentions légales" tagline="MÉTIERS DU MULTIMÉDIA ET DE L’INTERNET" TopImage="images/mentionslegales-heroM-1.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></HeroT>
+      </div>
+      <div class="container__index-heroC">
+        <heroC-hover  title="Mentions légales" tagline="MÉTIERS DU MULTIMÉDIA ET DE L’INTERNET" TopImage="/images/mentionslegales-heroM-1.webp" BottomImage="/images/mentionslegales-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"> 
+        </heroC-hover>
+      </div> 
   <div class="container">
     <div class="section1-mentions">
       <div class="section1-mentions__sideleft">

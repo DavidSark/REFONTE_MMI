@@ -20,7 +20,7 @@ useSeoMeta({
     <heroM title="espace pro" tagline="nos étudiants ont de l’avenir" TopImage="/images/espacepro-heroM-1.webp" BottomImage="/images/espacepro-heroM-2.webp" Button1="Contact" Button2="Formation" Button1Url="/contact" Button2Url="/formation"></heroM>
     </div>
     <div class="container__index-heroT">
-        <HeroT title="espace pro" tagline="nos étudiants ont de l’avenir" TopImage="images/espacepro-heroM-1.webp" Button1="Candidater" Button2="Formation" Button1Url="/contact" Button2Url="/formation"></HeroT>
+        <HeroT title="espace pro" tagline="nos étudiants ont de l’avenir" TopImage="images/espacepro-heroM-1.webp" Button1="Contact" Button2="Formation" Button1Url="/contact" Button2Url="/formation"></HeroT>
       </div>
       <div class="container__index-heroC">
         <heroC-hover  title="espace pro" tagline="nos étudiants ont de l’avenir" TopImage="/images/espacepro-heroM-1.webp" BottomImage="/images/espacepro-heroM-2.webp" Button1="Contact" Button2="Formation" Button1Url="/contact" Button2Url="/formation"> 
