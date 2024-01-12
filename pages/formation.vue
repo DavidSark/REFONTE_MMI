@@ -32,7 +32,7 @@ useSeoMeta({
                 :subtitle="formation.data.section1[0].subtitle"  ></borderSection>
             </div>
             <div class="section1-formation__parcours">
-                <card-parcours-circle></card-parcours-circle>
+              
                 
             </div>
         </div>
@@ -43,6 +43,7 @@ useSeoMeta({
                     :subtitle="formation.data.section2[0].subtitle" borderPosition="right" ></borderSection>
             </div>
             <div class="section2-formation__parcours">
+                <card-parcours-circle></card-parcours-circle>
             </div>
         </div>
 
@@ -85,9 +86,9 @@ useSeoMeta({
     flex-direction: column;
     gap: rem(40);
     &__parcours{
-        background-color: $black;
-        width: 100%;
-        height: rem(150);
+        // background-color: $black;
+        // width: 100%;
+        // height: rem(150);
     }
 }
 
@@ -134,16 +135,10 @@ useSeoMeta({
 
     .section2-formation{
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
         gap: rem(40);
         
-        &__content{
-            width: 50%;
-        }
-        &__parcours{          
-            width: 50%;
-            height: initial;
-        }
+    
 }
     .section3-formation{
         display: flex;;
@@ -175,6 +170,14 @@ useSeoMeta({
         }
     } 
 
+    .section2-formation{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: rem(40);
+        
+    
+}
     .section2-formation, .section3-formation{
         padding: rem(120) rem(75);
 }
