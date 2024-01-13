@@ -21,7 +21,7 @@ const className = computed(() => ({
 
 <template>
     <div class="card-etudiants" :class="className">
-        <img :src="image" :alt="alt">
+        <img :src="image" alt="Etudiants">
 
         <div class="card-etudiants__content">
             <PrismicRichText class="card-etudiants__content-name" :field="name"></PrismicRichText>

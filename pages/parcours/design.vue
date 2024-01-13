@@ -27,7 +27,7 @@ useSeoMeta({
       </div> 
     <div class="section1-design" id="section1">
         <div class="section1-design__sideleft">
-            <borderSection :title="design.data.section1[0].title" :subtitle="design.data.section1[0].subtitle"
+            <borderSection :title="design.data.section1[0].title" :subtitle="design.data.section1[0].subtitle "
                 />
                 <RouterLink to="/candidater">
             <Button class="btn-margin" size="small">Candidater</Button>
@@ -43,7 +43,7 @@ useSeoMeta({
     </div>
 
     <div class="section3-design" id="section3">
-            <card-projet-design :items="projets.data.projets_design"></card-projet-design>
+            <card-projet-design color="blue" :items="projets.data.projets_design"></card-projet-design>
     </div>
 
 
