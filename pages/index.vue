@@ -32,7 +32,7 @@ useSeoMeta({
         <HeroC></HeroC>
       </div> 
 
-      <div class="section1-index" id="section1"  aria-label="Section">
+      <div class="section1-index" id="section1"  >
         <div class="section1-index__tagline">
          <PrismicRichText :field="home.data.index_tagline"></PrismicRichText>
         </div>
@@ -50,16 +50,16 @@ useSeoMeta({
           <indexcards/>
       </div>
 
-      <div class="section5-index" id="section2"  aria-label="Section" >
+      <div class="section5-index" id="section2"  >
         <indexdep/>
         <div class="section5-index__line"></div>
       </div>
 
-      <div class="section6-index" id="section3"  aria-label="Section">
+      <div class="section6-index" id="section3"  >
         <indexespacepro/>       
       </div>
 
-      <div class="section7-index" id="section4" aria-label="Section">
+      <div class="section7-index" id="section4" >
         <indexactualite/>       
       </div>
   </div>
