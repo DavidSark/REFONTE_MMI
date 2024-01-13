@@ -5,7 +5,7 @@
 <template>
     <div class="footer">
         <div class="footer-subtitles">
-            <img src="/icons/MMI_Logo_Compact.png" alt="">
+            <img src="/icons/MMI_Logo_Compact.svg" alt="">
             <h2>Mmi montbéliard</h2>
             <h2>Métiers du multimédia et de l'internet</h2>
         </div>

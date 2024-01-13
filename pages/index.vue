@@ -59,7 +59,7 @@ useSeoMeta({
         <indexespacepro/>       
       </div>
 
-      <div class="section7-index" id="section4">
+      <div class="section7-index" id="section4" aria-label="Section">
         <indexactualite/>       
       </div>
   </div>
