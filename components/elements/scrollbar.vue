@@ -3,7 +3,7 @@
     <nav class="navbar">
       <ul>
         <li v-for="(section, index) in sections" :key="index">
-          <a :href="`#${section.id}`" :class="{ 'dot': true, 'active': activeSection === index }" :data-scroll="section.id" aria-label="Section">
+          <a :href="`#${section.id}`" :class="{ 'dot': true, 'active': activeSection === index }" :data-scroll="section.id" aria-label="Section">Section
             <!-- <span>{{ section.label }}</span> -->
           </a>
         </li>
@@ -63,6 +63,7 @@ export default {
 </script>
 
 <style>
+
 html {
   scroll-behavior: smooth;
 }
@@ -93,6 +94,7 @@ html {
   left: -5px;
   transform: translateY(-50%);
   z-index: 1;
+
 }
 
 .navbar ul {
@@ -105,10 +107,11 @@ html {
   width: 30px;
   position: relative;
   text-align: right;
+
 }
 
 .navbar ul li .dot {
-  color: #fff;
+  color:transparent;
   display: block;
   padding: 25px 0px;
 }
