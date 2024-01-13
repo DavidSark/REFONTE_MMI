@@ -224,7 +224,7 @@ useSeoMeta({
         gap: rem(20);
 
         &__content {
-            width: 50%;
+            width: 60%;
         }
 
 

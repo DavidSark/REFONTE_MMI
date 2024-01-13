@@ -98,7 +98,23 @@ a {
 }
 @media (min-width: 1024px){
     .circles {
-        gap:rem(73);
+        justify-content: center;
+        gap:rem(43);
+        .circle {
+            
+    &-parcours-1, &-parcours-2, &-parcours-3 {
+
+        
+width: rem(200);
+height: rem(200);
+border-radius: 50%;
+background-color: $white-soft;
+
+background-position: center 20%;
+background-size: cover;
+border: 7px solid $white-soft;
+}
+        }
     }
 
   
