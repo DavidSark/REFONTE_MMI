@@ -120,6 +120,7 @@ useSeoMeta({
     flex-direction: column;
     gap: rem(40);
     &__parcours{
+        margin: auto;
         // background-color: $black;
         // width: 100%;
         // height: rem(150);
@@ -191,11 +192,12 @@ useSeoMeta({
 
 }
 
-@media screen and (min-width : 1390px) {
+@media screen and (min-width : 1270px) {
 
     .section2-formation{
         display: flex;
         flex-direction: row-reverse;
+
         align-items: center;
         gap: rem(40);
     }
