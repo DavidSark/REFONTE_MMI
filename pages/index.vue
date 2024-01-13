@@ -43,7 +43,7 @@ useSeoMeta({
       </div>
   
       <div class="section3-index">  
-        <indextest></indextest>
+        <indexparcour/>
       </div>
   
       <div class="section4-index">
