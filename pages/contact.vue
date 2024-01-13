@@ -63,6 +63,41 @@ useSeoMeta({
 </template>
 
 <style lang="scss">
+.container__index{
+  overflow: hidden;
+  //pour le hero
+  &-heroT{
+    display: none;
+  }
+  &-heroC{
+    display: none;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .container__index{
+    &-heroM{
+      display: none;
+    }
+    &-heroT{
+      display: block;
+    }
+  }
+}
+@media screen and (min-width:1024px) {
+  .container__index{
+    &-heroM{
+      display: none;
+    }
+    &-heroT{
+      display: none;
+    }
+    &-heroC{
+      display: block;
+    }
+  }
+}
+
 .section1-contact {
     padding: rem(30) rem(20);
     gap: rem(40);
