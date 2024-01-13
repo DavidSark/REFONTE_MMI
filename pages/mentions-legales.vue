@@ -95,6 +95,15 @@ useSeoMeta({
 </template>
 
 <style lang="scss">
+
+
+
+
+
+
+
+
+
 .container {
   padding: rem(30) rem(20);
 }
