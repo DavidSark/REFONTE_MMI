@@ -5,7 +5,7 @@
 <template>
      <div class="section-espacepro">
         <div class="section-espacepro__text">
-            <h2>Espace profesionnel<span>.</span></h2>
+            <h2>Espace professionnel<span>.</span></h2>
             <p>nous sommes ravis de pouvoir aider <span>des entreprises en réalisant leur projet.</span></p>
         </div>
 
