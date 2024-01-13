@@ -112,8 +112,10 @@ html {
 
 .navbar ul li .dot {
   color:transparent;
+  width: 70px;
+  
   display: block;
-  padding: 25px 0px;
+  padding: 25px 25px;
 }
 
 .navbar ul li .dot span {
