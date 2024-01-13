@@ -41,9 +41,9 @@ useSeoMeta({
       <div class="section2-index">
         <img src="/image-video-dep.webp" alt="">
       </div>
-
+  
       <div class="section3-index">  
-          <indexparcour/>
+        <indextest></indextest>
       </div>
   
       <div class="section4-index">
