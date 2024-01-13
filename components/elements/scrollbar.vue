@@ -3,7 +3,7 @@
     <nav class="navbar">
       <ul>
         <li v-for="(section, index) in sections" :key="index">
-          <a :href="`#${section.id}`" :class="{ 'dot': true, 'active': activeSection === index }" :data-scroll="section.id">
+          <a :href="`#${section.id}`" :class="{ 'dot': true, 'active': activeSection === index }" :data-scroll="section.id" aria-label="Aller à la section {{ section.label }}">
             <!-- <span>{{ section.label }}</span> -->
           </a>
         </li>
