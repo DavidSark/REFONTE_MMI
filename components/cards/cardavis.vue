@@ -40,7 +40,7 @@ const className = computed(() => ({
                 </div> 
              
                 <div class="image-avis">
-                    <img :src="image" :alt="alt">
+                    <img :src="image" alt="Image d'étudiants">
                 </div>
              
             </div>

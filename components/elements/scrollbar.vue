@@ -168,6 +168,7 @@ html {
 .navbar ul li .dot.active::before,
 .navbar ul li:hover .dot::before {
   border-color: #0264F6;
+  
   background: #0264F6;
 }
 

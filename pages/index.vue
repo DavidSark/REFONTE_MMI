@@ -68,6 +68,7 @@ useSeoMeta({
 
 <style lang="scss" >
 
+
 .container__index{
   overflow: hidden;
   //pour le hero
