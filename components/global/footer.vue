@@ -5,7 +5,7 @@
 <template>
     <div class="footer">
         <div class="footer-subtitles">
-            <img src="/icons/icon-mmi.svg" alt="">
+            <img src="/icons/MMI_Logo_Compact.png" alt="">
             <h2>Mmi montbéliard</h2>
             <h2>Métiers du multimédia et de l'internet</h2>
         </div>
@@ -70,8 +70,8 @@
 
 
         img {
-            width: rem(37);
-            height: rem(37);
+            width: rem(55);
+            height: rem(47);
             margin-bottom: rem(10);
 
         }
@@ -112,8 +112,8 @@
             font-size: $size-26;
 
             img {
-                width: rem(45);
-                height: rem(45);
+                width: rem(75);
+                height: rem(55);
                 margin-bottom: rem(15);
             }
 
