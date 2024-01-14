@@ -27,7 +27,7 @@ useSeoMeta({
       </div> 
     <div class="section1-design" id="section1">
         <div class="section1-design__sideleft">
-            <borderSection :title="design.data.section1[0].title" :subtitle="design.data.section1[0].subtitle"
+            <borderSection :title="design.data.section1[0].title" :subtitle="design.data.section1[0].subtitle "
                 />
                 <RouterLink to="/candidater">
             <Button class="btn-margin" size="small">Candidater</Button>
@@ -43,7 +43,7 @@ useSeoMeta({
     </div>
 
     <div class="section3-design" id="section3">
-            <card-projet-design :items="projets.data.projets_design"></card-projet-design>
+            <card-projet-design color="blue" :items="projets.data.projets_design"></card-projet-design>
     </div>
 
 
@@ -64,6 +64,43 @@ useSeoMeta({
 </template>
 
 <style lang="scss">
+
+.container__index{
+  overflow: hidden;
+  //pour le hero
+  &-heroT{
+    display: none;
+  }
+  &-heroC{
+    display: none;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .container__index{
+    &-heroM{
+      display: none;
+    }
+    &-heroT{
+      display: block;
+    }
+  }
+}
+@media screen and (min-width:1024px) {
+  .container__index{
+    &-heroM{
+      display: none;
+    }
+    &-heroT{
+      display: none;
+    }
+    &-heroC{
+      display: block;
+    }
+  }
+}
+
+
 .section1-design {
     padding: rem(30) rem(20);
     display: flex;
@@ -205,9 +242,8 @@ useSeoMeta({
 
 @media(min-width : 1750px) {
     .section4-design{
-        &__cards {
+
         display: none;
-    }
     }
 }
 

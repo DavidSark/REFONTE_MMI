@@ -32,34 +32,34 @@ useSeoMeta({
         <HeroC></HeroC>
       </div> 
 
-      <div class="section1-index" id="section1">
+      <div class="section1-index" id="section1"  >
         <div class="section1-index__tagline">
          <PrismicRichText :field="home.data.index_tagline"></PrismicRichText>
         </div>
       </div>
 
       <div class="section2-index">
-        <img src="/image-video-dep.webp" alt="">
+        <img src="/image-video-dep.webp" alt="Image département">
       </div>
-
+  
       <div class="section3-index">  
-          <indexparcour/>
+        <index-parcour/>
       </div>
   
       <div class="section4-index">
           <indexcards/>
       </div>
 
-      <div class="section5-index" id="section2">
+      <div class="section5-index" id="section2"  >
         <indexdep/>
         <div class="section5-index__line"></div>
       </div>
 
-      <div class="section6-index" id="section3">
+      <div class="section6-index" id="section3"  >
         <indexespacepro/>       
       </div>
 
-      <div class="section7-index" id="section4">
+      <div class="section7-index" id="section4" >
         <indexactualite/>       
       </div>
   </div>
@@ -67,6 +67,8 @@ useSeoMeta({
 
 
 <style lang="scss" >
+
+
 .container__index{
   overflow: hidden;
   //pour le hero
