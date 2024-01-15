@@ -17,6 +17,18 @@ useSeoMeta({
 
 <template>
     <scrollbar/>
+    <div class="container__index-heroM">
+    <heroM title="Nous rencontrer" tagline="Entrez dans le monde supérieur" TopImage="/images/contact-heroM-1.webp" BottomImage="/images/contact-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></heroM>
+    </div>
+    <div class="container__index-heroT">
+        <HeroT title="Nous rencontrer" tagline="Entrez dans le monde supérieur" TopImage="images/contact-heroM-1.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></HeroT>
+      </div>
+      <div class="container__index-heroC">
+        <heroC-hover  title="Nous rencontrer" tagline="Entrez dans le monde supérieur" TopImage="/images/contact-heroM-1.webp" BottomImage="/images/contact-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"> 
+        </heroC-hover>
+      </div> 
+
+
     <div class="section1-contact" id="section1">
         <div class="section1-contact__side">
             <borderSection :title="contact.data.section1[0].title" :subtitle="contact.data.section1[0].subtitle" />
@@ -51,6 +63,41 @@ useSeoMeta({
 </template>
 
 <style lang="scss">
+.container__index{
+  overflow: hidden;
+  //pour le hero
+  &-heroT{
+    display: none;
+  }
+  &-heroC{
+    display: none;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .container__index{
+    &-heroM{
+      display: none;
+    }
+    &-heroT{
+      display: block;
+    }
+  }
+}
+@media screen and (min-width:1024px) {
+  .container__index{
+    &-heroM{
+      display: none;
+    }
+    &-heroT{
+      display: none;
+    }
+    &-heroC{
+      display: block;
+    }
+  }
+}
+
 .section1-contact {
     padding: rem(30) rem(20);
     gap: rem(40);

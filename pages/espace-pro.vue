@@ -16,6 +16,16 @@ useSeoMeta({
 
 <template>
 <scrollbar/>
+<div class="container__index-heroM">
+    <heroM title="espace pro" tagline="nos étudiants ont de l’avenir" TopImage="/images/espacepro-heroM-1.webp" BottomImage="/images/espacepro-heroM-2.webp" Button1="Contact" Button2="Formation" Button1Url="/contact" Button2Url="/formation"></heroM>
+    </div>
+    <div class="container__index-heroT">
+        <HeroT title="espace pro" tagline="nos étudiants ont de l’avenir" TopImage="images/espacepro-heroM-1.webp" Button1="Contact" Button2="Formation" Button1Url="/contact" Button2Url="/formation"></HeroT>
+      </div>
+      <div class="container__index-heroC">
+        <heroC-hover  title="espace pro" tagline="nos étudiants ont de l’avenir" TopImage="/images/espacepro-heroM-1.webp" BottomImage="/images/espacepro-heroM-2.webp" Button1="Contact" Button2="Formation" Button1Url="/contact" Button2Url="/formation"> 
+        </heroC-hover>
+      </div> 
   <div class="section1-espacepro" id="section1">
     <div class="section1-espacepro__sideleft">
       <borderSection :title="espacepro.data.section1[0].titre" :subtitle="espacepro.data.section1[0].soustitre" />
@@ -55,6 +65,41 @@ useSeoMeta({
 </template>
 
 <style lang="scss">
+.container__index{
+  overflow: hidden;
+  //pour le hero
+  &-heroT{
+    display: none;
+  }
+  &-heroC{
+    display: none;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .container__index{
+    &-heroM{
+      display: none;
+    }
+    &-heroT{
+      display: block;
+    }
+  }
+}
+@media screen and (min-width:1024px) {
+  .container__index{
+    &-heroM{
+      display: none;
+    }
+    &-heroT{
+      display: none;
+    }
+    &-heroC{
+      display: block;
+    }
+  }
+}
+
 
 .test {
   padding:300px;

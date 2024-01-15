@@ -12,12 +12,15 @@ const props = defineProps({
 onMounted(() => {
   let scrolled = 0;
   let header = document.getElementsByClassName('header')[0];
+  let headerMenu = document.getElementsByClassName('header-menu')[0];
   document.addEventListener('scroll', (e) => {
     scrolled = window.scrollY;
     if (scrolled > 0) {
       header.classList.add('-bg-white');
+      headerMenu.classList.add('-scrolled');
     } else {
       header.classList.remove('-bg-white');
+      headerMenu.classList.remove('-scrolled');
     }
   });
 });
@@ -88,7 +91,9 @@ onUnmounted(() => {
   <div class="header">
     <div class="header-block">
       <div class="header-block__logo" v-for="item in elements">
-        <img :src="item.header_logo.url" :alt="item.header_logo.alt">
+        <router-link to="/">
+          <img :src="item.header_logo.url" :alt="item.header_logo.alt">
+      </router-link>
       </div>
       <div class="header-block__container">
         <div class="header-block__container-square">
@@ -110,142 +115,182 @@ onUnmounted(() => {
       </div>
     </div>
 
+    <Transition name="slide">
+      <div v-if="isMenuOpen" class="menu">
+        <!-- Contenu du menu ici -->
+        <div class="menu-left">
+          <div class="menu-content__leave" @click="toggleMenu">
+            <p>quitter</p>
+            <button>
+              <img src="/icons/x.svg" alt="image de MMI">
+            </button>
+          </div>
 
-    <div v-if="isMenuOpen" class="menu">
-      <!-- Contenu du menu ici -->
-      <div class="menu-left">
-        <div class="menu-content__leave">
-          <p>quitter</p>
-          <button @click="toggleMenu">
-            <img src="/icons/x.svg" alt="">
-          </button>
+          <div class="menu-content">
+            <p class="menu-content__title">menu</p>
+            <div class="menu-content__text">
+              <div class="menu-content__text-flex">
+                <div class="bouton"></div>
+                <RouterLink to="/formation">
+                  <p>la formation</p>
+                </RouterLink>
+              </div>
+              <div class="menu-content__text-flex">
+                <div class="bouton"></div>
+                <RouterLink to="/departement">
+                  <p>le departement</p>
+                </RouterLink>
+              </div>
+              <div class="menu-content__text-flex">
+                <div class="bouton"></div>
+                <RouterLink to="/international">
+                  <p>international</p>
+                </RouterLink>
+              </div>
+              <div class="menu-content__text-flex">
+                <div class="bouton"></div>
+                <RouterLink to="/candidater">
+                  <p>candidater</p>
+                </RouterLink>
+              </div>
+              <div class="menu-content__text-flex">
+                <div class="bouton"></div>
+                <RouterLink to="/espace-pro">
+                  <p>espace professionnel</p>
+                </RouterLink>
+              </div>
+              <div class="menu-content__text-flex">
+                <div class="bouton"></div>
+                <RouterLink to="/contact">
+                  <p>contact</p>
+                </RouterLink>
+              </div>
+
+              <div class="menu-content__text-flex">
+                <div class="bouton"></div>
+
+                <RouterLink to="/faq">
+                  <p>faq</p>
+                </RouterLink>
+              </div>
+
+              <div class="menu-content__line"></div>
+
+              <div class="menu-content__text-flex">
+                <div class="bouton"></div>
+
+                <RouterLink to="/">
+                  <p>Accueil</p>
+                </RouterLink>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="menu-content">
-          <p class="menu-content__title">menu</p>
-          <div class="menu-content__text">
-            <div class="menu-content__text-flex">
-              <div class="bouton"></div>
+        <div class="menu-right">
+          <div class="menu-right__content">
+            <div class="menu-right__content-section1">
               <RouterLink to="/formation">
-                <p>la formation</p>
+                <img src="/image1.webp" alt="image de MMI">
+                <div class="menu-right__content-section1-text">
+                  <p>01</p>
+                  <p>La formation</p>
+                </div>
               </RouterLink>
             </div>
-            <div class="menu-content__text-flex">
-              <div class="bouton"></div>
+            <div class="menu-right__content-section1">
               <RouterLink to="/departement">
-                <p>le departement</p>
+                <img src="/image-dep-card3.webp" alt="image de MMI">
+                <div class="menu-right__content-section1-text" >
+                  <p>02</p>
+                  <p>Le département</p>
+                </div>
               </RouterLink>
             </div>
-            <div class="menu-content__text-flex">
-              <div class="bouton"></div>
+            <div class="menu-right__content-section1">
               <RouterLink to="/international">
-                <p>international</p>
+                <img src="/image-international-2.webp" alt="image de MMI">
+                <div class="menu-right__content-section1-text -03">
+                  <p>03</p>
+                  <p>International</p>
+                </div>
               </RouterLink>
             </div>
-            <div class="menu-content__text-flex">
-              <div class="bouton"></div>
-              <RouterLink to="/candidater">
-                <p>candidater</p>
+            <div class="menu-right__content-section1">
+              <RouterLink to="/candiater">
+                <img src="/candidater_hover.webp" alt="image de MMI">
+                <div class="menu-right__content-section1-text">
+                  <p>04</p>
+                  <p>Candidater</p>
+                </div>
               </RouterLink>
             </div>
-            <div class="menu-content__text-flex">
-              <div class="bouton"></div>
+            <div class="menu-right__content-section1">
               <RouterLink to="/espace-pro">
-                <p>espace professionnel</p>
+                <img src="/image4.webp" alt="image de MMI">
+                <div class="menu-right__content-section1-text">
+                  <p>05</p>
+                  <p>Espace pro</p>
+                </div>
               </RouterLink>
             </div>
-            <div class="menu-content__text-flex">
-              <div class="bouton"></div>
+            <div class="menu-right__content-section1">
               <RouterLink to="/contact">
-                <p>contact</p>
+                <img src="/image5.webp" alt="image de MMI">
+                <div class="menu-right__content-section1-text">
+                  <p>06</p>
+                  <p>Contact</p>
+                </div>
               </RouterLink>
             </div>
-
-            <div class="menu-content__text-flex">
-              <div class="bouton"></div>
-
+            <div class="menu-right__content-section1">
               <RouterLink to="/faq">
-                <p>faq</p>
+                <img src="/faq_hover.webp" alt="image de MMI">
+                <div class="menu-right__content-section1-text">
+                  <p>07</p>
+                  <p>FAQ</p>
+                </div>
               </RouterLink>
             </div>
-
-            <div class="menu-content__line"></div>
+            <div class="menu-right__content-section1">
+              <RouterLink to="/equipe-pedagogique">
+                <img src="/image10.webp" alt="image de MMI">
+                <div class="menu-right__content-section1-text">
+                  <p>08</p>
+                  <p>l'équipe</p>
+                </div>
+              </RouterLink>
+            </div>
+            <div class="menu-right__content-section1">
+              <RouterLink to="/">
+                <img src="/image13.webp" alt="image de MMI">
+                <div class="menu-right__content-section1-text">
+                  <p>09</p>
+                  <p>Accueil</p>
+                </div>
+              </RouterLink>
+            </div>
           </div>
-        </div>
+        </div>f
       </div>
-
-      <div class="menu-right">
-        <div class="menu-right__content">
-          <div class="menu-right__content-section1">
-            <RouterLink to="/formation">
-              <img src="/image1.webp" alt="">
-              <div class="menu-right__content-section1-text">
-                <p>01</p>
-                <p>La formation</p>
-              </div>
-            </RouterLink>
-          </div>
-          <div class="menu-right__content-section1">
-            <RouterLink to="/departement">
-              <img src="/image-dep-card3.webp" alt="">
-              <div class="menu-right__content-section1-text" >
-                <p>02</p>
-                <p>Le département</p>
-              </div>
-            </RouterLink>
-          </div>
-          <div class="menu-right__content-section1">
-            <RouterLink to="/international">
-              <img src="/image-international-2.webp" alt="">
-              <div class="menu-right__content-section1-text -03">
-                <p>03</p>
-                <p>International</p>
-              </div>
-            </RouterLink>
-          </div>
-          <div class="menu-right__content-section1">
-            <RouterLink to="/candiater">
-              <img src="/candidater_hover.webp" alt="">
-              <div class="menu-right__content-section1-text">
-                <p>04</p>
-                <p>Candidater</p>
-              </div>
-            </RouterLink>
-          </div>
-          <div class="menu-right__content-section1">
-            <RouterLink to="/espace-pro">
-              <img src="/image4.webp" alt="">
-              <div class="menu-right__content-section1-text">
-                <p>05</p>
-                <p>Espace pro</p>
-              </div>
-            </RouterLink>
-          </div>
-          <div class="menu-right__content-section1">
-            <RouterLink to="/contact">
-              <img src="/image5.webp" alt="">
-              <div class="menu-right__content-section1-text">
-                <p>06</p>
-                <p>Contact</p>
-              </div>
-            </RouterLink>
-          </div>
-          <div class="menu-right__content-section1">
-            <RouterLink to="/faq">
-              <img src="/faq_hover.webp" alt="">
-              <div class="menu-right__content-section1-text">
-                <p>07</p>
-                <p>FAQ</p>
-              </div>
-            </RouterLink>
-          </div>
-        </div>
-      </div>
-    </div>
+    </Transition>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.slide-enter-active, .slide-leave-active {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.slide-enter-from, .slide-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-enter-to, .slide-leave-from {
+  transform: translateX(0);
+  opacity: 1;
+}
 .header {
   padding: rem(20);
   z-index: 99;
@@ -266,9 +311,12 @@ onUnmounted(() => {
     align-items: center;
 
     &__logo {
-      img {
-        width: rem(45);
+        a{
+          img {
+          width: rem(45);
+        }
       }
+     
     }
 
     &__container {
@@ -287,23 +335,21 @@ onUnmounted(() => {
   }
 
   &-menu {
-
     &-center {
       width: fit-content;
       text-align: center;
       margin-left: rem(10);
-      margin-top: rem(10);
-
+      margin-top: rem(10);  
+      
       :nth-child(2) {
         width: rem(15);
       }
 
       div {
-
         transition: all .5s;
         width: rem(20);
         height: rem(.5);
-        background-color: $black;
+        background-color: $white;
         margin: rem(8) 0;
       }
 
@@ -316,8 +362,17 @@ onUnmounted(() => {
       border-radius: 50%;
       background: transparent;
       border: rem(1) solid;
-      border-color: $black ;
+      border-color: $white ;
       cursor: pointer;
+
+
+      &.-scrolled { 
+      border-color: $black;
+      
+      .header-menu-center div {
+        background-color: $black;
+      }
+    }
 
       &::before {
         content: '';
@@ -372,10 +427,12 @@ onUnmounted(() => {
     color: $gray-soft;
     padding-right: rem(25);
     margin-bottom: rem(20) ;
+    cursor: pointer;
     button {
       border: none;
       background: none;
       display: inline-flex;
+      cursor: pointer;
     }
   }
 
@@ -652,7 +709,6 @@ onUnmounted(() => {
         gap: rem(10);
         overflow-x: auto;
         position: relative;
-        
         &::-webkit-scrollbar {
           display: none;
         }
@@ -724,9 +780,12 @@ onUnmounted(() => {
 
     &-block {
       &__logo {
-        img {
+        a{
+          img {
           width: rem(40);
         }
+        }
+        
       }
 
       &__container {
@@ -755,9 +814,12 @@ onUnmounted(() => {
 
     &-block {
       &__logo {
-        img {
+        a{
+          img {
           width: rem(45);
         }
+        }
+       
       }
 
       &__container {
@@ -785,9 +847,9 @@ onUnmounted(() => {
     }
     &-content{
       &__text{
-        gap: 2.5rem;
+        gap: 1.8rem;
         a{
-          font-size: $size-32;
+          font-size: $size-28;
         }
       }
     }

@@ -2,6 +2,16 @@
 const { client } = usePrismic();
 const { data: home, error } = await useAsyncData('home', () => client.getSingle("homepage"))
 
+const props = defineProps ({ 
+  title: String, 
+  tagline: String, 
+  TopImage: String,
+  BottomImage : String, 
+  Button1 : String, 
+  Button2 : String,  
+  Button1Url : String, 
+  Button2Url : String, 
+})
 </script>
 
 <template>
@@ -9,17 +19,17 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
     <div class="container-hero__left">
       <div class="container-hero__left-main">
         <div class="container-hero__left-main-title">
-          <h1>Mmi Montbéliard</h1>
-          <h2>Métiers du Multimédia et de l'internet</h2>
+          <h1>{{title}}</h1>
+          <h2>{{tagline}}</h2>
         </div>
 
         <div class="container-hero__left-main-buttons">
-          <RouterLink to="/candidater">
-            <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">Candidater</Button>
-          </RouterLink>
-          <RouterLink to="/formation">
-            <Button size="small" bgColor="bgTransparent">Formation</Button>
-          </RouterLink>
+          <NuxtLink :to="Button1Url">
+            <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">{{Button1}}</Button>
+          </NuxtLink>
+          <NuxtLink :to="Button2Url">
+            <Button size="small" bgColor="bgTransparent">{{Button2}}</Button>
+          </NuxtLink>
         </div>
       </div>
 
@@ -40,13 +50,14 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
     </div>
 
     <div class="container-hero__right">
-      <img src="/image1.webp" alt="Cours en MMI">
-      <img src="/image3.webp" alt="Cours en MMI">
+      <img :src="TopImage"  class="hover-image" alt="Cours en MMI">
+      <img :src="BottomImage" class="hover-image" alt="Cours en MMI">
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+
 .container-hero {
   font-family: $font-poppins;
   border-bottom: 2px solid $white-soft;
@@ -68,7 +79,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
       flex: 1;
       justify-content: center;
       &-title {
-        margin-top: 60px;
+    margin-top: 60px;
       padding: rem(0) rem(35) rem(35) rem(35);
 
       :nth-child(1) {
@@ -150,6 +161,8 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
 
       &-main{
         &-title {
+   
+ 
         :nth-child(1) {
           font-size: 6.3vw;
         }

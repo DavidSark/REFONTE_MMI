@@ -13,6 +13,16 @@ useSeoMeta({
 </script>
 
 <template>
+   <div class="container__index-heroM">
+    <heroM title="Nous rejoindre" tagline="plusieurs façons de nous rejoindre" TopImage="/images/candidater-heroM-1.webp" BottomImage="/images/candidater-heroM-2.webp" Button1="Contact" Button2="Formation" Button1Url="/contact" Button2Url="/formation"></heroM>
+    </div>
+    <div class="container__index-heroT">
+        <HeroT title="Nous rejoindre" tagline="plusieurs façons de nous rejoindre" TopImage="images/candidater-heroM-1.webp" Button1="Contact" Button2="Formation" Button1Url="/contact" Button2Url="/formation"></HeroT>
+      </div>
+      <div class="container__index-heroC">
+        <heroC-hover  title="Nous rejoindre" tagline="plusieurs façons de nous rejoindre" TopImage="/images/candidater-heroM-1.webp" BottomImage="/images/candidater-heroM-2.webp" Button1="Contact" Button2="Formation" Button1Url="/contact" Button2Url="/formation"> 
+        </heroC-hover>
+      </div> 
   <div class="section1-candidater">
     <div class="section1-candidater__sideleft">
       <borderSection :title="canditater.data.section1[0].title" :subtitle="canditater.data.section1[0].subtitle" />
@@ -34,8 +44,46 @@ useSeoMeta({
 </template>
   
 <style lang="scss" >
+.container__index{
+  overflow: hidden;
+  //pour le hero
+  &-heroT{
+    display: none;
+  }
+  &-heroC{
+    display: none;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .container__index{
+    &-heroM{
+      display: none;
+    }
+    &-heroT{
+      display: block;
+    }
+  }
+}
+@media screen and (min-width:1024px) {
+  .container__index{
+    &-heroM{
+      display: none;
+    }
+    &-heroT{
+      display: none;
+    }
+    &-heroC{
+      display: block;
+    }
+  }
+}
+
 .section1-candidater {
   padding: rem(30) rem(20);
+  display: flex;
+  flex-direction: column;
+  gap: rem(50);
 
   &__sideleft {
     display: flex;
