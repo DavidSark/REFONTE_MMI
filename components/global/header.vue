@@ -117,9 +117,9 @@ onUnmounted(() => {
       <div v-if="isMenuOpen" class="menu">
         <!-- Contenu du menu ici -->
         <div class="menu-left">
-          <div class="menu-content__leave">
+          <div class="menu-content__leave" @click="toggleMenu">
             <p>quitter</p>
-            <button @click="toggleMenu">
+            <button>
               <img src="/icons/x.svg" alt="">
             </button>
           </div>
@@ -173,6 +173,14 @@ onUnmounted(() => {
               </div>
 
               <div class="menu-content__line"></div>
+
+              <div class="menu-content__text-flex">
+                <div class="bouton"></div>
+
+                <RouterLink to="/">
+                  <p>Accueil</p>
+                </RouterLink>
+              </div>
             </div>
           </div>
         </div>
@@ -239,6 +247,24 @@ onUnmounted(() => {
                 <div class="menu-right__content-section1-text">
                   <p>07</p>
                   <p>FAQ</p>
+                </div>
+              </RouterLink>
+            </div>
+            <div class="menu-right__content-section1">
+              <RouterLink to="/faq">
+                <img src="/image10.webp" alt="">
+                <div class="menu-right__content-section1-text">
+                  <p>08</p>
+                  <p>l'équipe</p>
+                </div>
+              </RouterLink>
+            </div>
+            <div class="menu-right__content-section1">
+              <RouterLink to="/faq">
+                <img src="/image13.webp" alt="">
+                <div class="menu-right__content-section1-text">
+                  <p>09</p>
+                  <p>Accueil</p>
                 </div>
               </RouterLink>
             </div>
@@ -396,10 +422,12 @@ onUnmounted(() => {
     color: $gray-soft;
     padding-right: rem(25);
     margin-bottom: rem(20) ;
+    cursor: pointer;
     button {
       border: none;
       background: none;
       display: inline-flex;
+      cursor: pointer;
     }
   }
 
@@ -676,7 +704,6 @@ onUnmounted(() => {
         gap: rem(10);
         overflow-x: auto;
         position: relative;
-        
         &::-webkit-scrollbar {
           display: none;
         }
@@ -809,9 +836,9 @@ onUnmounted(() => {
     }
     &-content{
       &__text{
-        gap: 2.5rem;
+        gap: 1.8rem;
         a{
-          font-size: $size-32;
+          font-size: $size-28;
         }
       }
     }
