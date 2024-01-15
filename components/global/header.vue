@@ -12,12 +12,15 @@ const props = defineProps({
 onMounted(() => {
   let scrolled = 0;
   let header = document.getElementsByClassName('header')[0];
+  let headerMenu = document.getElementsByClassName('header-menu')[0];
   document.addEventListener('scroll', (e) => {
     scrolled = window.scrollY;
     if (scrolled > 0) {
       header.classList.add('-bg-white');
+      headerMenu.classList.add('-scrolled');
     } else {
       header.classList.remove('-bg-white');
+      headerMenu.classList.remove('-scrolled');
     }
   });
 });
@@ -301,23 +304,21 @@ onUnmounted(() => {
   }
 
   &-menu {
-
     &-center {
       width: fit-content;
       text-align: center;
       margin-left: rem(10);
-      margin-top: rem(10);
-
+      margin-top: rem(10);  
+      
       :nth-child(2) {
         width: rem(15);
       }
 
       div {
-
         transition: all .5s;
         width: rem(20);
         height: rem(.5);
-        background-color: $black;
+        background-color: $white;
         margin: rem(8) 0;
       }
 
@@ -330,8 +331,17 @@ onUnmounted(() => {
       border-radius: 50%;
       background: transparent;
       border: rem(1) solid;
-      border-color: $black ;
+      border-color: $white ;
       cursor: pointer;
+
+
+      &.-scrolled { 
+      border-color: $black;
+      
+      .header-menu-center div {
+        background-color: $black;
+      }
+    }
 
       &::before {
         content: '';
