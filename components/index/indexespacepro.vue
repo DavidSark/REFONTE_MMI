@@ -44,7 +44,6 @@
             display: table-caption;
 
             span {
-                margin-left:10px;
                 color: $green;
             }
         }

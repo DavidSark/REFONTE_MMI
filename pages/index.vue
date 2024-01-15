@@ -110,7 +110,7 @@ useSeoMeta({
 
   .section5-index{
     position: relative;
-    margin: rem(80) rem(20);
+    
     &__line{
         position: absolute;
         bottom: rem(85);
@@ -122,7 +122,7 @@ useSeoMeta({
   }
 
   .section6-index{
-    margin: rem(80) rem(20);
+    margin: rem(880) rem(20);
   }
 }
 
@@ -151,8 +151,8 @@ useSeoMeta({
    .section4-index {
     margin: rem(50) rem(40);
   }
-  .section5-index, .section6-index{
-    margin: rem(120) rem(40);
+  .section5-index{
+   
   }
   }
 }
@@ -172,6 +172,7 @@ useSeoMeta({
  
     &__tagline{
       font-size: 4.7vw;
+     
       .hoverText{
         display: block;
       }
@@ -190,23 +191,21 @@ useSeoMeta({
   .container__index{
     .section1-index{
       // margin: rem(170) rem(75) rem(0) rem(75);
-   
+     
    }
-
    .section2-index{
     margin-top: 20vw ;
   }
-
    .section4-index{
     margin: rem(50) rem(75);
     &__tagline{
       font-size: $size-75;
     }
   }
-
-  .section5-index, .section6-index{
-    margin: rem(160) rem(75);
+  .section5-index{
+  
   }
+ 
   }
 }
 

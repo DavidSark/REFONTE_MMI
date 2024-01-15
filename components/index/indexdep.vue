@@ -7,19 +7,36 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
     <div class="section-indexdep">
         <div class="section-indexdep__text">
             <h2> <br/> département<span>.</span></h2>
-            <hoverText :textVisible="home.data.index_tagline" :textHidden="home.data.index_hidden" class="hoverText"></hoverText>  
+            <hoverTextDep :textVisible="home.data.index_departement" :textHidden="home.data.index_departementhidden" class="hoverText"></hoverTextDep>  
+            <PrismicRichText class="prismicHide" :field="home.data.index_departement"></PrismicRichText> 
         </div>
 
+
+            <RouterLink to="/departement">
+            <Button class="section-indexdep__btn-small" size="small">découvrir</Button>
+            </RouterLink>
           
 
-        <div class="section-indexdep__blackellipse2"></div>
+
+        <div class="section-indexdep__image">
+            <img src="/mmi_ellipse.webp" alt="image du département">
+            <img src="/mmi_ellipse2.webp" alt="image du département">
+            <img src="/mmi_ellipse3.webp" alt="image du département">
+            <div class="section-indexdep__blackellipse"></div>
+            <div class="section-indexdep__blackellipse3"></div>
+        </div>
+
+
+       
+
+    
     </div>
 </template>
 
 <style lang="scss" scoped>
 .section-indexdep {
+   
     position: relative;
-
     &__image {
         display: flex;
         align-items: center;
@@ -40,7 +57,6 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
             display: none;
         }
     }
-
     &__blackellipse {
         @include blackEllipse;
         width: rem(200);
@@ -54,33 +70,29 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
     &__text {
         font-family: $font-poppins;
         text-transform: uppercase;
-        margin-bottom: rem(15);
-        font-weight: 300;
-        
-
         h2 {
             letter-spacing: -9%;
             font-size: $size-32;
             font-weight: 700;
             font-family: $font-redhat;
+            margin: rem(0) rem(20);
             margin-bottom: rem(15);
-
             span {
                 color: $blue;
             }
         }
-
-        p {
+        .prismicHide{
             font-size: $size-16;
+            margin: rem(0) rem(20);
+           
         }
-
-        span {
-            font-weight: 700;
+        .hoverText{
+            display: none;
         }
     }
 
-    &__btn-big  {      
-            display: none;
+    &__btn-small{
+        margin: rem(20) rem(20);
     }
 }
 
@@ -90,10 +102,6 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
         &__text {
             h2 {
                 //font-size: $size-24;
-            }
-            p {
-                // font-size: $size-16;
-                max-width: rem(500);
             }
         }
 
@@ -109,19 +117,20 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
 
 @media screen and (min-width:768px) {
     .section-indexdep {
-        &__text {
-            h2 {
-                // font-size: $size-32;
-            }
-
-            p {
-                max-width: rem(600);
-                font-size: $size-24;
-            }
+        h2{
+            margin: rem(0) rem(40);
         }
-
+        .prismicHide{
+            max-width: rem(600);
+            font-size: $size-24;
+            margin: rem(20) rem(40)  
+        }
         &__blackellipse {
             right: rem(-90);
+        }
+                
+        &__btn-small{
+            margin: rem(20) rem(40);
         }
     }
 }
@@ -131,14 +140,25 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
         &__text {
             h2 {
                 font-size: 7.5vw;
-                margin-bottom: rem(40);
-            }
-
-            p {
-                max-width: initial;
-                font-size: 4vw;
+                margin: rem(0) rem(40);
             }
         }
+
+        &__image{
+            margin-top: rem(320) ;
+        }
+        .hoverText{
+            display: block;
+            font-size: 4vw;
+        }
+
+        .prismicHide{
+            display: none;
+        }
+
+       a{
+        display: none;
+       }
 
         &__blackellipse {
             display: none;
@@ -154,16 +174,23 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
             z-index: -1;
             
         }
+        
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .section-indexdep {
+        .section-indexdep {
+            
         h2 {
-            margin-bottom: rem(60);
+            margin: rem(0) rem(75) ;
             letter-spacing: -9px;
         }
-
+        &__image{
+            margin-top: rem(420) ;
+        }
+.hoverText{
+    font-size: $size-75 ;
+}
        &__btn-big{
         display: block;
        }
@@ -191,17 +218,17 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
     }
 }
 
-@media screen and (min-width:1760px) {
-    .section-indexdep {
-        &__text {
-            h2 {
-                font-size: $size-123
-            }
+// @media screen and (min-width:1760px) {
+//     .section-indexdep {
+//         &__text {
+//             h2 {
+//                 font-size: $size-123
+//             }
 
-            p {
-                font-size: $size-75
-            }
-        }
-    }
-}
+//             p {
+//                 font-size: $size-75
+//             }
+//         }
+//     }
+// }
 </style>
