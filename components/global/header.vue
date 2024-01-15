@@ -91,7 +91,9 @@ onUnmounted(() => {
   <div class="header">
     <div class="header-block">
       <div class="header-block__logo" v-for="item in elements">
-        <img :src="item.header_logo.url" :alt="item.header_logo.alt">
+        <router-link to="/">
+          <img :src="item.header_logo.url" :alt="item.header_logo.alt">
+      </router-link>
       </div>
       <div class="header-block__container">
         <div class="header-block__container-square">
@@ -120,7 +122,7 @@ onUnmounted(() => {
           <div class="menu-content__leave" @click="toggleMenu">
             <p>quitter</p>
             <button>
-              <img src="/icons/x.svg" alt="">
+              <img src="/icons/x.svg" alt="image de MMI">
             </button>
           </div>
 
@@ -189,7 +191,7 @@ onUnmounted(() => {
           <div class="menu-right__content">
             <div class="menu-right__content-section1">
               <RouterLink to="/formation">
-                <img src="/image1.webp" alt="">
+                <img src="/image1.webp" alt="image de MMI">
                 <div class="menu-right__content-section1-text">
                   <p>01</p>
                   <p>La formation</p>
@@ -198,7 +200,7 @@ onUnmounted(() => {
             </div>
             <div class="menu-right__content-section1">
               <RouterLink to="/departement">
-                <img src="/image-dep-card3.webp" alt="">
+                <img src="/image-dep-card3.webp" alt="image de MMI">
                 <div class="menu-right__content-section1-text" >
                   <p>02</p>
                   <p>Le département</p>
@@ -207,7 +209,7 @@ onUnmounted(() => {
             </div>
             <div class="menu-right__content-section1">
               <RouterLink to="/international">
-                <img src="/image-international-2.webp" alt="">
+                <img src="/image-international-2.webp" alt="image de MMI">
                 <div class="menu-right__content-section1-text -03">
                   <p>03</p>
                   <p>International</p>
@@ -216,7 +218,7 @@ onUnmounted(() => {
             </div>
             <div class="menu-right__content-section1">
               <RouterLink to="/candiater">
-                <img src="/candidater_hover.webp" alt="">
+                <img src="/candidater_hover.webp" alt="image de MMI">
                 <div class="menu-right__content-section1-text">
                   <p>04</p>
                   <p>Candidater</p>
@@ -225,7 +227,7 @@ onUnmounted(() => {
             </div>
             <div class="menu-right__content-section1">
               <RouterLink to="/espace-pro">
-                <img src="/image4.webp" alt="">
+                <img src="/image4.webp" alt="image de MMI">
                 <div class="menu-right__content-section1-text">
                   <p>05</p>
                   <p>Espace pro</p>
@@ -234,7 +236,7 @@ onUnmounted(() => {
             </div>
             <div class="menu-right__content-section1">
               <RouterLink to="/contact">
-                <img src="/image5.webp" alt="">
+                <img src="/image5.webp" alt="image de MMI">
                 <div class="menu-right__content-section1-text">
                   <p>06</p>
                   <p>Contact</p>
@@ -243,7 +245,7 @@ onUnmounted(() => {
             </div>
             <div class="menu-right__content-section1">
               <RouterLink to="/faq">
-                <img src="/faq_hover.webp" alt="">
+                <img src="/faq_hover.webp" alt="image de MMI">
                 <div class="menu-right__content-section1-text">
                   <p>07</p>
                   <p>FAQ</p>
@@ -251,8 +253,8 @@ onUnmounted(() => {
               </RouterLink>
             </div>
             <div class="menu-right__content-section1">
-              <RouterLink to="/faq">
-                <img src="/image10.webp" alt="">
+              <RouterLink to="/equipe-pedagogique">
+                <img src="/image10.webp" alt="image de MMI">
                 <div class="menu-right__content-section1-text">
                   <p>08</p>
                   <p>l'équipe</p>
@@ -260,8 +262,8 @@ onUnmounted(() => {
               </RouterLink>
             </div>
             <div class="menu-right__content-section1">
-              <RouterLink to="/faq">
-                <img src="/image13.webp" alt="">
+              <RouterLink to="/">
+                <img src="/image13.webp" alt="image de MMI">
                 <div class="menu-right__content-section1-text">
                   <p>09</p>
                   <p>Accueil</p>
@@ -269,7 +271,7 @@ onUnmounted(() => {
               </RouterLink>
             </div>
           </div>
-        </div>
+        </div>f
       </div>
     </Transition>
   </div>
@@ -309,9 +311,12 @@ onUnmounted(() => {
     align-items: center;
 
     &__logo {
-      img {
-        width: rem(45);
+        a{
+          img {
+          width: rem(45);
+        }
       }
+     
     }
 
     &__container {
@@ -775,9 +780,12 @@ onUnmounted(() => {
 
     &-block {
       &__logo {
-        img {
+        a{
+          img {
           width: rem(40);
         }
+        }
+        
       }
 
       &__container {
@@ -806,9 +814,12 @@ onUnmounted(() => {
 
     &-block {
       &__logo {
-        img {
+        a{
+          img {
           width: rem(45);
         }
+        }
+       
       }
 
       &__container {
