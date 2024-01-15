@@ -20,7 +20,6 @@ useSeoMeta({
 <template>
   <scrollbar/>
     <div class="container__index">
-
         <div class="container__index-heroM">
         <HeroM title="MMI Montbéliard" tagline="Métiers du Multimédia et de l'Internet" TopImage="/image1.webp" BottomImage="/image3.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></HeroM>
       </div>
@@ -34,7 +33,7 @@ useSeoMeta({
 
       <div class="section1-index" id="section1"  >
         <div class="section1-index__tagline">
-          <hoverText class="hoverText"></hoverText>  
+          <hoverText :textVisible="home.data.index_tagline" :textHidden="home.data.index_hidden" class="hoverText"></hoverText>  
           <PrismicRichText class="prismicHide" :field="home.data.index_tagline"></PrismicRichText> 
         </div>
       </div>
@@ -68,8 +67,6 @@ useSeoMeta({
 
 
 <style lang="scss" >
-
-
 .container__index{
   overflow: hidden;
   //pour le hero
@@ -80,7 +77,7 @@ useSeoMeta({
     display: none;
   }
   .section1-index{
-    margin: rem(50) rem(20);
+    // margin: rem(50) rem(20);
     &__tagline{
       font-family: $font-redhat;
       letter-spacing: -3%;
@@ -93,13 +90,17 @@ useSeoMeta({
       .hoverText{
         display: none;
       }
-     
+
+      .prismicHide{
+        margin: rem(60) rem(20);
+      }
     }
   }
 
   .section2-index{
     img{
       width: 100%;
+     
     }
   }
 
@@ -135,13 +136,18 @@ useSeoMeta({
     }
 
     .section1-index{
-      padding: rem(90) rem(0);
+      // padding: rem(90) rem(0);
       max-width: rem(1200);
-    &__tagline{
-      font-size: $size-32;
-    }
+      &__tagline{
+        font-size: $size-32;
+      }
+      .prismicHide{
+        margin: rem(60) rem(35);
+      }
+
    }
 
+  
    .section4-index {
     margin: rem(50) rem(40);
   }
@@ -162,7 +168,8 @@ useSeoMeta({
       display: block;
     }
     .section1-index{
-      margin: rem(130) rem(40);
+      // margin: rem(130) rem(40);
+ 
     &__tagline{
       font-size: 4.7vw;
       .hoverText{
@@ -173,15 +180,23 @@ useSeoMeta({
       }
     }
    }
+   .section2-index{
+    margin-top: 25vw ;
+  }
   }
 }
 
 @media screen and (min-width:1440px) {
   .container__index{
     .section1-index{
-      margin: rem(170) rem(75);
-      max-width: rem(1500);
+      // margin: rem(170) rem(75) rem(0) rem(75);
+   
    }
+
+   .section2-index{
+    margin-top: 20vw ;
+  }
+
    .section4-index{
     margin: rem(50) rem(75);
     &__tagline{

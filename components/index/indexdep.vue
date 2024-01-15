@@ -1,29 +1,17 @@
 <script setup>
-
+const { client } = usePrismic();
+const { data: home, error } = await useAsyncData('home', () => client.getSingle("homepage"))
 </script>
 
 <template>
     <div class="section-indexdep">
         <div class="section-indexdep__text">
             <h2> <br/> département<span>.</span></h2>
-            <p>Un environnement propice <span>au développement des étudiants.</span></p>
+            <hoverText :textVisible="home.data.index_tagline" :textHidden="home.data.index_hidden" class="hoverText"></hoverText>  
         </div>
 
-             <RouterLink to="/departement" >
-            <Button class="section-indexdep__btn-small" size="small">découvrir</Button>
-            </RouterLink>
-            <RouterLink to="/departement">
-            <Button size="small" class="section-indexdep__btn-big">découvrir</Button>
-            </RouterLink>
-        
+          
 
-        <div class="section-indexdep__image">
-            <img src="/mmi_ellipse.webp" alt="image du département">
-            <img src="/mmi_ellipse2.webp" alt="image du département">
-            <img src="/mmi_ellipse3.webp" alt="image du département">
-            <div class="section-indexdep__blackellipse"></div>
-            <div class="section-indexdep__blackellipse3"></div>
-        </div>
         <div class="section-indexdep__blackellipse2"></div>
     </div>
 </template>
