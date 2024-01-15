@@ -77,7 +77,6 @@ useSeoMeta({
     display: none;
   }
   .section1-index{
-    // margin: rem(50) rem(20);
     &__tagline{
       font-family: $font-redhat;
       letter-spacing: -3%;
@@ -121,9 +120,6 @@ useSeoMeta({
     }
   }
 
-  .section6-index{
-    margin: rem(880) rem(20);
-  }
 }
 
 @media screen and (min-width:768px) {
@@ -147,12 +143,8 @@ useSeoMeta({
 
    }
 
-  
    .section4-index {
     margin: rem(50) rem(40);
-  }
-  .section5-index{
-   
   }
   }
 }
@@ -168,11 +160,8 @@ useSeoMeta({
       display: block;
     }
     .section1-index{
-      // margin: rem(130) rem(40);
- 
     &__tagline{
       font-size: 4.7vw;
-     
       .hoverText{
         display: block;
       }
@@ -189,10 +178,6 @@ useSeoMeta({
 
 @media screen and (min-width:1440px) {
   .container__index{
-    .section1-index{
-      // margin: rem(170) rem(75) rem(0) rem(75);
-     
-   }
    .section2-index{
     margin-top: 20vw ;
   }
@@ -202,10 +187,6 @@ useSeoMeta({
       font-size: $size-75;
     }
   }
-  .section5-index{
-  
-  }
- 
   }
 }
 

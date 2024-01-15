@@ -130,7 +130,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
         }
                 
         &__btn-small{
-            margin: rem(20) rem(40);
+            margin: rem(0) rem(40);
         }
     }
 }

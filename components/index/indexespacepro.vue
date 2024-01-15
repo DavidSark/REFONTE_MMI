@@ -1,23 +1,23 @@
 <script setup>
-
+const { client } = usePrismic();
+const { data: home, error } = await useAsyncData('home', () => client.getSingle("homepage"));
 </script>
 
 <template>
      <div class="section-espacepro">
         <div class="section-espacepro__text">
             <h2>Espace professionnel<span>.</span></h2>
-            <p>nous sommes ravis de pouvoir aider <span>des entreprises en réalisant leur projet.</span></p>
+            <hoverTextDep :textVisible="home.data.index_pro" :textHidden="home.data.index_prohidden" class="hoverText"></hoverTextDep>  
+            <PrismicRichText class="prismicHide" :field="home.data.index_pro"></PrismicRichText> 
         </div>
 
-            <RouterLink to="/espace-pro" >
-            <Button class="section-espacepro__btn-small" size="small">déposer une offre</Button>
-            </RouterLink>
+          
             <RouterLink to="/espace-pro">
-            <Button size="small" class="section-espacepro__btn-big">déposer une offre</Button>
+                <Button size="small" class="section-espacepro__btn-small">déposer une offre</Button>
             </RouterLink>
      
 
-        
+
         <div class="section-espacepro__image">
             <img src="/image-espacepro.webp" alt="">
             <div class="section-espacepro__image-line"></div>
@@ -40,7 +40,7 @@
             font-family: $font-redhat;
             font-size: $size-32;
             font-weight: 700;
-            margin-bottom: rem(15);
+            margin: rem(50) rem(20) rem(15) rem(20);
             display: table-caption;
 
             span {
@@ -48,18 +48,10 @@
             }
         }
 
-        p {
-            font-size: $size-16;
-        }
-
-        span {
-            font-weight: 700;
+        .prismicHide{
+            margin:rem(0) rem(20);
         }
     }
-    
-   &__btn-big{
-    display: none;
-   }
 
     &__image {
         position: relative;
@@ -88,6 +80,14 @@
 
     }
     }
+
+    .hoverText{
+        display: none;
+    }
+
+    &__btn-small{
+        margin:rem(0) rem(20)
+    }
 }
 
 @media screen and (min-width:425px) {
@@ -104,40 +104,37 @@
     }
 }
 
-@media screen and (min-width:480px) {
-    .section-espacepro{
-       &__text{
-            p {
-                max-width: rem(500);
-            }
-       }
-    }
-}
 
 @media screen and (min-width:768px) {
     .section-espacepro{
+        h2{
+            margin: rem(0) rem(40);
+        }
         &__image{
             img{
                 width: 60%;
             }
         }
-        &__text {
-            p {
-                max-width: rem(600);
-                font-size: $size-24;
-            }
-        }  
+        .prismicHide{
+            max-width: rem(600);
+            font-size: $size-24;
+            margin: rem(20) rem(40)  
+        }
+
+        &__btn-small{
+            margin: rem(0) rem(40);
+        }
     }
 }
 @media screen and (min-width:1024px) {
     .section-espacepro{
         &__image{
+            margin-top: rem(285) ;
             img{
                 max-width: rem(560);
                 max-height: rem(360);
             }
         }
-
         &__text {
             h2 {
                 font-size: 7.5vw;
@@ -146,11 +143,19 @@
             letter-spacing: -9px;
             }
 
-            p {
-                max-width: initial;
+            .prismicHide{
+                display: none;
+            }
+           
+
+            .hoverText{
+                display: block;
                 font-size: 4vw;
             }
         }
+         a{
+                display: none;
+            }
     }
 }
 @media screen and (min-width:1440px) {
@@ -162,7 +167,14 @@
                 transform: initial;
             }
         }
+        h2 {
+            margin: rem(0) rem(75) ;
+            letter-spacing: -9px;
+        }
 
+        &__image{
+            margin-top: rem(393) ;
+        }
         &__btn-big{
             display: block;
         }
