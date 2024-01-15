@@ -34,7 +34,8 @@ useSeoMeta({
 
       <div class="section1-index" id="section1"  >
         <div class="section1-index__tagline">
-         <PrismicRichText :field="home.data.index_tagline"></PrismicRichText>
+          <hoverText class="hoverText"></hoverText>  
+          <PrismicRichText class="prismicHide" :field="home.data.index_tagline"></PrismicRichText> 
         </div>
       </div>
 
@@ -89,6 +90,10 @@ useSeoMeta({
       strong{
        font-weight: 700;
       }
+      .hoverText{
+        display: none;
+      }
+     
     }
   }
 
@@ -160,7 +165,12 @@ useSeoMeta({
       margin: rem(130) rem(40);
     &__tagline{
       font-size: 4.7vw;
- 
+      .hoverText{
+        display: block;
+      }
+      .prismicHide{
+        display: none;
+      }
     }
    }
   }
