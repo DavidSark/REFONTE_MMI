@@ -39,7 +39,9 @@ useSeoMeta({
       </div>
 
       <div class="section2-index">
-        <img src="/image-video-dep.webp" alt="Image département">
+        <video controls="">
+          <source src="/video_introduction_MMI.mp4" type="video/mp4" />
+        </video>
       </div>
   
       <div class="section3-index">  
@@ -95,7 +97,7 @@ useSeoMeta({
     }
   }
   .section2-index{
-    img{
+    video{
       width: 100%;
      
     }
