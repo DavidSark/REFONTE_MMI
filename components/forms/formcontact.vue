@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from 'vue';
+import axios from 'axios'; 
 const { client } = usePrismic();
 const { data: contact, error } = await useAsyncData('contact', () => client.getSingle("contact"));
 
@@ -6,6 +8,41 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
   
 });
 
+
+
+//API MAIL
+const formValues = ref({
+  lastName: '',
+  email: '',
+  message: ''
+});
+
+const showSuccessPopup = ref(false);
+const showErrorPopup = ref(false);
+
+const handleSubmit = async () => {
+  try {
+    const response = await axios.post('http://localhost:3001/api', formValues.value);
+    console.log(formValues.value)
+    if (response.status === 200) {
+
+      formValues.value = {
+        lastName: '',
+        email: '',
+        message: ''
+      };
+
+      showSuccessPopup.value = true;
+      setTimeout(() => {
+        showSuccessPopup.value = false;
+      }, 5000);
+    } else {
+      console.error('Une erreur s\'est produite lors de l\'envoi du formulaire.');
+    }
+  } catch (error) {
+    console.error('Une erreur s\'est produite lors de la soumission du formulaire :', error);
+  }
+};
 </script>
 
 <template>
@@ -16,18 +53,18 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     <p>Contactez-nous</p>
 
   </div>
-  <form class="form-contact__form" id="contactForm" action="http://localhost:3001/contact" method="POST">
+  <form class="form-contact__form" id="contactForm" @submit.prevent="handleSubmit" method="POST">
   <div class="form-contact__input">
     <label for="nom">Prénom & NOM</label>
-    <input type="text" id="nom" name="nom" required placeholder="Prénom & NOM...">
+    <input type="text" id="lastName" name="lastName" v-model="formValues.lastName" required placeholder="Prénom & NOM...">
   </div>
   <div class="form-contact__input">
     <label for="email">Email</label>
-    <input type="email" id="email" name="email" required  placeholder="youremail@gmail.com....">
+    <input type="email" id="email" name="email" required v-model="formValues.email"   placeholder="youremail@gmail.com....">
   </div>
   <div class="form-contact__input">
     <label for="message">Message</label>
-    <input type="text" id="message" name="message" required  placeholder="Votre message...">
+    <input type="text" id="message" name="message" required v-model="formValues.message"  placeholder="Votre message...">
   </div>
   <input class="form-contact__submit" type="submit" value="Envoyer">
 </form>
@@ -37,7 +74,13 @@ const { data: contact, error } = await useAsyncData('contact', () => client.getS
     
 
   </div>
+       <div v-if="showSuccessPopup" class="success-popup">
+        <p>Message envoyé avec succès !</p>
+      </div>
 
+      <div v-if="showErrorPopup" class="error-popup">
+        <p>Une erreur s'est produite lors de l'envoi du message.</p>
+    </div>
 </div>
 
 </template>

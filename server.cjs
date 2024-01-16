@@ -1,9 +1,13 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const cors = require('cors'); // Ajouter ceci
 require('dotenv').config();
 
 const app = express();
+
+// Utiliser CORS. Vous pouvez configurer les options de CORS selon vos besoins
+app.use(cors());
 
 const contactEmail = nodemailer.createTransport({
   port: 465,
@@ -13,28 +17,28 @@ const contactEmail = nodemailer.createTransport({
     pass: process.env.EMAIL_PASSWORD,
   },
   secure: true,
-  authMethod: 'PLAIN'
 });
 
 contactEmail.verify((error) => {
   if (error) {
     console.log(error);
   } else {
-    console.log("ready to send");
+    console.log("Ready to send");
   }
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.post("/test", (req, res) => {
+
+app.post("/api", (req, res) => {
   console.log('premier console log')
-  const nom = req.body.lastName + ' ' + req.body.firstName;
+  const nom = req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
 
   const mail = {
-    from: `"${nom}" <${process.env.EMAIL_ADDRESS}>"`,
+    from: `<${process.env.EMAIL_ADDRESS}>`,
     to: process.env.EMAIL_ADDRESS,
     subject: "Contact form submission",
     html: `<p>Name : ${nom}</p>` +
@@ -42,17 +46,14 @@ app.post("/test", (req, res) => {
       `<p>Message : ${message}</p>`
   };
 
-  console.log("Formulaire envoyé à l'adresse : ", mail.to);
+  //console.log("Formulaire envoyé à l'adresse : ", mail.to);
 
   contactEmail.sendMail(mail, (error) => {
     if (error) {
       res.json(error);
-      console.log("gegeg");
-      console.log("TEST");
     } else {
       res.json({ code: 200, status: "Message sent" });
-      console.log('test2');
-      console.log(response);
+      //console.log('Envoyé avec succés');
     }
   });
 });
