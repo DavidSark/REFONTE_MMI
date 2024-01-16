@@ -20,46 +20,46 @@ useSeoMeta({
 <template>
   <scrollbar/>
     <div class="container__index">
-
         <div class="container__index-heroM">
-        <HeroM></HeroM>
+        <HeroM title="MMI Montbéliard" tagline="Métiers du Multimédia et de l'Internet" TopImage="/image1.webp" BottomImage="/image3.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></HeroM>
       </div>
     
       <div class="container__index-heroT">
-        <HeroT></HeroT>
+        <HeroT  title="MMI Montbéliard" tagline="Métiers du Multimédia et de l'Internet" TopImage="/image1.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></HeroT>
       </div>
       <div class="container__index-heroC">
         <HeroC></HeroC>
       </div> 
 
-      <div class="section1-index" id="section1">
+      <div class="section1-index" id="section1"  >
         <div class="section1-index__tagline">
-         <PrismicRichText :field="home.data.index_tagline"></PrismicRichText>
+          <hoverText :textVisible="home.data.index_tagline" :textHidden="home.data.index_hidden" class="hoverText"></hoverText>  
+          <PrismicRichText class="prismicHide" :field="home.data.index_tagline"></PrismicRichText> 
         </div>
       </div>
 
       <div class="section2-index">
-        <img src="/image-video-dep.webp" alt="">
+        <img src="/image-video-dep.webp" alt="Image département">
       </div>
-
+  
       <div class="section3-index">  
-          <indexparcour/>
+        <index-parcour/>
       </div>
   
       <div class="section4-index">
           <indexcards/>
       </div>
 
-      <div class="section5-index" id="section2">
+      <div class="section5-index" id="section2"  >
         <indexdep/>
         <div class="section5-index__line"></div>
       </div>
 
-      <div class="section6-index" id="section3">
+      <div class="section6-index" id="section3"  >
         <indexespacepro/>       
       </div>
 
-      <div class="section7-index" id="section4">
+      <div class="section7-index" id="section4" >
         <indexactualite/>       
       </div>
   </div>
@@ -77,7 +77,6 @@ useSeoMeta({
     display: none;
   }
   .section1-index{
-    margin: rem(50) rem(20);
     &__tagline{
       font-family: $font-redhat;
       letter-spacing: -3%;
@@ -87,12 +86,20 @@ useSeoMeta({
       strong{
        font-weight: 700;
       }
+      .hoverText{
+        display: none;
+      }
+
+      .prismicHide{
+        margin: rem(60) rem(20);
+      }
     }
   }
 
   .section2-index{
     img{
       width: 100%;
+     
     }
   }
 
@@ -102,7 +109,7 @@ useSeoMeta({
 
   .section5-index{
     position: relative;
-    margin: rem(80) rem(20);
+    
     &__line{
         position: absolute;
         bottom: rem(85);
@@ -113,9 +120,6 @@ useSeoMeta({
     }
   }
 
-  .section6-index{
-    margin: rem(80) rem(20);
-  }
 }
 
 @media screen and (min-width:768px) {
@@ -128,18 +132,19 @@ useSeoMeta({
     }
 
     .section1-index{
-      padding: rem(90) rem(0);
+      // padding: rem(90) rem(0);
       max-width: rem(1200);
-    &__tagline{
-      font-size: $size-32;
-    }
+      &__tagline{
+        font-size: $size-32;
+      }
+      .prismicHide{
+        margin: rem(60) rem(35);
+      }
+
    }
 
    .section4-index {
     margin: rem(50) rem(40);
-  }
-  .section5-index, .section6-index{
-    margin: rem(120) rem(40);
   }
   }
 }
@@ -155,30 +160,32 @@ useSeoMeta({
       display: block;
     }
     .section1-index{
-      margin: rem(130) rem(40);
     &__tagline{
       font-size: 4.7vw;
- 
+      .hoverText{
+        display: block;
+      }
+      .prismicHide{
+        display: none;
+      }
     }
    }
+   .section2-index{
+    margin-top: 25vw ;
+  }
   }
 }
 
 @media screen and (min-width:1440px) {
   .container__index{
-    .section1-index{
-      margin: rem(170) rem(75);
-      max-width: rem(1500);
-   }
+   .section2-index{
+    margin-top: 20vw ;
+  }
    .section4-index{
     margin: rem(50) rem(75);
     &__tagline{
       font-size: $size-75;
     }
-  }
-
-  .section5-index, .section6-index{
-    margin: rem(160) rem(75);
   }
   }
 }

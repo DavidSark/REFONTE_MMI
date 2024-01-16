@@ -41,7 +41,7 @@
     }
     &-title{
         margin-top: rem(10);
-        font-family: $font-redhat;
+        font-family: $font-poppins;
         font-size: $size-20;
         text-transform: uppercase;
         border-left: rem(6) solid;

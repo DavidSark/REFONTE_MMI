@@ -12,7 +12,7 @@ const props = defineProps({
 
 <template>
   <div class="image-container">
-    <img :src="image" :alt="alt" class="image">
+    <img :src="image" alt="Parcours" class="image">
     <div class="text-container">
       <PrismicRichText :field="title"></PrismicRichText>
     </div>

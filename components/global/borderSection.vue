@@ -201,6 +201,7 @@
     &-sideleft {
         &__borderT{
         @include borderColorTitle;
+        border-color: $blue;
         
         &.-right {
           border-right: 15px solid;

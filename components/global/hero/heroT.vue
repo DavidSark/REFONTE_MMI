@@ -2,6 +2,17 @@
 const { client } = usePrismic();
 const { data: home, error } = await useAsyncData('home', () => client.getSingle("homepage"))
 
+
+const props = defineProps ({ 
+  title: String, 
+  tagline: String, 
+  TopImage: String,
+  Button1 : String, 
+  Button2 : String,  
+  Button1Url : String, 
+  Button2Url : String, 
+})
+
 </script>
 
 <template>
@@ -9,12 +20,16 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
     <div class="container-hero__left">
       <div class="container-hero__left-main">
         <div class="container-hero__left-main-title">
-          <h1>Mmi Montbéliard</h1>
-          <h2>Métiers du Multimédia et de l'internet</h2>
+          <h1>{{ title }}</h1>
+          <h2>{{ tagline }}</h2>
         </div>
         <div class="container-hero__left-main-buttons">
-          <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">Candidater</Button>
-          <Button size="small" bgColor="bgTransparent">Formation</Button>
+          <NuxtLink :to="Button1Url" >
+          <Button size="small" bgColor="bgBlue" borderColor="borderBlue" color="white">{{Button1}}</Button>
+          </NuxtLink>
+          <NuxtLink :to="Button2Url" >
+          <Button size="small" bgColor="bgTransparent">{{ Button2 }}</Button>
+          </NuxtLink>
         </div>
       </div>
       <div class="container-hero__left-social">
@@ -32,8 +47,9 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
     </div>
 
     <div class="container-hero__right">
-      <img src="/image1.webp" alt="Cours en MMI">
+      <sliderT/>
     </div>
+    
   </div>
 </template>
 
@@ -67,7 +83,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
           font-weight: 300;
           font-size: $size-16;
           letter-spacing: rem(3);
-          color: $gray-soft;
+          color: $gray-black;
           text-transform: uppercase;
         }
       }

@@ -40,8 +40,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
     </div>
 
     <div class="container-hero__right">
-      <img src="/image1.webp" alt="Cours en MMI">
-      <img src="/image3.webp" alt="Cours en MMI">
+     <slider></slider>
     </div>
   </div>
 </template>
@@ -68,6 +67,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
       flex: 1;
       justify-content: center;
       &-title {
+        margin-top: 60px;
       padding: rem(0) rem(35) rem(35) rem(35);
 
       :nth-child(1) {
@@ -82,7 +82,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
       :nth-child(2) {
         font-size: $size-16;
         letter-spacing: rem(3);
-        color: $gray-soft;
+        color: $gray-black;
         text-transform: uppercase;
       }
     }
@@ -132,6 +132,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
     display: flex;
     gap: rem(5);
     overflow: hidden;
+    flex: 1;
 
     img {
       width: 50%;
