@@ -322,7 +322,7 @@ onUnmounted(() => {
     }
 
     &__container {
-      margin: 0 rem(10);
+      margin: 0 rem(5);
       display: flex;
 
       justify-content: space-between;
@@ -373,9 +373,6 @@ onUnmounted(() => {
       .header-menu-center div {
         background-color: $black;
       }
-
-      
-
 
     }
 
@@ -558,8 +555,10 @@ onUnmounted(() => {
           }
         }
 
+        
+
         &-square {
-          margin-left: rem(15);
+          margin-left: rem(0);
         }
       }
     }
@@ -768,10 +767,6 @@ onUnmounted(() => {
           }
 
           &-text {
-          
-         
-      
-
             :nth-child(1) {
               font-size: $size-80;
               font-weight: 600;
@@ -796,27 +791,24 @@ onUnmounted(() => {
   }
   .header {
     font-size: $size-21;
-
     &-block {
       &__logo {
         a{
           img {
-          width: rem(40);
+          width: rem(60);
         }
         }
-        
       }
-
       &__container {
         &-text {
           :nth-child(2) {
-            margin: 0 rem(20);
+            margin: 0 rem(10);
             height: rem(18);
           }
         }
 
         &-square {
-          margin-left: rem(10);
+          margin-left: rem(2);
           width: rem(15);
           height: rem(20);
         }
@@ -835,7 +827,8 @@ onUnmounted(() => {
       &__logo {
         a{
           img {
-          width: rem(45);
+            width: rem(64);
+            height: rem(25);
         }
         }
        
@@ -851,7 +844,7 @@ onUnmounted(() => {
         
 
         &-square {
-          margin-left: rem(20);
+          margin: rem(0) rem(5) rem(0) rem(0);
           width: rem(15);
           height: rem(20);
         }

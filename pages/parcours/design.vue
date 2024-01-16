@@ -243,7 +243,7 @@ useSeoMeta({
 @media(min-width : 1750px) {
     .section4-design{
 
-        display: none;
+      
     }
 }
 
