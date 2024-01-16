@@ -89,13 +89,11 @@ useSeoMeta({
       .hoverText{
         display: none;
       }
-
       .prismicHide{
         margin: rem(60) rem(20);
       }
     }
   }
-
   .section2-index{
     img{
       width: 100%;
@@ -161,7 +159,7 @@ useSeoMeta({
     }
     .section1-index{
     &__tagline{
-      font-size: 4.7vw;
+      font-size: 4.5vw;
       .hoverText{
         display: block;
       }

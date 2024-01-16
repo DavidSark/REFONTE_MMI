@@ -16,31 +16,56 @@ useSeoMeta({
 
 <template>
   <div class="container__index-heroM">
-    <heroM title="Mentions légales" tagline="MÉTIERS DU MULTIMÉDIA ET DE L’INTERNET" TopImage="/images/mentionslegales-heroM-1.webp" BottomImage="/images/mentionslegales-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></heroM>
-    </div>
-    <div class="container__index-heroT">
-        <HeroT title="Mentions légales" tagline="MÉTIERS DU MULTIMÉDIA ET DE L’INTERNET" TopImage="images/mentionslegales-heroM-1.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></HeroT>
-      </div>
-      <div class="container__index-heroC">
-        <heroC-hover  title="Mentions légales" tagline="MÉTIERS DU MULTIMÉDIA ET DE L’INTERNET" TopImage="/images/mentionslegales-heroM-1.webp" BottomImage="/images/mentionslegales-heroM-2.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"> 
-        </heroC-hover>
-      </div> 
+    <heroM title="Mentions légales" tagline="MÉTIERS DU MULTIMÉDIA ET DE L’INTERNET"
+      TopImage="/images/mentionslegales-heroM-1.webp" BottomImage="/images/mentionslegales-heroM-2.webp"
+      Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation"></heroM>
+  </div>
+  <div class="container__index-heroT">
+    <HeroT title="Mentions légales" tagline="MÉTIERS DU MULTIMÉDIA ET DE L’INTERNET"
+      TopImage="images/mentionslegales-heroM-1.webp" Button1="Candidater" Button2="Formation" Button1Url="/candidater"
+      Button2Url="/formation"></HeroT>
+  </div>
+  <div class="container__index-heroC">
+    <heroC-hover title="Mentions légales" tagline="MÉTIERS DU MULTIMÉDIA ET DE L’INTERNET"
+      TopImage="/images/mentionslegales-heroM-1.webp" BottomImage="/images/mentionslegales-heroM-2.webp"
+      Button1="Candidater" Button2="Formation" Button1Url="/candidater" Button2Url="/formation">
+    </heroC-hover>
+  </div>
   <div class="container">
-    <div class="section1-mentions">
+    <!-- <div class="section1-mentions">
       <div class="section1-mentions__sideleft">
         <borderSection :title="mentions.data.section1[0].titre" :subtitle="mentions.data.section1[0].soustitre" />
       </div>
-      <div class="section1-mentions__slider">
-        <img src="/luka-jevremovic.webp" alt="Luka Jevremovic">
-        <p>Luka <span>Jevremovic</span></p>
-        <img src="/icons/icon-linkedin.svg" alt="Icone linkedin">
+      <div class="section1-mentions__sideright">
+        <div class="top">
+          <div class="section1-mentions__slider">
+            <img src="/luka-jevremovic.webp" alt="Luka Jevremovic">
+            <p>Luka <span>Jevremovic</span></p>
+            <img src="/icons/icon-linkedin.svg" alt="Icone linkedin">
+          </div>
+          <div class="section1-mentions__slider">
+            <img src="/justine-duval.webp" alt="Justine Duval">
+            <p>Justine <span>Duval</span></p>
+            <img src="/icons/icon-linkedin.svg" alt="Icone Linkedin">
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="section1-mentions__slider">
+            <img src="/luka-jevremovic.webp" alt="Luka Jevremovic">
+            <p>Luka <span>Jevremovic</span></p>
+            <img src="/icons/icon-linkedin.svg" alt="Icone linkedin">
+          </div>
+          <div class="section1-mentions__slider">
+            <img src="/justine-duval.webp" alt="Justine Duval">
+            <p>Justine <span>Duval</span></p>
+            <img src="/icons/icon-linkedin.svg" alt="Icone Linkedin">
+          </div>
+        </div>
+       
+
       </div>
-      <div class="section1-mentions__slider">
-        <img src="/justine-duval.webp" alt="Justine Duval">
-        <p>Justine <span>Duval</span></p>
-        <img src="/icons/icon-linkedin.svg" alt="Icone Linkedin">
-      </div>
-    </div>
+
+    </div> -->
     <div class="section2-mentions">
       <div class="section2-mentions__sideleft">
         <div class="section2-mentions__sideleft-borderT">
@@ -91,49 +116,51 @@ useSeoMeta({
       </div>
 
     </div>
+
   </div>
 </template>
 
 <style lang="scss">
-
-
-.container__index{
+.container__index {
   overflow: hidden;
+
   //pour le hero
-  &-heroT{
+  &-heroT {
     display: none;
   }
-  &-heroC{
+
+  &-heroC {
     display: none;
   }
 }
 
 @media screen and (min-width:768px) {
-  .container__index{
-    &-heroM{
+  .container__index {
+    &-heroM {
       display: none;
     }
-    &-heroT{
+
+    &-heroT {
       display: block;
     }
   }
 }
+
 @media screen and (min-width:1024px) {
-  .container__index{
-    &-heroM{
+  .container__index {
+    &-heroM {
       display: none;
     }
-    &-heroT{
+
+    &-heroT {
       display: none;
     }
-    &-heroC{
+
+    &-heroC {
       display: block;
     }
   }
 }
-
-
-
 
 
 
@@ -149,6 +176,7 @@ useSeoMeta({
   align-items: center;
   gap: rem(20);
 
+ 
   &__slider {
     display: flex;
     flex-direction: column;
@@ -178,6 +206,7 @@ useSeoMeta({
   margin-bottom: rem(60);
 
   &__sideleft {
+
     &-borderT {
       @include borderColorTitle;
       border-color: $red;
@@ -244,8 +273,20 @@ useSeoMeta({
     margin: rem(80) rem(0) rem(120) rem(0);
     display: flex;
     flex-direction: row;
-    justify-content: center;
     gap: rem(20);
+
+    &__sideleft{
+    width: 50%;
+    }
+
+    &__sideright{
+      
+      display: flex;
+      gap: rem(80);
+      flex: 1;
+      justify-content: center;
+    }
+
 
     &__slider {
       font-size: $size-14;
@@ -278,21 +319,21 @@ useSeoMeta({
     padding: rem(30) rem(40);
   }
 
-  .section1-mentions {
-    gap: rem(40);
+  // .section1-mentions {
+  //   gap: rem(40);
 
-    &__slider {
-      font-size: $size-14;
+  //   &__slider {
+  //     font-size: $size-14;
 
-      :nth-child(1) {
-        width: rem(210);
-      }
+  //     :nth-child(1) {
+  //       width: rem(210);
+  //     }
 
-      :nth-child(3) {
-        width: rem(20);
-      }
-    }
-  }
+  //     :nth-child(3) {
+  //       width: rem(20);
+  //     }
+  //   }
+  // }
 
   .section2-mentions {
     &__sideleft {
@@ -310,22 +351,22 @@ useSeoMeta({
     padding: rem(30) rem(75);
   }
 
-  .section1-mentions {
-    margin: rem(90) rem(0) rem(170) rem(0);
-    gap: rem(40);
+  // .section1-mentions {
+  //   margin: rem(90) rem(0) rem(170) rem(0);
+  //   gap: rem(40);
 
-    &__slider {
-      font-size: $size-16;
+  //   &__slider {
+  //     font-size: $size-16;
 
-      :nth-child(1) {
-        width: rem(280);
-      }
+  //     :nth-child(1) {
+  //       width: rem(280);
+  //     }
 
-      :nth-child(3) {
-        width: rem(24);
-      }
-    }
-  }
+  //     :nth-child(3) {
+  //       width: rem(24);
+  //     }
+  //   }
+  // }
 
   .section2-mentions {
     &__sideleft {
