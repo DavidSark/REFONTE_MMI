@@ -10,11 +10,11 @@ const props = defineProps({
 
 //on scroll le background est blanc
 onMounted(() => {
-  let scrolled = 0;
   let header = document.getElementsByClassName('header')[0];
   let headerMenu = document.getElementsByClassName('header-menu')[0];
+
   document.addEventListener('scroll', (e) => {
-    scrolled = window.scrollY;
+    let scrolled = window.scrollY;
     if (scrolled > 0) {
       header.classList.add('-bg-white');
       headerMenu.classList.add('-scrolled');
@@ -23,6 +23,8 @@ onMounted(() => {
       headerMenu.classList.remove('-scrolled');
     }
   });
+
+
 });
 
 
@@ -349,7 +351,7 @@ onUnmounted(() => {
         transition: all .5s;
         width: rem(20);
         height: rem(.5);
-        background-color: $white;
+        background-color: $black;
         margin: rem(8) 0;
       }
 
@@ -362,16 +364,19 @@ onUnmounted(() => {
       border-radius: 50%;
       background: transparent;
       border: rem(1) solid;
-      border-color: $white ;
+      border-color: $black ;
       cursor: pointer;
-
-
+      
       &.-scrolled { 
       border-color: $black;
       
       .header-menu-center div {
         background-color: $black;
       }
+
+      
+
+
     }
 
       &::before {
@@ -558,6 +563,20 @@ onUnmounted(() => {
         }
       }
     }
+
+    &-menu{
+      
+      &-center{
+        div{
+          background-color: $white;
+        }
+      }
+
+      &.-circle{
+      border-color: $white
+    }
+    }
+    
   }
 
   .menu {
