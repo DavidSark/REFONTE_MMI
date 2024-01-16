@@ -8,7 +8,7 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.714464850608!2d6.802704075879118!3d47.495475595645296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4792172655793f9f%3A0x1b3b0f76560084ad!2sD%C3%A9partement%20MMI%20de%20Montb%C3%A9liard!5e0!3m2!1sfr!2sfr!4v1703111614273!5m2!1sfr!2sfr"
             width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <h2><span class="circle"></span>Où nous retrouver</h2>
+        <h2><div class="circle"></div>Où nous retrouver</h2>
         <h6>4 place Tharradin</h6>
         <h6>25200 Montbéliard</h6>
         <h6>tél : +33 (0)3 81 99 47 34</h6>
@@ -22,6 +22,7 @@
                     alt="linkedin"></a>
 
         </div>
+       
     </div>
 </template>
 
@@ -29,26 +30,39 @@
 .cardgooglemap {
 
     &__info {
-
+        font-family: $font-poppins;
         iframe {
             width: 100%;
         }
-
+        h2{
+            font-size: $size-24;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: rem(5);
+            margin: rem(12) rem(0);
+            div{
+                background: $blue;
+                width: rem(15);
+                height: rem(15);
+                border-radius: 100%;
+            }
+        }
         &-socials {
             display: flex;
             justify-content: flex-end;
             gap: rem(20);
-
+            padding-left: rem(20);
             img {
                 width: rem(30);
             }
         }
 
         h6 {
-            font-family: $font-poppins;
             text-transform: uppercase;
             font-weight: 300;
             font-size: $size-13;
+            margin-left: rem(20);
             margin-bottom: rem(6)
         }
 
