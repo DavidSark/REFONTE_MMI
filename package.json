@@ -24,6 +24,8 @@
     "mongodb": "^6.3.0",
     "prismic-javascript": "^3.0.2",
     "sass": "^1.69.5",
-    "swiper": "^11.0.5"
+    "swiper": "^8.4.7",
+    "vue-awesome-swiper": "^5.0.1",
+    "nuxt-swiper": "^1.2.2"
   }
 }

@@ -47,8 +47,9 @@ const props = defineProps ({
     </div>
 
     <div class="container-hero__right">
-      <img :src="TopImage" alt="Cours en MMI">
+      <sliderT/>
     </div>
+    
   </div>
 </template>
 

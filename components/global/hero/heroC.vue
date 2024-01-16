@@ -40,8 +40,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
     </div>
 
     <div class="container-hero__right">
-      <img src="/image1.webp" alt="Cours en MMI">
-      <img src="/image3.webp" alt="Cours en MMI">
+     <slider></slider>
     </div>
   </div>
 </template>
@@ -133,6 +132,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
     display: flex;
     gap: rem(5);
     overflow: hidden;
+    flex: 1;
 
     img {
       width: 50%;
