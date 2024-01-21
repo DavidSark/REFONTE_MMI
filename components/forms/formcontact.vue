@@ -74,6 +74,7 @@ const handleSubmit = async () => {
     
 
   </div>
+  
        <div v-if="showSuccessPopup" class="success-popup">
         <p>Message envoyé avec succès !</p>
       </div>
@@ -86,7 +87,6 @@ const handleSubmit = async () => {
 </template>
 
 <style lang="scss" scoped>
-
 
 
 .square {
@@ -148,7 +148,9 @@ const handleSubmit = async () => {
       width: rem(100);
     }
   }
-  gap:rem(40);
+  &__form{
+    margin-top: rem(40);
+  }
   ::placeholder {
       font-family: $font-poppins;
       color: $gray-soft;
@@ -233,7 +235,9 @@ const handleSubmit = async () => {
 @media (min-width : 1440px ) {
   .form-contact{
     padding: rem(80) rem(75);
-    gap:rem(60);
+    &__form{
+      margin-top: rem(60)
+    }
 
     &__mmi {
       font-size: $size-33;
