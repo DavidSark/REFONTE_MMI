@@ -219,7 +219,7 @@ onUnmounted(() => {
               </RouterLink>
             </div>
             <div class="menu-right__content-section1">
-              <RouterLink to="/candiater">
+              <RouterLink to="/candidater">
                 <img src="/candidater_hover.webp" alt="image de MMI">
                 <div class="menu-right__content-section1-text">
                   <p>04</p>
