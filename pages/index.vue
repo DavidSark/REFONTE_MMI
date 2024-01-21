@@ -40,7 +40,7 @@ useSeoMeta({
 
       <div class="section2-index">
         <video controls="">
-          <source src="/video_introduction_MMI.mp4" type="video/mp4" />
+          <source src="/Video_introduction_MMI.mp4" type="video/mp4" />
         </video>
       </div>
   
