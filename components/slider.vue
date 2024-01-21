@@ -5,17 +5,17 @@ import 'swiper/swiper-bundle.min.css';
 
 const images = [
     'image1.webp',
-    'image2.webp',
     'image3.webp',
+    'image2.webp',
     'image4.webp',
   
 ];
 
 const images2 = [
-    'image1.webp',
     'image2.webp',
     'image3.webp',
     'image4.webp',
+    'image1.webp',
 ];
 
 
