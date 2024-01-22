@@ -26,11 +26,8 @@ useSeoMeta({
     { x: 450, y: 100, radius: 50, style: "hollow", velocityY: 0 },
     { x: 200, y: 200, radius: 60, style: "hollow", velocityY: 0 },
     { x: 250, y: 100, radius: 100, style: "hollow", velocityY: 0 },
-    { x: 200, y: 200, radius: 60, style: "hollow", velocityY: 0 },
-    { x: 250, y: 100, radius: 100, style: "hollow", velocityY: 0 },
+  
 
-    { x: 120, y: 100, radius: 80, style: "solid", velocityY: 0 },
-    { x: 350, y: 150, radius: 60, style: "solid", velocityY: 0 },
     { x: 120, y: 100, radius: 80, style: "solid", velocityY: 0 },
     { x: 350, y: 150, radius: 60, style: "solid", velocityY: 0 },
     { x: 120, y: 100, radius: 80, style: "solid", velocityY: 0 },
