@@ -79,7 +79,7 @@ const props = defineProps({
     <div class="layer layer_red">
       <div class="text_container text_black">
         <PrismicRichText class="prismic" :field="textHidden"></PrismicRichText> 
-            <RouterLink to="/departement" @mouseenter="onMouseEnterButton" @mouseleave="onMouseLeaveButton">
+            <RouterLink to="/espace-pro" @mouseenter="onMouseEnterButton" @mouseleave="onMouseLeaveButton">
                     <Button size="small" class="button">déposer une offre</Button>
             </RouterLink>
 
