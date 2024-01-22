@@ -7,7 +7,7 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
      <div class="section-espacepro">
         <div class="section-espacepro__text">
             <h2>Espace professionnel<span>.</span></h2>
-            <hoverTextDep :textVisible="home.data.index_pro" :textHidden="home.data.index_prohidden" class="hoverText"></hoverTextDep>  
+            <hoverTextPro :textVisible="home.data.index_pro" :textHidden="home.data.index_prohidden" class="hoverText"></hoverTextPro>  
             <PrismicRichText class="prismicHide" :field="home.data.index_pro"></PrismicRichText> 
         </div>
 
